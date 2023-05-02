@@ -64,16 +64,15 @@ public class Cinchcraft
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             event.enqueueWork(() -> {
-                PotionBrewing.addMix(Potions.AWKWARD, Items.GLOW_BERRIES, ModPotions.GLOWING_POTION.get());
-                PotionBrewing.addMix(Potions.AWKWARD, Items.INK_SAC, ModPotions.BLINDNESS_POTION.get());
-                PotionBrewing.addMix(ModPotions.GLOWING_POTION.get(), Items.REDSTONE, ModPotions.LONG_GLOWING_POTION.get());
-                PotionBrewing.addMix(ModPotions.BLINDNESS_POTION.get(), Items.REDSTONE, ModPotions.LONG_BLINDNESS_POTION.get());
+                //PotionBrewing.addMix(Potions.AWKWARD, Items.GLOW_BERRIES, ModPotions.GLOWING_POTION.get());
+                //PotionBrewing.addMix(Potions.AWKWARD, Items.INK_SAC, ModPotions.BLINDNESS_POTION.get());
+                //PotionBrewing.addMix(ModPotions.GLOWING_POTION.get(), Items.REDSTONE, ModPotions.LONG_GLOWING_POTION.get());
+                //PotionBrewing.addMix(ModPotions.BLINDNESS_POTION.get(), Items.REDSTONE, ModPotions.LONG_BLINDNESS_POTION.get());
             });
         }
     }
 
     public void clientSetup(final FMLClientSetupEvent event) {
-
     }
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
