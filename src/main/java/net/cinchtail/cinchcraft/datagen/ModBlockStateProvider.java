@@ -16,6 +16,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.BLOCK_OF_RUBY);
+        blockWithItem(ModBlocks.RUBY_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_RUBY_ORE);
+        blockWithItem(ModBlocks.NETHER_RUBY_ORE);
+        blockWithItem(ModBlocks.NETHER_IRON_ORE);
+        blockWithItem(ModBlocks.NETHER_COPPER_ORE);
+        blockWithItem(ModBlocks.NETHER_COAL_ORE);
+        blockWithItem(ModBlocks.NETHER_LAPIS_LAZULI_ORE);
+        blockWithItem(ModBlocks.NETHER_REDSTONE_ORE);
+        blockWithItem(ModBlocks.NETHER_DIAMOND_ORE);
+        blockWithItem(ModBlocks.NETHER_EMERALD_ORE);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

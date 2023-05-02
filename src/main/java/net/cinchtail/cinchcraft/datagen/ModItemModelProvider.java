@@ -18,7 +18,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(ModItems.RUBY);
-
+        simpleItem(ModItems.COPPER_NUGGET);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

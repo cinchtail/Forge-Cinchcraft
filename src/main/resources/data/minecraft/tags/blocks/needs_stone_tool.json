@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "cinchcraft:nether_redstone_ore",
+    "cinchcraft:nether_lapis_lazuli_ore"
+  ]
+}

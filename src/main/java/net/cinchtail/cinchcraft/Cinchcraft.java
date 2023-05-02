@@ -73,9 +73,19 @@ public class Cinchcraft
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if (event.getTab() == ModCreativeModeTabBlocks.CINCHCRAFT_BLOCK_TAB) {
             event.accept(ModBlocks.BLOCK_OF_RUBY);
+            event.accept(ModBlocks.RUBY_ORE);
+            event.accept(ModBlocks.DEEPSLATE_RUBY_ORE);
+            event.accept(ModBlocks.NETHER_COAL_ORE);
+            event.accept(ModBlocks.NETHER_COPPER_ORE);
+            event.accept(ModBlocks.NETHER_IRON_ORE);
+            event.accept(ModBlocks.NETHER_LAPIS_LAZULI_ORE);
+            event.accept(ModBlocks.NETHER_EMERALD_ORE);
+            event.accept(ModBlocks.NETHER_RUBY_ORE);
+            event.accept(ModBlocks.NETHER_DIAMOND_ORE);
         }
         if(event.getTab() == ModCreativeModeTabItems.CINCHCRAFT_ITEM_TAB) {
             event.accept(ModItems.RUBY);
+            event.accept(ModItems.COPPER_NUGGET);
         }
     }
 }
