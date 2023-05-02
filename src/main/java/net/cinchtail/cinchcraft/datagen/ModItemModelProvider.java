@@ -19,6 +19,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.RUBY);
         simpleItem(ModItems.COPPER_NUGGET);
+        simpleItem(ModItems.CARROT_SEEDS);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

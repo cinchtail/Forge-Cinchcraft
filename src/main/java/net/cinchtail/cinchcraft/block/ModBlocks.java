@@ -1,6 +1,7 @@
 package net.cinchtail.cinchcraft.block;
 
 import net.cinchtail.cinchcraft.Cinchcraft;
+import net.cinchtail.cinchcraft.block.custom.CarvedMelonBlock;
 import net.cinchtail.cinchcraft.block.custom.NetherRedStoneOreBlock;
 import net.cinchtail.cinchcraft.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -64,6 +65,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> NETHER_EMERALD_ORE = registerBlock("nether_emerald_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(2f).requiresCorrectToolForDrops().sound(SoundType.NETHER_GOLD_ORE),
                     UniformInt.of(2, 5)));
+
+    public static final RegistryObject<Block> CARVED_MELON = registerBlock("carved_melon",
+            () -> new CarvedMelonBlock(BlockBehaviour.Properties.copy(Blocks.CARVED_PUMPKIN).strength(1f).sound(SoundType.WOOD)));
 
 
 

@@ -7,9 +7,12 @@ import net.cinchtail.cinchcraft.event.WanderingTraderTrades;
 import net.cinchtail.cinchcraft.item.ModCreativeModeTabBlocks;
 import net.cinchtail.cinchcraft.item.ModCreativeModeTabItems;
 import net.cinchtail.cinchcraft.item.ModItems;
+import net.cinchtail.cinchcraft.potion.ModPotions;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.PotionBrewing;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
-import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -31,7 +34,7 @@ public class Cinchcraft
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
-        //ModPotions.register(modEventBus);
+        ModPotions.register(modEventBus);
         //ModEffects.register(modEventBus);
 
         //ModBlockEntities.register(modEventBus);
@@ -61,7 +64,10 @@ public class Cinchcraft
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             event.enqueueWork(() -> {
-
+                PotionBrewing.addMix(Potions.AWKWARD, Items.GLOW_BERRIES, ModPotions.GLOWING_POTION.get());
+                PotionBrewing.addMix(Potions.AWKWARD, Items.INK_SAC, ModPotions.BLINDNESS_POTION.get());
+                PotionBrewing.addMix(ModPotions.GLOWING_POTION.get(), Items.REDSTONE, ModPotions.LONG_GLOWING_POTION.get());
+                PotionBrewing.addMix(ModPotions.BLINDNESS_POTION.get(), Items.REDSTONE, ModPotions.LONG_BLINDNESS_POTION.get());
             });
         }
     }
@@ -79,13 +85,15 @@ public class Cinchcraft
             event.accept(ModBlocks.NETHER_COPPER_ORE);
             event.accept(ModBlocks.NETHER_IRON_ORE);
             event.accept(ModBlocks.NETHER_LAPIS_LAZULI_ORE);
-            event.accept(ModBlocks.NETHER_EMERALD_ORE);
             event.accept(ModBlocks.NETHER_RUBY_ORE);
+            event.accept(ModBlocks.NETHER_EMERALD_ORE);
             event.accept(ModBlocks.NETHER_DIAMOND_ORE);
+            event.accept(ModBlocks.CARVED_MELON);
         }
         if(event.getTab() == ModCreativeModeTabItems.CINCHCRAFT_ITEM_TAB) {
             event.accept(ModItems.RUBY);
             event.accept(ModItems.COPPER_NUGGET);
+            event.accept(ModItems.CARROT_SEEDS);
         }
     }
 }
