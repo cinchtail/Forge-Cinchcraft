@@ -8,10 +8,14 @@ import net.cinchtail.cinchcraft.item.ModCreativeModeTabBlocks;
 import net.cinchtail.cinchcraft.item.ModCreativeModeTabItems;
 import net.cinchtail.cinchcraft.item.ModItems;
 import net.cinchtail.cinchcraft.potion.ModPotions;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionBrewing;
+import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
+import net.minecraftforge.common.brewing.IBrewingRecipe;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -56,6 +60,14 @@ public class Cinchcraft
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        BrewingRecipeRegistry.addRecipe(new IBrewingRecipe() {
+            @Override
+            public boolean isInput(ItemStack input) {return PotionUtils.getPotion(input) == ModPotions.GLOWING_POTION.get();}
+            @Override
+            public boolean isIngredient(ItemStack ingredient) {return ingredient.is(Items.GLOW_BERRIES);}
+            @Override
+            public ItemStack getOutput(ItemStack input, ItemStack ingredient) {return PotionUtils.setPotion(input.copy(), ModPotions.LONG_GLOWING_POTION.get());}
+        });
     }
 
     @Mod.EventBusSubscriber(modid = Cinchcraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -64,10 +76,6 @@ public class Cinchcraft
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             event.enqueueWork(() -> {
-                //PotionBrewing.addMix(Potions.AWKWARD, Items.GLOW_BERRIES, ModPotions.GLOWING_POTION.get());
-                //PotionBrewing.addMix(Potions.AWKWARD, Items.INK_SAC, ModPotions.BLINDNESS_POTION.get());
-                //PotionBrewing.addMix(ModPotions.GLOWING_POTION.get(), Items.REDSTONE, ModPotions.LONG_GLOWING_POTION.get());
-                //PotionBrewing.addMix(ModPotions.BLINDNESS_POTION.get(), Items.REDSTONE, ModPotions.LONG_BLINDNESS_POTION.get());
             });
         }
     }
