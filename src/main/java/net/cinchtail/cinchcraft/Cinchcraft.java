@@ -8,6 +8,7 @@ import net.cinchtail.cinchcraft.item.ModCreativeModeTabBlocks;
 import net.cinchtail.cinchcraft.item.ModCreativeModeTabItems;
 import net.cinchtail.cinchcraft.item.ModItems;
 import net.cinchtail.cinchcraft.potion.ModPotions;
+import net.cinchtail.cinchcraft.util.BetterBrewingRecipe;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionBrewing;
@@ -60,14 +61,6 @@ public class Cinchcraft
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        BrewingRecipeRegistry.addRecipe(new IBrewingRecipe() {
-            @Override
-            public boolean isInput(ItemStack input) {return PotionUtils.getPotion(input) == ModPotions.GLOWING_POTION.get();}
-            @Override
-            public boolean isIngredient(ItemStack ingredient) {return ingredient.is(Items.GLOW_BERRIES);}
-            @Override
-            public ItemStack getOutput(ItemStack input, ItemStack ingredient) {return PotionUtils.setPotion(input.copy(), ModPotions.LONG_GLOWING_POTION.get());}
-        });
     }
 
     @Mod.EventBusSubscriber(modid = Cinchcraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -76,6 +69,14 @@ public class Cinchcraft
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             event.enqueueWork(() -> {
+                BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
+                        Items.GLOW_BERRIES, ModPotions.GLOWING_POTION.get()));
+                BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
+                        Items.INK_SAC, ModPotions.BLINDNESS_POTION.get()));
+                BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(ModPotions.GLOWING_POTION.get(),
+                        Items.REDSTONE, ModPotions.LONG_GLOWING_POTION.get()));
+                BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(ModPotions.BLINDNESS_POTION.get(),
+                        Items.REDSTONE, ModPotions.LONG_BLINDNESS_POTION.get()));
             });
         }
     }
