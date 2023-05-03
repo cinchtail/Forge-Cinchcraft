@@ -44,10 +44,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         wallBlock((WallBlock) ModBlocks.DARK_PRISMARINE_WALL.get(), blockTexture(Blocks.DARK_PRISMARINE));
         wallBlock((WallBlock) ModBlocks.CUT_SANDSTONE_WALL.get(), blockTexture(Blocks.CUT_SANDSTONE));
         wallBlock((WallBlock) ModBlocks.CUT_RED_SANDSTONE_WALL.get(), blockTexture(Blocks.CUT_RED_SANDSTONE));
-        //wallBlock((WallBlock) ModBlocks.SMOOTH_SANDSTONE_WALL.get(), blockTexture(Blocks.SMOOTH_SANDSTONE));
-        //wallBlock((WallBlock) ModBlocks.SMOOTH_RED_SANDSTONE_WALL.get(), blockTexture(Blocks.SMOOTH_RED_SANDSTONE));
-        //wallBlock((WallBlock) ModBlocks.QUARTZ_WALL.get(), blockTexture(Blocks.QUARTZ_BLOCK));
-        //wallBlock((WallBlock) ModBlocks.SMOOTH_QUARTZ_WALL.get(), blockTexture(Blocks.SMOOTH_QUARTZ));
         wallBlock((WallBlock) ModBlocks.PURPUR_WALL.get(), blockTexture(Blocks.PURPUR_BLOCK));
 
     }

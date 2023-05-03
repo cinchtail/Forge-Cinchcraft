@@ -11,6 +11,23 @@
     "cinchcraft:nether_redstone_ore",
     "cinchcraft:nether_lapis_lazuli_ore",
     "cinchcraft:nether_diamond_ore",
-    "cinchcraft:nether_emerald_ore"
+    "cinchcraft:nether_emerald_ore",
+    "cinchcraft:smooth_stone_stairs",
+    "cinchcraft:smooth_stone_wall",
+    "cinchcraft:stone_wall",
+    "cinchcraft:polished_granite_wall",
+    "cinchcraft:polished_andesite_wall",
+    "cinchcraft:polished_diorite_wall",
+    "cinchcraft:prismarine_brick_wall",
+    "cinchcraft:dark_prismarine_wall",
+    "cinchcraft:cut_sandstone_wall",
+    "cinchcraft:smooth_sandstone_wall",
+    "cinchcraft:cut_red_sandstone_wall",
+    "cinchcraft:smooth_red_sandstone_wall",
+    "cinchcraft:cut_sandstone_stairs",
+    "cinchcraft:cut_red_sandstone_stairs",
+    "cinchcraft:smooth_quartz_wall",
+    "cinchcraft:quartz_wall",
+    "cinchcraft:purpur_wall"
   ]
 }
