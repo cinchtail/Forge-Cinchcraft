@@ -8,6 +8,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModBlockStateProvider extends BlockStateProvider {
@@ -56,6 +57,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         wallBlock((WallBlock) ModBlocks.CALCITE_WALL.get(), blockTexture(Blocks.CALCITE));
         wallBlock((WallBlock) ModBlocks.DRIPSTONE_WALL.get(), blockTexture(Blocks.DRIPSTONE_BLOCK));
         wallBlock((WallBlock) ModBlocks.QUARTZ_BRICK_WALL.get(), blockTexture(Blocks.QUARTZ_BRICKS));
+        wallBlock((WallBlock) ModBlocks.CUT_SANDSTONE_WALL.get(), blockTexture(Blocks.CUT_SANDSTONE));
+        wallBlock((WallBlock) ModBlocks.CUT_RED_SANDSTONE_WALL.get(), blockTexture(Blocks.CUT_RED_SANDSTONE));
 
     }
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
