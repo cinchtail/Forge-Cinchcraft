@@ -3,6 +3,7 @@ package net.cinchtail.cinchcraft.item;
 import net.cinchtail.cinchcraft.Cinchcraft;
 import net.cinchtail.cinchcraft.item.custom.CarrotSeedItem;
 import net.minecraft.world.item.BowlFoodItem;
+import net.minecraft.world.item.HorseArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -25,6 +26,9 @@ public class ModItems {
     public static final RegistryObject<Item> CARROT_SEEDS = ITEMS.register("carrot_seeds",
             () -> new CarrotSeedItem(Blocks.CARROTS,
                     new Item.Properties()));
+    public static final RegistryObject<Item> NETHERITE_HORSE_ARMOR = ITEMS.register("netherite_horse_armor",
+            () -> new HorseArmorItem(14, "netherite",
+                    new Item.Properties().fireResistant().stacksTo(1)));
 
     //Foods
     public static final RegistryObject<Item> VEGETABLE_STEW = ITEMS.register("vegetable_stew",

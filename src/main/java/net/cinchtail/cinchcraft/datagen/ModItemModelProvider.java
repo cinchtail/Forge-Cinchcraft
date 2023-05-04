@@ -17,6 +17,8 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.function.Supplier;
 
 public class ModItemModelProvider extends ItemModelProvider {
+
+    private final ModelFile GENERATED = getExistingFile(mcLoc("item/generated"));
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, Cinchcraft.MOD_ID, existingFileHelper);
     }
@@ -28,6 +30,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.CARROT_SEEDS);
         simpleItem(ModItems.VEGETABLE_STEW);
         simpleItem(ModItems.NETHER_STEW);
+        simpleItem(ModItems.NETHERITE_HORSE_ARMOR);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

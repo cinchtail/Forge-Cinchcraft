@@ -258,7 +258,7 @@ public class Cinchcraft
             //event.accept(ModItems.BLACKSTONE_AXE);
             //event.accept(ModItems.BLACKSTONE_SHOVEL);
             //event.accept(ModItems.BLACKSTONE_HOE);
-            //event.accept(ModItems.NETHERITE_HORSE_ARMOR);
+            event.accept(ModItems.NETHERITE_HORSE_ARMOR);
             //event.accept(ModItems.RUBY_HORSE_ARMOR);
             //event.accept(ModItems.EMERALD_HORSE_ARMOR);
             event.accept(ModItems.RUBY);
