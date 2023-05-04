@@ -271,8 +271,8 @@ public class Cinchcraft
             //event.accept(ModItems.BLUEBERRY_PIE);
             //event.accept(ModItems.STRAWBERRIES);
             //event.accept(ModItems.PINEAPPLE);
-            //event.accept(ModItems.VEGETABLE_STEW);
-            //event.accept(ModItems.NETHER_SALAD);
+            event.accept(ModItems.VEGETABLE_STEW);
+            event.accept(ModItems.NETHER_STEW);
         }
     }
 }

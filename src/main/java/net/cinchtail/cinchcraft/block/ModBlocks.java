@@ -21,8 +21,8 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, Cinchcraft.MOD_ID);
 
-    public static final RegistryObject<Block> BLOCK_OF_RUBY = registerBlock("block_of_ruby",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK).strength(5f).requiresCorrectToolForDrops()));
+
+    //Ores
     public static final RegistryObject<Block> RUBY_ORE = registerBlock("ruby_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4f).requiresCorrectToolForDrops(),
                     UniformInt.of(3, 7)));
@@ -54,6 +54,7 @@ public class ModBlocks {
                     UniformInt.of(2, 5)));
 
 
+    //Miscellaneous Blocks
     public static final RegistryObject<Block> SMOOTH_STONE_STAIRS = registerBlock("smooth_stone_stairs",
             () -> new StairBlock(() -> ModBlocks.SMOOTH_STONE_WALL.get().defaultBlockState(),
                     BlockBehaviour.Properties.of(Material.STONE).strength(3f).requiresCorrectToolForDrops()));
@@ -105,57 +106,46 @@ public class ModBlocks {
     public static final RegistryObject<Block> PURPUR_WALL = registerBlock("purpur_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(2f).requiresCorrectToolForDrops()));
-
     public static final RegistryObject<Block> TUFF_STAIRS = registerBlock("tuff_stairs",
             () -> new StairBlock(() -> ModBlocks.SMOOTH_SANDSTONE_WALL.get().defaultBlockState(),
                     BlockBehaviour.Properties.of(Material.STONE).strength(2f).requiresCorrectToolForDrops().sound(SoundType.TUFF)));
-
     public static final RegistryObject<Block> TUFF_SLAB = registerBlock("tuff_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(2f).requiresCorrectToolForDrops().sound(SoundType.TUFF)));
-
     public static final RegistryObject<Block> TUFF_WALL = registerBlock("tuff_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(2f).requiresCorrectToolForDrops().sound(SoundType.TUFF)));
-
     public static final RegistryObject<Block> CALCITE_STAIRS = registerBlock("calcite_stairs",
             () -> new StairBlock(() -> ModBlocks.SMOOTH_SANDSTONE_WALL.get().defaultBlockState(),
                     BlockBehaviour.Properties.of(Material.STONE).strength(1f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
-
     public static final RegistryObject<Block> CALCITE_SLAB = registerBlock("calcite_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(1f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
-
     public static final RegistryObject<Block> CALCITE_WALL = registerBlock("calcite_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(1f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
-
     public static final RegistryObject<Block> DRIPSTONE_STAIRS = registerBlock("dripstone_stairs",
             () -> new StairBlock(() -> ModBlocks.SMOOTH_SANDSTONE_WALL.get().defaultBlockState(),
                     BlockBehaviour.Properties.of(Material.STONE).strength(2f).requiresCorrectToolForDrops().sound(SoundType.DRIPSTONE_BLOCK)));
-
     public static final RegistryObject<Block> DRIPSTONE_SLAB = registerBlock("dripstone_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(2f).requiresCorrectToolForDrops().sound(SoundType.DRIPSTONE_BLOCK)));
-
     public static final RegistryObject<Block> DRIPSTONE_WALL = registerBlock("dripstone_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(2f).requiresCorrectToolForDrops().sound(SoundType.DRIPSTONE_BLOCK)));
-
     public static final RegistryObject<Block> QUARTZ_BRICK_STAIRS = registerBlock("quartz_brick_stairs",
             () -> new StairBlock(() -> ModBlocks.SMOOTH_SANDSTONE_WALL.get().defaultBlockState(),
                     BlockBehaviour.Properties.of(Material.STONE).strength(1f).requiresCorrectToolForDrops()));
-
     public static final RegistryObject<Block> QUARTZ_BRICK_SLAB = registerBlock("quartz_brick_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(1f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
-
     public static final RegistryObject<Block> QUARTZ_BRICK_WALL = registerBlock("quartz_brick_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(1f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
-
     public static final RegistryObject<Block> CARVED_MELON = registerBlock("carved_melon",
             () -> new CarvedMelonBlock(BlockBehaviour.Properties.copy(Blocks.CARVED_PUMPKIN).strength(1f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> BLOCK_OF_RUBY = registerBlock("block_of_ruby",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK).strength(5f).requiresCorrectToolForDrops()));
 
 
 
