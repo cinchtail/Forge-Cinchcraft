@@ -46,7 +46,7 @@ public class ModPlacedFeatures {
     //public static final ResourceKey<PlacedFeature> STRAWBERRY_PLACED_KEY = createKey("strawberry_placed");
     //public static final ResourceKey<PlacedFeature> MOD_SWEET_BERRIE_PLACED_KEY = createKey("mod_sweet_berrie_placed");
     //public static final ResourceKey<PlacedFeature> ICICLE_CEILING = createKey("icicle_ceiling");
-    //public static final ResourceKey<PlacedFeature> REEDS_PLACED_KEY = createKey("reeds_placed");
+    public static final ResourceKey<PlacedFeature> REEDS_PLACED_KEY = createKey("reeds_placed");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -85,6 +85,9 @@ public class ModPlacedFeatures {
                 commonOrePlacement(4, // VeinsPerChunk
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
 
+        register(context, REEDS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.REEDS_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(5), InSquarePlacement.spread(),
+                        PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()));
         /*register(context, BUTTER_CUP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BUTTER_CUP_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(16),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
@@ -120,10 +123,6 @@ public class ModPlacedFeatures {
         register(context, FIRE_FERN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.FIRE_FERN_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(1),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
-        register(context, REEDS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.REEDS_KEY),
-                List.of(RarityFilter.onAverageOnceEvery(5), InSquarePlacement.spread(),
-                        PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()));
-
 
         register(context, ICICLE_CEILING, configuredFeatures.getOrThrow(ModConfiguredFeatures.ICICLE_KEY), CountPlacement.of(256),
                 InSquarePlacement.spread(), PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, EnvironmentScanPlacement.scanningFor(Direction.UP,

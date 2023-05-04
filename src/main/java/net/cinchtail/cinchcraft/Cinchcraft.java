@@ -9,6 +9,7 @@ import net.cinchtail.cinchcraft.item.ModCreativeModeTabItems;
 import net.cinchtail.cinchcraft.item.ModItems;
 import net.cinchtail.cinchcraft.potion.ModPotions;
 import net.cinchtail.cinchcraft.util.BetterBrewingRecipe;
+import net.cinchtail.cinchcraft.world.biomemods.ModBiomeModifiers;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionBrewing;
@@ -46,7 +47,7 @@ public class Cinchcraft
 
         //ModVillagers.register(modEventBus);
 
-        //ModBiomeModifiers.register(modEventBus);
+        ModBiomeModifiers.register(modEventBus);
         //ModLootModifiers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);

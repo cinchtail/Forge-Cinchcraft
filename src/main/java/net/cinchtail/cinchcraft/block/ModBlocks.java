@@ -3,6 +3,7 @@ package net.cinchtail.cinchcraft.block;
 import net.cinchtail.cinchcraft.Cinchcraft;
 import net.cinchtail.cinchcraft.block.custom.CarvedMelonBlock;
 import net.cinchtail.cinchcraft.block.custom.NetherRedStoneOreBlock;
+import net.cinchtail.cinchcraft.block.custom.ReedsBlock;
 import net.cinchtail.cinchcraft.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -147,6 +148,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> BLOCK_OF_RUBY = registerBlock("block_of_ruby",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK).strength(5f).requiresCorrectToolForDrops()));
 
+    //Plants
+
+    public static final RegistryObject<Block> REEDS = registerBlock("reeds",
+            () -> new ReedsBlock(BlockBehaviour.Properties.copy(Blocks.LILAC).sound(SoundType.SMALL_DRIPLEAF)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

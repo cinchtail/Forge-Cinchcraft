@@ -1,24 +1,17 @@
 package net.cinchtail.cinchcraft.datagen;
 
 import net.cinchtail.cinchcraft.Cinchcraft;
-import net.cinchtail.cinchcraft.block.ModBlocks;
 import net.cinchtail.cinchcraft.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
-import java.util.function.Supplier;
-
 public class ModItemModelProvider extends ItemModelProvider {
-
-    private final ModelFile GENERATED = getExistingFile(mcLoc("item/generated"));
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, Cinchcraft.MOD_ID, existingFileHelper);
     }
@@ -31,6 +24,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.VEGETABLE_STEW);
         simpleItem(ModItems.NETHER_STEW);
         simpleItem(ModItems.NETHERITE_HORSE_ARMOR);
+
+        withExistingParent("tuff_stairs", modLoc("block/tuff_stairs"));
+        withExistingParent("tuff_slab", modLoc("block/tuff_slab"));
+
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

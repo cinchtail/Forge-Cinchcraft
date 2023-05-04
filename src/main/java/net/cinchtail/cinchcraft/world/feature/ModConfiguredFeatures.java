@@ -58,7 +58,7 @@ public class ModConfiguredFeatures {
     //public static final ResourceKey<ConfiguredFeature<?, ?>> STRAWBERRY_KEY = registerKey("strawberry");
     //public static final ResourceKey<ConfiguredFeature<?, ?>> MOD_SWEET_BERRIE_KEY = registerKey("mod_sweet_berrie");
     //public static final ResourceKey<ConfiguredFeature<?, ?>> ICICLE_KEY = registerKey("icicle");
-    //public static final ResourceKey<ConfiguredFeature<?, ?>> REEDS_KEY = registerKey("reeds");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> REEDS_KEY = registerKey("reeds");
 
 
 
@@ -108,6 +108,9 @@ public class ModConfiguredFeatures {
         register(context, NETHER_EMERALD_KEY, Feature.ORE, new OreConfiguration(NETHER_EMERALD_ORES.get(),3));
         register(context, NETHER_DIAMOND_ORE_KEY, Feature.ORE, new OreConfiguration(NETHER_DIAMOND_ORES.get(),3));
 
+        register(context, REEDS_KEY, Feature.RANDOM_PATCH,
+                new RandomPatchConfiguration(50, 6, 2, PlacementUtils.inlinePlaced(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.REEDS.get().defaultBlockState())))));
         /*register(context, BUTTER_CUP_KEY, Feature.FLOWER,
                 new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.BUTTER_CUP.get())))));
@@ -143,9 +146,7 @@ public class ModConfiguredFeatures {
         register(context, FIRE_FERN_KEY, Feature.FLOWER,
                 new RandomPatchConfiguration(10, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.FIRE_FERN.get())))));
-        register(context, REEDS_KEY, Feature.RANDOM_PATCH,
-                new RandomPatchConfiguration(50, 6, 2, PlacementUtils.inlinePlaced(Feature.SIMPLE_BLOCK,
-                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.REEDS.get().defaultBlockState())))));
+
 
         register(context, ICICLE_KEY, Feature.BLOCK_COLUMN, new BlockColumnConfiguration(List.of(BlockColumnConfiguration.layer(new WeightedListInt(SimpleWeightedRandomList.<IntProvider>builder().add(ConstantInt.of(1),
                 2).add(ConstantInt.of(0), 1).build()), BlockStateProvider.simple(ModBlocks.ICICLE.get().defaultBlockState().setValue(IcicleBlock.TIP_DIRECTION,

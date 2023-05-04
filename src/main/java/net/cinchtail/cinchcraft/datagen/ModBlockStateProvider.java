@@ -11,6 +11,8 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.function.Supplier;
+
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, Cinchcraft.MOD_ID, exFileHelper);
@@ -63,5 +65,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    }
+    public void wallBlock(Supplier<WallBlock> block, ResourceLocation texture) {
+        super.wallBlock(block.get(), texture);
+        models().wallInventory(getName(block) + "_inventory", texture);
+    }
+    public String getName(Supplier<? extends Block> block) {
+        return block.get().builtInRegistryHolder().key().location().getPath();
     }
 }
