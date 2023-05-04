@@ -25,8 +25,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.NETHER_STEW);
         simpleItem(ModItems.NETHERITE_HORSE_ARMOR);
 
+        withExistingParent("smooth_stone_stairs", modLoc("block/smooth_stone_stairs"));
         withExistingParent("tuff_stairs", modLoc("block/tuff_stairs"));
         withExistingParent("tuff_slab", modLoc("block/tuff_slab"));
+        withExistingParent("calcite_stairs", modLoc("block/calcite_stairs"));
+        withExistingParent("calcite_slab", modLoc("block/calcite_slab"));
+        withExistingParent("dripstone_stairs", modLoc("block/dripstone_stairs"));
+        withExistingParent("dripstone_slab", modLoc("block/dripstone_slab"));
+        withExistingParent("quartz_brick_stairs", modLoc("block/quartz_brick_stairs"));
+        withExistingParent("quartz_brick_slab", modLoc("block/quartz_brick_slab"));
 
     }
 

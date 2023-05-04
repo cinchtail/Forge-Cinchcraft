@@ -1,9 +1,16 @@
-// 1.19.4	2023-05-04T14:24:55.1403779	Item Models: cinchcraft
+// 1.19.4	2023-05-04T16:24:16.1051839	Item Models: cinchcraft
+07c6dbc9c31ce95e6ffe96c825941d17467bc4bd assets/cinchcraft/models/item/calcite_slab.json
+ee1daea6515585ef27a4bfa788889485a42a0ff7 assets/cinchcraft/models/item/calcite_stairs.json
 59a03ac82bee2a421b032bae05b3834d92e0fd63 assets/cinchcraft/models/item/carrot_seeds.json
 d8a52c63d48d99d8d379d54f5888156c8b60cc28 assets/cinchcraft/models/item/copper_nugget.json
+feac18884b1a446438f8aa2a2a15c8538e0e2a78 assets/cinchcraft/models/item/dripstone_slab.json
+81a709d698817453e9e501472745329159160d8c assets/cinchcraft/models/item/dripstone_stairs.json
 84fea0bbbaccac220bd591e8a276b217a8397420 assets/cinchcraft/models/item/netherite_horse_armor.json
 4f889d219574e0d6ff818d02aa5e0a20a9fca3c2 assets/cinchcraft/models/item/nether_stew.json
+eb47064ae36daa661ebd44fa1cbb1b45b33090b0 assets/cinchcraft/models/item/quartz_brick_slab.json
+12b50ee784483be4869ade98118e6f9aa21fe59e assets/cinchcraft/models/item/quartz_brick_stairs.json
 1d6e5a1eadf70ec6b8e042ee01396c80a7c20cf3 assets/cinchcraft/models/item/ruby.json
+e09a1a73a1bb2df5a3ef49972f37a62f87ac904c assets/cinchcraft/models/item/smooth_stone_stairs.json
 62f8368d24b58c3ae303fdc2a581d8960adfc6f8 assets/cinchcraft/models/item/tuff_slab.json
 22186061a9ad557c7a34ce55d2e4e9158ff37d09 assets/cinchcraft/models/item/tuff_stairs.json
 63bfaf8d1b56289536af74b1865e9dd3a98796ca assets/cinchcraft/models/item/vegetable_stew.json

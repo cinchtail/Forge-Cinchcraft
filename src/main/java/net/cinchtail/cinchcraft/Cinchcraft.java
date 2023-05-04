@@ -226,7 +226,7 @@ public class Cinchcraft
             //event.accept(ModBlocks.ALYSSUM);
             //event.accept(ModBlocks.SMALL_ROSE);
             //event.accept(ModBlocks.SMALL_CACTUS);
-            //event.accept(ModBlocks.REEDS);
+            event.accept(ModBlocks.REEDS);
             //event.accept(ModItems.STALK);
             //event.accept(ModBlocks.NETHER_BRICK_FURNACE);
         }

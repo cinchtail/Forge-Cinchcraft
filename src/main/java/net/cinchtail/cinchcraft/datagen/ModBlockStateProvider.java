@@ -3,15 +3,10 @@ package net.cinchtail.cinchcraft.datagen;
 import net.cinchtail.cinchcraft.Cinchcraft;
 import net.cinchtail.cinchcraft.block.ModBlocks;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-
-import java.util.function.Supplier;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -65,12 +60,5 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
-    }
-    public void wallBlock(Supplier<WallBlock> block, ResourceLocation texture) {
-        super.wallBlock(block.get(), texture);
-        models().wallInventory(getName(block) + "_inventory", texture);
-    }
-    public String getName(Supplier<? extends Block> block) {
-        return block.get().builtInRegistryHolder().key().location().getPath();
     }
 }
