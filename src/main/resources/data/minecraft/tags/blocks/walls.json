@@ -14,6 +14,10 @@
     "cinchcraft:smooth_red_sandstone_wall",
     "cinchcraft:smooth_quartz_wall",
     "cinchcraft:quartz_wall",
-    "cinchcraft:purpur_wall"
+    "cinchcraft:purpur_wall",
+    "cinchcraft:tuff_wall",
+    "cinchcraft:calcite_wall",
+    "cinchcraft:dripstone_wall",
+    "cinchcraft:quartz_brick_wall"
   ]
 }

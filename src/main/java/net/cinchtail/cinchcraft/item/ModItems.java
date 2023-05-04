@@ -18,7 +18,8 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> COPPER_NUGGET = ITEMS.register("copper_nugget",
             () -> new Item(new Item.Properties()));
-
+    public static final RegistryObject<Item> CHAINMAIL = ITEMS.register("chainmail",
+            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CARROT_SEEDS = ITEMS.register("carrot_seeds",
             () -> new CarrotSeedItem(Blocks.CARROTS,
                     new Item.Properties()));

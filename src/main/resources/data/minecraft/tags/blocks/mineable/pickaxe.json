@@ -28,6 +28,18 @@
     "cinchcraft:cut_red_sandstone_stairs",
     "cinchcraft:smooth_quartz_wall",
     "cinchcraft:quartz_wall",
-    "cinchcraft:purpur_wall"
+    "cinchcraft:purpur_wall",
+    "cinchcraft:tuff_wall",
+    "cinchcraft:tuff_slab",
+    "cinchcraft:tuff_stairs",
+    "cinchcraft:calcite_wall",
+    "cinchcraft:calcite_slab",
+    "cinchcraft:calcite_stairs",
+    "cinchcraft:dripstone_wall",
+    "cinchcraft:dripstone_slab",
+    "cinchcraft:dripstone_stairs",
+    "cinchcraft:quartz_brick_wall",
+    "cinchcraft:quartz_brick_slab",
+    "cinchcraft:quartz_brick_stairs"
   ]
 }
