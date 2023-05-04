@@ -15,8 +15,6 @@
     "minecraft:dark_forest",
     "minecraft:old_growth_pine_taiga",
     "minecraft:sunflower_plains",
-    "minecraft:old_growth_birch_forest",
-    "cinchcraft:mixed_forest",
-    "cinchcraft:alyssum_fields"
+    "minecraft:old_growth_birch_forest"
   ]
 }

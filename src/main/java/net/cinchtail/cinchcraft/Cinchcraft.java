@@ -188,6 +188,10 @@ public class Cinchcraft
             event.accept(ModBlocks.QUARTZ_WALL);
             event.accept(ModBlocks.SMOOTH_QUARTZ_WALL);
             event.accept(ModBlocks.PURPUR_WALL);
+            event.accept(ModItems.THATCH_BLOCK);
+            //event.accept(ModItems.THATCH_STAIRS);
+            //event.accept(ModItems.THATCH_SLAB);
+            //event.accept(ModItems.THATCH_WALL);
             //event.accept(ModItems.APPLE_LOG);
             //event.accept(ModItems.APPLE_WOOD);
             //event.accept(ModItems.STRIPPED_APPLE_LOG);

@@ -1,7 +1,9 @@
 package net.cinchtail.cinchcraft.item;
 
 import net.cinchtail.cinchcraft.Cinchcraft;
+import net.cinchtail.cinchcraft.block.ModBlocks;
 import net.cinchtail.cinchcraft.item.custom.CarrotSeedItem;
+import net.cinchtail.cinchcraft.item.custom.ThatchFullBlock;
 import net.minecraft.world.item.BowlFoodItem;
 import net.minecraft.world.item.HorseArmorItem;
 import net.minecraft.world.item.Item;
@@ -35,6 +37,11 @@ public class ModItems {
             () -> new BowlFoodItem(new Item.Properties().stacksTo(1).food(ModFoods.VEGETABLE_STEW)));
     public static final RegistryObject<Item> NETHER_STEW = ITEMS.register("nether_stew",
             () -> new BowlFoodItem(new Item.Properties().stacksTo(1).food(ModFoods.NETHER_STEW)));
+
+    //Block Items
+    public static final RegistryObject<Item> THATCH_BLOCK = ITEMS.register("thatch_block",
+            () -> new ThatchFullBlock(ModBlocks.THATCH_BLOCK.get(),
+                    new Item.Properties()));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
