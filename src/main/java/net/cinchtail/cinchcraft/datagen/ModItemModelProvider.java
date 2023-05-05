@@ -7,7 +7,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
-import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -26,16 +25,35 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.NETHERITE_HORSE_ARMOR);
 
         withExistingParent("smooth_stone_stairs", modLoc("block/smooth_stone_stairs"));
+        withExistingParent("smooth_stone_wall", modLoc("block/smooth_stone_wall_inventory"));
         withExistingParent("tuff_stairs", modLoc("block/tuff_stairs"));
         withExistingParent("tuff_slab", modLoc("block/tuff_slab"));
+        withExistingParent("tuff_wall", modLoc("block/tuff_wall_inventory"));
         withExistingParent("calcite_stairs", modLoc("block/calcite_stairs"));
         withExistingParent("calcite_slab", modLoc("block/calcite_slab"));
+        withExistingParent("calcite_wall", modLoc("block/calcite_wall_inventory"));
         withExistingParent("dripstone_stairs", modLoc("block/dripstone_stairs"));
         withExistingParent("dripstone_slab", modLoc("block/dripstone_slab"));
+        withExistingParent("dripstone_wall", modLoc("block/dripstone_wall_inventory"));
         withExistingParent("quartz_brick_stairs", modLoc("block/quartz_brick_stairs"));
+        withExistingParent("quartz_brick_slab", modLoc("block/quartz_brick_slab"));
+        withExistingParent("quartz_brick_wall", modLoc("block/quartz_brick_wall_inventory"));
         withExistingParent("thatch_block", modLoc("block/thatch_block"));
         withExistingParent("thatch_stairs", modLoc("block/thatch_stairs"));
         withExistingParent("thatch_slab", modLoc("block/thatch_slab"));
+        withExistingParent("stone_wall", modLoc("block/stone_wall_inventory"));
+        withExistingParent("polished_granite_wall", modLoc("block/polished_granite_wall_inventory"));
+        withExistingParent("polished_andesite_wall", modLoc("block/polished_andesite_wall_inventory"));
+        withExistingParent("polished_diorite_wall", modLoc("block/polished_diorite_wall_inventory"));
+        withExistingParent("prismarine_brick_wall", modLoc("block/prismarine_brick_wall_inventory"));
+        withExistingParent("dark_prismarine_wall", modLoc("block/dark_prismarine_wall_inventory"));
+        withExistingParent("cut_sandstone_wall", modLoc("block/cut_sandstone_wall_inventory"));
+        withExistingParent("cut_sandstone_wall", modLoc("block/cut_sandstone_wall_inventory"));
+        withExistingParent("cut_red_sandstone_wall", modLoc("block/cut_red_sandstone_wall_inventory"));
+        withExistingParent("purpur_wall", modLoc("block/purpur_wall_inventory"));
+
+
+
 
     }
 

@@ -11,8 +11,6 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
-import static net.minecraft.world.level.block.Blocks.SMOOTH_STONE;
-
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, Cinchcraft.MOD_ID, exFileHelper);
@@ -41,43 +39,39 @@ public class ModBlockStateProvider extends BlockStateProvider {
         slabBlock((SlabBlock) ModBlocks.QUARTZ_BRICK_SLAB.get(), blockTexture(Blocks.QUARTZ_BRICKS),
                 blockTexture(Blocks.QUARTZ_BRICKS));
 
-        stairsBlock((StairBlock) ModBlocks.SMOOTH_STONE_STAIRS.get(), blockTexture(SMOOTH_STONE));
+        stairsBlock((StairBlock) ModBlocks.SMOOTH_STONE_STAIRS.get(), blockTexture(Blocks.SMOOTH_STONE));
         stairsBlock((StairBlock) ModBlocks.TUFF_STAIRS.get(), blockTexture(Blocks.TUFF));
         stairsBlock((StairBlock) ModBlocks.CALCITE_STAIRS.get(), blockTexture(Blocks.CALCITE));
         stairsBlock((StairBlock) ModBlocks.DRIPSTONE_STAIRS.get(), blockTexture(Blocks.DRIPSTONE_BLOCK));
         stairsBlock((StairBlock) ModBlocks.QUARTZ_BRICK_STAIRS.get(), blockTexture(Blocks.QUARTZ_BRICKS));
 
-        modWallBlock(ModBlocks.SMOOTH_STONE_WALL, blockLoc(SMOOTH_STONE));
-        wallBlock((WallBlock) ModBlocks.STONE_WALL.get(), blockTexture(Blocks.STONE));
-        wallBlock((WallBlock) ModBlocks.POLISHED_ANDESITE_WALL.get(), blockTexture(Blocks.POLISHED_ANDESITE));
-        wallBlock((WallBlock) ModBlocks.POLISHED_GRANITE_WALL.get(), blockTexture(Blocks.POLISHED_GRANITE));
-        wallBlock((WallBlock) ModBlocks.POLISHED_DIORITE_WALL.get(), blockTexture(Blocks.POLISHED_DIORITE));
-        wallBlock((WallBlock) ModBlocks.PRISMARINE_BRICK_WALL.get(), blockTexture(Blocks.PRISMARINE_BRICKS));
-        wallBlock((WallBlock) ModBlocks.DARK_PRISMARINE_WALL.get(), blockTexture(Blocks.DARK_PRISMARINE));
-        wallBlock((WallBlock) ModBlocks.PURPUR_WALL.get(), blockTexture(Blocks.PURPUR_BLOCK));
-        wallBlock((WallBlock) ModBlocks.TUFF_WALL.get(), blockTexture(Blocks.TUFF));
-        wallBlock((WallBlock) ModBlocks.CALCITE_WALL.get(), blockTexture(Blocks.CALCITE));
-        wallBlock((WallBlock) ModBlocks.DRIPSTONE_WALL.get(), blockTexture(Blocks.DRIPSTONE_BLOCK));
-        wallBlock((WallBlock) ModBlocks.QUARTZ_BRICK_WALL.get(), blockTexture(Blocks.QUARTZ_BRICKS));
-        wallBlock((WallBlock) ModBlocks.CUT_SANDSTONE_WALL.get(), blockTexture(Blocks.CUT_SANDSTONE));
-        wallBlock((WallBlock) ModBlocks.CUT_RED_SANDSTONE_WALL.get(), blockTexture(Blocks.CUT_RED_SANDSTONE));
-
+        modWallBlock(ModBlocks.SMOOTH_STONE_WALL, blockVanillaBlockLoc(Blocks.SMOOTH_STONE));
+        modWallBlock(ModBlocks.STONE_WALL, blockVanillaBlockLoc(Blocks.STONE));
+        modWallBlock(ModBlocks.POLISHED_ANDESITE_WALL, blockVanillaBlockLoc(Blocks.POLISHED_ANDESITE));
+        modWallBlock(ModBlocks.POLISHED_DIORITE_WALL, blockVanillaBlockLoc(Blocks.POLISHED_DIORITE));
+        modWallBlock(ModBlocks.POLISHED_GRANITE_WALL, blockVanillaBlockLoc(Blocks.POLISHED_GRANITE));
+        modWallBlock(ModBlocks.PRISMARINE_BRICK_WALL, blockVanillaBlockLoc(Blocks.PRISMARINE_BRICKS));
+        modWallBlock(ModBlocks.DARK_PRISMARINE_WALL, blockVanillaBlockLoc(Blocks.DARK_PRISMARINE));
+        modWallBlock(ModBlocks.PURPUR_WALL, blockVanillaBlockLoc(Blocks.PURPUR_BLOCK));
+        modWallBlock(ModBlocks.TUFF_WALL, blockVanillaBlockLoc(Blocks.TUFF));
+        modWallBlock(ModBlocks.CALCITE_WALL, blockVanillaBlockLoc(Blocks.CALCITE));
+        modWallBlock(ModBlocks.DRIPSTONE_WALL, blockVanillaBlockLoc(Blocks.DRIPSTONE_BLOCK));
+        modWallBlock(ModBlocks.QUARTZ_BRICK_WALL, blockVanillaBlockLoc(Blocks.QUARTZ_BRICKS));
+        modWallBlock(ModBlocks.CUT_SANDSTONE_WALL, blockVanillaBlockLoc(Blocks.CUT_SANDSTONE));
+        modWallBlock(ModBlocks.CUT_RED_SANDSTONE_WALL, blockVanillaBlockLoc(Blocks.CUT_RED_SANDSTONE));
     }
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
     }
-    public void modWallBlock(Supplier<WallBlock> block, ResourceLocation texture) {
-        super.wallBlock(block.get(), texture);
+    public void modWallBlock(RegistryObject<Block> block, ResourceLocation texture) {
+        super.wallBlock((WallBlock) block.get(), texture);
         models().wallInventory(getName(block) + "_inventory", texture);
     }
 
     public String getName(Supplier<? extends Block> block) {
         return block.get().builtInRegistryHolder().key().location().getPath();
     }
-    public ResourceLocation blockLoc(Supplier<? extends Block> block) {
-        return new ResourceLocation(Cinchcraft.MOD_ID, "block/" + getName(block));
+    public ResourceLocation blockVanillaBlockLoc(Block block) {
+        return new ResourceLocation("block/" + block.asItem().toString());
     }
-    //private void wallBlock(BlockModelBuilder wallInventory,  ResourceLocation texture) {
-        //wallBlock(models().wallInventory(blockPath + "_inventory", texture));
-    //}
 }
