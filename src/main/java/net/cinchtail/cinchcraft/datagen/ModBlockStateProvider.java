@@ -12,7 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
-import net.minecraft.world.level.block.Blocks.
+import net.minecraft.world.level.block.Blocks.SMOOTH_STONE;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
