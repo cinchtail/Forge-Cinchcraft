@@ -23,7 +23,6 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, Cinchcraft.MOD_ID);
 
-
     //Ores
     public static final RegistryObject<Block> RUBY_ORE = registerBlock("ruby_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4f).requiresCorrectToolForDrops(),
@@ -146,7 +145,8 @@ public class ModBlocks {
                     .strength(1f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final RegistryObject<Block> END_STONE_STAIRS = registerBlock("end_stone_stairs",
             () -> new StairBlock(() -> ModBlocks.SMOOTH_STONE_STAIRS.get().defaultBlockState(),
-                    BlockBehaviour.Properties.of(Material.STONE).strength(3.0F, 9.0F).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+                    BlockBehaviour.Properties.of(Material.STONE).strength(3.0F, 9.0F)
+                            .requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final RegistryObject<Block> END_STONE_SLAB = registerBlock("end_stone_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(3.0F, 9.0F).requiresCorrectToolForDrops().sound(SoundType.STONE)));

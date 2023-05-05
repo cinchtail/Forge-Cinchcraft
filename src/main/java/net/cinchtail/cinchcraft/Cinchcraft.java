@@ -221,6 +221,7 @@ public class Cinchcraft
             //event.accept(ModBlocks.IRON_BUTTON);
             //event.accept(ModBlocks.GOLD_BUTTON);
             //event.accept(ModBlocks.PERMAFROST);
+            event.accept(ModBlocks.CARVED_MELON);
             //event.accept(ModBlocks.ICICLE);
             //event.accept(ModItems.FIRE_FERN);
             //event.accept(ModBlocks.BUBBLE_FLOWER);
