@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "cinchcraft:thatch_block"
+    "cinchcraft:thatch_block",
+    "cinchcraft:thatch_stairs",
+    "cinchcraft:thatch_slab"
   ]
 }

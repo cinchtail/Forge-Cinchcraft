@@ -3,10 +3,16 @@ package net.cinchtail.cinchcraft.datagen;
 import net.cinchtail.cinchcraft.Cinchcraft;
 import net.cinchtail.cinchcraft.block.ModBlocks;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
+import net.minecraftforge.client.model.generators.BlockModelBuilder;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.function.Supplier;
+
+import net.minecraft.world.level.block.Blocks.
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -42,7 +48,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock((StairBlock) ModBlocks.DRIPSTONE_STAIRS.get(), blockTexture(Blocks.DRIPSTONE_BLOCK));
         stairsBlock((StairBlock) ModBlocks.QUARTZ_BRICK_STAIRS.get(), blockTexture(Blocks.QUARTZ_BRICKS));
 
-        wallBlock((WallBlock) ModBlocks.SMOOTH_STONE_WALL.get(), blockTexture(Blocks.SMOOTH_STONE));
+        modWallBlock(ModBlocks.SMOOTH_STONE_WALL, blockLoc(SMOOTH_STONE));
         wallBlock((WallBlock) ModBlocks.STONE_WALL.get(), blockTexture(Blocks.STONE));
         wallBlock((WallBlock) ModBlocks.POLISHED_ANDESITE_WALL.get(), blockTexture(Blocks.POLISHED_ANDESITE));
         wallBlock((WallBlock) ModBlocks.POLISHED_GRANITE_WALL.get(), blockTexture(Blocks.POLISHED_GRANITE));
@@ -61,4 +67,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
     }
+    public void modWallBlock(Supplier<WallBlock> block, ResourceLocation texture) {
+        super.wallBlock(block.get(), texture);
+        models().wallInventory(getName(block) + "_inventory", texture);
+    }
+
+    public String getName(Supplier<? extends Block> block) {
+        return block.get().builtInRegistryHolder().key().location().getPath();
+    }
+    public ResourceLocation blockLoc(Supplier<? extends Block> block) {
+        return new ResourceLocation(Cinchcraft.MOD_ID, "block/" + getName(block));
+    }
+    //private void wallBlock(BlockModelBuilder wallInventory,  ResourceLocation texture) {
+        //wallBlock(models().wallInventory(blockPath + "_inventory", texture));
+    //}
 }

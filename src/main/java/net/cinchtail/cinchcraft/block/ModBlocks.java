@@ -157,6 +157,12 @@ public class ModBlocks {
     //New Block Sets
     public static final RegistryObject<Block> THATCH_BLOCK = BLOCKS.register("thatch_block",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK)));
+    public static final RegistryObject<Block> THATCH_STAIRS = BLOCKS.register("thatch_stairs",
+            () -> new StairBlock(() -> ModBlocks.SMOOTH_SANDSTONE_WALL.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of(Material.GRASS).strength(.5f).sound(SoundType.GRASS)));
+    public static final RegistryObject<Block> THATCH_SLAB = BLOCKS.register("thatch_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.GRASS)
+                    .strength(.5f).sound(SoundType.GRASS)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

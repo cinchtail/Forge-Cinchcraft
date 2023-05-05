@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "cinchcraft:block/thatch_slab"
+    },
+    "type=double": {
+      "model": "cinchcraft:block/thatch_block"
+    },
+    "type=top": {
+      "model": "cinchcraft:block/thatch_slab_top"
+    }
+  }
+}

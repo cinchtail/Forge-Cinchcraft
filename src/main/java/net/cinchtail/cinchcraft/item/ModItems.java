@@ -4,6 +4,8 @@ import net.cinchtail.cinchcraft.Cinchcraft;
 import net.cinchtail.cinchcraft.block.ModBlocks;
 import net.cinchtail.cinchcraft.item.custom.CarrotSeedItem;
 import net.cinchtail.cinchcraft.item.custom.ThatchFullBlock;
+import net.cinchtail.cinchcraft.item.custom.ThatchSlabBlock;
+import net.cinchtail.cinchcraft.item.custom.ThatchStairsBlock;
 import net.minecraft.world.item.BowlFoodItem;
 import net.minecraft.world.item.HorseArmorItem;
 import net.minecraft.world.item.Item;
@@ -41,6 +43,12 @@ public class ModItems {
     //Block Items
     public static final RegistryObject<Item> THATCH_BLOCK = ITEMS.register("thatch_block",
             () -> new ThatchFullBlock(ModBlocks.THATCH_BLOCK.get(),
+                    new Item.Properties()));
+    public static final RegistryObject<Item> THATCH_STAIRS = ITEMS.register("thatch_stairs",
+            () -> new ThatchStairsBlock(ModBlocks.THATCH_STAIRS.get(),
+                    new Item.Properties()));
+    public static final RegistryObject<Item> THATCH_SLAB = ITEMS.register("thatch_slab",
+            () -> new ThatchSlabBlock(ModBlocks.THATCH_SLAB.get(),
                     new Item.Properties()));
 
     public static void register(IEventBus eventBus){

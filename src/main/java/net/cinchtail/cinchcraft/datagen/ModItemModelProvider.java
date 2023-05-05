@@ -33,7 +33,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("dripstone_stairs", modLoc("block/dripstone_stairs"));
         withExistingParent("dripstone_slab", modLoc("block/dripstone_slab"));
         withExistingParent("quartz_brick_stairs", modLoc("block/quartz_brick_stairs"));
-        withExistingParent("quartz_brick_slab", modLoc("block/quartz_brick_slab"));
+        withExistingParent("thatch_block", modLoc("block/thatch_block"));
+        withExistingParent("thatch_stairs", modLoc("block/thatch_stairs"));
+        withExistingParent("thatch_slab", modLoc("block/thatch_slab"));
 
     }
 
