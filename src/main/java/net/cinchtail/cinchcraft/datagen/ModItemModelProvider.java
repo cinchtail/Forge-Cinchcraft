@@ -24,6 +24,18 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.NETHER_STEW);
         simpleItem(ModItems.NETHERITE_HORSE_ARMOR);
 
+        handheldItem(ModItems.DEEPSLATE_SWORD);
+        handheldItem(ModItems.DEEPSLATE_PICKAXE);
+        handheldItem(ModItems.DEEPSLATE_AXE);
+        handheldItem(ModItems.DEEPSLATE_SHOVEL);
+        handheldItem(ModItems.DEEPSLATE_HOE);
+        handheldItem(ModItems.BLACKSTONE_SWORD);
+        handheldItem(ModItems.BLACKSTONE_PICKAXE);
+        handheldItem(ModItems.BLACKSTONE_AXE);
+        handheldItem(ModItems.BLACKSTONE_SHOVEL);
+        handheldItem(ModItems.BLACKSTONE_HOE);
+
+
         withExistingParent("smooth_stone_stairs", modLoc("block/smooth_stone_stairs"));
         withExistingParent("smooth_stone_wall", modLoc("block/smooth_stone_wall_inventory"));
         withExistingParent("tuff_stairs", modLoc("block/tuff_stairs"));
@@ -51,18 +63,19 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("cut_sandstone_wall", modLoc("block/cut_sandstone_wall_inventory"));
         withExistingParent("cut_red_sandstone_wall", modLoc("block/cut_red_sandstone_wall_inventory"));
         withExistingParent("purpur_wall", modLoc("block/purpur_wall_inventory"));
+        withExistingParent("end_stone_stairs", modLoc("block/end_stone_stairs"));
+        withExistingParent("end_stone_slab", modLoc("block/end_stone_slab"));
+        withExistingParent("end_stone_wall", modLoc("block/end_stone_wall_inventory"));
 
 
 
 
     }
-
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(Cinchcraft.MOD_ID,"item/" + item.getId().getPath()));
     }
-
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/handheld")).texture("layer0",

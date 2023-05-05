@@ -38,12 +38,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 blockTexture(Blocks.DRIPSTONE_BLOCK));
         slabBlock((SlabBlock) ModBlocks.QUARTZ_BRICK_SLAB.get(), blockTexture(Blocks.QUARTZ_BRICKS),
                 blockTexture(Blocks.QUARTZ_BRICKS));
+        slabBlock((SlabBlock) ModBlocks.END_STONE_SLAB.get(), blockTexture(Blocks.END_STONE),
+                blockTexture(Blocks.END_STONE));
 
         stairsBlock((StairBlock) ModBlocks.SMOOTH_STONE_STAIRS.get(), blockTexture(Blocks.SMOOTH_STONE));
         stairsBlock((StairBlock) ModBlocks.TUFF_STAIRS.get(), blockTexture(Blocks.TUFF));
         stairsBlock((StairBlock) ModBlocks.CALCITE_STAIRS.get(), blockTexture(Blocks.CALCITE));
         stairsBlock((StairBlock) ModBlocks.DRIPSTONE_STAIRS.get(), blockTexture(Blocks.DRIPSTONE_BLOCK));
         stairsBlock((StairBlock) ModBlocks.QUARTZ_BRICK_STAIRS.get(), blockTexture(Blocks.QUARTZ_BRICKS));
+        stairsBlock((StairBlock) ModBlocks.END_STONE_STAIRS.get(), blockTexture(Blocks.END_STONE));
 
         modWallBlock(ModBlocks.SMOOTH_STONE_WALL, blockVanillaBlockLoc(Blocks.SMOOTH_STONE));
         modWallBlock(ModBlocks.STONE_WALL, blockVanillaBlockLoc(Blocks.STONE));
@@ -59,6 +62,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         modWallBlock(ModBlocks.QUARTZ_BRICK_WALL, blockVanillaBlockLoc(Blocks.QUARTZ_BRICKS));
         modWallBlock(ModBlocks.CUT_SANDSTONE_WALL, blockVanillaBlockLoc(Blocks.CUT_SANDSTONE));
         modWallBlock(ModBlocks.CUT_RED_SANDSTONE_WALL, blockVanillaBlockLoc(Blocks.CUT_RED_SANDSTONE));
+        modWallBlock(ModBlocks.END_STONE_WALL, blockVanillaBlockLoc(Blocks.END_STONE));
     }
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));

@@ -1,4 +1,9 @@
-// 1.19.4	2023-05-05T13:11:55.1357218	Item Models: cinchcraft
+// 1.19.4	2023-05-05T15:21:30.8007216	Item Models: cinchcraft
+1c90b5f18401efcc168cf75aad20b84b9f739d50 assets/cinchcraft/models/item/blackstone_axe.json
+c4e0813bbff9221790d53c7968580579b0dbd043 assets/cinchcraft/models/item/blackstone_hoe.json
+88b8a4e53315dd0b2604b6bd7b98f1553f5a5bbd assets/cinchcraft/models/item/blackstone_pickaxe.json
+15237a975009043736e511153ec0fcc030993ca6 assets/cinchcraft/models/item/blackstone_shovel.json
+4a63dda03df42f7606752f4e899c8e76a8aaa82e assets/cinchcraft/models/item/blackstone_sword.json
 07c6dbc9c31ce95e6ffe96c825941d17467bc4bd assets/cinchcraft/models/item/calcite_slab.json
 ee1daea6515585ef27a4bfa788889485a42a0ff7 assets/cinchcraft/models/item/calcite_stairs.json
 574b7c9b149ebed2e8ab78c2e16df561bccf8898 assets/cinchcraft/models/item/calcite_wall.json
@@ -7,9 +12,17 @@ d8a52c63d48d99d8d379d54f5888156c8b60cc28 assets/cinchcraft/models/item/copper_nu
 b6e0b504eba3fb346870e282e98232ce9d41c683 assets/cinchcraft/models/item/cut_red_sandstone_wall.json
 635c7b977e72addfc35b13041f09985e41e6e334 assets/cinchcraft/models/item/cut_sandstone_wall.json
 611978c0bbead0bb37e92ad9eaeeb99737aa7414 assets/cinchcraft/models/item/dark_prismarine_wall.json
+b105ea96288dfa464c472f7361fae504ae173e71 assets/cinchcraft/models/item/deepslate_axe.json
+1cba746679b1d35e7f0ab487105179ef655788ca assets/cinchcraft/models/item/deepslate_hoe.json
+de33ac31f12f41b997828b115d21ef6fe52c6589 assets/cinchcraft/models/item/deepslate_pickaxe.json
+d989c39acc3d48f8c836a7227f76d83607b43de6 assets/cinchcraft/models/item/deepslate_shovel.json
+4daf6fee956534ffb1d582eef7c93cd09197c05c assets/cinchcraft/models/item/deepslate_sword.json
 feac18884b1a446438f8aa2a2a15c8538e0e2a78 assets/cinchcraft/models/item/dripstone_slab.json
 81a709d698817453e9e501472745329159160d8c assets/cinchcraft/models/item/dripstone_stairs.json
 a2e5fffd4cdcdbdd20703ccc7d2e6517f199a0b4 assets/cinchcraft/models/item/dripstone_wall.json
+bf4895a7763d6af76f4cd14c644214c192dc8491 assets/cinchcraft/models/item/end_stone_slab.json
+9d6ce5eb80a5708e9dbcd32237af705a2c8e0e5f assets/cinchcraft/models/item/end_stone_stairs.json
+09d59b3d26bde1ddc6e88fd7d62c18533fc46969 assets/cinchcraft/models/item/end_stone_wall.json
 84fea0bbbaccac220bd591e8a276b217a8397420 assets/cinchcraft/models/item/netherite_horse_armor.json
 4f889d219574e0d6ff818d02aa5e0a20a9fca3c2 assets/cinchcraft/models/item/nether_stew.json
 63145a80adea253600ad20c418d931896f570c55 assets/cinchcraft/models/item/polished_andesite_wall.json

@@ -40,6 +40,9 @@
     "cinchcraft:dripstone_stairs",
     "cinchcraft:quartz_brick_wall",
     "cinchcraft:quartz_brick_slab",
-    "cinchcraft:quartz_brick_stairs"
+    "cinchcraft:quartz_brick_stairs",
+    "cinchcraft:end_stone_wall",
+    "cinchcraft:end_stone_slab",
+    "cinchcraft:end_stone_stairs"
   ]
 }

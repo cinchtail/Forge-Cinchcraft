@@ -6,9 +6,7 @@ import net.cinchtail.cinchcraft.item.custom.CarrotSeedItem;
 import net.cinchtail.cinchcraft.item.custom.ThatchFullBlock;
 import net.cinchtail.cinchcraft.item.custom.ThatchSlabBlock;
 import net.cinchtail.cinchcraft.item.custom.ThatchStairsBlock;
-import net.minecraft.world.item.BowlFoodItem;
-import net.minecraft.world.item.HorseArmorItem;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -39,6 +37,40 @@ public class ModItems {
             () -> new BowlFoodItem(new Item.Properties().stacksTo(1).food(ModFoods.VEGETABLE_STEW)));
     public static final RegistryObject<Item> NETHER_STEW = ITEMS.register("nether_stew",
             () -> new BowlFoodItem(new Item.Properties().stacksTo(1).food(ModFoods.NETHER_STEW)));
+
+
+    //Tools and Weapons
+    public static final RegistryObject<Item> BLACKSTONE_SWORD = ITEMS.register("blackstone_sword",
+            () -> new SwordItem(ModTiers.BLACKSTONE,3, -2.4f,
+                    new Item.Properties()));
+    public static final RegistryObject<Item> BLACKSTONE_PICKAXE = ITEMS.register("blackstone_pickaxe",
+            () -> new PickaxeItem(ModTiers.BLACKSTONE,1, -2.8f,
+                    new Item.Properties()));
+    public static final RegistryObject<Item> BLACKSTONE_AXE = ITEMS.register("blackstone_axe",
+            () -> new AxeItem(ModTiers.BLACKSTONE,7, -3.2f,
+                    new Item.Properties()));
+    public static final RegistryObject<Item> BLACKSTONE_SHOVEL = ITEMS.register("blackstone_shovel",
+            () -> new ShovelItem(ModTiers.BLACKSTONE,1, -3f,
+                    new Item.Properties()));
+    public static final RegistryObject<Item> BLACKSTONE_HOE = ITEMS.register("blackstone_hoe",
+            () -> new HoeItem(ModTiers.BLACKSTONE,-1, -2f,
+                    new Item.Properties()));
+    public static final RegistryObject<Item> DEEPSLATE_SWORD = ITEMS.register("deepslate_sword",
+            () -> new SwordItem(ModTiers.DEEPSLATE,3, -2.4f,
+                    new Item.Properties()));
+    public static final RegistryObject<Item> DEEPSLATE_PICKAXE = ITEMS.register("deepslate_pickaxe",
+            () -> new PickaxeItem(ModTiers.DEEPSLATE,1, -2.8f,
+                    new Item.Properties()));
+    public static final RegistryObject<Item> DEEPSLATE_AXE = ITEMS.register("deepslate_axe",
+            () -> new AxeItem(ModTiers.DEEPSLATE,7, -3.2f,
+                    new Item.Properties()));
+    public static final RegistryObject<Item> DEEPSLATE_SHOVEL = ITEMS.register("deepslate_shovel",
+            () -> new ShovelItem(ModTiers.DEEPSLATE,1, -3f,
+                    new Item.Properties()));
+    public static final RegistryObject<Item> DEEPSLATE_HOE = ITEMS.register("deepslate_hoe",
+            () -> new HoeItem(ModTiers.DEEPSLATE,-1, -2f,
+                    new Item.Properties()));
+
 
     //Block Items
     public static final RegistryObject<Item> THATCH_BLOCK = ITEMS.register("thatch_block",
