@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "building",
+  "ingredients": [
+    {
+      "item": "cinchcraft:thatch_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "cinchcraft:reeds"
+  }
+}
