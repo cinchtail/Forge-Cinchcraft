@@ -29,6 +29,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.NETHER_REDSTONE_ORE);
         blockWithItem(ModBlocks.NETHER_DIAMOND_ORE);
         blockWithItem(ModBlocks.NETHER_EMERALD_ORE);
+        blockWithItem(ModBlocks.CHISELED_END_STONE_BRICKS);
 
         slabBlock((SlabBlock) ModBlocks.TUFF_SLAB.get(), blockTexture(Blocks.TUFF),
                 blockTexture(Blocks.TUFF));

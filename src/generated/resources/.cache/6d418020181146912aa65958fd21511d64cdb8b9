@@ -1,8 +1,9 @@
-// 1.19.4	2023-05-05T15:10:42.6428204	Block States: cinchcraft
+// 1.19.4	2023-05-05T17:54:55.1695672	Block States: cinchcraft
 f11bd51ce93467b2ba8364b304367f7cec9bdded assets/cinchcraft/blockstates/block_of_ruby.json
 572a9fc390f1034f3b74accd88bcbddd9e755e95 assets/cinchcraft/blockstates/calcite_slab.json
 e2c4cf035c154522e443b639e851c872dd7ea69d assets/cinchcraft/blockstates/calcite_stairs.json
 4a64586a8d40397cdfdc1592caefaa4aac97820b assets/cinchcraft/blockstates/calcite_wall.json
+6ef2d72df1fb66d20378f3684af016d5b8061cc9 assets/cinchcraft/blockstates/chiseled_end_stone_bricks.json
 6771bf1ae7290f3d0f2da6a321ad61528024fff2 assets/cinchcraft/blockstates/cut_red_sandstone_wall.json
 19ca2dcfec3a139d055738eaee46162cfff99523 assets/cinchcraft/blockstates/cut_sandstone_wall.json
 3786263870cf3fedd55c487cc4b42dd08a3af7a7 assets/cinchcraft/blockstates/dark_prismarine_wall.json
@@ -46,6 +47,7 @@ a85f076ec716e06c9dba328f508dbf2fde46ae6d assets/cinchcraft/models/block/calcite_
 34a5c094db05cd118925a91d420313e16e5d678c assets/cinchcraft/models/block/calcite_wall_post.json
 4bf348805d045b1700a46c148bffb43ac32a20cc assets/cinchcraft/models/block/calcite_wall_side.json
 42c6ad051abaa26727fcbfe7d003f39b358cff9a assets/cinchcraft/models/block/calcite_wall_side_tall.json
+092b732222bedcae65f8c7d29debc8c949101c35 assets/cinchcraft/models/block/chiseled_end_stone_bricks.json
 6053966085f33e3fbd11b9c38d80599a9f04f147 assets/cinchcraft/models/block/cut_red_sandstone_wall_inventory.json
 b7240b665f600757f6d01fe2a6d77a8e30b7c6ba assets/cinchcraft/models/block/cut_red_sandstone_wall_post.json
 22a4ac46036bdbd0beddff8a726c81810b2b076d assets/cinchcraft/models/block/cut_red_sandstone_wall_side.json
@@ -136,6 +138,7 @@ a1ab0e8a4b87be741d8f69004f44a26b9918b2b1 assets/cinchcraft/models/block/tuff_wal
 e40a77e4fd1d701399fa7527fff79cb0bb7948e7 assets/cinchcraft/models/block/tuff_wall_side.json
 473e34e18f20fb943cb44d1b69673057b997af6c assets/cinchcraft/models/block/tuff_wall_side_tall.json
 907c7066e5d72f4599e37728c40e3bf97b14d713 assets/cinchcraft/models/item/block_of_ruby.json
+a90e047a139a699fbb5b26b467cc50d6ff30f8b1 assets/cinchcraft/models/item/chiseled_end_stone_bricks.json
 69de2e70589bd261002da0cccbc7af8adbed985a assets/cinchcraft/models/item/deepslate_ruby_ore.json
 f990f16045d69d84a5b2f442063ed2a439c36fc8 assets/cinchcraft/models/item/nether_coal_ore.json
 62868cd311ecfd5434bef4fc6c9fe6835ebadb50 assets/cinchcraft/models/item/nether_copper_ore.json

@@ -143,6 +143,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> QUARTZ_BRICK_WALL = registerBlock("quartz_brick_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(1f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final RegistryObject<Block> CHISELED_END_STONE_BRICKS = registerBlock("chiseled_end_stone_bricks",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(3.0F, 9.0F).sound(SoundType.STONE)));
     public static final RegistryObject<Block> END_STONE_STAIRS = registerBlock("end_stone_stairs",
             () -> new StairBlock(() -> ModBlocks.SMOOTH_STONE_STAIRS.get().defaultBlockState(),
                     BlockBehaviour.Properties.of(Material.STONE).strength(3.0F, 9.0F)

@@ -131,7 +131,7 @@ public class Cinchcraft
             event.accept(ModBlocks.QUARTZ_BRICK_STAIRS);
             event.accept(ModBlocks.QUARTZ_BRICK_SLAB);
             event.accept(ModBlocks.QUARTZ_BRICK_WALL);
-            //event.accept(ModBlocks.CHISELED_END_STONE_BRICKS);
+            event.accept(ModBlocks.CHISELED_END_STONE_BRICKS);
             event.accept(ModBlocks.END_STONE_STAIRS);
             event.accept(ModBlocks.END_STONE_SLAB);
             event.accept(ModBlocks.END_STONE_WALL);

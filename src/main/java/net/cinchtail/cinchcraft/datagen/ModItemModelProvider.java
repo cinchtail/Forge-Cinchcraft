@@ -66,6 +66,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("end_stone_stairs", modLoc("block/end_stone_stairs"));
         withExistingParent("end_stone_slab", modLoc("block/end_stone_slab"));
         withExistingParent("end_stone_wall", modLoc("block/end_stone_wall_inventory"));
+        withExistingParent("chiseled_end_stone_bricks", modLoc("block/chiseled_end_stone_bricks"));
 
 
 
