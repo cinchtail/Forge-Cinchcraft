@@ -1,10 +1,7 @@
 package net.cinchtail.cinchcraft.block;
 
 import net.cinchtail.cinchcraft.Cinchcraft;
-import net.cinchtail.cinchcraft.block.custom.CarvedMelonBlock;
-import net.cinchtail.cinchcraft.block.custom.ModFlammableRotatedPillarBlock;
-import net.cinchtail.cinchcraft.block.custom.NetherRedStoneOreBlock;
-import net.cinchtail.cinchcraft.block.custom.ReedsBlock;
+import net.cinchtail.cinchcraft.block.custom.*;
 import net.cinchtail.cinchcraft.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -171,6 +168,12 @@ public class ModBlocks {
     //Plants
     public static final RegistryObject<Block> REEDS = registerBlock("reeds",
             () -> new ReedsBlock(BlockBehaviour.Properties.copy(Blocks.LILAC).sound(SoundType.SMALL_DRIPLEAF)));
+
+
+    //Crops
+    public static final RegistryObject<Block> BLUEBERRY_BUSH = BLOCKS.register("blueberry_bush",
+            () -> new BlueBerryBushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH).noOcclusion().sound(SoundType.SWEET_BERRY_BUSH)));
+
 
     //New Block Sets
     public static final RegistryObject<Block> THATCH_BLOCK = BLOCKS.register("thatch_block",
