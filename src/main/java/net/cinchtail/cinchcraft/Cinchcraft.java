@@ -10,14 +10,10 @@ import net.cinchtail.cinchcraft.item.ModItems;
 import net.cinchtail.cinchcraft.potion.ModPotions;
 import net.cinchtail.cinchcraft.util.BetterBrewingRecipe;
 import net.cinchtail.cinchcraft.world.biomemods.ModBiomeModifiers;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.alchemy.PotionBrewing;
-import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
-import net.minecraftforge.common.brewing.IBrewingRecipe;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -147,9 +143,9 @@ public class Cinchcraft
             //event.accept(ModBlocks.MOSSY_DEEPSLATE_TILE_STAIRS);
             //event.accept(ModBlocks.MOSSY_DEEPSLATE_TILE_SLAB);
             //event.accept(ModBlocks.MOSSY_DEEPSLATE_TILE_WALL);
-            //event.accept(ModBlocks.CHISELED_RED_NETHER_BRICKS);
-            //event.accept(ModBlocks.CRACKED_RED_NETHER_BRICKS);
-            //event.accept(ModBlocks.RED_NETHER_BRICK_FENCE);
+            event.accept(ModBlocks.CHISELED_RED_NETHER_BRICKS);
+            event.accept(ModBlocks.CRACKED_RED_NETHER_BRICKS);
+            event.accept(ModBlocks.RED_NETHER_BRICK_FENCE);
             //event.accept(ModBlocks.MOSSY_NETHER_BRICKS);
             //event.accept(ModBlocks.MOSSY_NETHER_BRICK_STAIRS);
             //event.accept(ModBlocks.MOSSY_NETHER_BRICK_SLAB);
@@ -232,7 +228,6 @@ public class Cinchcraft
             //event.accept(ModBlocks.SMALL_CACTUS);
             event.accept(ModBlocks.REEDS);
             //event.accept(ModItems.STALK);
-            //event.accept(ModBlocks.NETHER_BRICK_FURNACE);
         }
         if(event.getTab() == ModCreativeModeTabItems.CINCHCRAFT_ITEM_TAB) {
             //event.accept(ModItems.RUBY_SWORD);

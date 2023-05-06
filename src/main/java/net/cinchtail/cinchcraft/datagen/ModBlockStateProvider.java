@@ -30,6 +30,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.NETHER_DIAMOND_ORE);
         blockWithItem(ModBlocks.NETHER_EMERALD_ORE);
         blockWithItem(ModBlocks.CHISELED_END_STONE_BRICKS);
+        blockWithItem(ModBlocks.CHISELED_RED_NETHER_BRICKS);
+        blockWithItem(ModBlocks.CRACKED_RED_NETHER_BRICKS);
 
         slabBlock((SlabBlock) ModBlocks.TUFF_SLAB.get(), blockTexture(Blocks.TUFF),
                 blockTexture(Blocks.TUFF));
@@ -77,6 +79,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         return block.get().builtInRegistryHolder().key().location().getPath();
     }
     public ResourceLocation blockVanillaBlockLoc(Block block) {
-        return new ResourceLocation("block/" + block.asItem().toString());
+        return new ResourceLocation("block/" + block.asItem());
     }
 }

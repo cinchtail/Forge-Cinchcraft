@@ -1,4 +1,4 @@
-// 1.19.4	2023-05-05T17:54:55.1675667	Item Models: cinchcraft
+// 1.19.4	2023-05-06T15:05:31.1135392	Item Models: cinchcraft
 1c90b5f18401efcc168cf75aad20b84b9f739d50 assets/cinchcraft/models/item/blackstone_axe.json
 c4e0813bbff9221790d53c7968580579b0dbd043 assets/cinchcraft/models/item/blackstone_hoe.json
 88b8a4e53315dd0b2604b6bd7b98f1553f5a5bbd assets/cinchcraft/models/item/blackstone_pickaxe.json
@@ -9,7 +9,9 @@ ee1daea6515585ef27a4bfa788889485a42a0ff7 assets/cinchcraft/models/item/calcite_s
 574b7c9b149ebed2e8ab78c2e16df561bccf8898 assets/cinchcraft/models/item/calcite_wall.json
 59a03ac82bee2a421b032bae05b3834d92e0fd63 assets/cinchcraft/models/item/carrot_seeds.json
 a90e047a139a699fbb5b26b467cc50d6ff30f8b1 assets/cinchcraft/models/item/chiseled_end_stone_bricks.json
+c95630241d6c7b0a0dd0279261a1a9c13ceea4b9 assets/cinchcraft/models/item/chiseled_red_nether_bricks.json
 d8a52c63d48d99d8d379d54f5888156c8b60cc28 assets/cinchcraft/models/item/copper_nugget.json
+3ecf8890df357cbea53d89de8bc4abf68e047e87 assets/cinchcraft/models/item/cracked_red_nether_bricks.json
 b6e0b504eba3fb346870e282e98232ce9d41c683 assets/cinchcraft/models/item/cut_red_sandstone_wall.json
 635c7b977e72addfc35b13041f09985e41e6e334 assets/cinchcraft/models/item/cut_sandstone_wall.json
 611978c0bbead0bb37e92ad9eaeeb99737aa7414 assets/cinchcraft/models/item/dark_prismarine_wall.json
@@ -34,6 +36,7 @@ f5740f371800524f655e771c2d26d0ac9ef02a24 assets/cinchcraft/models/item/prismarin
 eb47064ae36daa661ebd44fa1cbb1b45b33090b0 assets/cinchcraft/models/item/quartz_brick_slab.json
 12b50ee784483be4869ade98118e6f9aa21fe59e assets/cinchcraft/models/item/quartz_brick_stairs.json
 bfb53ab740d50fda48ce3319fbc36d6c6a21d6ac assets/cinchcraft/models/item/quartz_brick_wall.json
+16ff278c0facdc8b6bddb22702fa7eb7706c7f01 assets/cinchcraft/models/item/red_nether_brick_fence.json
 1d6e5a1eadf70ec6b8e042ee01396c80a7c20cf3 assets/cinchcraft/models/item/ruby.json
 e09a1a73a1bb2df5a3ef49972f37a62f87ac904c assets/cinchcraft/models/item/smooth_stone_stairs.json
 7930ebfcd95eef8982eaffa8369685f19fd68ac5 assets/cinchcraft/models/item/smooth_stone_wall.json

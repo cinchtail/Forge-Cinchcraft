@@ -44,6 +44,9 @@
     "cinchcraft:end_stone_wall",
     "cinchcraft:end_stone_slab",
     "cinchcraft:end_stone_stairs",
-    "cinchcraft:chiseled_end_stone_bricks"
+    "cinchcraft:chiseled_end_stone_bricks",
+    "cinchcraft:red_nether_brick_fence",
+    "cinchcraft:chiseled_red_nether_bricks",
+    "cinchcraft:cracked_red_nether_bricks"
   ]
 }
