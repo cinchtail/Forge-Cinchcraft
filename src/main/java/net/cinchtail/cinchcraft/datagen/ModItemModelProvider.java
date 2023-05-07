@@ -25,6 +25,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.NETHERITE_HORSE_ARMOR);
         simpleItem(ModItems.BLUEBERRIES);
         simpleItem(ModItems.BLUEBERRY_PIE);
+        simpleItem(ModItems.PINEAPPLE);
 
         handheldItem(ModItems.DEEPSLATE_SWORD);
         handheldItem(ModItems.DEEPSLATE_PICKAXE);
