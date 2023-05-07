@@ -12,6 +12,8 @@ import net.cinchtail.cinchcraft.util.BetterBrewingRecipe;
 import net.cinchtail.cinchcraft.world.biomemods.ModBiomeModifiers;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potions;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -66,6 +68,11 @@ public class Cinchcraft
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             event.enqueueWork(() -> {
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.BUTTER_CUP.getId(), ModBlocks.POTTED_BUTTER_CUP);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.SMALL_ROSE.getId(), ModBlocks.POTTED_SMALL_ROSE);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CROCUS.getId(), ModBlocks.POTTED_CROCUS);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.ALYSSUM.getId(), ModBlocks.POTTED_ALYSSUM);
+
                 BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
                         Items.GLOW_BERRIES, ModPotions.GLOWING_POTION.get()));
                 BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
@@ -220,11 +227,11 @@ public class Cinchcraft
             event.accept(ModBlocks.CARVED_MELON);
             //event.accept(ModBlocks.ICICLE);
             //event.accept(ModItems.FIRE_FERN);
-            //event.accept(ModBlocks.BUBBLE_FLOWER);
-            //event.accept(ModBlocks.BUTTER_CUP);
-            //event.accept(ModBlocks.CROCUS);
-            //event.accept(ModBlocks.ALYSSUM);
-            //event.accept(ModBlocks.SMALL_ROSE);
+            event.accept(ModBlocks.BUBBLE_FLOWER);
+            event.accept(ModBlocks.BUTTER_CUP);
+            event.accept(ModBlocks.CROCUS);
+            event.accept(ModBlocks.ALYSSUM);
+            event.accept(ModBlocks.SMALL_ROSE);
             //event.accept(ModBlocks.SMALL_CACTUS);
             event.accept(ModBlocks.REEDS);
             //event.accept(ModItems.STALK);
