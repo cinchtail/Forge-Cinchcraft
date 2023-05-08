@@ -1,4 +1,4 @@
-// 1.19.4	2023-05-07T15:03:42.7705206	Item Models: cinchcraft
+// 1.19.4	2023-05-07T20:56:46.6991665	Item Models: cinchcraft
 1c90b5f18401efcc168cf75aad20b84b9f739d50 assets/cinchcraft/models/item/blackstone_axe.json
 c4e0813bbff9221790d53c7968580579b0dbd043 assets/cinchcraft/models/item/blackstone_hoe.json
 88b8a4e53315dd0b2604b6bd7b98f1553f5a5bbd assets/cinchcraft/models/item/blackstone_pickaxe.json
@@ -27,6 +27,9 @@ a2e5fffd4cdcdbdd20703ccc7d2e6517f199a0b4 assets/cinchcraft/models/item/dripstone
 bf4895a7763d6af76f4cd14c644214c192dc8491 assets/cinchcraft/models/item/end_stone_slab.json
 9d6ce5eb80a5708e9dbcd32237af705a2c8e0e5f assets/cinchcraft/models/item/end_stone_stairs.json
 09d59b3d26bde1ddc6e88fd7d62c18533fc46969 assets/cinchcraft/models/item/end_stone_wall.json
+416936f2c52c9cd91d5749f60195d8e88772a7a8 assets/cinchcraft/models/item/mossy_mud_brick_slab.json
+69739f30ec97d57d6513700498a634763b536f64 assets/cinchcraft/models/item/mossy_mud_brick_stairs.json
+446cb5aa9a23da97896af9a1b4abd435fda9272e assets/cinchcraft/models/item/mossy_mud_brick_wall.json
 84fea0bbbaccac220bd591e8a276b217a8397420 assets/cinchcraft/models/item/netherite_horse_armor.json
 4f889d219574e0d6ff818d02aa5e0a20a9fca3c2 assets/cinchcraft/models/item/nether_stew.json
 3f6b83024137c455c59b715d98cd219ebad41396 assets/cinchcraft/models/item/pineapple.json

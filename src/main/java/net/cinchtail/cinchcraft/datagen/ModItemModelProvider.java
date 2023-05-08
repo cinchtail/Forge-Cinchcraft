@@ -5,7 +5,6 @@ import net.cinchtail.cinchcraft.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
@@ -72,15 +71,18 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("chiseled_end_stone_bricks", modLoc("block/chiseled_end_stone_bricks"));
         withExistingParent("red_nether_brick_fence", modLoc("block/red_nether_brick_fence_inventory"));
         withExistingParent("cracked_red_nether_bricks", modLoc("block/cracked_red_nether_bricks"));
+        withExistingParent("mossy_mud_brick_stairs", modLoc("block/mossy_mud_brick_stairs"));
+        withExistingParent("mossy_mud_brick_slab", modLoc("block/mossy_mud_brick_slab"));
+        withExistingParent("mossy_mud_brick_wall", modLoc("block/mossy_mud_brick_wall_inventory"));
     }
-    private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
-        return withExistingParent(item.getId().getPath(),
+    private void simpleItem(RegistryObject<Item> item) {
+        withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(Cinchcraft.MOD_ID,"item/" + item.getId().getPath()));
+                new ResourceLocation(Cinchcraft.MOD_ID, "item/" + item.getId().getPath()));
     }
-    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
-        return withExistingParent(item.getId().getPath(),
+    private void handheldItem(RegistryObject<Item> item) {
+        withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/handheld")).texture("layer0",
-                new ResourceLocation(Cinchcraft.MOD_ID,"item/" + item.getId().getPath()));
+                new ResourceLocation(Cinchcraft.MOD_ID, "item/" + item.getId().getPath()));
     }
 }

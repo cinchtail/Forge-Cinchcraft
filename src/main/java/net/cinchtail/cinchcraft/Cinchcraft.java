@@ -168,12 +168,12 @@ public class Cinchcraft
             //event.accept(ModBlocks.WARPED_MOSSY_NETHER_BRICK_SLAB);
             //event.accept(ModBlocks.WARPED_MOSSY_NETHER_BRICK_WALL);
             //event.accept(ModBlocks.WARPED_MOSSY_NETHER_BRICK_FENCE);
-            //event.accept(ModBlocks.CHISELED_MUD_BRICKS);
-            //event.accept(ModBlocks.CRACKED_MUD_BRICKS);
-            //event.accept(ModBlocks.MOSSY_MUD_BRICKS);
-            //event.accept(ModBlocks.MOSSY_MUD_BRICK_STAIRS);
-            //event.accept(ModBlocks.MOSSY_MUD_BRICK_SLAB);
-            //event.accept(ModBlocks.MOSSY_MUD_BRICK_WALL);
+            event.accept(ModBlocks.CHISELED_MUD_BRICKS);
+            event.accept(ModBlocks.CRACKED_MUD_BRICKS);
+            event.accept(ModBlocks.MOSSY_MUD_BRICKS);
+            event.accept(ModBlocks.MOSSY_MUD_BRICK_STAIRS);
+            event.accept(ModBlocks.MOSSY_MUD_BRICK_SLAB);
+            event.accept(ModBlocks.MOSSY_MUD_BRICK_WALL);
             event.accept(ModBlocks.SMOOTH_STONE_STAIRS);
             event.accept(ModBlocks.SMOOTH_STONE_WALL);
             event.accept(ModBlocks.CUT_SANDSTONE_STAIRS);

@@ -47,6 +47,12 @@
     "cinchcraft:chiseled_end_stone_bricks",
     "cinchcraft:red_nether_brick_fence",
     "cinchcraft:chiseled_red_nether_bricks",
-    "cinchcraft:cracked_red_nether_bricks"
+    "cinchcraft:cracked_red_nether_bricks",
+    "cinchcraft:cracked_mud_bricks",
+    "cinchcraft:mossy_mud_bricks",
+    "cinchcraft:mossy_mud_brick_wall",
+    "cinchcraft:mossy_mud_brick_slab",
+    "cinchcraft:mossy_mud_brick_stairs",
+    "cinchcraft:chiseled_mud_bricks"
   ]
 }

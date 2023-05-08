@@ -164,6 +164,10 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(2.5f).requiresCorrectToolForDrops().sound(SoundType.NETHER_BRICKS)));
     public static final RegistryObject<Block> CHISELED_RED_NETHER_BRICKS = registerBlock("chiseled_red_nether_bricks",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(2.5f).requiresCorrectToolForDrops().sound(SoundType.NETHER_BRICKS)));
+    public static final RegistryObject<Block> CHISELED_MUD_BRICKS = registerBlock("chiseled_mud_bricks",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5f).sound(SoundType.MUD_BRICKS).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> CRACKED_MUD_BRICKS = registerBlock("cracked_mud_bricks",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5f).sound(SoundType.MUD_BRICKS).requiresCorrectToolForDrops()));
 
 
     //Plants
@@ -205,6 +209,17 @@ public class ModBlocks {
     public static final RegistryObject<Block> THATCH_SLAB = BLOCKS.register("thatch_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of(Material.GRASS)
                     .strength(.5f).sound(SoundType.GRASS)));
+    public static final RegistryObject<Block> MOSSY_MUD_BRICKS = registerBlock("mossy_mud_bricks",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5f).sound(SoundType.MUD_BRICKS).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> MOSSY_MUD_BRICK_STAIRS = registerBlock("mossy_mud_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.SMOOTH_SANDSTONE_WALL.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of(Material.STONE).strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.MUD_BRICKS)));
+    public static final RegistryObject<Block> MOSSY_MUD_BRICK_SLAB = registerBlock("mossy_mud_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.MUD_BRICKS)));
+    public static final RegistryObject<Block> MOSSY_MUD_BRICK_WALL = registerBlock("mossy_mud_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.MUD_BRICKS)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
