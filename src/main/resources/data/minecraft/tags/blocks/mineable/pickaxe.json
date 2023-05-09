@@ -53,6 +53,18 @@
     "cinchcraft:mossy_mud_brick_wall",
     "cinchcraft:mossy_mud_brick_slab",
     "cinchcraft:mossy_mud_brick_stairs",
-    "cinchcraft:chiseled_mud_bricks"
+    "cinchcraft:chiseled_mud_bricks",
+    "cinchcraft:polished_tuff",
+    "cinchcraft:polished_tuff_wall",
+    "cinchcraft:polished_tuff_slab",
+    "cinchcraft:polished_tuff_stairs",
+    "cinchcraft:polished_calcite",
+    "cinchcraft:polished_calcite_wall",
+    "cinchcraft:polished_calcite_slab",
+    "cinchcraft:polished_calcite_stairs",
+    "cinchcraft:polished_dripstone_block",
+    "cinchcraft:polished_dripstone_wall",
+    "cinchcraft:polished_dripstone_slab",
+    "cinchcraft:polished_dripstone_stairs"
   ]
 }

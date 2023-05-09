@@ -2,10 +2,7 @@ package net.cinchtail.cinchcraft.item;
 
 import net.cinchtail.cinchcraft.Cinchcraft;
 import net.cinchtail.cinchcraft.block.ModBlocks;
-import net.cinchtail.cinchcraft.item.custom.CarrotSeedItem;
-import net.cinchtail.cinchcraft.item.custom.ThatchFullBlock;
-import net.cinchtail.cinchcraft.item.custom.ThatchSlabBlock;
-import net.cinchtail.cinchcraft.item.custom.ThatchStairsBlock;
+import net.cinchtail.cinchcraft.item.custom.*;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -89,6 +86,9 @@ public class ModItems {
                     new Item.Properties()));
     public static final RegistryObject<Item> THATCH_SLAB = ITEMS.register("thatch_slab",
             () -> new ThatchSlabBlock(ModBlocks.THATCH_SLAB.get(),
+                    new Item.Properties()));
+    public static final RegistryObject<Item> GLOWSTONE_TORCH = ITEMS.register("glowstone_torch",
+            () -> new ModStandingAndWallBlockItem(ModBlocks.GLOWSTONE_TORCH.get(), ModBlocks.GLOWSTONE_WALL_TORCH.get(),
                     new Item.Properties()));
 
     public static void register(IEventBus eventBus){

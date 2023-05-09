@@ -12,6 +12,9 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.function.Supplier;
 
 import static net.cinchtail.cinchcraft.block.ModBlocks.MOSSY_MUD_BRICKS;
+import static net.cinchtail.cinchcraft.block.ModBlocks.POLISHED_TUFF;
+import static net.cinchtail.cinchcraft.block.ModBlocks.POLISHED_CALCITE;
+import static net.cinchtail.cinchcraft.block.ModBlocks.POLISHED_DRIPSTONE_BLOCK;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -37,6 +40,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(MOSSY_MUD_BRICKS);
         blockWithItem(ModBlocks.CHISELED_MUD_BRICKS);
         blockWithItem(ModBlocks.CRACKED_MUD_BRICKS);
+        blockWithItem(POLISHED_TUFF);
+        blockWithItem(POLISHED_CALCITE);
+        blockWithItem(POLISHED_DRIPSTONE_BLOCK);
 
         slabBlock((SlabBlock) ModBlocks.TUFF_SLAB.get(), blockTexture(Blocks.TUFF),
                 blockTexture(Blocks.TUFF));
@@ -50,6 +56,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 blockTexture(Blocks.END_STONE));
         slabBlock((SlabBlock) ModBlocks.MOSSY_MUD_BRICK_SLAB.get(), blockLoc(MOSSY_MUD_BRICKS),
                 blockLoc(MOSSY_MUD_BRICKS));
+        slabBlock((SlabBlock) ModBlocks.POLISHED_TUFF_SLAB.get(), blockLoc(POLISHED_TUFF),
+                blockLoc(POLISHED_TUFF));
+        slabBlock((SlabBlock) ModBlocks.POLISHED_CALCITE_SLAB.get(), blockLoc(POLISHED_CALCITE),
+                blockLoc(POLISHED_CALCITE));
+        slabBlock((SlabBlock) ModBlocks.POLISHED_DRIPSTONE_SLAB.get(), blockLoc(POLISHED_DRIPSTONE_BLOCK),
+                blockLoc(POLISHED_DRIPSTONE_BLOCK));
 
         stairsBlock((StairBlock) ModBlocks.SMOOTH_STONE_STAIRS.get(), blockTexture(Blocks.SMOOTH_STONE));
         stairsBlock((StairBlock) ModBlocks.TUFF_STAIRS.get(), blockTexture(Blocks.TUFF));
@@ -58,6 +70,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock((StairBlock) ModBlocks.QUARTZ_BRICK_STAIRS.get(), blockTexture(Blocks.QUARTZ_BRICKS));
         stairsBlock((StairBlock) ModBlocks.END_STONE_STAIRS.get(), blockTexture(Blocks.END_STONE));
         stairsBlock((StairBlock) ModBlocks.MOSSY_MUD_BRICK_STAIRS.get(), blockLoc(MOSSY_MUD_BRICKS));
+        stairsBlock((StairBlock) ModBlocks.POLISHED_TUFF_STAIRS.get(), blockLoc(POLISHED_TUFF));
+        stairsBlock((StairBlock) ModBlocks.POLISHED_CALCITE_STAIRS.get(), blockLoc(POLISHED_CALCITE));
+        stairsBlock((StairBlock) ModBlocks.POLISHED_DRIPSTONE_STAIRS.get(), blockLoc(POLISHED_DRIPSTONE_BLOCK));
 
         vanillaWallBlock(ModBlocks.SMOOTH_STONE_WALL, blockVanillaBlockLoc(Blocks.SMOOTH_STONE));
         vanillaWallBlock(ModBlocks.STONE_WALL, blockVanillaBlockLoc(Blocks.STONE));
@@ -75,6 +90,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         vanillaWallBlock(ModBlocks.CUT_RED_SANDSTONE_WALL, blockVanillaBlockLoc(Blocks.CUT_RED_SANDSTONE));
         vanillaWallBlock(ModBlocks.END_STONE_WALL, blockVanillaBlockLoc(Blocks.END_STONE));
         modWallBlock(ModBlocks.MOSSY_MUD_BRICK_WALL, blockLoc(MOSSY_MUD_BRICKS));
+        modWallBlock(ModBlocks.POLISHED_TUFF_WALL, blockLoc(POLISHED_TUFF));
+        modWallBlock(ModBlocks.POLISHED_CALCITE_WALL, blockLoc(POLISHED_CALCITE));
+        modWallBlock(ModBlocks.POLISHED_DRIPSTONE_WALL, blockLoc(POLISHED_DRIPSTONE_BLOCK));
     }
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));

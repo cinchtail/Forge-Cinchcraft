@@ -74,6 +74,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("mossy_mud_brick_stairs", modLoc("block/mossy_mud_brick_stairs"));
         withExistingParent("mossy_mud_brick_slab", modLoc("block/mossy_mud_brick_slab"));
         withExistingParent("mossy_mud_brick_wall", modLoc("block/mossy_mud_brick_wall_inventory"));
+        withExistingParent("polished_tuff_stairs", modLoc("block/polished_tuff_stairs"));
+        withExistingParent("polished_tuff_slab", modLoc("block/polished_tuff_slab"));
+        withExistingParent("polished_tuff_wall", modLoc("block/polished_tuff_wall_inventory"));
+        withExistingParent("polished_calcite_stairs", modLoc("block/polished_calcite_stairs"));
+        withExistingParent("polished_calcite_slab", modLoc("block/polished_calcite_slab"));
+        withExistingParent("polished_calcite_wall", modLoc("block/polished_calcite_wall_inventory"));
+        withExistingParent("polished_dripstone_stairs", modLoc("block/polished_dripstone_stairs"));
+        withExistingParent("polished_dripstone_slab", modLoc("block/polished_dripstone_slab"));
+        withExistingParent("polished_dripstone_wall", modLoc("block/polished_dripstone_wall_inventory"));
     }
     private void simpleItem(RegistryObject<Item> item) {
         withExistingParent(item.getId().getPath(),

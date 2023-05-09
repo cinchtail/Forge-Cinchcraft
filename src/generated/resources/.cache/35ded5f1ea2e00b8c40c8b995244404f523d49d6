@@ -1,4 +1,4 @@
-// 1.19.4	2023-05-07T20:56:46.6991665	Item Models: cinchcraft
+// 1.19.4	2023-05-09T11:47:03.1576008	Item Models: cinchcraft
 1c90b5f18401efcc168cf75aad20b84b9f739d50 assets/cinchcraft/models/item/blackstone_axe.json
 c4e0813bbff9221790d53c7968580579b0dbd043 assets/cinchcraft/models/item/blackstone_hoe.json
 88b8a4e53315dd0b2604b6bd7b98f1553f5a5bbd assets/cinchcraft/models/item/blackstone_pickaxe.json
@@ -34,8 +34,17 @@ bf4895a7763d6af76f4cd14c644214c192dc8491 assets/cinchcraft/models/item/end_stone
 4f889d219574e0d6ff818d02aa5e0a20a9fca3c2 assets/cinchcraft/models/item/nether_stew.json
 3f6b83024137c455c59b715d98cd219ebad41396 assets/cinchcraft/models/item/pineapple.json
 63145a80adea253600ad20c418d931896f570c55 assets/cinchcraft/models/item/polished_andesite_wall.json
+b723872ef275fe9a40303cf33f814f61de706525 assets/cinchcraft/models/item/polished_calcite_slab.json
+a0917d03db3dcfd0cf72437f8a794c4825bcd481 assets/cinchcraft/models/item/polished_calcite_stairs.json
+87248329e764ea36648cdba71c438f77a27c5828 assets/cinchcraft/models/item/polished_calcite_wall.json
 e777a6a4ab8561fa7be0fd0b368ab29b744b9cb4 assets/cinchcraft/models/item/polished_diorite_wall.json
+13094cfea3172225d95ae95b05c4cb566d0de80f assets/cinchcraft/models/item/polished_dripstone_slab.json
+e261483e340d4beedfd814e618064603d0d042b8 assets/cinchcraft/models/item/polished_dripstone_stairs.json
+1b2fa729a128530227da346df9c567cdb30f825e assets/cinchcraft/models/item/polished_dripstone_wall.json
 09be1f55df97458f27aafcbf7fae98f98841aff6 assets/cinchcraft/models/item/polished_granite_wall.json
+e452d2e83e382bb2202232a0715b978ab5788e4b assets/cinchcraft/models/item/polished_tuff_slab.json
+bae4fe0cb4d6c39cdf14dc9560acf1247fcad3d0 assets/cinchcraft/models/item/polished_tuff_stairs.json
+64b144e2f9739cc94be65f7e30b0a42a0828f283 assets/cinchcraft/models/item/polished_tuff_wall.json
 f5740f371800524f655e771c2d26d0ac9ef02a24 assets/cinchcraft/models/item/prismarine_brick_wall.json
 24501eff4bc1fa21e383b72477fb4957288de112 assets/cinchcraft/models/item/purpur_wall.json
 eb47064ae36daa661ebd44fa1cbb1b45b33090b0 assets/cinchcraft/models/item/quartz_brick_slab.json
