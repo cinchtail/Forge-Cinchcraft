@@ -1,4 +1,4 @@
-// 1.19.4	2023-05-09T11:47:03.1576008	Item Models: cinchcraft
+// 1.19.4	2023-05-10T12:47:00.49057	Item Models: cinchcraft
 1c90b5f18401efcc168cf75aad20b84b9f739d50 assets/cinchcraft/models/item/blackstone_axe.json
 c4e0813bbff9221790d53c7968580579b0dbd043 assets/cinchcraft/models/item/blackstone_hoe.json
 88b8a4e53315dd0b2604b6bd7b98f1553f5a5bbd assets/cinchcraft/models/item/blackstone_pickaxe.json
@@ -21,6 +21,7 @@ b105ea96288dfa464c472f7361fae504ae173e71 assets/cinchcraft/models/item/deepslate
 de33ac31f12f41b997828b115d21ef6fe52c6589 assets/cinchcraft/models/item/deepslate_pickaxe.json
 d989c39acc3d48f8c836a7227f76d83607b43de6 assets/cinchcraft/models/item/deepslate_shovel.json
 4daf6fee956534ffb1d582eef7c93cd09197c05c assets/cinchcraft/models/item/deepslate_sword.json
+2b4f0cd527638cb97aad119db18c4dcd7cd9f597 assets/cinchcraft/models/item/dog_music_disc.json
 feac18884b1a446438f8aa2a2a15c8538e0e2a78 assets/cinchcraft/models/item/dripstone_slab.json
 81a709d698817453e9e501472745329159160d8c assets/cinchcraft/models/item/dripstone_stairs.json
 a2e5fffd4cdcdbdd20703ccc7d2e6517f199a0b4 assets/cinchcraft/models/item/dripstone_wall.json
@@ -52,6 +53,16 @@ eb47064ae36daa661ebd44fa1cbb1b45b33090b0 assets/cinchcraft/models/item/quartz_br
 bfb53ab740d50fda48ce3319fbc36d6c6a21d6ac assets/cinchcraft/models/item/quartz_brick_wall.json
 16ff278c0facdc8b6bddb22702fa7eb7706c7f01 assets/cinchcraft/models/item/red_nether_brick_fence.json
 1d6e5a1eadf70ec6b8e042ee01396c80a7c20cf3 assets/cinchcraft/models/item/ruby.json
+61208272c248a2d81d4649c5af3dfa962543202a assets/cinchcraft/models/item/ruby_axe.json
+12521cf16fa2cf54ae163ba36780b6c40fe00538 assets/cinchcraft/models/item/ruby_boots.json
+6659e9224370f7bcd99598b10feb4b4b5149129f assets/cinchcraft/models/item/ruby_chestplate.json
+dc6fe831fe72bdda984228c4c406410fae990d25 assets/cinchcraft/models/item/ruby_helmet.json
+bb97d23cb449a6b02f94f6fcaea440a057e603b9 assets/cinchcraft/models/item/ruby_hoe.json
+6e96e6dc097b123890d7cc6fb13ffb520472ae54 assets/cinchcraft/models/item/ruby_horse_armor.json
+f4f2734538092e6be1a8e5caeacd101c5709ebd3 assets/cinchcraft/models/item/ruby_leggings.json
+782f2c29cb29a63b2f12a6c98241f16518f140e3 assets/cinchcraft/models/item/ruby_pickaxe.json
+da6160549428947f68ceeadf43b70d366fc3fcbf assets/cinchcraft/models/item/ruby_shovel.json
+e5fac61d1e049323d5c198850ccd5c5f9c7912c5 assets/cinchcraft/models/item/ruby_sword.json
 e09a1a73a1bb2df5a3ef49972f37a62f87ac904c assets/cinchcraft/models/item/smooth_stone_stairs.json
 7930ebfcd95eef8982eaffa8369685f19fd68ac5 assets/cinchcraft/models/item/smooth_stone_wall.json
 7c1515fdf30beadaa144e013e909e88e81e3acf8 assets/cinchcraft/models/item/stone_wall.json

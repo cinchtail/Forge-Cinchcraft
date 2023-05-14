@@ -8,6 +8,7 @@ import net.cinchtail.cinchcraft.item.ModCreativeModeTabBlocks;
 import net.cinchtail.cinchcraft.item.ModCreativeModeTabItems;
 import net.cinchtail.cinchcraft.item.ModItems;
 import net.cinchtail.cinchcraft.potion.ModPotions;
+import net.cinchtail.cinchcraft.sound.ModSounds;
 import net.cinchtail.cinchcraft.util.BetterBrewingRecipe;
 import net.cinchtail.cinchcraft.world.biomemods.ModBiomeModifiers;
 import net.minecraft.world.item.Items;
@@ -42,6 +43,8 @@ public class Cinchcraft
         //ModEffects.register(modEventBus);
 
         //ModBlockEntities.register(modEventBus);
+
+        ModSounds.register(modEventBus);
 
         //ModVillagers.register(modEventBus);
 
@@ -237,15 +240,15 @@ public class Cinchcraft
             //event.accept(ModItems.STALK);
         }
         if(event.getTab() == ModCreativeModeTabItems.CINCHCRAFT_ITEM_TAB) {
-            //event.accept(ModItems.RUBY_SWORD);
-            //event.accept(ModItems.RUBY_PICKAXE);
-            //event.accept(ModItems.RUBY_AXE);
-            //event.accept(ModItems.RUBY_SHOVEL);
-            //event.accept(ModItems.RUBY_HOE);
-            //event.accept(ModItems.RUBY_HELMET);
-            //event.accept(ModItems.RUBY_CHESTPLATE);
-            //event.accept(ModItems.RUBY_LEGGING);
-            //event.accept(ModItems.RUBY_BOOTS);
+            event.accept(ModItems.RUBY_SWORD);
+            event.accept(ModItems.RUBY_PICKAXE);
+            event.accept(ModItems.RUBY_AXE);
+            event.accept(ModItems.RUBY_SHOVEL);
+            event.accept(ModItems.RUBY_HOE);
+            event.accept(ModItems.RUBY_HELMET);
+            event.accept(ModItems.RUBY_CHESTPLATE);
+            event.accept(ModItems.RUBY_LEGGINGS);
+            event.accept(ModItems.RUBY_BOOTS);
             //event.accept(ModItems.EMERALD_SWORD);
             //event.accept(ModItems.EMERALD_PICKAXE);
             //event.accept(ModItems.EMERALD_AXE);
@@ -266,11 +269,11 @@ public class Cinchcraft
             event.accept(ModItems.BLACKSTONE_SHOVEL);
             event.accept(ModItems.BLACKSTONE_HOE);
             event.accept(ModItems.NETHERITE_HORSE_ARMOR);
-            //event.accept(ModItems.RUBY_HORSE_ARMOR);
+            event.accept(ModItems.RUBY_HORSE_ARMOR);
             //event.accept(ModItems.EMERALD_HORSE_ARMOR);
             event.accept(ModItems.RUBY);
             event.accept(ModItems.COPPER_NUGGET);
-            //event.accept(ModItems.COMPOST);
+            event.accept(ModItems.DOG_MUSIC_DISC);
             event.accept(ModItems.CARROT_SEEDS);
             //event.accept(ModItems.SUNFLOWER_SEEDS);
             event.accept(ModItems.CHAINMAIL);

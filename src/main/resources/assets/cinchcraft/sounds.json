@@ -1,0 +1,10 @@
+{
+  "dog_music_disc": {
+    "sounds": [
+      {
+        "name": "cinchcraft:dog_music_disc",
+        "stream": true
+      }
+    ]
+  }
+}

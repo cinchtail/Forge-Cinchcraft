@@ -22,9 +22,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.VEGETABLE_STEW);
         simpleItem(ModItems.NETHER_STEW);
         simpleItem(ModItems.NETHERITE_HORSE_ARMOR);
+        simpleItem(ModItems.RUBY_HORSE_ARMOR);
         simpleItem(ModItems.BLUEBERRIES);
         simpleItem(ModItems.BLUEBERRY_PIE);
         simpleItem(ModItems.PINEAPPLE);
+        simpleItem(ModItems.RUBY_HELMET);
+        simpleItem(ModItems.RUBY_CHESTPLATE);
+        simpleItem(ModItems.RUBY_LEGGINGS);
+        simpleItem(ModItems.RUBY_BOOTS);
+        simpleItem(ModItems.DOG_MUSIC_DISC);
 
         handheldItem(ModItems.DEEPSLATE_SWORD);
         handheldItem(ModItems.DEEPSLATE_PICKAXE);
@@ -36,6 +42,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.BLACKSTONE_AXE);
         handheldItem(ModItems.BLACKSTONE_SHOVEL);
         handheldItem(ModItems.BLACKSTONE_HOE);
+        handheldItem(ModItems.RUBY_SWORD);
+        handheldItem(ModItems.RUBY_PICKAXE);
+        handheldItem(ModItems.RUBY_AXE);
+        handheldItem(ModItems.RUBY_SHOVEL);
+        handheldItem(ModItems.RUBY_HOE);
 
 
         withExistingParent("smooth_stone_stairs", modLoc("block/smooth_stone_stairs"));
