@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(modid = Cinchcraft.MOD_ID)
 public class WanderingTraderTrades {
     @SubscribeEvent
-    public void WanderingTraderTrades(WandererTradesEvent event)
+    public void ModWanderingTraderTrades(WandererTradesEvent event)
     {
         event.getGenericTrades().add(new BasicItemListing(8, new ItemStack(Items.BUNDLE, 1)
                 , 1, 10));
