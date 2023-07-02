@@ -13,10 +13,12 @@ import net.minecraft.world.level.block.FlowerBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.PlantType;
 
-public class BubbleFlowerBlock extends FlowerBlock {
+import java.util.function.Supplier;
+
+public class BubbleFlowerBlock extends ModFlowerBlock {
 
     public BubbleFlowerBlock(MobEffect pSuspiciousStewEffect, int pEffectDuration, Properties pProperties) {
-        super(pSuspiciousStewEffect, pEffectDuration, pProperties);
+        super((Supplier<MobEffect>) pSuspiciousStewEffect, pEffectDuration, pProperties);
     }
     @Override
     public PlantType getPlantType(BlockGetter level, BlockPos pos) {

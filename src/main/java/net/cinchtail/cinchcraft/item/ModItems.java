@@ -4,7 +4,6 @@ import net.cinchtail.cinchcraft.Cinchcraft;
 import net.cinchtail.cinchcraft.block.ModBlocks;
 import net.cinchtail.cinchcraft.item.custom.*;
 import net.cinchtail.cinchcraft.sound.ModSounds;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.IEventBus;

@@ -4,8 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.cinchtail.cinchcraft.block.ModBlocks;
 import net.cinchtail.cinchcraft.event.ModEvents;
 import net.cinchtail.cinchcraft.event.WanderingTraderTrades;
-import net.cinchtail.cinchcraft.item.ModCreativeModeTabBlocks;
-import net.cinchtail.cinchcraft.item.ModCreativeModeTabItems;
+import net.cinchtail.cinchcraft.item.ModCreativeModeTabs;
 import net.cinchtail.cinchcraft.item.ModItems;
 import net.cinchtail.cinchcraft.potion.ModPotions;
 import net.cinchtail.cinchcraft.sound.ModSounds;
@@ -17,7 +16,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
-import net.minecraftforge.event.CreativeModeTabEvent;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -35,6 +34,8 @@ public class Cinchcraft
     public Cinchcraft() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
+
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
@@ -91,8 +92,8 @@ public class Cinchcraft
     public void clientSetup(final FMLClientSetupEvent event) {
     }
 
-    private void addCreative(CreativeModeTabEvent.BuildContents event) {
-        if (event.getTab() == ModCreativeModeTabBlocks.CINCHCRAFT_BLOCK_TAB) {
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTab() == ModCreativeModeTabs.CINCHCRAFT_BLOCK_TAB.get()) {
             event.accept(ModBlocks.BLOCK_OF_RUBY);
             event.accept(ModBlocks.RUBY_ORE);
             event.accept(ModBlocks.DEEPSLATE_RUBY_ORE);
@@ -239,7 +240,7 @@ public class Cinchcraft
             event.accept(ModBlocks.REEDS);
             //event.accept(ModItems.STALK);
         }
-        if(event.getTab() == ModCreativeModeTabItems.CINCHCRAFT_ITEM_TAB) {
+        if(event.getTab() == ModCreativeModeTabs.CINCHCRAFT_ITEM_TAB.get()) {
             event.accept(ModItems.RUBY_SWORD);
             event.accept(ModItems.RUBY_PICKAXE);
             event.accept(ModItems.RUBY_AXE);

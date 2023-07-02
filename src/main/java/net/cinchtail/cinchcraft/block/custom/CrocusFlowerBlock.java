@@ -11,37 +11,19 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class CrocusFlowerBlock extends BushBlock implements SuspiciousEffectHolder {
+import java.util.function.Supplier;
+
+public class CrocusFlowerBlock extends ModFlowerBlock {
     protected static final VoxelShape SHAPE = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D);
-    private final MobEffect suspiciousStewEffect;
-    private final int effectDuration;
 
-    private final java.util.function.Supplier<MobEffect> suspiciousStewEffectSupplier;
 
-    @Deprecated
-    public CrocusFlowerBlock(MobEffect mobEffect, int i, Properties properties) {
-        super(properties);
-        this.suspiciousStewEffect = mobEffect;
-        if (mobEffect.isInstantenous()) {
-            this.effectDuration = i;
-        } else {
-            this.effectDuration = i * 20;
-        }
-        this.suspiciousStewEffectSupplier = net.minecraftforge.registries.ForgeRegistries.MOB_EFFECTS.getDelegateOrThrow(mobEffect);
-
+    public CrocusFlowerBlock(Supplier<MobEffect> effectSupplier, int p_53513_, Properties p_53514_) {
+        super(effectSupplier, p_53513_, p_53514_);
     }
-
-    public VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos pos, CollisionContext collisionContext) {
-        Vec3 vec3 = blockState.getOffset(blockGetter, pos);
+    @Override
+    public VoxelShape getShape(BlockState p_53517_, BlockGetter p_53518_, BlockPos p_53519_, CollisionContext p_53520_) {
+        Vec3 vec3 = p_53517_.getOffset(p_53518_, p_53519_);
         return SHAPE.move(vec3.x, vec3.y, vec3.z);
     }
 
-    public MobEffect getSuspiciousEffect() {
-        return this.suspiciousStewEffectSupplier.get();
-    }
-
-    public int getEffectDuration() {
-        if (this.suspiciousStewEffect == null && !this.suspiciousStewEffectSupplier.get().isInstantenous()) return this.effectDuration * 20;
-        return this.effectDuration;
-    }
 }
