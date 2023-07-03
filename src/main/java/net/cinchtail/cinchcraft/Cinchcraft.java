@@ -213,15 +213,6 @@ public class Cinchcraft
             //event.accept(ModItems.APPLE_PRESSURE_PLATE);
             //event.accept(ModItems.APPLE_BUTTON);
             //event.accept(ModBlocks.APPLE_LEAVES);
-            //event.accept(ModBlocks.OAK_BARREL);
-            //event.accept(ModBlocks.BIRCH_BARREL);
-            //event.accept(ModBlocks.APPLE_BARREL);
-            //event.accept(ModBlocks.DARK_OAK_BARREL);
-            //event.accept(ModBlocks.ACACIA_BARREL);
-            //event.accept(ModBlocks.JUNGLE_BARREL);
-            //event.accept(ModBlocks.MANGROVE_BARREL);
-            //event.accept(ModBlocks.CRIMSON_BARREL);
-            //event.accept(ModBlocks.WARPED_BARREL);
             event.accept(ModItems.GLOWSTONE_TORCH);
             //event.accept(ModBlocks.POLISHED_DEEPSLATE_PRESSURE_PLATE);
             //event.accept(ModBlocks.POLISHED_DEEPSLATE_BUTTON);
