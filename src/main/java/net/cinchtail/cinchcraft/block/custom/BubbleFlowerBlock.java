@@ -15,7 +15,7 @@ import net.minecraftforge.common.PlantType;
 
 import java.util.function.Supplier;
 
-public class BubbleFlowerBlock extends ModFlowerBlock {
+public class BubbleFlowerBlock extends FlowerBlock {
 
     public BubbleFlowerBlock(MobEffect pSuspiciousStewEffect, int pEffectDuration, Properties pProperties) {
         super((Supplier<MobEffect>) pSuspiciousStewEffect, pEffectDuration, pProperties);
