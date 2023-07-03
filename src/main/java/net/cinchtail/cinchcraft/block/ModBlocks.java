@@ -210,9 +210,9 @@ public class ModBlocks {
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK)));
     public static final RegistryObject<Block> THATCH_STAIRS = BLOCKS.register("thatch_stairs",
             () -> new StairBlock(() -> ModBlocks.SMOOTH_SANDSTONE_WALL.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.GRASS).strength(.5f).sound(SoundType.GRASS)));
+                    BlockBehaviour.Properties.copy(Blocks.SPRUCE_STAIRS).strength(.5f).sound(SoundType.GRASS)));
     public static final RegistryObject<Block> THATCH_SLAB = BLOCKS.register("thatch_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.GRASS)
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_SLAB)
                     .strength(.5f).sound(SoundType.GRASS)));
     public static final RegistryObject<Block> MOSSY_MUD_BRICKS = registerBlock("mossy_mud_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1.5f).sound(SoundType.MUD_BRICKS).requiresCorrectToolForDrops()));

@@ -18,7 +18,7 @@ public class ModCreativeModeTabs {
             CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.BLOCK_OF_RUBY.get())).title(Component.literal("Cinchcraft Block Tab")).build());
 
     public static RegistryObject<CreativeModeTab> CINCHCRAFT_ITEM_TAB = CREATIVE_MODE_TABS.register("cinchcraft_item_tab",() ->
-            CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.BLOCK_OF_RUBY.get())).title(Component.literal("Cinchcraft Item Tab")).build());
+            CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.RUBY.get())).title(Component.literal("Cinchcraft Item Tab")).build());
 
 
     public static void register(IEventBus eventBus) {
