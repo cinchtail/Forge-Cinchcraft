@@ -1,4 +1,4 @@
-// 1.19.4	2023-05-10T12:47:00.49057	Item Models: cinchcraft
+// 1.20.1	2023-07-03T17:46:46.8372199	Item Models: cinchcraft
 1c90b5f18401efcc168cf75aad20b84b9f739d50 assets/cinchcraft/models/item/blackstone_axe.json
 c4e0813bbff9221790d53c7968580579b0dbd043 assets/cinchcraft/models/item/blackstone_hoe.json
 88b8a4e53315dd0b2604b6bd7b98f1553f5a5bbd assets/cinchcraft/models/item/blackstone_pickaxe.json
@@ -28,6 +28,15 @@ a2e5fffd4cdcdbdd20703ccc7d2e6517f199a0b4 assets/cinchcraft/models/item/dripstone
 bf4895a7763d6af76f4cd14c644214c192dc8491 assets/cinchcraft/models/item/end_stone_slab.json
 9d6ce5eb80a5708e9dbcd32237af705a2c8e0e5f assets/cinchcraft/models/item/end_stone_stairs.json
 09d59b3d26bde1ddc6e88fd7d62c18533fc46969 assets/cinchcraft/models/item/end_stone_wall.json
+34d0fd57cd8b1660f30e22a47e3d6a9b09ddbffc assets/cinchcraft/models/item/mossy_cobbled_deepslate_slab.json
+15d333433e873f1b33f41b7458557660b806420e assets/cinchcraft/models/item/mossy_cobbled_deepslate_stairs.json
+da0ae90ef81b75ff08d910a3680c57a34bfc2673 assets/cinchcraft/models/item/mossy_cobbled_deepslate_wall.json
+090ceaf27aa79b248f4d016a73abc2e97348ba52 assets/cinchcraft/models/item/mossy_deepslate_brick_slab.json
+5c8a2d419227d5fec211487bdbefc67f6d54dc19 assets/cinchcraft/models/item/mossy_deepslate_brick_stairs.json
+08d0495cf18ce7ce49494ea814c80525688ef3fa assets/cinchcraft/models/item/mossy_deepslate_brick_wall.json
+d5ca79e22103d0021578801c3d4ef36b3e0588d5 assets/cinchcraft/models/item/mossy_deepslate_tile_slab.json
+2c7374f6b2c99aa2481917256c8c23e2d2796cdc assets/cinchcraft/models/item/mossy_deepslate_tile_stairs.json
+9a6028734270038d8987a0ef11678b62ada08002 assets/cinchcraft/models/item/mossy_deepslate_tile_wall.json
 416936f2c52c9cd91d5749f60195d8e88772a7a8 assets/cinchcraft/models/item/mossy_mud_brick_slab.json
 69739f30ec97d57d6513700498a634763b536f64 assets/cinchcraft/models/item/mossy_mud_brick_stairs.json
 446cb5aa9a23da97896af9a1b4abd435fda9272e assets/cinchcraft/models/item/mossy_mud_brick_wall.json

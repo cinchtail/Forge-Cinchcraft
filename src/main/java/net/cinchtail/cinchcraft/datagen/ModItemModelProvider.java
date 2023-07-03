@@ -94,6 +94,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("polished_dripstone_stairs", modLoc("block/polished_dripstone_stairs"));
         withExistingParent("polished_dripstone_slab", modLoc("block/polished_dripstone_slab"));
         withExistingParent("polished_dripstone_wall", modLoc("block/polished_dripstone_wall_inventory"));
+        withExistingParent("mossy_cobbled_deepslate_stairs", modLoc("block/mossy_cobbled_deepslate_stairs"));
+        withExistingParent("mossy_cobbled_deepslate_slab", modLoc("block/mossy_cobbled_deepslate_slab"));
+        withExistingParent("mossy_cobbled_deepslate_wall", modLoc("block/mossy_cobbled_deepslate_wall_inventory"));
+        withExistingParent("mossy_deepslate_brick_stairs", modLoc("block/mossy_deepslate_brick_stairs"));
+        withExistingParent("mossy_deepslate_brick_slab", modLoc("block/mossy_deepslate_brick_slab"));
+        withExistingParent("mossy_deepslate_brick_wall", modLoc("block/mossy_deepslate_brick_wall_inventory"));
+        withExistingParent("mossy_deepslate_tile_stairs", modLoc("block/mossy_deepslate_tile_stairs"));
+        withExistingParent("mossy_deepslate_tile_slab", modLoc("block/mossy_deepslate_tile_slab"));
+        withExistingParent("mossy_deepslate_tile_wall", modLoc("block/mossy_deepslate_tile_wall_inventory"));
     }
     private void simpleItem(RegistryObject<Item> item) {
         withExistingParent(item.getId().getPath(),
