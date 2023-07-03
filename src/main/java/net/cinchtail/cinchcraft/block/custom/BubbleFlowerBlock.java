@@ -18,7 +18,7 @@ import java.util.function.Supplier;
 public class BubbleFlowerBlock extends FlowerBlock {
 
     public BubbleFlowerBlock(MobEffect pSuspiciousStewEffect, int pEffectDuration, Properties pProperties) {
-        super((Supplier<MobEffect>) pSuspiciousStewEffect, pEffectDuration, pProperties);
+        super(pSuspiciousStewEffect, pEffectDuration, pProperties);
     }
     @Override
     public PlantType getPlantType(BlockGetter level, BlockPos pos) {

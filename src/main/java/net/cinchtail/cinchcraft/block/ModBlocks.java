@@ -4,7 +4,6 @@ import net.cinchtail.cinchcraft.Cinchcraft;
 import net.cinchtail.cinchcraft.block.custom.*;
 import net.cinchtail.cinchcraft.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
