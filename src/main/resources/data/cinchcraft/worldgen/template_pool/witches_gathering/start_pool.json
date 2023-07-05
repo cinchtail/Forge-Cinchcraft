@@ -3,7 +3,7 @@
   // Yes, worldgen json files can have comments. Minecraft does "lenient" parsing of these json files.
 
   // This is the name of the template pool itself. I tend to just put the file path and file name here with modid.
-  "name": "cinchcraft:abandoned_archaeology_site/start_pool",
+  "name": "cinchcraft:witches_gathering/start_pool",
 
   // The template pool to refer to if the entries in 'elements' fails to generate.
   "fallback": "minecraft:empty",
@@ -21,10 +21,10 @@
         // Note, this will automatically check into the 'structures' folder for the nbt file.
         // The final path would look like 'resources/data/tutorialmod/structures/run_down_house_left_side.nbt'
         // The Jigsaw block in the structure will point to side_pool.json to spawn the other half of the house.
-        "location": "cinchcraft:abandoned_archaeology_site",
+        "location": "cinchcraft:witches_gathering",
 
         // Processor JSON files can be used to randomize or replace blocks dynamically. Here, we don't do any of that.
-        "processors": "cinchcraft:coarse_dirt_and_gravel_mixed_into_dirt",
+        "processors": "cinchcraft:make_cobblestone_and_stone_bricks_mossy",
 
         // If set to 'terrain_matching', the house would be deformed to fit the change in land.
         // That's best for roads so lets stay 'rigid' for now.
