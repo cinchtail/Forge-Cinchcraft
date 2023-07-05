@@ -196,6 +196,10 @@ public class ModBlocks {
             () -> new AlyssumFlowerBlock(MobEffects.CONFUSION, 12, BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()));
     public static final RegistryObject<FlowerPotBlock> POTTED_ALYSSUM = BLOCKS.register("potted_alyssum",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ModBlocks.ALYSSUM, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
+    public static final RegistryObject<Block> LUPINE = registerBlock("lupine",
+            () -> new FlowerBlock(MobEffects.DOLPHINS_GRACE, 8, BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()));
+    public static final RegistryObject<FlowerPotBlock> POTTED_LUPINE = BLOCKS.register("potted_lupine",
+            () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ModBlocks.LUPINE, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
 
 
     //Crops
