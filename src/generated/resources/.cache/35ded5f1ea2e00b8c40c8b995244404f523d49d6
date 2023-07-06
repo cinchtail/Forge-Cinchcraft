@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-05T23:15:14.6982583	Item Models: cinchcraft
+// 1.20.1	2023-07-06T10:33:06.9106276	Item Models: cinchcraft
 1c90b5f18401efcc168cf75aad20b84b9f739d50 assets/cinchcraft/models/item/blackstone_axe.json
 c4e0813bbff9221790d53c7968580579b0dbd043 assets/cinchcraft/models/item/blackstone_hoe.json
 88b8a4e53315dd0b2604b6bd7b98f1553f5a5bbd assets/cinchcraft/models/item/blackstone_pickaxe.json
@@ -76,6 +76,7 @@ e5fac61d1e049323d5c198850ccd5c5f9c7912c5 assets/cinchcraft/models/item/ruby_swor
 e09a1a73a1bb2df5a3ef49972f37a62f87ac904c assets/cinchcraft/models/item/smooth_stone_stairs.json
 7930ebfcd95eef8982eaffa8369685f19fd68ac5 assets/cinchcraft/models/item/smooth_stone_wall.json
 7c1515fdf30beadaa144e013e909e88e81e3acf8 assets/cinchcraft/models/item/stone_wall.json
+d1e3f184de2aea428bba4c7829bd094d864b7638 assets/cinchcraft/models/item/strawberries.json
 9b05ee784b2845723f605b6cf10e804c3ab142fa assets/cinchcraft/models/item/thatch_block.json
 be1ae46ddcbbd08d95927a3134dbb811af0c2a63 assets/cinchcraft/models/item/thatch_slab.json
 cbce7f9bf763c6e6bb84470a9c17645f4a8e0119 assets/cinchcraft/models/item/thatch_stairs.json
