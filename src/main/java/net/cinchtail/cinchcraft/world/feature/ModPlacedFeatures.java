@@ -86,7 +86,7 @@ public class ModPlacedFeatures {
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
 
         register(context, REEDS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.REEDS_KEY),
-                List.of(RarityFilter.onAverageOnceEvery(10), InSquarePlacement.spread(),
+                List.of(RarityFilter.onAverageOnceEvery(5), InSquarePlacement.spread(),
                         PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()));
         register(context, BLUEBERRIES_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLUEBERRIES_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(18),
@@ -114,7 +114,7 @@ public class ModPlacedFeatures {
                 List.of(RarityFilter.onAverageOnceEvery(18),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));*/
         register(context, STRAWBERRY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STRAWBERRY_KEY),
-                List.of(RarityFilter.onAverageOnceEvery(80),
+                List.of(RarityFilter.onAverageOnceEvery(70),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
 
         register(context, SMALL_CACTUS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SMALL_CACTUS_KEY),
