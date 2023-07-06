@@ -18,9 +18,9 @@ public class ModPotions {
     public static final RegistryObject<Potion> LONG_GLOWING_POTION = POTIONS.register("long_glowing_potion",
             () -> new Potion(new MobEffectInstance(MobEffects.GLOWING,9600,0)));
     public static final RegistryObject<Potion> BLINDNESS_POTION = POTIONS.register("blindness_potion",
-            () -> new Potion(new MobEffectInstance(MobEffects.BLINDNESS,3600,0)));
+            () -> new Potion(new MobEffectInstance(MobEffects.BLINDNESS,1200,0)));
     public static final RegistryObject<Potion> LONG_BLINDNESS_POTION = POTIONS.register("long_blindness_potion",
-            () -> new Potion(new MobEffectInstance(MobEffects.BLINDNESS,9600,0)));
+            () -> new Potion(new MobEffectInstance(MobEffects.BLINDNESS,2400,0)));
 
 
     public static void register(IEventBus eventBus) {

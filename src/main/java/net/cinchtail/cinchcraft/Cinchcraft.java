@@ -269,6 +269,7 @@ public class Cinchcraft
             event.accept(ModItems.RUBY);
             event.accept(ModItems.COPPER_NUGGET);
             event.accept(ModItems.DOG_MUSIC_DISC);
+            event.accept(ModItems.KYOTO_MUSIC_DISC);
             event.accept(ModItems.CARROT_SEEDS);
             //event.accept(ModItems.SUNFLOWER_SEEDS);
             event.accept(ModItems.CHAINMAIL);

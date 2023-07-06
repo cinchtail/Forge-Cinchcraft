@@ -31,6 +31,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.RUBY_LEGGINGS);
         simpleItem(ModItems.RUBY_BOOTS);
         simpleItem(ModItems.DOG_MUSIC_DISC);
+        simpleItem(ModItems.KYOTO_MUSIC_DISC);
 
         handheldItem(ModItems.DEEPSLATE_SWORD);
         handheldItem(ModItems.DEEPSLATE_PICKAXE);

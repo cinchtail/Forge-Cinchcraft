@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-03T17:46:46.8372199	Item Models: cinchcraft
+// 1.20.1	2023-07-05T23:15:14.6982583	Item Models: cinchcraft
 1c90b5f18401efcc168cf75aad20b84b9f739d50 assets/cinchcraft/models/item/blackstone_axe.json
 c4e0813bbff9221790d53c7968580579b0dbd043 assets/cinchcraft/models/item/blackstone_hoe.json
 88b8a4e53315dd0b2604b6bd7b98f1553f5a5bbd assets/cinchcraft/models/item/blackstone_pickaxe.json
@@ -28,6 +28,7 @@ a2e5fffd4cdcdbdd20703ccc7d2e6517f199a0b4 assets/cinchcraft/models/item/dripstone
 bf4895a7763d6af76f4cd14c644214c192dc8491 assets/cinchcraft/models/item/end_stone_slab.json
 9d6ce5eb80a5708e9dbcd32237af705a2c8e0e5f assets/cinchcraft/models/item/end_stone_stairs.json
 09d59b3d26bde1ddc6e88fd7d62c18533fc46969 assets/cinchcraft/models/item/end_stone_wall.json
+0a1f7e01a9d29342ef10e022cce88e13c52448b2 assets/cinchcraft/models/item/kyoto_music_disc.json
 34d0fd57cd8b1660f30e22a47e3d6a9b09ddbffc assets/cinchcraft/models/item/mossy_cobbled_deepslate_slab.json
 15d333433e873f1b33f41b7458557660b806420e assets/cinchcraft/models/item/mossy_cobbled_deepslate_stairs.json
 da0ae90ef81b75ff08d910a3680c57a34bfc2673 assets/cinchcraft/models/item/mossy_cobbled_deepslate_wall.json

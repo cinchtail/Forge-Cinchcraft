@@ -34,6 +34,8 @@ public class ModItems {
                     new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> DOG_MUSIC_DISC = ITEMS.register("dog_music_disc",
             () -> new RecordItem(8, ModSounds.DOG_MUSIC_DISC, new Item.Properties().rarity(Rarity.RARE).stacksTo(1), 2900));
+    public static final RegistryObject<Item> KYOTO_MUSIC_DISC = ITEMS.register("kyoto_music_disc",
+            () -> new RecordItem(6, ModSounds.KYOTO_MUSIC_DISC, new Item.Properties().rarity(Rarity.RARE).stacksTo(1), 4980));
 
     //Foods
     public static final RegistryObject<Item> VEGETABLE_STEW = ITEMS.register("vegetable_stew",

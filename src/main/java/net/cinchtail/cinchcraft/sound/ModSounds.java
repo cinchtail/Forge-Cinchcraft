@@ -13,12 +13,12 @@ public class ModSounds {
             DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, Cinchcraft.MOD_ID);
 
     public static final RegistryObject<SoundEvent> DOG_MUSIC_DISC = registerSoundEvent("dog_music_disc");
+    public static final RegistryObject<SoundEvent> KYOTO_MUSIC_DISC = registerSoundEvent("kyoto_music_disc");
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
         ResourceLocation id = new ResourceLocation(Cinchcraft.MOD_ID, name);
         return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(id));
     }
-
     public static void register(IEventBus eventBus) {
         SOUND_EVENTS.register(eventBus);
     }
