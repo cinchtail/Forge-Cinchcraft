@@ -49,10 +49,10 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_DIAMOND_ORE_KEY = registerKey("nether_diamond_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> BUTTER_CUP_KEY = registerKey("butter_cup");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CROCUS_KEY = registerKey("crocus");
-    //public static final ResourceKey<ConfiguredFeature<?, ?>> ALYSSUM_FIELDS_KEY = registerKey("alyssum_fields");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ALYSSUM_KEY = registerKey("alyssum");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LUPINE_KEY = registerKey("lupine");
     public static final ResourceKey<ConfiguredFeature<?, ?>> BUBBLE_FLOWER_KEY = registerKey("bubble_flower");
-    //public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_CACTUS_KEY = registerKey("small_cactus");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SMALL_CACTUS_KEY = registerKey("small_cactus");
     //public static final ResourceKey<ConfiguredFeature<?, ?>> FIRE_FERN_KEY = registerKey("fire_fern");
     public static final ResourceKey<ConfiguredFeature<?, ?>> BLUEBERRIES_KEY = registerKey("blueberries");
     public static final ResourceKey<ConfiguredFeature<?, ?>> PINEAPPLE_PLANT_KEY = registerKey("pineapple");
@@ -121,12 +121,12 @@ public class ModConfiguredFeatures {
         register(context, CROCUS_KEY, Feature.FLOWER,
                 new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.CROCUS.get())))));
-        //register(context, ALYSSUM_FIELDS_KEY, Feature.FLOWER,
-                //new RandomPatchConfiguration(3000, 20, 5, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
-                        //new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.ALYSSUM.get())))));
         register(context, ALYSSUM_KEY, Feature.FLOWER,
                 new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.ALYSSUM.get())))));
+        register(context, LUPINE_KEY, Feature.FLOWER,
+                new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.LUPINE.get())))));
         register(context, BUBBLE_FLOWER_KEY, Feature.FLOWER,
                 new RandomPatchConfiguration(20, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.BUBBLE_FLOWER.get())))));
@@ -139,12 +139,12 @@ public class ModConfiguredFeatures {
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.STRAWBERRY_PLANT.get().defaultBlockState().setValue(BlueBerryBushBlock.AGE, 3))))));
         register(context, MOD_SWEET_BERRIE_KEY, Feature.FLOWER,
                 new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
-                        new SimpleBlockConfiguration(BlockStateProvider.simple(Blocks.SWEET_BERRY_BUSH.defaultBlockState().setValue(SweetBerryBushBlock.AGE, 3))))));
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(Blocks.SWEET_BERRY_BUSH.defaultBlockState().setValue(SweetBerryBushBlock.AGE, 3))))));*/
 
         register(context, SMALL_CACTUS_KEY, Feature.FLOWER,
                 new RandomPatchConfiguration(10, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.SMALL_CACTUS.get())))));
-        register(context, FIRE_FERN_KEY, Feature.FLOWER,
+        /*register(context, FIRE_FERN_KEY, Feature.FLOWER,
                 new RandomPatchConfiguration(10, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.FIRE_FERN.get())))));
 

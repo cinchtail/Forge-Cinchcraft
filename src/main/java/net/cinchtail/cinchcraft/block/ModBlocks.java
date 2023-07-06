@@ -200,6 +200,10 @@ public class ModBlocks {
             () -> new FlowerBlock(MobEffects.DOLPHINS_GRACE, 8, BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()));
     public static final RegistryObject<FlowerPotBlock> POTTED_LUPINE = BLOCKS.register("potted_lupine",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ModBlocks.LUPINE, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
+    public static final RegistryObject<Block> SMALL_CACTUS = registerBlock("small_cactus",
+            () -> new SmallCactusBlock(BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()));
+    public static final RegistryObject<FlowerPotBlock> POTTED_SMALL_CACTUS = BLOCKS.register("potted_small_cactus",
+            () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ModBlocks.SMALL_CACTUS, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
 
 
     //Crops

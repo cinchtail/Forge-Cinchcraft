@@ -36,10 +36,10 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> NETHER_DIAMOND_ORE_PLACED_PLACED_KEY = createKey("nether_diamond_ore_placed");
     public static final ResourceKey<PlacedFeature> BUTTER_CUP_PLACED_KEY = createKey("butter_cup_placed");
     public static final ResourceKey<PlacedFeature> CROCUS_PLACED_KEY = createKey("crocus_placed");
-    //public static final ResourceKey<PlacedFeature> ALYSSUM_FIELDS_PLACED_KEY = createKey("alyssum_fields_placed");
     public static final ResourceKey<PlacedFeature> ALYSSUM_PLACED_KEY = createKey("alyssum_placed");
+    public static final ResourceKey<PlacedFeature> LUPINE_PLACED_KEY = createKey("lupine_placed");
     public static final ResourceKey<PlacedFeature> BUBBLE_FLOWER_PLACED_KEY = createKey("bubble_flower_placed");
-    //public static final ResourceKey<PlacedFeature> SMALL_CACTUS_PLACED_KEY = createKey("small_cactus_placed");
+    public static final ResourceKey<PlacedFeature> SMALL_CACTUS_PLACED_KEY = createKey("small_cactus_placed");
     //public static final ResourceKey<PlacedFeature> FIRE_FERN_PLACED_KEY = createKey("fire_fern_placed");
     public static final ResourceKey<PlacedFeature> BLUEBERRIES_PLACED_KEY = createKey("blueberries_placed");
     public static final ResourceKey<PlacedFeature> PINEAPPLE_PLANT_PLACED_KEY = createKey("pineapple_placed");
@@ -97,10 +97,10 @@ public class ModPlacedFeatures {
         register(context, CROCUS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CROCUS_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(16),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
-        //register(context, ALYSSUM_FIELDS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ALYSSUM_FIELDS_KEY),
-                //List.of(RarityFilter.onAverageOnceEvery(1),
-                        //InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         register(context, ALYSSUM_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ALYSSUM_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(16),
+                        InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+        register(context, LUPINE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LUPINE_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(16),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         register(context, BUBBLE_FLOWER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BUBBLE_FLOWER_KEY),
@@ -115,12 +115,12 @@ public class ModPlacedFeatures {
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         register(context, STRAWBERRY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STRAWBERRY_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(50),
-                        InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+                        InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));*/
 
         register(context, SMALL_CACTUS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SMALL_CACTUS_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(42),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
-        register(context, FIRE_FERN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.FIRE_FERN_KEY),
+        /*register(context, FIRE_FERN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.FIRE_FERN_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(1),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
 
@@ -130,8 +130,6 @@ public class ModPlacedFeatures {
                 RandomOffsetPlacement.vertical(ConstantInt.of(0)), BiomeFilter.biome());*/
 
     }
-
-
 
     public static List<PlacementModifier> orePlacement(PlacementModifier placementModifier, PlacementModifier placementModifier1) {
         return List.of(placementModifier, InSquarePlacement.spread(), placementModifier1, BiomeFilter.biome());
