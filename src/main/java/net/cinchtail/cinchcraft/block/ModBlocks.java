@@ -175,6 +175,7 @@ public class ModBlocks {
                     .noOcclusion().sound(SoundType.WOOD).instabreak().lightLevel((blockState) -> 9).sound(SoundType.WOOD)));
 
 
+
     //Plants
     public static final RegistryObject<Block> REEDS = registerBlock("reeds",
             () -> new ReedsBlock(BlockBehaviour.Properties.copy(Blocks.LILAC).sound(SoundType.SMALL_DRIPLEAF)));
@@ -204,6 +205,9 @@ public class ModBlocks {
             () -> new SmallCactusBlock(BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()));
     public static final RegistryObject<FlowerPotBlock> POTTED_SMALL_CACTUS = BLOCKS.register("potted_small_cactus",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ModBlocks.SMALL_CACTUS, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
+    public static final RegistryObject<Block> FIRE_FERN = BLOCKS.register("fire_fern",
+            () -> new FireFernBlock(BlockBehaviour.Properties.copy(Blocks.ROSE_BUSH).noCollission().instabreak()
+                    .sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
 
 
     //Crops

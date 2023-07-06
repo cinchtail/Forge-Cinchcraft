@@ -121,6 +121,9 @@ public class ModItems {
     public static final RegistryObject<Item> GLOWSTONE_TORCH = ITEMS.register("glowstone_torch",
             () -> new ModStandingAndWallBlockItem(ModBlocks.GLOWSTONE_TORCH.get(), ModBlocks.GLOWSTONE_WALL_TORCH.get(),
                     new Item.Properties()));
+    public static final RegistryObject<Item> FIRE_FERN = ITEMS.register("fire_fern",
+            () -> new ItemNameBlockItem(ModBlocks.FIRE_FERN.get(),
+                    new Item.Properties()));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

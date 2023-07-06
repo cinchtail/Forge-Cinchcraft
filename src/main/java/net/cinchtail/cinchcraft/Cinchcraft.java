@@ -223,7 +223,7 @@ public class Cinchcraft
             //event.accept(ModBlocks.PERMAFROST);
             event.accept(ModBlocks.CARVED_MELON);
             //event.accept(ModBlocks.ICICLE);
-            //event.accept(ModItems.FIRE_FERN);
+            event.accept(ModItems.FIRE_FERN);
             event.accept(ModBlocks.BUBBLE_FLOWER);
             event.accept(ModBlocks.BUTTER_CUP);
             event.accept(ModBlocks.CROCUS);
