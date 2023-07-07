@@ -144,7 +144,7 @@ public class ModConfiguredFeatures {
         register(context, SMALL_CACTUS_KEY, Feature.FLOWER,
                 new RandomPatchConfiguration(10, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.SMALL_CACTUS.get())))));
-        register(context, FIRE_FERN_KEY, Feature.FLOWER,
+        register(context, FIRE_FERN_KEY, Feature.RANDOM_PATCH,
                 new RandomPatchConfiguration(10, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.FIRE_FERN.get())))));
 
