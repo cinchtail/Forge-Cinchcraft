@@ -1,5 +1,6 @@
 {
-  "type": "cinchcraft:nether_vegetal",
-  "biomes": "#minecraft:is_fire_fern_biomes",
-  "feature": "cinchcraft:fire_fern_placed"
+  "type": "forge:add_features",
+  "biomes": "#cinchcraft:is_fire_fern_biomes",
+  "features": "cinchcraft:fire_fern_placed",
+  "step": "underground_decoration"
 }
