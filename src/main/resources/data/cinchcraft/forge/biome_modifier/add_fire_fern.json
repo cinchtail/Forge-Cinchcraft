@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
-  "biomes": "#cinchcraft:is_fire_fern_biomes",
+  "biomes": "#minecraft:is_fire_fern_biomes",
   "features": "cinchcraft:fire_fern_placed",
   "step": "underground_decoration"
 }
