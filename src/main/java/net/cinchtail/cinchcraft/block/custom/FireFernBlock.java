@@ -91,9 +91,9 @@ public class FireFernBlock extends BushBlock {
     {
         if (blockState.getValue(HALF) == DoubleBlockHalf.UPPER)
         {
-            if (blockState.getBlock() != this)
-                return super.canSurvive(blockState, levelReader, pos);
             BlockState blockstate = levelReader.getBlockState(pos.below());
+            if (blockState.getBlock() != this)
+                return blockState.is(ModBlockTags.FIRE_FERN_PLACEABLE);
             return blockstate.is(this) && blockstate.getValue(HALF) == DoubleBlockHalf.LOWER;
         }
 
