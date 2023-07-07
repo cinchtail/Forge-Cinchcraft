@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.Block;
 public class ModBlockTags {
 
     public static final TagKey<Block> REEDS_PLACEABLE = create("reeds_placeable");
+    public static final TagKey<Block> FIRE_FERN_PLACEABLE = create("fire_fern_placeable");
 
     private ModBlockTags() {
     }

@@ -1,5 +1,6 @@
 package net.cinchtail.cinchcraft.block.custom;
 
+import net.cinchtail.cinchcraft.util.ModBlockTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -30,6 +31,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.common.PlantType;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 
@@ -43,11 +45,6 @@ public class FireFernBlock extends BushBlock {
     @Override
     public PlantType getPlantType(BlockGetter level, BlockPos pos) {
         return null;
-    }
-    @Override
-    protected boolean mayPlaceOn(BlockState blockState, BlockGetter blockGetter, BlockPos pos) {
-        return super.mayPlaceOn(blockState, blockGetter, pos) || blockState.is(Blocks.NETHERRACK) || blockState.is(Blocks.SOUL_SAND) || blockState.is(Blocks.SOUL_SOIL) ||
-                blockState.is(Blocks.BASALT) || blockState.is(Blocks.MAGMA_BLOCK) || blockState.is(Blocks.CRIMSON_NYLIUM) || blockState.is(Blocks.WARPED_NYLIUM) || blockState.is(Blocks.BLACKSTONE);
     }
     public BlockState updateShape(BlockState p_52894_, Direction p_52895_, BlockState p_52896_, LevelAccessor p_52897_, BlockPos p_52898_, BlockPos p_52899_) {
         DoubleBlockHalf doubleblockhalf = p_52894_.getValue(HALF);
@@ -91,13 +88,22 @@ public class FireFernBlock extends BushBlock {
         p_52872_.setBlock(blockpos, copyWaterloggedFrom(p_52872_, blockpos, this.defaultBlockState().setValue(HALF, DoubleBlockHalf.UPPER)), 3);
     }
 
-    public boolean canSurvive(BlockState p_52887_, LevelReader p_52888_, BlockPos p_52889_) {
-        if (p_52887_.getValue(HALF) != DoubleBlockHalf.UPPER) {
-            return super.canSurvive(p_52887_, p_52888_, p_52889_);
-        } else {
-            BlockState blockstate = p_52888_.getBlockState(p_52889_.below());
-            if (p_52887_.getBlock() != this) return super.canSurvive(p_52887_, p_52888_, p_52889_); //Forge: This function is called during world gen and placement, before this block is set, so if we are not 'here' then assume it's the pre-check.
+    @Override
+    public boolean canSurvive(BlockState blockState, LevelReader levelReader, BlockPos pos)
+    {
+        if (blockState.getValue(HALF) == DoubleBlockHalf.UPPER)
+        {
+            BlockState blockstate = levelReader.getBlockState(pos.below());
             return blockstate.is(this) && blockstate.getValue(HALF) == DoubleBlockHalf.LOWER;
+        }
+
+        else if(blockState.getValue(HALF) == DoubleBlockHalf.LOWER)
+        {
+            return levelReader.getBlockState(pos.below()).is(ModBlockTags.FIRE_FERN_PLACEABLE);
+        }
+        else
+        {
+            return false;
         }
     }
 
