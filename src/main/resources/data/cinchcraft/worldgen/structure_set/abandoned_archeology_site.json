@@ -5,6 +5,10 @@
     {
       "structure": "cinchcraft:abandoned_archeology_site",
       "weight": 1
+    },
+    {
+      "structure": "cinchcraft:desert_abandoned_archeology_site",
+      "weight": 1
     }
   ],
   "placement": {
