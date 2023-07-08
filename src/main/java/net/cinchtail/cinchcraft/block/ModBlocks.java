@@ -173,6 +173,36 @@ public class ModBlocks {
     public static final RegistryObject<Block> GLOWSTONE_WALL_TORCH = BLOCKS.register("glowstone_wall_torch",
             () -> new GlowStoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH)
                     .noOcclusion().sound(SoundType.WOOD).instabreak().lightLevel((blockState) -> 9).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> CRACKED_STONE_BRICK_STAIRS = registerBlock("cracked_stone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.SMOOTH_STONE_STAIRS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.CRACKED_STONE_BRICKS).strength(1.5F, 6.0F)
+                            .requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final RegistryObject<Block> CRACKED_STONE_BRICK_SLAB = registerBlock("cracked_stone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CRACKED_STONE_BRICKS)
+                    .strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final RegistryObject<Block> CRACKED_STONE_BRICK_WALL = registerBlock("cracked_stone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CRACKED_STONE_BRICKS)
+                    .strength(1.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final RegistryObject<Block> CRACKED_DEEPSLATE_BRICK_STAIRS = registerBlock("cracked_deepslate_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.SMOOTH_STONE_STAIRS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.CRACKED_DEEPSLATE_BRICKS).strength(3.5F, 6.0F)
+                            .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE_BRICKS)));
+    public static final RegistryObject<Block> CRACKED_DEEPSLATE_BRICK_SLAB = registerBlock("cracked_deepslate_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CRACKED_DEEPSLATE_BRICKS)
+                    .strength(3.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE_BRICKS)));
+    public static final RegistryObject<Block> CRACKED_DEEPSLATE_BRICK_WALL = registerBlock("cracked_deepslate_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CRACKED_DEEPSLATE_BRICKS)
+                    .strength(3.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE_BRICKS)));
+    public static final RegistryObject<Block> CRACKED_DEEPSLATE_TILE_STAIRS = registerBlock("cracked_deepslate_tile_stairs",
+            () -> new StairBlock(() -> ModBlocks.SMOOTH_STONE_STAIRS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.CRACKED_DEEPSLATE_TILES).strength(3.5F, 6.0F)
+                            .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE_TILES)));
+    public static final RegistryObject<Block> CRACKED_DEEPSLATE_TILE_SLAB = registerBlock("cracked_deepslate_tile_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CRACKED_DEEPSLATE_TILES)
+                    .strength(3.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE_TILES)));
+    public static final RegistryObject<Block> CRACKED_DEEPSLATE_TILE_WALL = registerBlock("cracked_deepslate_tile_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CRACKED_DEEPSLATE_TILES)
+                    .strength(3.5F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE_TILES)));
 
 
 

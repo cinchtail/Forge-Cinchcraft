@@ -26,6 +26,9 @@
     "cinchcraft:polished_dripstone_wall",
     "cinchcraft:mossy_cobbled_deepslate_wall",
     "cinchcraft:mossy_deepslate_brick_wall",
-    "cinchcraft:mossy_deepslate_tile_wall"
+    "cinchcraft:mossy_deepslate_tile_wall",
+    "cinchcraft:cracked_stone_brick_wall",
+    "cinchcraft:cracked_deepslate_brick_wall",
+    "cinchcraft:cracked_deepslate_tile_wall"
   ]
 }

@@ -68,6 +68,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 blockLoc(MOSSY_DEEPSLATE_BRICKS));
         slabBlock((SlabBlock) MOSSY_DEEPSLATE_TILE_SLAB.get(), blockLoc(MOSSY_DEEPSLATE_TILES),
                 blockLoc(MOSSY_DEEPSLATE_TILES));
+        slabBlock((SlabBlock) CRACKED_STONE_BRICK_SLAB.get(), blockTexture(Blocks.CRACKED_STONE_BRICKS),
+                blockTexture(Blocks.CRACKED_STONE_BRICKS));
+        slabBlock((SlabBlock) CRACKED_DEEPSLATE_BRICK_SLAB.get(), blockTexture(Blocks.CRACKED_DEEPSLATE_BRICKS),
+                blockTexture(Blocks.CRACKED_DEEPSLATE_BRICKS));
+        slabBlock((SlabBlock) CRACKED_DEEPSLATE_TILE_SLAB.get(), blockTexture(Blocks.CRACKED_DEEPSLATE_TILES),
+                blockTexture(Blocks.CRACKED_DEEPSLATE_TILES));
 
         stairsBlock((StairBlock) SMOOTH_STONE_STAIRS.get(), blockTexture(Blocks.SMOOTH_STONE));
         stairsBlock((StairBlock) TUFF_STAIRS.get(), blockTexture(Blocks.TUFF));
@@ -82,6 +88,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock((StairBlock) MOSSY_COBBLED_DEEPSLATE_STAIRS.get(), blockLoc(MOSSY_COBBLED_DEEPSLATE));
         stairsBlock((StairBlock) MOSSY_DEEPSLATE_BRICK_STAIRS.get(), blockLoc(MOSSY_DEEPSLATE_BRICKS));
         stairsBlock((StairBlock) MOSSY_DEEPSLATE_TILE_STAIRS.get(), blockLoc(MOSSY_DEEPSLATE_TILES));
+        stairsBlock((StairBlock) CRACKED_STONE_BRICK_STAIRS.get(), blockTexture(Blocks.CRACKED_STONE_BRICKS));
+        stairsBlock((StairBlock) CRACKED_DEEPSLATE_BRICK_STAIRS.get(), blockTexture(Blocks.CRACKED_DEEPSLATE_BRICKS));
+        stairsBlock((StairBlock) CRACKED_DEEPSLATE_TILE_STAIRS.get(), blockTexture(Blocks.CRACKED_DEEPSLATE_TILES));
 
         vanillaWallBlock(SMOOTH_STONE_WALL, blockVanillaBlockLoc(Blocks.SMOOTH_STONE));
         vanillaWallBlock(STONE_WALL, blockVanillaBlockLoc(Blocks.STONE));
@@ -98,6 +107,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         vanillaWallBlock(CUT_SANDSTONE_WALL, blockVanillaBlockLoc(Blocks.CUT_SANDSTONE));
         vanillaWallBlock(CUT_RED_SANDSTONE_WALL, blockVanillaBlockLoc(Blocks.CUT_RED_SANDSTONE));
         vanillaWallBlock(END_STONE_WALL, blockVanillaBlockLoc(Blocks.END_STONE));
+        vanillaWallBlock(CRACKED_STONE_BRICK_WALL, blockVanillaBlockLoc(Blocks.CRACKED_STONE_BRICKS));
+        vanillaWallBlock(CRACKED_DEEPSLATE_BRICK_WALL, blockVanillaBlockLoc(Blocks.CRACKED_DEEPSLATE_BRICKS));
+        vanillaWallBlock(CRACKED_DEEPSLATE_TILE_WALL, blockVanillaBlockLoc(Blocks.CRACKED_DEEPSLATE_TILES));
         modWallBlock(MOSSY_MUD_BRICK_WALL, blockLoc(MOSSY_MUD_BRICKS));
         modWallBlock(POLISHED_TUFF_WALL, blockLoc(POLISHED_TUFF));
         modWallBlock(POLISHED_CALCITE_WALL, blockLoc(POLISHED_CALCITE));
