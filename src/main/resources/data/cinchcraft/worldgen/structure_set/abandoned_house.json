@@ -17,6 +17,10 @@
     {
       "structure": "cinchcraft:abandoned_farm_house",
       "weight": 5
+    },
+    {
+      "structure": "cinchcraft:abandoned_birch_forest_house",
+      "weight": 5
     }
   ],
   "placement": {
