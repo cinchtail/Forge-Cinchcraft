@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-08T00:08:57.8619997	Item Models: cinchcraft
+// 1.20.1	2023-07-08T15:26:13.4355504	Item Models: cinchcraft
 1c90b5f18401efcc168cf75aad20b84b9f739d50 assets/cinchcraft/models/item/blackstone_axe.json
 c4e0813bbff9221790d53c7968580579b0dbd043 assets/cinchcraft/models/item/blackstone_hoe.json
 88b8a4e53315dd0b2604b6bd7b98f1553f5a5bbd assets/cinchcraft/models/item/blackstone_pickaxe.json
@@ -18,6 +18,9 @@ d8a52c63d48d99d8d379d54f5888156c8b60cc28 assets/cinchcraft/models/item/copper_nu
 2700188d069eb66eb57550a0dac548b0b874523a assets/cinchcraft/models/item/cracked_deepslate_tile_slab.json
 5372e35008bce90160cdb4020b6fbefa1796014d assets/cinchcraft/models/item/cracked_deepslate_tile_stairs.json
 16356650260fdcbf6ae0600a05e8a5253544b09f assets/cinchcraft/models/item/cracked_deepslate_tile_wall.json
+1d4d7fcb2156c6c5b0a20488ae4d086a991c7b05 assets/cinchcraft/models/item/cracked_polished_blackstone_brick_slab.json
+0e3919aa055ffbabd7f17bb0ff91f32e3de6b25a assets/cinchcraft/models/item/cracked_polished_blackstone_brick_stairs.json
+ba5ed5937b8eb50b85c8efc16677a8c04c67c424 assets/cinchcraft/models/item/cracked_polished_blackstone_brick_wall.json
 3ecf8890df357cbea53d89de8bc4abf68e047e87 assets/cinchcraft/models/item/cracked_red_nether_bricks.json
 08637c1c45a87eb3f61bfe6a2fd7a482bda1b0a4 assets/cinchcraft/models/item/cracked_stone_brick_slab.json
 e2e7a342286a6f34a6a2abdd31bf42630604667c assets/cinchcraft/models/item/cracked_stone_brick_stairs.json

@@ -250,5 +250,9 @@
   "block.cinchcraft.cracked_deepslate_tile_wall": "Cracked Deepslate Tile Wall",
   "block.cinchcraft.cracked_deepslate_tile_slab": "Cracked Deepslate Tile Slab",
   "block.cinchcraft.cracked_deepslate_tile_stairs": "Cracked Deepslate Tile Stairs",
-  "block.cinchcraft.lupine": "Lupine"
+  "block.cinchcraft.lupine": "Lupine",
+  "Block.cinchcraft.potted_lupine": "Potted Lupine",
+  "block.cinchcraft.cracked_polished_blackstone_brick_wall": "Cracked Polished Blackstone Brick Wall",
+  "block.cinchcraft.cracked_polished_blackstone_brick_slab": "Cracked Polished Blackstone Brick Slab",
+  "block.cinchcraft.cracked_polished_blackstone_brick_stairs": "Cracked Polished Blackstone Brick Stairs"
 }

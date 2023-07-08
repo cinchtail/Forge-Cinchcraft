@@ -137,6 +137,9 @@ public class Cinchcraft
             event.accept(ModBlocks.CRACKED_DEEPSLATE_TILE_STAIRS);
             event.accept(ModBlocks.CRACKED_DEEPSLATE_TILE_SLAB);
             event.accept(ModBlocks.CRACKED_DEEPSLATE_TILE_WALL);
+            event.accept(ModBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_STAIRS);
+            event.accept(ModBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_SLAB);
+            event.accept(ModBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_WALL);
             event.accept(ModBlocks.QUARTZ_BRICK_STAIRS);
             event.accept(ModBlocks.QUARTZ_BRICK_SLAB);
             event.accept(ModBlocks.QUARTZ_BRICK_WALL);
