@@ -56,32 +56,32 @@ public class ModPlacedFeatures {
                 VegetationPlacements.treePlacement(RarityFilter.onAverageOnceEvery(48), ModBlocks.APPLE_SAPLING.get()));*/
 
         register(context, RUBY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_RUBY_ORE_KEY),
-                commonOrePlacement(12, // VeinsPerChunk
+                commonOrePlacement(10, // VeinsPerChunk
                         HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(90))));
 
         register(context, NETHER_RUBY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_RUBY_ORE_KEY),
-                commonOrePlacement(5, // VeinsPerChunk
+                commonOrePlacement(4, // VeinsPerChunk
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
         register(context, NETHER_IRON_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_IRON_ORE_KEY),
-                commonOrePlacement(8, // VeinsPerChunk
-                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
-        register(context, NETHER_COPPER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_COPPER_ORE_KEY),
-                commonOrePlacement(8, // VeinsPerChunk
-                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
-        register(context, NETHER_COAL_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_COAL_ORE_KEY),
                 commonOrePlacement(6, // VeinsPerChunk
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
+        register(context, NETHER_COPPER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_COPPER_ORE_KEY),
+                commonOrePlacement(6, // VeinsPerChunk
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
+        register(context, NETHER_COAL_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_COAL_ORE_KEY),
+                commonOrePlacement(4, // VeinsPerChunk
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
         register(context, NETHER_LAPIS_LAZULI_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_LAPIS_LAZULI_ORE_KEY),
-                commonOrePlacement(5, // VeinsPerChunk
+                commonOrePlacement(3, // VeinsPerChunk
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
         register(context, NETHER_REDSTONE_PLACED_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_REDSTONE_KEY),
-                commonOrePlacement(4, // VeinsPerChunk
+                commonOrePlacement(3, // VeinsPerChunk
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
         register(context, NETHER_DIAMOND_ORE_PLACED_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_DIAMOND_ORE_KEY),
-                commonOrePlacement(4, // VeinsPerChunk
+                commonOrePlacement(2, // VeinsPerChunk
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
         register(context, NETHER_EMERALD_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_EMERALD_KEY),
-                commonOrePlacement(4, // VeinsPerChunk
+                commonOrePlacement(2, // VeinsPerChunk
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
 
         register(context, REEDS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.REEDS_KEY),
