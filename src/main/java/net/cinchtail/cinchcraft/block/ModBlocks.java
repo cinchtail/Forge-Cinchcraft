@@ -159,13 +159,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> RED_NETHER_BRICK_FENCE = registerBlock("red_nether_brick_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(2.5f).requiresCorrectToolForDrops().sound(SoundType.NETHER_BRICKS)));
-    public static final RegistryObject<Block> CRACKED_RED_NETHER_BRICKS = registerBlock("cracked_red_nether_bricks",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.5f).requiresCorrectToolForDrops().sound(SoundType.NETHER_BRICKS)));
     public static final RegistryObject<Block> CHISELED_RED_NETHER_BRICKS = registerBlock("chiseled_red_nether_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.5f).requiresCorrectToolForDrops().sound(SoundType.NETHER_BRICKS)));
     public static final RegistryObject<Block> CHISELED_MUD_BRICKS = registerBlock("chiseled_mud_bricks",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1.5f).sound(SoundType.MUD_BRICKS).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> CRACKED_MUD_BRICKS = registerBlock("cracked_mud_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1.5f).sound(SoundType.MUD_BRICKS).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> GLOWSTONE_TORCH = BLOCKS.register("glowstone_torch",
             () -> new GlowStoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH)
@@ -262,11 +258,14 @@ public class ModBlocks {
 
     //Crops
     public static final RegistryObject<Block> BLUEBERRY_BUSH = BLOCKS.register("blueberry_bush",
-            () -> new BlueBerryBushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH).noOcclusion().sound(SoundType.SWEET_BERRY_BUSH)));
+            () -> new BlueBerryBushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)
+                    .noOcclusion().sound(SoundType.SWEET_BERRY_BUSH)));
     public static final RegistryObject<Block> PINEAPPLE_PLANT = BLOCKS.register("pineapple_plant",
-            () -> new PineapplePlantBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH).noOcclusion().sound(SoundType.CROP)));
+            () -> new PineapplePlantBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)
+                    .noOcclusion().sound(SoundType.CROP)));
     public static final RegistryObject<Block> STRAWBERRY_PLANT = BLOCKS.register("strawberry_plant",
-            () -> new StrawberryPlantBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH).noOcclusion().sound(SoundType.CROP)));
+            () -> new StrawberryPlantBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)
+                    .noOcclusion().sound(SoundType.CROP)));
 
 
     //New Block Sets
@@ -279,10 +278,12 @@ public class ModBlocks {
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_SLAB)
                     .strength(.5f).sound(SoundType.GRASS)));
     public static final RegistryObject<Block> MOSSY_MUD_BRICKS = registerBlock("mossy_mud_bricks",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1.5f).sound(SoundType.MUD_BRICKS).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1.5f)
+                    .sound(SoundType.MUD_BRICKS).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> MOSSY_MUD_BRICK_STAIRS = registerBlock("mossy_mud_brick_stairs",
             () -> new StairBlock(() -> ModBlocks.SMOOTH_SANDSTONE_WALL.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE).strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.MUD_BRICKS)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE).strength(1.5f)
+                            .requiresCorrectToolForDrops().sound(SoundType.MUD_BRICKS)));
     public static final RegistryObject<Block> MOSSY_MUD_BRICK_SLAB = registerBlock("mossy_mud_brick_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.MUD_BRICKS)));
@@ -290,10 +291,12 @@ public class ModBlocks {
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.MUD_BRICKS)));
     public static final RegistryObject<Block> POLISHED_TUFF = registerBlock("polished_tuff",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2f).sound(SoundType.TUFF).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2f)
+                    .sound(SoundType.TUFF).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> POLISHED_TUFF_STAIRS = registerBlock("polished_tuff_stairs",
             () -> new StairBlock(() -> ModBlocks.SMOOTH_SANDSTONE_WALL.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE).strength(2f).requiresCorrectToolForDrops().sound(SoundType.TUFF)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE).strength(2f)
+                            .requiresCorrectToolForDrops().sound(SoundType.TUFF)));
     public static final RegistryObject<Block> POLISHED_TUFF_SLAB = registerBlock("polished_tuff_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(2f).requiresCorrectToolForDrops().sound(SoundType.TUFF)));
@@ -301,10 +304,12 @@ public class ModBlocks {
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(2f).requiresCorrectToolForDrops().sound(SoundType.TUFF)));
     public static final RegistryObject<Block> POLISHED_CALCITE = registerBlock("polished_calcite",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.CALCITE).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f)
+                    .sound(SoundType.CALCITE).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> POLISHED_CALCITE_STAIRS = registerBlock("polished_calcite_stairs",
             () -> new StairBlock(() -> ModBlocks.SMOOTH_SANDSTONE_WALL.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f)
+                            .requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
     public static final RegistryObject<Block> POLISHED_CALCITE_SLAB = registerBlock("polished_calcite_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(1f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
@@ -312,20 +317,25 @@ public class ModBlocks {
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(1f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
     public static final RegistryObject<Block> POLISHED_DRIPSTONE_BLOCK = registerBlock("polished_dripstone_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2f).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2f)
+                    .sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> POLISHED_DRIPSTONE_STAIRS = registerBlock("polished_dripstone_stairs",
             () -> new StairBlock(() -> ModBlocks.SMOOTH_SANDSTONE_WALL.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.STONE).strength(2f).requiresCorrectToolForDrops().sound(SoundType.DRIPSTONE_BLOCK)));
+                    BlockBehaviour.Properties.copy(Blocks.STONE).strength(2f)
+                            .requiresCorrectToolForDrops().sound(SoundType.DRIPSTONE_BLOCK)));
     public static final RegistryObject<Block> POLISHED_DRIPSTONE_SLAB = registerBlock("polished_dripstone_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2f).requiresCorrectToolForDrops().sound(SoundType.DRIPSTONE_BLOCK)));
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2f)
+                    .requiresCorrectToolForDrops().sound(SoundType.DRIPSTONE_BLOCK)));
     public static final RegistryObject<Block> POLISHED_DRIPSTONE_WALL = registerBlock("polished_dripstone_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(2f).requiresCorrectToolForDrops().sound(SoundType.DRIPSTONE_BLOCK)));
     public static final RegistryObject<Block> MOSSY_COBBLED_DEEPSLATE = registerBlock("mossy_cobbled_deepslate",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE).strength(3.5f).sound(SoundType.DEEPSLATE).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE).strength(3.5f)
+                    .sound(SoundType.DEEPSLATE).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> MOSSY_COBBLED_DEEPSLATE_STAIRS = registerBlock("mossy_cobbled_deepslate_stairs",
             () -> new StairBlock(() -> ModBlocks.SMOOTH_SANDSTONE_WALL.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE).strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+                    BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE).strength(3.5f)
+                            .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
     public static final RegistryObject<Block> MOSSY_COBBLED_DEEPSLATE_SLAB = registerBlock("mossy_cobbled_deepslate_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE)
                     .strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
@@ -333,10 +343,12 @@ public class ModBlocks {
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE)
                     .strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
     public static final RegistryObject<Block> MOSSY_DEEPSLATE_BRICKS = registerBlock("mossy_deepslate_bricks",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS).strength(3.5f).sound(SoundType.DEEPSLATE_BRICKS).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS).strength(3.5f)
+                    .sound(SoundType.DEEPSLATE_BRICKS).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> MOSSY_DEEPSLATE_BRICK_STAIRS = registerBlock("mossy_deepslate_brick_stairs",
             () -> new StairBlock(() -> ModBlocks.SMOOTH_SANDSTONE_WALL.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS).strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE_BRICKS)));
+                    BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS).strength(3.5f)
+                            .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE_BRICKS)));
     public static final RegistryObject<Block> MOSSY_DEEPSLATE_BRICK_SLAB = registerBlock("mossy_deepslate_brick_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS)
                     .strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE_BRICKS)));
@@ -344,16 +356,33 @@ public class ModBlocks {
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS)
                     .strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE_BRICKS)));
     public static final RegistryObject<Block> MOSSY_DEEPSLATE_TILES = registerBlock("mossy_deepslate_tiles",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_TILES).strength(3.5f).sound(SoundType.DEEPSLATE_TILES).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_TILES).strength(3.5f)
+                    .sound(SoundType.DEEPSLATE_TILES).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> MOSSY_DEEPSLATE_TILE_STAIRS = registerBlock("mossy_deepslate_tile_stairs",
             () -> new StairBlock(() -> ModBlocks.SMOOTH_SANDSTONE_WALL.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_TILES).strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE_TILES)));
+                    BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_TILES).strength(3.5f)
+                            .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE_TILES)));
     public static final RegistryObject<Block> MOSSY_DEEPSLATE_TILE_SLAB = registerBlock("mossy_deepslate_tile_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_TILES)
                     .strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE_TILES)));
     public static final RegistryObject<Block> MOSSY_DEEPSLATE_TILE_WALL = registerBlock("mossy_deepslate_tile_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_TILES)
                     .strength(3.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE_TILES)));
+    public static final RegistryObject<Block> CRACKED_RED_NETHER_BRICKS = registerBlock("cracked_red_nether_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0F, 6.0F)
+                    .requiresCorrectToolForDrops().sound(SoundType.NETHER_BRICKS)));
+    public static final RegistryObject<Block> CRACKED_RED_NETHER_BRICK_STAIRS = registerBlock("cracked_red_nether_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.SMOOTH_STONE_STAIRS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.CRACKED_NETHER_BRICKS).requiresCorrectToolForDrops()
+                            .strength(2.0F, 6.0F).sound(SoundType.NETHER_BRICKS)));
+    public static final RegistryObject<Block> CRACKED_RED_NETHER_BRICK_SLAB = registerBlock("cracked_red_nether_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CRACKED_NETHER_BRICKS)
+                    .requiresCorrectToolForDrops().strength(2.0F, 6.0F).sound(SoundType.NETHER_BRICKS)));
+    public static final RegistryObject<Block> CRACKED_RED_NETHER_BRICK_WALL = registerBlock("cracked_red_nether_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CRACKED_NETHER_BRICKS)
+                    .requiresCorrectToolForDrops().strength(2.0F, 6.0F).sound(SoundType.NETHER_BRICKS)));
+    public static final RegistryObject<Block> CRACKED_MUD_BRICKS = registerBlock("cracked_mud_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1.5f).sound(SoundType.MUD_BRICKS).requiresCorrectToolForDrops()));
 
 
 

@@ -161,6 +161,9 @@ public class Cinchcraft
             event.accept(ModBlocks.CRACKED_NETHER_BRICK_STAIRS);
             event.accept(ModBlocks.CRACKED_NETHER_BRICK_SLAB);
             event.accept(ModBlocks.CRACKED_NETHER_BRICK_WALL);
+            event.accept(ModBlocks.CRACKED_RED_NETHER_BRICK_STAIRS);
+            event.accept(ModBlocks.CRACKED_RED_NETHER_BRICK_SLAB);
+            event.accept(ModBlocks.CRACKED_RED_NETHER_BRICK_WALL);
             event.accept(ModBlocks.QUARTZ_BRICK_STAIRS);
             event.accept(ModBlocks.QUARTZ_BRICK_SLAB);
             event.accept(ModBlocks.QUARTZ_BRICK_WALL);
