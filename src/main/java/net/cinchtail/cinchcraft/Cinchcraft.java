@@ -13,6 +13,7 @@ import net.cinchtail.cinchcraft.world.biomemods.ModBiomeModifiers;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
@@ -64,6 +65,23 @@ public class Cinchcraft
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        ComposterBlock.COMPOSTABLES.put(Items.ROTTEN_FLESH, 0.2f);
+        ComposterBlock.COMPOSTABLES.put(Items.BAMBOO, 0.65f);
+        ComposterBlock.COMPOSTABLES.put(Items.POISONOUS_POTATO, 0.2f);
+        ComposterBlock.COMPOSTABLES.put(ModItems.CARROT_SEEDS.get(), 0.3f);
+        ComposterBlock.COMPOSTABLES.put(ModItems.BLUEBERRY_PIE.get(), 1f);
+        ComposterBlock.COMPOSTABLES.put(ModItems.BLUEBERRIES.get(), 0.3f);
+        ComposterBlock.COMPOSTABLES.put(ModItems.STRAWBERRIES.get(), 0.3f);
+        ComposterBlock.COMPOSTABLES.put(ModItems.PINEAPPLE.get(), 0.5f);
+        ComposterBlock.COMPOSTABLES.put(ModItems.CARVED_MELON.get(), 0.65f);
+        ComposterBlock.COMPOSTABLES.put(ModItems.BUTTER_CUP.get(), 0.65f);
+        ComposterBlock.COMPOSTABLES.put(ModItems.SMALL_ROSE.get(), 0.65f);
+        ComposterBlock.COMPOSTABLES.put(ModItems.CROCUS.get(), 0.65f);
+        ComposterBlock.COMPOSTABLES.put(ModItems.ALYSSUM.get(), 0.65f);
+        ComposterBlock.COMPOSTABLES.put(ModItems.LUPINE.get(), 0.65f);
+        ComposterBlock.COMPOSTABLES.put(ModItems.SMALL_CACTUS.get(), 0.65f);
+        ComposterBlock.COMPOSTABLES.put(ModItems.FIRE_FERN.get(), 0.65f);
+        ComposterBlock.COMPOSTABLES.put(ModItems.REEDS.get(), 0.65f);
     }
 
     @Mod.EventBusSubscriber(modid = Cinchcraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -140,6 +158,9 @@ public class Cinchcraft
             event.accept(ModBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_STAIRS);
             event.accept(ModBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_SLAB);
             event.accept(ModBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_WALL);
+            event.accept(ModBlocks.CRACKED_NETHER_BRICK_STAIRS);
+            event.accept(ModBlocks.CRACKED_NETHER_BRICK_SLAB);
+            event.accept(ModBlocks.CRACKED_NETHER_BRICK_WALL);
             event.accept(ModBlocks.QUARTZ_BRICK_STAIRS);
             event.accept(ModBlocks.QUARTZ_BRICK_SLAB);
             event.accept(ModBlocks.QUARTZ_BRICK_WALL);
@@ -224,17 +245,17 @@ public class Cinchcraft
             //event.accept(ModBlocks.IRON_BUTTON);
             //event.accept(ModBlocks.GOLD_BUTTON);
             //event.accept(ModBlocks.PERMAFROST);
-            event.accept(ModBlocks.CARVED_MELON);
+            event.accept(ModItems.CARVED_MELON);
             //event.accept(ModBlocks.ICICLE);
             event.accept(ModItems.FIRE_FERN);
             event.accept(ModBlocks.BUBBLE_FLOWER);
-            event.accept(ModBlocks.BUTTER_CUP);
-            event.accept(ModBlocks.CROCUS);
-            event.accept(ModBlocks.ALYSSUM);
-            event.accept(ModBlocks.SMALL_ROSE);
-            event.accept(ModBlocks.LUPINE);
-            event.accept(ModBlocks.SMALL_CACTUS);
-            event.accept(ModBlocks.REEDS);
+            event.accept(ModItems.BUTTER_CUP);
+            event.accept(ModItems.CROCUS);
+            event.accept(ModItems.ALYSSUM);
+            event.accept(ModItems.SMALL_ROSE);
+            event.accept(ModItems.LUPINE);
+            event.accept(ModItems.SMALL_CACTUS);
+            event.accept(ModItems.REEDS);
             //event.accept(ModItems.STALK);
         }
         if(event.getTab() == ModCreativeModeTabs.CINCHCRAFT_ITEM_TAB.get()) {

@@ -89,6 +89,9 @@
     "cinchcraft:cracked_deepslate_tile_stairs",
     "cinchcraft:cracked_polished_blackstone_brick_wall",
     "cinchcraft:cracked_polished_blackstone_brick_slab",
-    "cinchcraft:cracked_polished_blackstone_brick_stairs"
+    "cinchcraft:cracked_polished_blackstone_brick_stairs",
+    "cinchcraft:cracked_nether_brick_wall",
+    "cinchcraft:cracked_nether_brick_slab",
+    "cinchcraft:cracked_nether_brick_stairs"
   ]
 }

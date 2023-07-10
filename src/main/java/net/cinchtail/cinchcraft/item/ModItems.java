@@ -127,6 +127,30 @@ public class ModItems {
     public static final RegistryObject<Item> FIRE_FERN = ITEMS.register("fire_fern",
             () -> new ItemNameBlockItem(ModBlocks.FIRE_FERN.get(),
                     new Item.Properties()));
+    public static final RegistryObject<Item> CARVED_MELON = ITEMS.register("carved_melon",
+            () -> new ItemNameBlockItem(ModBlocks.CARVED_MELON.get(),
+                    new Item.Properties()));
+    public static final RegistryObject<Item> REEDS = ITEMS.register("reeds",
+            () -> new ItemNameBlockItem(ModBlocks.REEDS.get(),
+                    new Item.Properties()));
+    public static final RegistryObject<Item> BUTTER_CUP = ITEMS.register("butter_cup",
+            () -> new ItemNameBlockItem(ModBlocks.BUTTER_CUP.get(),
+                    new Item.Properties()));
+    public static final RegistryObject<Item> SMALL_ROSE = ITEMS.register("small_rose",
+            () -> new ItemNameBlockItem(ModBlocks.REEDS.get(),
+                    new Item.Properties()));
+    public static final RegistryObject<Item> CROCUS = ITEMS.register("crocus",
+            () -> new ItemNameBlockItem(ModBlocks.REEDS.get(),
+                    new Item.Properties()));
+    public static final RegistryObject<Item> ALYSSUM = ITEMS.register("alyssum",
+            () -> new ItemNameBlockItem(ModBlocks.REEDS.get(),
+                    new Item.Properties()));
+    public static final RegistryObject<Item> LUPINE = ITEMS.register("lupine",
+            () -> new ItemNameBlockItem(ModBlocks.REEDS.get(),
+                    new Item.Properties()));
+    public static final RegistryObject<Item> SMALL_CACTUS = ITEMS.register("small_cactus",
+            () -> new ItemNameBlockItem(ModBlocks.REEDS.get(),
+                    new Item.Properties()));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

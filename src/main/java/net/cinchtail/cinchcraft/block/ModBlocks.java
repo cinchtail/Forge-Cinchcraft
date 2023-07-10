@@ -152,7 +152,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> END_STONE_WALL = registerBlock("end_stone_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(3.0F, 9.0F).requiresCorrectToolForDrops().sound(SoundType.STONE)));
-    public static final RegistryObject<Block> CARVED_MELON = registerBlock("carved_melon",
+    public static final RegistryObject<Block> CARVED_MELON = BLOCKS.register("carved_melon",
             () -> new CarvedMelonBlock(BlockBehaviour.Properties.copy(Blocks.CARVED_PUMPKIN).strength(1f).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> BLOCK_OF_RUBY = registerBlock("block_of_ruby",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK).strength(5f).requiresCorrectToolForDrops()));
@@ -213,35 +213,45 @@ public class ModBlocks {
     public static final RegistryObject<Block> CRACKED_POLISHED_BLACKSTONE_BRICK_WALL = registerBlock("cracked_polished_blackstone_brick_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.POLISHED_BLACKSTONE)
                     .requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
+    public static final RegistryObject<Block> CRACKED_NETHER_BRICK_STAIRS = registerBlock("cracked_nether_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.SMOOTH_STONE_STAIRS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.CRACKED_NETHER_BRICKS).requiresCorrectToolForDrops()
+                            .strength(2.0F, 6.0F).sound(SoundType.NETHER_BRICKS)));
+    public static final RegistryObject<Block> CRACKED_NETHER_BRICK_SLAB = registerBlock("cracked_nether_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CRACKED_NETHER_BRICKS)
+                    .requiresCorrectToolForDrops().strength(2.0F, 6.0F).sound(SoundType.NETHER_BRICKS)));
+    public static final RegistryObject<Block> CRACKED_NETHER_BRICK_WALL = registerBlock("cracked_nether_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CRACKED_NETHER_BRICKS)
+                    .requiresCorrectToolForDrops().strength(2.0F, 6.0F).sound(SoundType.NETHER_BRICKS)));
 
 
 
     //Plants
-    public static final RegistryObject<Block> REEDS = registerBlock("reeds",
+    public static final RegistryObject<Block> REEDS = BLOCKS.register("reeds",
             () -> new ReedsBlock(BlockBehaviour.Properties.copy(Blocks.LILAC).sound(SoundType.SMALL_DRIPLEAF)));
-    public static final RegistryObject<Block> BUTTER_CUP = registerBlock("butter_cup",
+    public static final RegistryObject<Block> BUTTER_CUP = BLOCKS.register("butter_cup",
             () -> new FlowerBlock(MobEffects.DARKNESS, 6, BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()));
     public static final RegistryObject<FlowerPotBlock> POTTED_BUTTER_CUP = BLOCKS.register("potted_butter_cup",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ModBlocks.BUTTER_CUP, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
-    public static final RegistryObject<Block> SMALL_ROSE = registerBlock("small_rose",
+    public static final RegistryObject<Block> SMALL_ROSE = BLOCKS.register("small_rose",
             () -> new FlowerBlock(MobEffects.HEALTH_BOOST, 4, BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()));
     public static final RegistryObject<FlowerPotBlock> POTTED_SMALL_ROSE = BLOCKS.register("potted_small_rose",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ModBlocks.SMALL_ROSE, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
-    public static final RegistryObject<Block> CROCUS = registerBlock("crocus",
+    public static final RegistryObject<Block> CROCUS = BLOCKS.register("crocus",
             () -> new CrocusFlowerBlock(MobEffects.INVISIBILITY, 5, BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()));
     public static final RegistryObject<FlowerPotBlock> POTTED_CROCUS = BLOCKS.register("potted_crocus",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ModBlocks.CROCUS, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
     public static final RegistryObject<Block> BUBBLE_FLOWER = registerBlock("bubble_flower",
             () -> new BubbleFlowerBlock(MobEffects.LEVITATION, 4, BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()));
-    public static final RegistryObject<Block> ALYSSUM = registerBlock("alyssum",
+    public static final RegistryObject<Block> ALYSSUM = BLOCKS.register("alyssum",
             () -> new AlyssumFlowerBlock(MobEffects.CONFUSION, 12, BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()));
     public static final RegistryObject<FlowerPotBlock> POTTED_ALYSSUM = BLOCKS.register("potted_alyssum",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ModBlocks.ALYSSUM, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
-    public static final RegistryObject<Block> LUPINE = registerBlock("lupine",
+    public static final RegistryObject<Block> LUPINE = BLOCKS.register("lupine",
             () -> new FlowerBlock(MobEffects.DOLPHINS_GRACE, 8, BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()));
     public static final RegistryObject<FlowerPotBlock> POTTED_LUPINE = BLOCKS.register("potted_lupine",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ModBlocks.LUPINE, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
-    public static final RegistryObject<Block> SMALL_CACTUS = registerBlock("small_cactus",
+    public static final RegistryObject<Block> SMALL_CACTUS = BLOCKS.register("small_cactus",
             () -> new SmallCactusBlock(BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()));
     public static final RegistryObject<FlowerPotBlock> POTTED_SMALL_CACTUS = BLOCKS.register("potted_small_cactus",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ModBlocks.SMALL_CACTUS, BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
