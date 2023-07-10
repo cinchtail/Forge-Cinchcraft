@@ -80,6 +80,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 blockTexture(Blocks.CRACKED_NETHER_BRICKS));
         slabBlock((SlabBlock) CRACKED_RED_NETHER_BRICK_SLAB.get(), blockLoc(CRACKED_RED_NETHER_BRICKS),
                 blockLoc(CRACKED_RED_NETHER_BRICKS));
+        slabBlock((SlabBlock) CRACKED_MUD_BRICK_SLAB.get(), blockLoc(CRACKED_MUD_BRICKS),
+                blockLoc(CRACKED_MUD_BRICKS));
 
         stairsBlock((StairBlock) SMOOTH_STONE_STAIRS.get(), blockTexture(Blocks.SMOOTH_STONE));
         stairsBlock((StairBlock) TUFF_STAIRS.get(), blockTexture(Blocks.TUFF));
@@ -100,6 +102,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock((StairBlock) CRACKED_POLISHED_BLACKSTONE_BRICK_STAIRS.get(), blockTexture(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS));
         stairsBlock((StairBlock) CRACKED_NETHER_BRICK_STAIRS.get(), blockTexture(Blocks.CRACKED_NETHER_BRICKS));
         stairsBlock((StairBlock) CRACKED_RED_NETHER_BRICK_STAIRS.get(), blockLoc(CRACKED_RED_NETHER_BRICKS));
+        stairsBlock((StairBlock) CRACKED_MUD_BRICK_STAIRS.get(), blockLoc(CRACKED_MUD_BRICKS));
 
 
         vanillaWallBlock(SMOOTH_STONE_WALL, blockVanillaBlockLoc(Blocks.SMOOTH_STONE));
@@ -130,7 +133,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         modWallBlock(MOSSY_DEEPSLATE_BRICK_WALL, blockLoc(MOSSY_DEEPSLATE_BRICKS));
         modWallBlock(MOSSY_DEEPSLATE_TILE_WALL, blockLoc(MOSSY_DEEPSLATE_TILES));
         modWallBlock(CRACKED_RED_NETHER_BRICK_WALL, blockLoc(CRACKED_RED_NETHER_BRICKS));
+        modWallBlock(CRACKED_MUD_BRICK_WALL, blockLoc(CRACKED_MUD_BRICKS));
     }
+
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
     }
@@ -142,7 +147,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         super.wallBlock((WallBlock) block.get(), texture);
         models().wallInventory(getName(block) + "_inventory", texture);
     }
-
     public String getName(Supplier<? extends Block> block) {
         return block.get().builtInRegistryHolder().key().location().getPath();
     }
