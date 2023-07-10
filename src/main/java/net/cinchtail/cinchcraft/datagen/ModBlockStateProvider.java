@@ -43,6 +43,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(MOSSY_COBBLED_DEEPSLATE);
         blockWithItem(MOSSY_DEEPSLATE_BRICKS);
         blockWithItem(MOSSY_DEEPSLATE_TILES);
+        blockWithItem(CRACKED_QUARTZ_BRICKS);
 
         slabBlock((SlabBlock) TUFF_SLAB.get(), blockTexture(Blocks.TUFF),
                 blockTexture(Blocks.TUFF));
@@ -82,6 +83,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 blockLoc(CRACKED_RED_NETHER_BRICKS));
         slabBlock((SlabBlock) CRACKED_MUD_BRICK_SLAB.get(), blockLoc(CRACKED_MUD_BRICKS),
                 blockLoc(CRACKED_MUD_BRICKS));
+        slabBlock((SlabBlock) CRACKED_QUARTZ_BRICK_SLAB.get(), blockLoc(CRACKED_QUARTZ_BRICKS),
+                blockLoc(CRACKED_QUARTZ_BRICKS));
 
         stairsBlock((StairBlock) SMOOTH_STONE_STAIRS.get(), blockTexture(Blocks.SMOOTH_STONE));
         stairsBlock((StairBlock) TUFF_STAIRS.get(), blockTexture(Blocks.TUFF));
@@ -103,6 +106,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock((StairBlock) CRACKED_NETHER_BRICK_STAIRS.get(), blockTexture(Blocks.CRACKED_NETHER_BRICKS));
         stairsBlock((StairBlock) CRACKED_RED_NETHER_BRICK_STAIRS.get(), blockLoc(CRACKED_RED_NETHER_BRICKS));
         stairsBlock((StairBlock) CRACKED_MUD_BRICK_STAIRS.get(), blockLoc(CRACKED_MUD_BRICKS));
+        stairsBlock((StairBlock) CRACKED_QUARTZ_BRICK_STAIRS.get(), blockLoc(CRACKED_QUARTZ_BRICKS));
 
 
         vanillaWallBlock(SMOOTH_STONE_WALL, blockVanillaBlockLoc(Blocks.SMOOTH_STONE));
@@ -134,6 +138,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         modWallBlock(MOSSY_DEEPSLATE_TILE_WALL, blockLoc(MOSSY_DEEPSLATE_TILES));
         modWallBlock(CRACKED_RED_NETHER_BRICK_WALL, blockLoc(CRACKED_RED_NETHER_BRICKS));
         modWallBlock(CRACKED_MUD_BRICK_WALL, blockLoc(CRACKED_MUD_BRICKS));
+        modWallBlock(CRACKED_QUARTZ_BRICK_WALL, blockLoc(CRACKED_QUARTZ_BRICKS));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

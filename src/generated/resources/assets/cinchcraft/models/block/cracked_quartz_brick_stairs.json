@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "cinchcraft:block/cracked_quartz_bricks",
+    "side": "cinchcraft:block/cracked_quartz_bricks",
+    "top": "cinchcraft:block/cracked_quartz_bricks"
+  }
+}

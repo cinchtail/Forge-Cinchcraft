@@ -98,6 +98,10 @@
     "cinchcraft:cracked_red_nether_brick_stairs",
     "cinchcraft:cracked_mud_brick_wall",
     "cinchcraft:cracked_mud_brick_slab",
-    "cinchcraft:cracked_mud_brick_stairs"
+    "cinchcraft:cracked_mud_brick_stairs",
+    "cinchcraft:cracked_quartz_bricks",
+    "cinchcraft:cracked_quartz_brick_wall",
+    "cinchcraft:cracked_quartz_brick_slab",
+    "cinchcraft:cracked_quartz_brick_stairs"
   ]
 }

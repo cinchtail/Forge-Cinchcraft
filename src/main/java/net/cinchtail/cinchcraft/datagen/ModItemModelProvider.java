@@ -126,6 +126,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("cracked_mud_brick_stairs", modLoc("block/cracked_mud_brick_stairs"));
         withExistingParent("cracked_mud_brick_slab", modLoc("block/cracked_mud_brick_slab"));
         withExistingParent("cracked_mud_brick_wall", modLoc("block/cracked_mud_brick_wall_inventory"));
+        withExistingParent("cracked_quartz_brick_stairs", modLoc("block/cracked_quartz_brick_stairs"));
+        withExistingParent("cracked_quartz_brick_slab", modLoc("block/cracked_quartz_brick_slab"));
+        withExistingParent("cracked_quartz_brick_wall", modLoc("block/cracked_quartz_brick_wall_inventory"));
     }
     private void simpleItem(RegistryObject<Item> item) {
         withExistingParent(item.getId().getPath(),

@@ -161,12 +161,25 @@ public class Cinchcraft
             event.accept(ModBlocks.CRACKED_NETHER_BRICK_STAIRS);
             event.accept(ModBlocks.CRACKED_NETHER_BRICK_SLAB);
             event.accept(ModBlocks.CRACKED_NETHER_BRICK_WALL);
+            event.accept(ModBlocks.CHISELED_RED_NETHER_BRICKS);
+            event.accept(ModBlocks.RED_NETHER_BRICK_FENCE);
+            event.accept(ModBlocks.CRACKED_RED_NETHER_BRICKS);
             event.accept(ModBlocks.CRACKED_RED_NETHER_BRICK_STAIRS);
             event.accept(ModBlocks.CRACKED_RED_NETHER_BRICK_SLAB);
             event.accept(ModBlocks.CRACKED_RED_NETHER_BRICK_WALL);
+            event.accept(ModBlocks.CRACKED_MUD_BRICKS);
             event.accept(ModBlocks.CRACKED_MUD_BRICK_STAIRS);
             event.accept(ModBlocks.CRACKED_MUD_BRICK_SLAB);
             event.accept(ModBlocks.CRACKED_MUD_BRICK_WALL);
+            event.accept(ModBlocks.CHISELED_MUD_BRICKS);
+            event.accept(ModBlocks.MOSSY_MUD_BRICKS);
+            event.accept(ModBlocks.MOSSY_MUD_BRICK_STAIRS);
+            event.accept(ModBlocks.MOSSY_MUD_BRICK_SLAB);
+            event.accept(ModBlocks.MOSSY_MUD_BRICK_WALL);
+            event.accept(ModBlocks.CRACKED_QUARTZ_BRICKS);
+            event.accept(ModBlocks.CRACKED_QUARTZ_BRICK_STAIRS);
+            event.accept(ModBlocks.CRACKED_QUARTZ_BRICK_SLAB);
+            event.accept(ModBlocks.CRACKED_QUARTZ_BRICK_WALL);
             event.accept(ModBlocks.QUARTZ_BRICK_STAIRS);
             event.accept(ModBlocks.QUARTZ_BRICK_SLAB);
             event.accept(ModBlocks.QUARTZ_BRICK_WALL);
@@ -186,9 +199,6 @@ public class Cinchcraft
             event.accept(ModBlocks.MOSSY_DEEPSLATE_TILE_STAIRS);
             event.accept(ModBlocks.MOSSY_DEEPSLATE_TILE_SLAB);
             event.accept(ModBlocks.MOSSY_DEEPSLATE_TILE_WALL);
-            event.accept(ModBlocks.CHISELED_RED_NETHER_BRICKS);
-            event.accept(ModBlocks.CRACKED_RED_NETHER_BRICKS);
-            event.accept(ModBlocks.RED_NETHER_BRICK_FENCE);
             //event.accept(ModBlocks.MOSSY_NETHER_BRICKS);
             //event.accept(ModBlocks.MOSSY_NETHER_BRICK_STAIRS);
             //event.accept(ModBlocks.MOSSY_NETHER_BRICK_SLAB);
@@ -204,12 +214,6 @@ public class Cinchcraft
             //event.accept(ModBlocks.WARPED_MOSSY_NETHER_BRICK_SLAB);
             //event.accept(ModBlocks.WARPED_MOSSY_NETHER_BRICK_WALL);
             //event.accept(ModBlocks.WARPED_MOSSY_NETHER_BRICK_FENCE);
-            event.accept(ModBlocks.CHISELED_MUD_BRICKS);
-            event.accept(ModBlocks.CRACKED_MUD_BRICKS);
-            event.accept(ModBlocks.MOSSY_MUD_BRICKS);
-            event.accept(ModBlocks.MOSSY_MUD_BRICK_STAIRS);
-            event.accept(ModBlocks.MOSSY_MUD_BRICK_SLAB);
-            event.accept(ModBlocks.MOSSY_MUD_BRICK_WALL);
             event.accept(ModBlocks.SMOOTH_STONE_STAIRS);
             event.accept(ModBlocks.SMOOTH_STONE_WALL);
             event.accept(ModBlocks.CUT_SANDSTONE_STAIRS);
@@ -227,9 +231,12 @@ public class Cinchcraft
             event.accept(ModBlocks.QUARTZ_WALL);
             event.accept(ModBlocks.SMOOTH_QUARTZ_WALL);
             event.accept(ModBlocks.PURPUR_WALL);
+            event.accept(ModItems.CARVED_MELON);
+            event.accept(ModItems.GLOWSTONE_TORCH);
             event.accept(ModItems.THATCH_BLOCK);
             event.accept(ModItems.THATCH_STAIRS);
             event.accept(ModItems.THATCH_SLAB);
+            event.accept(ModItems.REEDS);
             //event.accept(ModItems.APPLE_LOG);
             //event.accept(ModItems.APPLE_WOOD);
             //event.accept(ModItems.STRIPPED_APPLE_LOG);
@@ -245,13 +252,11 @@ public class Cinchcraft
             //event.accept(ModItems.APPLE_PRESSURE_PLATE);
             //event.accept(ModItems.APPLE_BUTTON);
             //event.accept(ModBlocks.APPLE_LEAVES);
-            event.accept(ModItems.GLOWSTONE_TORCH);
             //event.accept(ModBlocks.POLISHED_DEEPSLATE_PRESSURE_PLATE);
             //event.accept(ModBlocks.POLISHED_DEEPSLATE_BUTTON);
             //event.accept(ModBlocks.IRON_BUTTON);
             //event.accept(ModBlocks.GOLD_BUTTON);
             //event.accept(ModBlocks.PERMAFROST);
-            event.accept(ModItems.CARVED_MELON);
             //event.accept(ModBlocks.ICICLE);
             event.accept(ModItems.FIRE_FERN);
             event.accept(ModBlocks.BUBBLE_FLOWER);
@@ -261,7 +266,6 @@ public class Cinchcraft
             event.accept(ModItems.SMALL_ROSE);
             event.accept(ModItems.LUPINE);
             event.accept(ModItems.SMALL_CACTUS);
-            event.accept(ModItems.REEDS);
             //event.accept(ModItems.STALK);
         }
         if(event.getTab() == ModCreativeModeTabs.CINCHCRAFT_ITEM_TAB.get()) {
