@@ -1,5 +1,6 @@
 package net.cinchtail.cinchcraft.item;
 
+import net.cinchtail.cinchcraft.Cinchcraft;
 import net.minecraft.Util;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -75,7 +76,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
     }
 
     public String getName() {
-        return this.name;
+        return Cinchcraft.MOD_ID + ":" + this.name;
     }
 
     public float getToughness() {
@@ -84,5 +85,8 @@ public enum ModArmorMaterials implements ArmorMaterial {
 
     public float getKnockbackResistance() {
         return this.knockbackResistance;
+    }
+    public String getSerializedName() {
+        return Cinchcraft.MOD_ID + ":" + this.name;
     }
 }

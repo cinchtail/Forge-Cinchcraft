@@ -26,10 +26,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.BLUEBERRIES);
         simpleItem(ModItems.BLUEBERRY_PIE);
         simpleItem(ModItems.PINEAPPLE);
-        simpleItem(ModItems.RUBY_HELMET);
-        simpleItem(ModItems.RUBY_CHESTPLATE);
-        simpleItem(ModItems.RUBY_LEGGINGS);
-        simpleItem(ModItems.RUBY_BOOTS);
         simpleItem(ModItems.DOG_MUSIC_DISC);
         simpleItem(ModItems.KYOTO_MUSIC_DISC);
         simpleItem(ModItems.STRAWBERRIES);

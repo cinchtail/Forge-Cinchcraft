@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-10T18:20:16.0639717	Item Models: cinchcraft
+// 1.20.1	2023-07-10T19:19:13.4386919	Item Models: cinchcraft
 1c90b5f18401efcc168cf75aad20b84b9f739d50 assets/cinchcraft/models/item/blackstone_axe.json
 c4e0813bbff9221790d53c7968580579b0dbd043 assets/cinchcraft/models/item/blackstone_hoe.json
 88b8a4e53315dd0b2604b6bd7b98f1553f5a5bbd assets/cinchcraft/models/item/blackstone_pickaxe.json
@@ -88,12 +88,8 @@ bfb53ab740d50fda48ce3319fbc36d6c6a21d6ac assets/cinchcraft/models/item/quartz_br
 16ff278c0facdc8b6bddb22702fa7eb7706c7f01 assets/cinchcraft/models/item/red_nether_brick_fence.json
 1d6e5a1eadf70ec6b8e042ee01396c80a7c20cf3 assets/cinchcraft/models/item/ruby.json
 61208272c248a2d81d4649c5af3dfa962543202a assets/cinchcraft/models/item/ruby_axe.json
-12521cf16fa2cf54ae163ba36780b6c40fe00538 assets/cinchcraft/models/item/ruby_boots.json
-6659e9224370f7bcd99598b10feb4b4b5149129f assets/cinchcraft/models/item/ruby_chestplate.json
-dc6fe831fe72bdda984228c4c406410fae990d25 assets/cinchcraft/models/item/ruby_helmet.json
 bb97d23cb449a6b02f94f6fcaea440a057e603b9 assets/cinchcraft/models/item/ruby_hoe.json
 6e96e6dc097b123890d7cc6fb13ffb520472ae54 assets/cinchcraft/models/item/ruby_horse_armor.json
-f4f2734538092e6be1a8e5caeacd101c5709ebd3 assets/cinchcraft/models/item/ruby_leggings.json
 782f2c29cb29a63b2f12a6c98241f16518f140e3 assets/cinchcraft/models/item/ruby_pickaxe.json
 da6160549428947f68ceeadf43b70d366fc3fcbf assets/cinchcraft/models/item/ruby_shovel.json
 e5fac61d1e049323d5c198850ccd5c5f9c7912c5 assets/cinchcraft/models/item/ruby_sword.json
