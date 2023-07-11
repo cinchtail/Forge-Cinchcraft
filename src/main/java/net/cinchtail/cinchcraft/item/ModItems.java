@@ -137,19 +137,19 @@ public class ModItems {
             () -> new ItemNameBlockItem(ModBlocks.BUTTER_CUP.get(),
                     new Item.Properties()));
     public static final RegistryObject<Item> SMALL_ROSE = ITEMS.register("small_rose",
-            () -> new ItemNameBlockItem(ModBlocks.REEDS.get(),
+            () -> new ItemNameBlockItem(ModBlocks.SMALL_ROSE.get(),
                     new Item.Properties()));
     public static final RegistryObject<Item> CROCUS = ITEMS.register("crocus",
-            () -> new ItemNameBlockItem(ModBlocks.REEDS.get(),
+            () -> new ItemNameBlockItem(ModBlocks.CROCUS.get(),
                     new Item.Properties()));
     public static final RegistryObject<Item> ALYSSUM = ITEMS.register("alyssum",
-            () -> new ItemNameBlockItem(ModBlocks.REEDS.get(),
+            () -> new ItemNameBlockItem(ModBlocks.ALYSSUM.get(),
                     new Item.Properties()));
     public static final RegistryObject<Item> LUPINE = ITEMS.register("lupine",
-            () -> new ItemNameBlockItem(ModBlocks.REEDS.get(),
+            () -> new ItemNameBlockItem(ModBlocks.LUPINE.get(),
                     new Item.Properties()));
     public static final RegistryObject<Item> SMALL_CACTUS = ITEMS.register("small_cactus",
-            () -> new ItemNameBlockItem(ModBlocks.REEDS.get(),
+            () -> new ItemNameBlockItem(ModBlocks.SMALL_CACTUS.get(),
                     new Item.Properties()));
 
     public static void register(IEventBus eventBus){
