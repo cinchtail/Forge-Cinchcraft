@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-10T19:19:13.4386919	Item Models: cinchcraft
+// 1.20.1	2023-07-10T20:00:13.7629946	Item Models: cinchcraft
 1c90b5f18401efcc168cf75aad20b84b9f739d50 assets/cinchcraft/models/item/blackstone_axe.json
 c4e0813bbff9221790d53c7968580579b0dbd043 assets/cinchcraft/models/item/blackstone_hoe.json
 88b8a4e53315dd0b2604b6bd7b98f1553f5a5bbd assets/cinchcraft/models/item/blackstone_pickaxe.json
@@ -93,6 +93,9 @@ bb97d23cb449a6b02f94f6fcaea440a057e603b9 assets/cinchcraft/models/item/ruby_hoe.
 782f2c29cb29a63b2f12a6c98241f16518f140e3 assets/cinchcraft/models/item/ruby_pickaxe.json
 da6160549428947f68ceeadf43b70d366fc3fcbf assets/cinchcraft/models/item/ruby_shovel.json
 e5fac61d1e049323d5c198850ccd5c5f9c7912c5 assets/cinchcraft/models/item/ruby_sword.json
+b9c087c6c7bb0cbfde7381649796026727a001c9 assets/cinchcraft/models/item/smooth_basalt_slab.json
+21afd938c6354f8d5ec51d8a4a301249d5ee5b7f assets/cinchcraft/models/item/smooth_basalt_stairs.json
+05e3364467fe8d3dea239022bc194100cd65fefc assets/cinchcraft/models/item/smooth_basalt_wall.json
 e09a1a73a1bb2df5a3ef49972f37a62f87ac904c assets/cinchcraft/models/item/smooth_stone_stairs.json
 7930ebfcd95eef8982eaffa8369685f19fd68ac5 assets/cinchcraft/models/item/smooth_stone_wall.json
 7c1515fdf30beadaa144e013e909e88e81e3acf8 assets/cinchcraft/models/item/stone_wall.json

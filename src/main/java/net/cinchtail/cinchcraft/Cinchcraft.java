@@ -187,6 +187,9 @@ public class Cinchcraft
             event.accept(ModBlocks.END_STONE_STAIRS);
             event.accept(ModBlocks.END_STONE_SLAB);
             event.accept(ModBlocks.END_STONE_WALL);
+            event.accept(ModBlocks.SMOOTH_BASALT_STAIRS);
+            event.accept(ModBlocks.SMOOTH_BASALT_SLAB);
+            event.accept(ModBlocks.SMOOTH_BASALT_WALL);
             event.accept(ModBlocks.MOSSY_COBBLED_DEEPSLATE);
             event.accept(ModBlocks.MOSSY_COBBLED_DEEPSLATE_STAIRS);
             event.accept(ModBlocks.MOSSY_COBBLED_DEEPSLATE_SLAB);

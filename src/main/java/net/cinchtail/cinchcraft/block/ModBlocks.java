@@ -219,6 +219,16 @@ public class ModBlocks {
     public static final RegistryObject<Block> CRACKED_NETHER_BRICK_WALL = registerBlock("cracked_nether_brick_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CRACKED_NETHER_BRICKS)
                     .requiresCorrectToolForDrops().strength(2.0F, 6.0F).sound(SoundType.NETHER_BRICKS)));
+    public static final RegistryObject<Block> SMOOTH_BASALT_STAIRS = registerBlock("smooth_basalt_stairs",
+            () -> new StairBlock(() -> ModBlocks.SMOOTH_SANDSTONE_WALL.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.SMOOTH_BASALT).requiresCorrectToolForDrops()
+                            .strength(1.25F, 4.2F).sound(SoundType.BASALT)));
+    public static final RegistryObject<Block> SMOOTH_BASALT_SLAB = registerBlock("smooth_basalt_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.SMOOTH_BASALT)
+                    .requiresCorrectToolForDrops().strength(1.25F, 4.2F).sound(SoundType.BASALT)));
+    public static final RegistryObject<Block> SMOOTH_BASALT_WALL = registerBlock("smooth_basalt_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.SMOOTH_BASALT)
+                    .requiresCorrectToolForDrops().strength(1.25F, 4.2F).sound(SoundType.BASALT)));
 
 
 

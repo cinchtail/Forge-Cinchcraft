@@ -85,6 +85,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 blockLoc(CRACKED_MUD_BRICKS));
         slabBlock((SlabBlock) CRACKED_QUARTZ_BRICK_SLAB.get(), blockLoc(CRACKED_QUARTZ_BRICKS),
                 blockLoc(CRACKED_QUARTZ_BRICKS));
+        slabBlock((SlabBlock) SMOOTH_BASALT_SLAB.get(), blockTexture(Blocks.SMOOTH_BASALT),
+                blockTexture(Blocks.SMOOTH_BASALT));
 
         stairsBlock((StairBlock) SMOOTH_STONE_STAIRS.get(), blockTexture(Blocks.SMOOTH_STONE));
         stairsBlock((StairBlock) TUFF_STAIRS.get(), blockTexture(Blocks.TUFF));
@@ -107,6 +109,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock((StairBlock) CRACKED_RED_NETHER_BRICK_STAIRS.get(), blockLoc(CRACKED_RED_NETHER_BRICKS));
         stairsBlock((StairBlock) CRACKED_MUD_BRICK_STAIRS.get(), blockLoc(CRACKED_MUD_BRICKS));
         stairsBlock((StairBlock) CRACKED_QUARTZ_BRICK_STAIRS.get(), blockLoc(CRACKED_QUARTZ_BRICKS));
+        stairsBlock((StairBlock) SMOOTH_BASALT_STAIRS.get(), blockTexture(Blocks.SMOOTH_BASALT));
 
 
         vanillaWallBlock(SMOOTH_STONE_WALL, blockVanillaBlockLoc(Blocks.SMOOTH_STONE));
@@ -129,6 +132,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         vanillaWallBlock(CRACKED_DEEPSLATE_TILE_WALL, blockVanillaBlockLoc(Blocks.CRACKED_DEEPSLATE_TILES));
         vanillaWallBlock(CRACKED_POLISHED_BLACKSTONE_BRICK_WALL, blockVanillaBlockLoc(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS));
         vanillaWallBlock(CRACKED_NETHER_BRICK_WALL, blockVanillaBlockLoc(Blocks.CRACKED_NETHER_BRICKS));
+        vanillaWallBlock(SMOOTH_BASALT_WALL, blockVanillaBlockLoc(Blocks.SMOOTH_BASALT));
         modWallBlock(MOSSY_MUD_BRICK_WALL, blockLoc(MOSSY_MUD_BRICKS));
         modWallBlock(POLISHED_TUFF_WALL, blockLoc(POLISHED_TUFF));
         modWallBlock(POLISHED_CALCITE_WALL, blockLoc(POLISHED_CALCITE));
