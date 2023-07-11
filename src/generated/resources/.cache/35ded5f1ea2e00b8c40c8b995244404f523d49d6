@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-11T12:06:37.498945	Item Models: cinchcraft
+// 1.20.1	2023-07-11T12:50:25.4025881	Item Models: cinchcraft
 1c90b5f18401efcc168cf75aad20b84b9f739d50 assets/cinchcraft/models/item/blackstone_axe.json
 c4e0813bbff9221790d53c7968580579b0dbd043 assets/cinchcraft/models/item/blackstone_hoe.json
 88b8a4e53315dd0b2604b6bd7b98f1553f5a5bbd assets/cinchcraft/models/item/blackstone_pickaxe.json
@@ -70,6 +70,7 @@ d5ca79e22103d0021578801c3d4ef36b3e0588d5 assets/cinchcraft/models/item/mossy_dee
 84fea0bbbaccac220bd591e8a276b217a8397420 assets/cinchcraft/models/item/netherite_horse_armor.json
 4f889d219574e0d6ff818d02aa5e0a20a9fca3c2 assets/cinchcraft/models/item/nether_stew.json
 3f6b83024137c455c59b715d98cd219ebad41396 assets/cinchcraft/models/item/pineapple.json
+29448540ed9d01ac6ba58ed98da8c9145c495d3c assets/cinchcraft/models/item/pitcher_plant_root.json
 63145a80adea253600ad20c418d931896f570c55 assets/cinchcraft/models/item/polished_andesite_wall.json
 b723872ef275fe9a40303cf33f814f61de706525 assets/cinchcraft/models/item/polished_calcite_slab.json
 a0917d03db3dcfd0cf72437f8a794c4825bcd481 assets/cinchcraft/models/item/polished_calcite_stairs.json

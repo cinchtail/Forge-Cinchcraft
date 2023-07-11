@@ -314,6 +314,7 @@ public class Cinchcraft
             event.accept(ModItems.STRAWBERRIES);
             event.accept(ModItems.PINEAPPLE);
             event.accept(ModItems.BLUEBERRY_PIE);
+            event.accept(ModItems.PITCHER_PLANT_ROOT);
             event.accept(ModItems.VEGETABLE_STEW);
             event.accept(ModItems.NETHER_STEW);
         }
