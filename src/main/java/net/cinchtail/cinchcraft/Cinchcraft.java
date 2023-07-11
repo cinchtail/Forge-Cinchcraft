@@ -317,6 +317,7 @@ public class Cinchcraft
             event.accept(ModItems.PITCHER_PLANT_ROOT);
             event.accept(ModItems.VEGETABLE_STEW);
             event.accept(ModItems.NETHER_STEW);
+            event.accept(ModItems.ANCIENT_SLIME_STEW);
         }
     }
 }

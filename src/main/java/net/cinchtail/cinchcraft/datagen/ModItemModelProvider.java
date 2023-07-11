@@ -36,6 +36,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.KYOTO_MUSIC_DISC);
         simpleItem(ModItems.STRAWBERRIES);
         simpleItem(ModItems.PITCHER_PLANT_ROOT);
+        simpleItem(ModItems.ANCIENT_SLIME_STEW);
 
 
         handheldItem(ModItems.DEEPSLATE_SWORD);

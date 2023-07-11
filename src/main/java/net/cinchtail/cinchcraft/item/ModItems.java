@@ -42,6 +42,9 @@ public class ModItems {
             () -> new BowlFoodItem(new Item.Properties().stacksTo(1).food(ModFoods.VEGETABLE_STEW)));
     public static final RegistryObject<Item> NETHER_STEW = ITEMS.register("nether_stew",
             () -> new BowlFoodItem(new Item.Properties().stacksTo(1).food(ModFoods.NETHER_STEW)));
+
+    public static final RegistryObject<Item> ANCIENT_SLIME_STEW = ITEMS.register("ancient_slime_stew",
+            () -> new BowlFoodItem(new Item.Properties().stacksTo(1).food(ModFoods.ANCIENT_SLIME_STEW)));
     public static final RegistryObject<Item> BLUEBERRIES = ITEMS.register("blueberries",
             () -> new ItemNameBlockItem(ModBlocks.BLUEBERRY_BUSH.get(),
                     new Item.Properties().food(ModFoods.BLUEBERRIES)));
