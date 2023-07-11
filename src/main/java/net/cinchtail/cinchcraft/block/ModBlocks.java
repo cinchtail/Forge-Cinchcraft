@@ -9,6 +9,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -229,6 +230,18 @@ public class ModBlocks {
     public static final RegistryObject<Block> SMOOTH_BASALT_WALL = registerBlock("smooth_basalt_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.SMOOTH_BASALT)
                     .requiresCorrectToolForDrops().strength(1.25F, 4.2F).sound(SoundType.BASALT)));
+    public static final RegistryObject<Block> POLISHED_DEEPSLATE_PRESSURE_PLATE = registerBlock("polished_deepslate_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
+                    BlockBehaviour.Properties.copy(Blocks.POLISHED_BLACKSTONE_PRESSURE_PLATE).sound(SoundType.POLISHED_DEEPSLATE), BlockSetType.STONE));
+    public static final RegistryObject<Block> POLISHED_DEEPSLATE_BUTTON = registerBlock("polished_deepslate_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.POLISHED_BLACKSTONE_BUTTON).sound(SoundType.POLISHED_DEEPSLATE),
+                    BlockSetType.STONE, 10, true));
+    public static final RegistryObject<Block> IRON_BUTTON = registerBlock("iron_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BUTTON).sound(SoundType.METAL),
+                    BlockSetType.IRON, 10, true));
+    public static final RegistryObject<Block> GOLD_BUTTON = registerBlock("gold_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BUTTON).sound(SoundType.METAL),
+                    BlockSetType.GOLD, 10, true));
 
 
 

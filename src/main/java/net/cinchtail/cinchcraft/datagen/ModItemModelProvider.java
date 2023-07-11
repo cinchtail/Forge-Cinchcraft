@@ -1,13 +1,19 @@
 package net.cinchtail.cinchcraft.datagen;
 
 import net.cinchtail.cinchcraft.Cinchcraft;
+import net.cinchtail.cinchcraft.block.ModBlocks;
 import net.cinchtail.cinchcraft.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.Objects;
 
 public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -30,6 +36,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.KYOTO_MUSIC_DISC);
         simpleItem(ModItems.STRAWBERRIES);
 
+
         handheldItem(ModItems.DEEPSLATE_SWORD);
         handheldItem(ModItems.DEEPSLATE_PICKAXE);
         handheldItem(ModItems.DEEPSLATE_AXE);
@@ -45,6 +52,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.RUBY_AXE);
         handheldItem(ModItems.RUBY_SHOVEL);
         handheldItem(ModItems.RUBY_HOE);
+
+
+        buttonItem(ModBlocks.POLISHED_DEEPSLATE_BUTTON, Blocks.POLISHED_DEEPSLATE);
+        buttonItem(ModBlocks.IRON_BUTTON, Blocks.IRON_BLOCK);
+        buttonItem(ModBlocks.GOLD_BUTTON, Blocks.GOLD_BLOCK);
 
 
         withExistingParent("smooth_stone_stairs", modLoc("block/smooth_stone_stairs"));
@@ -138,5 +150,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/handheld")).texture("layer0",
                 new ResourceLocation(Cinchcraft.MOD_ID, "item/" + item.getId().getPath()));
+    }
+    public void buttonItem(RegistryObject<Block> block, Block baseBlock) {
+        this.withExistingParent(Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block.get())).getPath(), mcLoc("block/button_inventory"))
+                .texture("texture",  new ResourceLocation("minecraft", "block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(baseBlock)).getPath()));
     }
 }

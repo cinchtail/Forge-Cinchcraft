@@ -105,6 +105,10 @@
     "cinchcraft:cracked_quartz_brick_stairs",
     "cinchcraft:smooth_basalt_wall",
     "cinchcraft:smooth_basalt_slab",
-    "cinchcraft:smooth_basalt_stairs"
+    "cinchcraft:smooth_basalt_stairs",
+    "cinchcraft:polished_deepslate_pressure_plate",
+    "cinchcraft:polished_deepslate_button",
+    "cinchcraft:iron_button",
+    "cinchcraft:gold_button"
   ]
 }

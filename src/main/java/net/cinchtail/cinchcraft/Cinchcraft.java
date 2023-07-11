@@ -234,6 +234,10 @@ public class Cinchcraft
             event.accept(ModBlocks.QUARTZ_WALL);
             event.accept(ModBlocks.SMOOTH_QUARTZ_WALL);
             event.accept(ModBlocks.PURPUR_WALL);
+            event.accept(ModBlocks.POLISHED_DEEPSLATE_PRESSURE_PLATE);
+            event.accept(ModBlocks.POLISHED_DEEPSLATE_BUTTON);
+            event.accept(ModBlocks.IRON_BUTTON);
+            event.accept(ModBlocks.GOLD_BUTTON);
             event.accept(ModItems.CARVED_MELON);
             event.accept(ModItems.GLOWSTONE_TORCH);
             event.accept(ModItems.THATCH_BLOCK);
@@ -255,10 +259,6 @@ public class Cinchcraft
             //event.accept(ModItems.APPLE_PRESSURE_PLATE);
             //event.accept(ModItems.APPLE_BUTTON);
             //event.accept(ModBlocks.APPLE_LEAVES);
-            //event.accept(ModBlocks.POLISHED_DEEPSLATE_PRESSURE_PLATE);
-            //event.accept(ModBlocks.POLISHED_DEEPSLATE_BUTTON);
-            //event.accept(ModBlocks.IRON_BUTTON);
-            //event.accept(ModBlocks.GOLD_BUTTON);
             //event.accept(ModBlocks.PERMAFROST);
             //event.accept(ModBlocks.ICICLE);
             event.accept(ModItems.FIRE_FERN);

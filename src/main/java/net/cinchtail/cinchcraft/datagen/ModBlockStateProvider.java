@@ -6,9 +6,12 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.Objects;
 import java.util.function.Supplier;
 
 import static net.cinchtail.cinchcraft.block.ModBlocks.*;
@@ -143,8 +146,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         modWallBlock(CRACKED_RED_NETHER_BRICK_WALL, blockLoc(CRACKED_RED_NETHER_BRICKS));
         modWallBlock(CRACKED_MUD_BRICK_WALL, blockLoc(CRACKED_MUD_BRICKS));
         modWallBlock(CRACKED_QUARTZ_BRICK_WALL, blockLoc(CRACKED_QUARTZ_BRICKS));
-    }
 
+
+        buttonBlock((ButtonBlock) POLISHED_DEEPSLATE_BUTTON.get(), blockTexture(Blocks.POLISHED_DEEPSLATE));
+        buttonBlock((ButtonBlock) IRON_BUTTON.get(), blockTexture(Blocks.IRON_BLOCK));
+        buttonBlock((ButtonBlock) GOLD_BUTTON.get(), blockTexture(Blocks.GOLD_BLOCK));
+
+
+        pressurePlateBlock((PressurePlateBlock) POLISHED_DEEPSLATE_PRESSURE_PLATE.get(), blockTexture(Blocks.POLISHED_DEEPSLATE));
+        blockItem(ModBlocks.POLISHED_DEEPSLATE_PRESSURE_PLATE);
+    }
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
     }
@@ -164,5 +175,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
     public ResourceLocation blockLoc(Supplier<? extends Block> block) {
         return new ResourceLocation(Cinchcraft.MOD_ID, "block/" + getName(block));
+    }
+    private void blockItem(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("cinchcraft:block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
     }
 }
