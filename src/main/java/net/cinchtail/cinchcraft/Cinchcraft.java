@@ -269,7 +269,7 @@ public class Cinchcraft
             event.accept(ModItems.SMALL_ROSE);
             event.accept(ModItems.LUPINE);
             event.accept(ModItems.SMALL_CACTUS);
-            //event.accept(ModItems.STALK);
+            event.accept(ModItems.STALK);
         }
         if(event.getTab() == ModCreativeModeTabs.CINCHCRAFT_ITEM_TAB.get()) {
             event.accept(ModItems.RUBY_SWORD);

@@ -159,6 +159,9 @@ public class ModItems {
     public static final RegistryObject<Item> SMALL_CACTUS = ITEMS.register("small_cactus",
             () -> new ItemNameBlockItem(ModBlocks.SMALL_CACTUS.get(),
                     new Item.Properties()));
+    public static final RegistryObject<Item> STALK = ITEMS.register("stalk",
+            () -> new StalkItem(ModBlocks.STALK.get(),
+                    new Item.Properties()));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

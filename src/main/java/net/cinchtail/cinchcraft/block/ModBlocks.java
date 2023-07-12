@@ -278,6 +278,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> FIRE_FERN = BLOCKS.register("fire_fern",
             () -> new FireFernBlock(BlockBehaviour.Properties.copy(Blocks.ROSE_BUSH).noCollission().instabreak()
                     .sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
+    public static final RegistryObject<Block> STALK = BLOCKS.register("stalk",
+            () -> new DoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)));
 
 
     //Crops
