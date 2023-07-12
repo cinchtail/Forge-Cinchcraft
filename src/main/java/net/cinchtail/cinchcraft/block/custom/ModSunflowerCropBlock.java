@@ -1,6 +1,7 @@
 package net.cinchtail.cinchcraft.block.custom;
 
 import net.cinchtail.cinchcraft.block.ModBlocks;
+import net.cinchtail.cinchcraft.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -49,7 +50,7 @@ public class ModSunflowerCropBlock extends DoublePlantBlock implements Bonemeala
         return this.defaultBlockState();
     }
     protected boolean mayPlaceOn(BlockState p_277418_, BlockGetter p_277461_, BlockPos p_277608_) {
-        return p_277418_.is(BlockTags.DIRT);
+        return p_277418_.is(Blocks.FARMLAND);
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> p_277573_) {
@@ -86,15 +87,15 @@ public class ModSunflowerCropBlock extends DoublePlantBlock implements Bonemeala
         }
 
     }
-    protected static float modGetGrowthSpeed(Block p_52273_, BlockGetter p_52274_, BlockPos p_52275_) {
+    protected static float modGetGrowthSpeed(Block block, BlockGetter blockGetter, BlockPos pos) {
         float f = 1.0F;
-        BlockPos blockpos = p_52275_.below();
+        BlockPos blockpos = pos.below();
 
         for(int i = -1; i <= 1; ++i) {
             for(int j = -1; j <= 1; ++j) {
                 float f1 = 0.0F;
-                BlockState blockstate = p_52274_.getBlockState(blockpos.offset(i, 0, j));
-                if (blockstate.canSustainPlant(p_52274_, blockpos.offset(i, 0, j), net.minecraft.core.Direction.UP, (net.minecraftforge.common.IPlantable) p_52273_)) {
+                BlockState blockstate = blockGetter.getBlockState(blockpos.offset(i, 0, j));
+                if (blockstate.canSustainPlant(blockGetter, blockpos.offset(i, 0, j), net.minecraft.core.Direction.UP, (net.minecraftforge.common.IPlantable) block)) {
                     f1 = 3.0F;
                 }
 
@@ -106,16 +107,16 @@ public class ModSunflowerCropBlock extends DoublePlantBlock implements Bonemeala
             }
         }
 
-        BlockPos blockpos1 = p_52275_.north();
-        BlockPos blockpos2 = p_52275_.south();
-        BlockPos blockpos3 = p_52275_.west();
-        BlockPos blockpos4 = p_52275_.east();
-        boolean flag = p_52274_.getBlockState(blockpos3).is(p_52273_) || p_52274_.getBlockState(blockpos4).is(p_52273_);
-        boolean flag1 = p_52274_.getBlockState(blockpos1).is(p_52273_) || p_52274_.getBlockState(blockpos2).is(p_52273_);
+        BlockPos blockpos1 = pos.north();
+        BlockPos blockpos2 = pos.south();
+        BlockPos blockpos3 = pos.west();
+        BlockPos blockpos4 = pos.east();
+        boolean flag = blockGetter.getBlockState(blockpos3).is(block) || blockGetter.getBlockState(blockpos4).is(block);
+        boolean flag1 = blockGetter.getBlockState(blockpos1).is(block) || blockGetter.getBlockState(blockpos2).is(block);
         if (flag && flag1) {
             f /= 2.0F;
         } else {
-            boolean flag2 = p_52274_.getBlockState(blockpos3.north()).is(p_52273_) || p_52274_.getBlockState(blockpos4.north()).is(p_52273_) || p_52274_.getBlockState(blockpos4.south()).is(p_52273_) || p_52274_.getBlockState(blockpos3.south()).is(p_52273_);
+            boolean flag2 = blockGetter.getBlockState(blockpos3.north()).is(block) || blockGetter.getBlockState(blockpos4.north()).is(block) || blockGetter.getBlockState(blockpos4.south()).is(block) || blockGetter.getBlockState(blockpos3.south()).is(block);
             if (flag2) {
                 f /= 2.0F;
             }
@@ -163,20 +164,23 @@ public class ModSunflowerCropBlock extends DoublePlantBlock implements Bonemeala
             return isLower(blockstate) ? new ModSunflowerCropBlock.PosAndState(blockpos, blockstate) : null;
         }
     }
-    @Override
     public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos pos, BlockState blockState, boolean p_277487_) {
         ModSunflowerCropBlock.PosAndState modsunflowercropblock$posandstate = this.getLowerHalf(levelReader, pos, blockState);
         return modsunflowercropblock$posandstate != null && this.canGrow(levelReader, modsunflowercropblock$posandstate.pos, modsunflowercropblock$posandstate.state, modsunflowercropblock$posandstate.state.getValue(AGE) + 1);
     }
 
-    @Override
     public boolean isBonemealSuccess(Level level, RandomSource randomSource, BlockPos pos, BlockState blockState) {
         return true;
     }
 
-    @Override
-    public void performBonemeal(ServerLevel p_220874_, RandomSource p_220875_, BlockPos p_220876_, BlockState p_220877_) {
-
+    public void performBonemeal(ServerLevel p_277717_, RandomSource p_277870_, BlockPos p_277836_, BlockState p_278034_) {
+        ModSunflowerCropBlock.PosAndState modsunflowercropblock$posandstate = this.getLowerHalf(p_277717_, p_277836_, p_278034_);
+        if (modsunflowercropblock$posandstate != null) {
+            this.grow(p_277717_, modsunflowercropblock$posandstate.state, modsunflowercropblock$posandstate.pos, 1);
+        }
+    }
+    public ItemStack getCloneItemStack(BlockGetter blockGetter, BlockPos pos, BlockState blockState) {
+        return new ItemStack(ModItems.SUNFLOWER_SEEDS.get());
     }
     record PosAndState(BlockPos pos, BlockState state) {
     }
