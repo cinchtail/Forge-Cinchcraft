@@ -5,8 +5,10 @@ import net.cinchtail.cinchcraft.block.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
+import net.minecraftforge.client.model.generators.BlockModelBuilder;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
+import net.minecraftforge.client.model.generators.MultiPartBlockStateBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -148,6 +150,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         modWallBlock(CRACKED_QUARTZ_BRICK_WALL, blockLoc(CRACKED_QUARTZ_BRICKS));
 
 
+        fenceBlock((FenceBlock) RED_NETHER_BRICK_FENCE.get(), blockVanillaBlockLoc(Blocks.RED_NETHER_BRICKS));
+
+
         buttonBlock((ButtonBlock) POLISHED_DEEPSLATE_BUTTON.get(), blockTexture(Blocks.POLISHED_DEEPSLATE));
         buttonBlock((ButtonBlock) IRON_BUTTON.get(), blockTexture(Blocks.IRON_BLOCK));
         buttonBlock((ButtonBlock) GOLD_BUTTON.get(), blockTexture(Blocks.GOLD_BLOCK));
@@ -167,8 +172,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
         super.wallBlock((WallBlock) block.get(), texture);
         models().wallInventory(getName(block) + "_inventory", texture);
     }
+    public void fenceBlock(FenceBlock block, ResourceLocation texture) {
+        super.fenceBlock( block, texture);
+        String baseName = key(block).toString();
+        fourWayBlock(block,
+                models().fencePost(baseName + "_post", texture),
+                models().fenceSide(baseName + "_side", texture),
+                models().fenceInventory(baseName + "_inventory", texture));
+    }
+    private void fourWayBlock(FenceBlock block, BlockModelBuilder fencePost, BlockModelBuilder fenceSide, BlockModelBuilder fenceInventory) {
+    }
     public String getName(Supplier<? extends Block> block) {
         return block.get().builtInRegistryHolder().key().location().getPath();
+    }
+    private ResourceLocation key(Block block) {
+        return ForgeRegistries.BLOCKS.getKey(block);
     }
     public ResourceLocation blockVanillaBlockLoc(Block block) {
         return new ResourceLocation("block/" + block.asItem());
@@ -177,6 +195,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         return new ResourceLocation(Cinchcraft.MOD_ID, "block/" + getName(block));
     }
     private void blockItem(RegistryObject<Block> blockRegistryObject) {
-        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("cinchcraft:block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("cinchcraft:block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get())).getPath()));
     }
 }

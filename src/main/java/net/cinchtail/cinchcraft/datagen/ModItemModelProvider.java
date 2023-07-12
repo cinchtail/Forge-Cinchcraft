@@ -158,4 +158,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         this.withExistingParent(Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block.get())).getPath(), mcLoc("block/button_inventory"))
                 .texture("texture",  new ResourceLocation("minecraft", "block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(baseBlock)).getPath()));
     }
+    public void fenceItem(RegistryObject<Block> block, Block baseBlock) {
+        this.withExistingParent(Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block.get())).getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture",  new ResourceLocation("minecraft", "block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(baseBlock)).getPath()));
+    }
 }

@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-11T12:06:37.5019455	Block States: cinchcraft
+// 1.20.1	2023-07-12T18:31:47.2571039	Block States: cinchcraft
 f11bd51ce93467b2ba8364b304367f7cec9bdded assets/cinchcraft/blockstates/block_of_ruby.json
 572a9fc390f1034f3b74accd88bcbddd9e755e95 assets/cinchcraft/blockstates/calcite_slab.json
 e2c4cf035c154522e443b639e851c872dd7ea69d assets/cinchcraft/blockstates/calcite_stairs.json
@@ -91,6 +91,7 @@ cf90508761942af74b501b26d0c195bcbc94eff5 assets/cinchcraft/blockstates/polished_
 81108a0436be9cd3d16fbb52f1cbbcccf598d447 assets/cinchcraft/blockstates/quartz_brick_slab.json
 0fac16585161110073cfc7698db2312f457e78df assets/cinchcraft/blockstates/quartz_brick_stairs.json
 ac91df30d2f72f18255161c00b96835afc407f45 assets/cinchcraft/blockstates/quartz_brick_wall.json
+26044993b222acf6f65603b56459a309522e820b assets/cinchcraft/blockstates/red_nether_brick_fence.json
 ce3c5f27d7543fa0308d20106333f82344bbe988 assets/cinchcraft/blockstates/ruby_ore.json
 b0441e4b9acba9e90cbe5f2f0997800adecc98f8 assets/cinchcraft/blockstates/smooth_basalt_slab.json
 99b3351cb98a79429942955d272d1a2860a0a466 assets/cinchcraft/blockstates/smooth_basalt_stairs.json
@@ -335,6 +336,9 @@ f8276f3db108902d4b9c4dd0ce7898aab3587633 assets/cinchcraft/models/block/quartz_b
 366ba3bab6fe97895087a596edc7949bef35ab0e assets/cinchcraft/models/block/quartz_brick_wall_post.json
 8f74a23ff21012dfa117eb6e8e4610320c75cbd9 assets/cinchcraft/models/block/quartz_brick_wall_side.json
 420706dfa42d4d615bb1030f2702e3d35bef67e4 assets/cinchcraft/models/block/quartz_brick_wall_side_tall.json
+e54b6cc3b2744821e69cea9b782cfaae9bb1d9fd assets/cinchcraft/models/block/red_nether_brick_fence_inventory.json
+03372d38412c310f82479619088a437692037064 assets/cinchcraft/models/block/red_nether_brick_fence_post.json
+4af4dfd39b6929467c4ebbfa9292e0694ad1cab7 assets/cinchcraft/models/block/red_nether_brick_fence_side.json
 291204c4108663b6964edcce906c86b8ee0e63e3 assets/cinchcraft/models/block/ruby_ore.json
 119ce91689bc71c8f4c3992c55315e0906dd004a assets/cinchcraft/models/block/smooth_basalt_slab.json
 e90b3a07fb557d9c3985061c3d4d7c5297e27809 assets/cinchcraft/models/block/smooth_basalt_slab_top.json
