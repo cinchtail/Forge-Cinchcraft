@@ -9,7 +9,7 @@ public class ModFoods {
     static final FoodProperties BLUEBERRIES = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.1F).build();
     static final FoodProperties BLUEBERRY_PIE = (new FoodProperties.Builder()).nutrition(8).saturationMod(0.3F).build();
     static final FoodProperties PINEAPPLE = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.5F).build();
-    //static final FoodProperties SUNFLOWER_SEEDS = (new FoodProperties.Builder().fast()).nutrition(2).saturationMod(0.1F).build();
+    static final FoodProperties SUNFLOWER_SEEDS = (new FoodProperties.Builder().fast()).nutrition(2).saturationMod(0.1F).build();
     static final FoodProperties STRAWBERRIES = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.1F).build();
     static final FoodProperties NETHER_STEW = modstew(6).effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 300, 0), 1F).build();
     static final FoodProperties ANCIENT_SLIME_STEW = modstew(6).effect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 300, 0), 1F).build();

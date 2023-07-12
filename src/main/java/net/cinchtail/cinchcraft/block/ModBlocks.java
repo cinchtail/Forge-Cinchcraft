@@ -10,6 +10,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -289,6 +290,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> STRAWBERRY_PLANT = BLOCKS.register("strawberry_plant",
             () -> new StrawberryPlantBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)
                     .noOcclusion().sound(SoundType.CROP)));
+    public static final RegistryObject<Block> SUNFLOWER_CROP = BLOCKS.register("sunflower_crop",
+            () -> new ModSunflowerCropBlock(BlockBehaviour.Properties.copy(Blocks.PITCHER_CROP)
+                    .noOcclusion().sound(SoundType.GRASS)));
 
 
     //New Block Sets

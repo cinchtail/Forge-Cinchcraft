@@ -58,6 +58,9 @@ public class ModItems {
                     new Item.Properties().food(ModFoods.STRAWBERRIES)));
     public static final RegistryObject<Item> PITCHER_PLANT_ROOT = ITEMS.register("pitcher_plant_root",
             () -> new Item(new Item.Properties().food(ModFoods.PITCHER_PLANT_ROOT)));
+    public static final RegistryObject<Item> SUNFLOWER_SEEDS = ITEMS.register("sunflower_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.SUNFLOWER_CROP.get(),
+                    new Item.Properties().food(ModFoods.SUNFLOWER_SEEDS)));
 
 
     //Tools and Weapons
