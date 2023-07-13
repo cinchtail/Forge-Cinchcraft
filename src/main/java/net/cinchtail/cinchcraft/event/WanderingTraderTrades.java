@@ -61,5 +61,7 @@ public class WanderingTraderTrades {
                 , 5, 3));
         event.getRareTrades().add(new BasicItemListing(2, new ItemStack(ModItems.RUBY.get(), 1)
         , 9, 3));
+        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.SUNFLOWER_SEEDS.get(), 2)
+                , 7, 3));
     }
 }

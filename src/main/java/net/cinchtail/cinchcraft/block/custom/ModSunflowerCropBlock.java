@@ -2,6 +2,7 @@ package net.cinchtail.cinchcraft.block.custom;
 
 import net.cinchtail.cinchcraft.block.ModBlocks;
 import net.cinchtail.cinchcraft.item.ModItems;
+import net.cinchtail.cinchcraft.util.ModBlockTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -50,7 +51,7 @@ public class ModSunflowerCropBlock extends DoublePlantBlock implements Bonemeala
         return this.defaultBlockState();
     }
     protected boolean mayPlaceOn(BlockState blockState, BlockGetter blockGetter, BlockPos pos) {
-        return blockState.is(BlockTags.DIRT);
+        return blockState.is(ModBlockTags.SUNFLOWER_CROP_PLACEABLE);
     }
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockBlockStateBuilder) {
         blockBlockStateBuilder.add(AGE);

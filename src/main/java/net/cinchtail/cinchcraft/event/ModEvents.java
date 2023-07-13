@@ -14,12 +14,14 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CarvedPumpkinBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.common.ToolActions;
+import net.minecraftforge.event.entity.player.BonemealEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -30,7 +32,7 @@ public class ModEvents {
     public static class ForgeEvents {
 
         @SubscribeEvent
-        public static InteractionResult ShearMelonBlock(PlayerInteractEvent.RightClickBlock event){
+        public static InteractionResult ShearMelonBlock(PlayerInteractEvent.RightClickBlock event) {
             Level level = event.getLevel();
             Player player = event.getEntity();
             BlockPos pos = event.getPos();
@@ -41,25 +43,34 @@ public class ModEvents {
             InteractionHand hand = event.getHand();
             ItemStack stack = event.getItemStack();
             if (stack.canPerformAction(ToolActions.SHEARS_CARVE)) {
-                if (!level.isClientSide()){
+                if (!level.isClientSide()) {
                     if (blockState.is(Blocks.MELON)) {
                         level.setBlock(pos, ModBlocks.CARVED_MELON.get().defaultBlockState().setValue(CarvedPumpkinBlock.FACING, direction1), 11);
                         level.playSound(null, pos, SoundEvents.PUMPKIN_CARVE, SoundSource.BLOCKS, 1.0F, 1.0F);
-                        ItemEntity itementity = new ItemEntity(level, (double)pos.getX() + 0.5D + (double)direction1.getStepX() * 0.65D, (double)pos.getY() + 0.1D, (double)pos.getZ() + 0.5D + (double)direction1.getStepZ() * 0.65D, new ItemStack(Items.MELON_SEEDS, 4));
-                        itementity.setDeltaMovement(0.05D * (double)direction1.getStepX() + level.random.nextDouble() * 0.02D, 0.05D, 0.05D * (double)direction1.getStepZ() + level.random.nextDouble() * 0.02D);
+                        ItemEntity itementity = new ItemEntity(level, (double) pos.getX() + 0.5D + (double) direction1.getStepX() * 0.65D, (double) pos.getY() + 0.1D, (double) pos.getZ() + 0.5D + (double) direction1.getStepZ() * 0.65D, new ItemStack(Items.MELON_SEEDS, 4));
+                        itementity.setDeltaMovement(0.05D * (double) direction1.getStepX() + level.random.nextDouble() * 0.02D, 0.05D, 0.05D * (double) direction1.getStepZ() + level.random.nextDouble() * 0.02D);
                         level.addFreshEntity(itementity);
                         stack.hurtAndBreak(1, player, (p_55287_) -> {
                             p_55287_.broadcastBreakEvent(hand);
                         });
                         level.gameEvent(player, GameEvent.SHEAR, pos);
-                        player.awardStat(Stats.ITEM_USED.get(Items.SHEARS));}
+                        player.awardStat(Stats.ITEM_USED.get(Items.SHEARS));
+                    }
                 }
-            } return InteractionResult.sidedSuccess(level.isClientSide);
+            }
+            return InteractionResult.sidedSuccess(level.isClientSide);
         }
         @SubscribeEvent
         public static void CancelCarrotPlanting(PlayerInteractEvent.RightClickBlock event) {
             ItemStack stack = event.getItemStack();
             if (stack.is(Items.CARROT)) {
+                event.setCanceled(true);
+            }
+        }
+        @SubscribeEvent
+        public static void CancelSunflowerBoneMealing(BonemealEvent event) {
+            Block targetBlock = event.getLevel().getBlockState(event.getPos()).getBlock();
+            if (targetBlock == Blocks.SUNFLOWER) {
                 event.setCanceled(true);
             }
         }

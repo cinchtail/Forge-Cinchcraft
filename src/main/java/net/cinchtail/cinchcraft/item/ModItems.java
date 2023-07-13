@@ -27,7 +27,7 @@ public class ModItems {
             () -> new CarrotSeedItem(Blocks.CARROTS,
                     new Item.Properties()));
     public static final RegistryObject<Item> SUNFLOWER_HEAD = ITEMS.register("sunflower_head",
-            () -> new Item(new Item.Properties()));
+            () -> new Item(new Item.Properties().craftRemainder(Items.YELLOW_DYE)));
     public static final RegistryObject<Item> NETHERITE_HORSE_ARMOR = ITEMS.register("netherite_horse_armor",
             () -> new HorseArmorItem(14, "netherite",
                     new Item.Properties().fireResistant().stacksTo(1)));
