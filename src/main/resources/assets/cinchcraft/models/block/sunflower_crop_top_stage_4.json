@@ -1,33 +1,54 @@
 {
 	"ambientocclusion": false,
 	"textures": {
-        "particle": "block/pitcher_crop_top",
-		"stage_4_top": "block/pitcher_crop_top_stage_4",
-		"pitcher_top": "block/pitcher_crop_top",
-		"pitcher_side": "block/pitcher_crop_side"
+		"particle": "cinchcraft:block/sunflower_front",
+		"cross": "cinchcraft:block/sunflower_crop_top_stage_4",
+		"back": "cinchcraft:block/sunflower_back",
+		"front": "cinchcraft:block/sunflower_front"
 	},
 	"elements": [
-		{
-			"name": "pitcher_crop_top_stage_4",
-			"from": [8, 0, 0],
-			"to": [8, 16, 16],
+		{   "from": [ 0.8, 0, 8 ],
+			"to": [ 15.2, 8, 8 ],
+			"rotation": {
+				"origin": [ 8, 8, 8 ],
+				"axis": "y",
+				"angle": 45,
+				"rescale": true
+			},
 			"shade": false,
-			"rotation": {"angle": 45, "axis": "y", "origin": [8, 0, 8]},
 			"faces": {
-				"east": {"uv": [0, 0, 16, 16], "texture": "#stage_4_top"},
-				"west": {"uv": [0, 0, 16, 16], "texture": "#stage_4_top"}
+				"north": { "uv": [ 0, 8, 16, 16 ], "texture": "#cross" },
+				"south": { "uv": [ 0, 8, 16, 16 ], "texture": "#cross" }
 			}
 		},
-		{
-			"name": "pitcher_crop_top_stage_4",
-			"from": [0, 0, 8],
-			"to": [16, 16, 8],
+		{   "from": [ 8, 0, 0.8 ],
+			"to": [ 8, 8, 15.2 ],
+			"rotation": {
+				"origin": [ 8, 8, 8 ],
+				"axis": "y",
+				"angle": 45,
+				"rescale": true
+			},
 			"shade": false,
-			"rotation": {"angle": 45, "axis": "y", "origin": [8, 0, 8]},
 			"faces": {
-				"north": {"uv": [0, 0, 16, 16], "texture": "#stage_4_top"},
-				"south": {"uv": [0, 0, 16, 16], "texture": "#stage_4_top"}
+				"west": { "uv": [ 0, 8, 16, 16 ], "texture": "#cross" },
+				"east": { "uv": [ 0, 8, 16, 16 ], "texture": "#cross" }
+			}
+		},
+		{   "from": [ 9.6, -1, 1 ],
+			"to": [ 9.6, 15, 15 ],
+			"rotation": {
+				"origin": [ 8, 8, 8 ],
+				"axis": "z",
+				"angle": 22.5,
+				"rescale": true
+			},
+			"shade": false,
+			"faces": {
+				"west": { "uv": [ 0, 0, 16, 16 ], "texture": "#back" },
+				"east": { "uv": [ 0, 0, 16, 16 ], "texture": "#front" }
 			}
 		}
-	]
+	],
+	"render_type": "cutout"
 }
