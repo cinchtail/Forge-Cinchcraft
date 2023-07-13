@@ -69,6 +69,7 @@ public class Cinchcraft
         ComposterBlock.COMPOSTABLES.put(Items.BAMBOO, 0.65f);
         ComposterBlock.COMPOSTABLES.put(Items.POISONOUS_POTATO, 0.2f);
         ComposterBlock.COMPOSTABLES.put(ModItems.CARROT_SEEDS.get(), 0.3f);
+        ComposterBlock.COMPOSTABLES.put(ModItems.SUNFLOWER_SEEDS.get(), 0.3f);
         ComposterBlock.COMPOSTABLES.put(ModItems.BLUEBERRY_PIE.get(), 1f);
         ComposterBlock.COMPOSTABLES.put(ModItems.BLUEBERRIES.get(), 0.3f);
         ComposterBlock.COMPOSTABLES.put(ModItems.STRAWBERRIES.get(), 0.3f);
@@ -82,6 +83,7 @@ public class Cinchcraft
         ComposterBlock.COMPOSTABLES.put(ModItems.SMALL_CACTUS.get(), 0.65f);
         ComposterBlock.COMPOSTABLES.put(ModItems.FIRE_FERN.get(), 0.65f);
         ComposterBlock.COMPOSTABLES.put(ModItems.REEDS.get(), 0.65f);
+        ComposterBlock.COMPOSTABLES.put(ModItems.STALK.get(), 0.65f);
     }
 
     @Mod.EventBusSubscriber(modid = Cinchcraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -305,11 +307,12 @@ public class Cinchcraft
             //event.accept(ModItems.EMERALD_HORSE_ARMOR);
             event.accept(ModItems.RUBY);
             event.accept(ModItems.COPPER_NUGGET);
+            event.accept(ModItems.CHAINMAIL);
             event.accept(ModItems.DOG_MUSIC_DISC);
             event.accept(ModItems.KYOTO_MUSIC_DISC);
             event.accept(ModItems.CARROT_SEEDS);
             event.accept(ModItems.SUNFLOWER_SEEDS);
-            event.accept(ModItems.CHAINMAIL);
+            event.accept(ModItems.SUNFLOWER_HEAD);
             event.accept(ModItems.BLUEBERRIES);
             event.accept(ModItems.STRAWBERRIES);
             event.accept(ModItems.PINEAPPLE);

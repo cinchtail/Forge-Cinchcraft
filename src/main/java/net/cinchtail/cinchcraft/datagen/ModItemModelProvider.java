@@ -38,6 +38,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.PITCHER_PLANT_ROOT);
         simpleItem(ModItems.ANCIENT_SLIME_STEW);
         simpleItem(ModItems.SUNFLOWER_SEEDS);
+        simpleItem(ModItems.SUNFLOWER_HEAD);
 
 
         handheldItem(ModItems.DEEPSLATE_SWORD);
