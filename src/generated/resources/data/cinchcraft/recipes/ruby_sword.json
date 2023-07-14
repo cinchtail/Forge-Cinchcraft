@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "cinchcraft:ruby"
+    },
+    "I": {
+      "item": "minecraft:stick"
+    },
+    "X": []
+  },
+  "pattern": [
+    "AAA",
+    "XIX",
+    "XIX"
+  ],
+  "result": {
+    "item": "cinchcraft:ruby_sword"
+  },
+  "show_notification": true
+}
