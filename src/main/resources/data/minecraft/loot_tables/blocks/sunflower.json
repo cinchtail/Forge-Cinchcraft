@@ -11,9 +11,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "cinchcraft:sunflower_seeds"
-        },
-        {
+          "name": "cinchcraft:sunflower_seeds",
           "conditions": [
             {
               "condition": "minecraft:block_state_property",
