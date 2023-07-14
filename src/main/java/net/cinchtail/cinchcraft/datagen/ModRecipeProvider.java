@@ -6,6 +6,7 @@ import net.cinchtail.cinchcraft.item.ModItems;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
@@ -14,6 +15,7 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import org.checkerframework.checker.units.qual.C;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -262,6 +264,86 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(Items.COBBLED_DEEPSLATE).build()))
                 .save(pWriter);
 
+        //Copper Recipes
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.COPPER_INGOT)
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.COPPER_NUGGET.get())
+                .unlockedBy("has_copper_nugget", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.COPPER_NUGGET.get()).build()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.COPPER_NUGGET.get(), 9)
+                .requires(Items.COPPER_INGOT)
+                .unlockedBy("has_copper_ingot", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.COPPER_INGOT).build()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.COPPER_INGOT, 2)
+                .requires(Items.CUT_COPPER)
+                .group("copper_ingot")
+                .unlockedBy("has_cut_copper", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.CUT_COPPER).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "copper_ingot_from_cut_copper"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.COPPER_INGOT, 2)
+                .requires(Items.CUT_COPPER_STAIRS)
+                .group("copper_ingot")
+                .unlockedBy("has_cut_copper_stairs", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.CUT_COPPER_STAIRS).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "copper_ingot_from_cut_copper_stairs"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.COPPER_INGOT, 1)
+                .requires(Items.CUT_COPPER_SLAB)
+                .group("copper_ingot")
+                .unlockedBy("has_cut_copper_slab", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.CUT_COPPER_SLAB).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "copper_ingot_from_cut_copper_slab"));
+
+        //Chainmail recipes
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CHAINMAIL.get(), 4)
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', Items.CHAIN)
+                .unlockedBy("has_chain", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.CHAIN).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, Items.CHAINMAIL_HELMET)
+                .pattern("AAA")
+                .pattern("A A")
+                .define('A', ModItems.CHAINMAIL.get())
+                .unlockedBy("has_chainmail", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.CHAINMAIL.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, Items.CHAINMAIL_CHESTPLATE)
+                .pattern("A A")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.CHAINMAIL.get())
+                .unlockedBy("has_chainmail", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.CHAINMAIL.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, Items.CHAINMAIL_LEGGINGS)
+                .pattern("AAA")
+                .pattern("A A")
+                .pattern("A A")
+                .define('A', ModItems.CHAINMAIL.get())
+                .unlockedBy("has_chainmail", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.CHAINMAIL.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, Items.CHAINMAIL_BOOTS)
+                .pattern("A A")
+                .pattern("A A")
+                .define('A', ModItems.CHAINMAIL.get())
+                .unlockedBy("has_chainmail", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.CHAINMAIL.get()).build()))
+                .save(pWriter);
+
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
@@ -284,11 +366,4 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .save(pFinishedRecipeConsumer, Cinchcraft.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
     }
-    protected static void oneToOneConversionRecipe(Consumer<FinishedRecipe> finishedRecipeConsumer, ItemLike itemLike, ItemLike itemLike1, @Nullable String s) {
-        oneToOneConversionRecipe(finishedRecipeConsumer, itemLike, itemLike1, s, 1);
-    }
-    protected static void netheriteSmithing(Consumer<FinishedRecipe> finishedRecipeConsumer, Item item, RecipeCategory recipeCategory, Item item1) {
-        SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), Ingredient.of(item), Ingredient.of(Items.NETHERITE_INGOT), recipeCategory, item1).unlocks("has_netherite_ingot", has(Items.NETHERITE_INGOT)).save(finishedRecipeConsumer, getItemName(item1) + "_smithing");
-    }
-
 }

@@ -1,15 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "equipment",
   "key": {
-    "X": {
+    "A": {
       "item": "cinchcraft:chainmail"
     }
   },
   "pattern": [
-    "XXX",
-    "X X"
+    "A A",
+    "A A"
   ],
   "result": {
-    "item": "minecraft:chainmail_helmet"
-  }
+    "item": "minecraft:chainmail_boots"
+  },
+  "show_notification": true
 }
