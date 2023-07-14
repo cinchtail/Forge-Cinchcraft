@@ -1,19 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "equipment",
   "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "X": {
+    "A": {
       "item": "minecraft:blackstone"
+    },
+    "I": {
+      "item": "minecraft:stick"
     }
   },
   "pattern": [
-    "XX",
-    "X#",
-    " #"
+    "AA ",
+    "AI ",
+    " I "
   ],
   "result": {
     "item": "cinchcraft:blackstone_axe"
-  }
+  },
+  "show_notification": true
 }

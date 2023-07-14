@@ -1,19 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "equipment",
   "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "X": {
+    "A": {
       "item": "minecraft:blackstone"
+    },
+    "I": {
+      "item": "minecraft:stick"
     }
   },
   "pattern": [
-    "X",
-    "X",
-    "#"
+    "A",
+    "A",
+    "I"
   ],
   "result": {
     "item": "cinchcraft:blackstone_sword"
-  }
+  },
+  "show_notification": true
 }

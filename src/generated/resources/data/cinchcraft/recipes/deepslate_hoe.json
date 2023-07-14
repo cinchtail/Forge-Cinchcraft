@@ -1,19 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "equipment",
   "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "X": {
+    "A": {
       "item": "minecraft:cobbled_deepslate"
+    },
+    "I": {
+      "item": "minecraft:stick"
     }
   },
   "pattern": [
-    "XX",
-    " #",
-    " #"
+    "AA",
+    " I",
+    " I"
   ],
   "result": {
     "item": "cinchcraft:deepslate_hoe"
-  }
+  },
+  "show_notification": true
 }

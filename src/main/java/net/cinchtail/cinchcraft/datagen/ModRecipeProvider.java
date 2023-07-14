@@ -161,6 +161,106 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreBlasting(pWriter, NETHER_DIAMOND, RecipeCategory.MISC, Items.DIAMOND, 1.0f, 100, "diamond");
 
         //Blackstone Tools
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BLACKSTONE_SWORD.get())
+                .pattern("A")
+                .pattern("A")
+                .pattern("I")
+                .define('A', Items.BLACKSTONE)
+                .define('I', Items.STICK)
+                .unlockedBy("has_blackstone", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.BLACKSTONE).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.BLACKSTONE_PICKAXE.get())
+                .pattern("AAA")
+                .pattern(" I ")
+                .pattern(" I ")
+                .define('A', Items.BLACKSTONE)
+                .define('I', Items.STICK)
+                .unlockedBy("has_blackstone", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.BLACKSTONE).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.BLACKSTONE_AXE.get())
+                .pattern("AA ")
+                .pattern("AI ")
+                .pattern(" I ")
+                .define('A', Items.BLACKSTONE)
+                .define('I', Items.STICK)
+                .unlockedBy("has_blackstone", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.BLACKSTONE).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.BLACKSTONE_SHOVEL.get())
+                .pattern("A")
+                .pattern("I")
+                .pattern("I")
+                .define('A', Items.BLACKSTONE)
+                .define('I', Items.STICK)
+                .unlockedBy("has_blackstone", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.BLACKSTONE).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.BLACKSTONE_HOE.get())
+                .pattern("AA")
+                .pattern(" I")
+                .pattern(" I")
+                .define('A', Items.BLACKSTONE)
+                .define('I', Items.STICK)
+                .unlockedBy("has_blackstone", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.BLACKSTONE).build()))
+                .save(pWriter);
+
+        //Deepslate Tools
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.DEEPSLATE_SWORD.get())
+                .pattern("A")
+                .pattern("A")
+                .pattern("I")
+                .define('A', Items.COBBLED_DEEPSLATE)
+                .define('I', Items.STICK)
+                .unlockedBy("has_deepslate", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.COBBLED_DEEPSLATE).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.DEEPSLATE_PICKAXE.get())
+                .pattern("AAA")
+                .pattern(" I ")
+                .pattern(" I ")
+                .define('A', Items.COBBLED_DEEPSLATE)
+                .define('I', Items.STICK)
+                .unlockedBy("has_deepslate", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.COBBLED_DEEPSLATE).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.DEEPSLATE_AXE.get())
+                .pattern("AA ")
+                .pattern("AI ")
+                .pattern(" I ")
+                .define('A', Items.COBBLED_DEEPSLATE)
+                .define('I', Items.STICK)
+                .unlockedBy("has_deepslate", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.COBBLED_DEEPSLATE).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.DEEPSLATE_SHOVEL.get())
+                .pattern("A")
+                .pattern("I")
+                .pattern("I")
+                .define('A', Items.COBBLED_DEEPSLATE)
+                .define('I', Items.STICK)
+                .unlockedBy("has_deepslate", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.COBBLED_DEEPSLATE).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.DEEPSLATE_HOE.get())
+                .pattern("AA")
+                .pattern(" I")
+                .pattern(" I")
+                .define('A', Items.COBBLED_DEEPSLATE)
+                .define('I', Items.STICK)
+                .unlockedBy("has_deepslate", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.COBBLED_DEEPSLATE).build()))
+                .save(pWriter);
 
     }
 
