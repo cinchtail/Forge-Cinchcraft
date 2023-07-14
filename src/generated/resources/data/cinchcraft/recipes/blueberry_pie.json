@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "category": "misc",
   "ingredients": [
     {
       "item": "cinchcraft:blueberries"
@@ -11,10 +12,10 @@
       "item": "cinchcraft:blueberries"
     },
     {
-      "item": "minecraft:sugar"
+      "item": "minecraft:egg"
     },
     {
-      "item": "minecraft:egg"
+      "item": "minecraft:sugar"
     }
   ],
   "result": {

@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "yellow_dye",
+  "category": "misc",
   "ingredients": [
     {
-      "item": "cinchcraft:butter_cup"
+      "item": "cinchcraft:small_rose"
     }
   ],
   "result": {
-    "item": "minecraft:yellow_dye"
+    "item": "minecraft:red_dye"
   }
 }

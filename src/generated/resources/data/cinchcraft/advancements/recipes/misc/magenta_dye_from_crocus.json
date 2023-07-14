@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_crocus": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cinchcraft:crocus"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cinchcraft:magenta_dye_from_crocus"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_crocus",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cinchcraft:magenta_dye_from_crocus"
+    ]
+  },
+  "sends_telemetry_event": false
+}

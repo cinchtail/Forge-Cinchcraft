@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bubble_flower": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cinchcraft:bubble_flower"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cinchcraft:purple_dye_from_bubble_flower"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_bubble_flower",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cinchcraft:purple_dye_from_bubble_flower"
+    ]
+  },
+  "sends_telemetry_event": false
+}

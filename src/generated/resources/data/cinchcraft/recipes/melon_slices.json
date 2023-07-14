@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "copper_ingot",
+  "category": "misc",
+  "group": "melon_slices",
   "ingredients": [
     {
       "item": "minecraft:melon"

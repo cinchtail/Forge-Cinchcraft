@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "copper_ingot",
+  "category": "misc",
   "ingredients": [
     {
       "item": "minecraft:rose_bush"
     }
   ],
   "result": {
-    "count": 2,
+    "count": 4,
     "item": "cinchcraft:small_rose"
   }
 }

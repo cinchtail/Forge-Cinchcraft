@@ -344,6 +344,134 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(ModItems.CHAINMAIL.get()).build()))
                 .save(pWriter);
 
+        //Food Recipes
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.BLUEBERRY_PIE.get())
+                .requires(ModItems.BLUEBERRIES.get())
+                .requires(ModItems.BLUEBERRIES.get())
+                .requires(ModItems.BLUEBERRIES.get())
+                .requires(Items.EGG)
+                .requires(Items.SUGAR)
+                .unlockedBy("has_blueberry", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.BLUEBERRIES.get()).build()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.ANCIENT_SLIME_STEW.get())
+                .requires(Items.BOWL)
+                .requires(Items.BEETROOT)
+                .requires(Items.TORCHFLOWER_SEEDS)
+                .requires(Items.SLIME_BALL)
+                .requires(Items.SLIME_BALL)
+                .unlockedBy("has_torchflower_seeds", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.TORCHFLOWER_SEEDS).build()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, Items.MELON_SLICE,9)
+                .requires(Items.MELON)
+                .group("melon_slices")
+                .unlockedBy("has_melon", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.MELON).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "melon_slices"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, Items.MELON_SLICE,6)
+                .requires(ModItems.CARVED_MELON.get())
+                .group("melon_slices")
+                .unlockedBy("has_carved_melon", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.CARVED_MELON.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "melon_slices_from_carved_melon"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.NETHER_STEW.get())
+                .requires(Items.BOWL)
+                .requires(Items.WARPED_FUNGUS)
+                .requires(Items.CRIMSON_FUNGUS)
+                .requires(Items.NETHER_WART)
+                .requires(Items.MAGMA_CREAM)
+                .unlockedBy("has_nether_wart", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.NETHER_WART).build()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.VEGETABLE_STEW.get())
+                .requires(Items.BOWL)
+                .requires(Items.POTATO)
+                .requires(Items.BEETROOT)
+                .requires(Items.CARROT)
+                .requires(Items.BROWN_MUSHROOM)
+                .group("vegetable_stew")
+                .unlockedBy("has_vegetable_stew_ingredient", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.BEETROOT, Items.POTATO, Items.CARROT, Items.BROWN_MUSHROOM).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "vegetable_stew_from_brown_mushroom"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.VEGETABLE_STEW.get())
+                .requires(Items.BOWL)
+                .requires(Items.POTATO)
+                .requires(Items.BEETROOT)
+                .requires(Items.CARROT)
+                .requires(Items.RED_MUSHROOM)
+                .group("vegetable_stew")
+                .unlockedBy("has_vegetable_stew_ingredient", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.BEETROOT, Items.POTATO, Items.CARROT, Items.RED_MUSHROOM).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "vegetable_stew_from_red_mushroom"));
+
+        //Dye Recipes
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.CYAN_DYE)
+                .requires(ModItems.LUPINE.get())
+                .unlockedBy("has_lupine", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.LUPINE.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cyan_dye_from_lupine"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.MAGENTA_DYE)
+                .requires(ModItems.CROCUS.get())
+                .unlockedBy("has_crocus", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.CROCUS.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "magenta_dye_from_crocus"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.PURPLE_DYE)
+                .requires(ModBlocks.BUBBLE_FLOWER.get())
+                .unlockedBy("has_bubble_flower", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.BUBBLE_FLOWER.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "purple_dye_from_bubble_flower"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.RED_DYE)
+                .requires(ModItems.SMALL_ROSE.get())
+                .unlockedBy("has_small_rose", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.SMALL_ROSE.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "red_dye_from_small_rose"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.WHITE_DYE)
+                .requires(ModItems.ALYSSUM.get())
+                .unlockedBy("has_alyssum", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.ALYSSUM.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "white_dye_from_alyssum"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.YELLOW_DYE)
+                .requires(ModItems.BUTTER_CUP.get())
+                .unlockedBy("has_butter_cup", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.BUTTER_CUP.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "yellow_dye_from_butter_cup"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.SUNFLOWER_SEEDS.get(), 4)
+                .requires(ModItems.SUNFLOWER_HEAD.get())
+                .unlockedBy("has_sunflower_head", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.SUNFLOWER_HEAD.get()).build()))
+                .save(pWriter);
+
+        //Miscellaneous
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.SMALL_ROSE.get(), 4)
+                .requires(Items.ROSE_BUSH)
+                .unlockedBy("has_rose_bush", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.ROSE_BUSH).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GLOWSTONE_TORCH.get())
+                .pattern("A")
+                .pattern("T")
+                .define('A', Items.GLOWSTONE_DUST)
+                .define('T', Items.STICK)
+                .unlockedBy("has_glowstone_dust", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.GLOWSTONE_DUST).build()))
+                .save(pWriter);
+
+
+
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

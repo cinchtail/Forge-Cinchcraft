@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "yellow_dye",
+  "category": "misc",
   "ingredients": [
     {
-      "item": "cinchcraft:crocus"
+      "item": "cinchcraft:alyssum"
     }
   ],
   "result": {
-    "item": "minecraft:cyan_dye"
+    "item": "minecraft:white_dye"
   }
 }
