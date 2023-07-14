@@ -1,8 +1,9 @@
 {
   "type": "minecraft:blasting",
+  "category": "misc",
   "cookingtime": 100,
-  "experience": 0.7,
-  "group": "ruby",
+  "experience": 0.2,
+  "group": "lapis_lazuli",
   "ingredient": {
     "item": "cinchcraft:nether_lapis_lazuli_ore"
   },

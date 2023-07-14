@@ -1,8 +1,9 @@
 {
   "type": "minecraft:smelting",
+  "category": "misc",
   "cookingtime": 200,
-  "experience": 0.7,
-  "group": "ruby",
+  "experience": 0.1,
+  "group": "coal",
   "ingredient": {
     "item": "cinchcraft:nether_coal_ore"
   },

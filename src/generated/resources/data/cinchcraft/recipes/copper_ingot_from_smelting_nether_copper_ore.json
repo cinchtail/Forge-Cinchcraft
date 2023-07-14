@@ -1,8 +1,9 @@
 {
-  "type": "minecraft:blasting",
-  "cookingtime": 100,
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
   "experience": 0.7,
-  "group": "ruby",
+  "group": "copper_ingot",
   "ingredient": {
     "item": "cinchcraft:nether_copper_ore"
   },

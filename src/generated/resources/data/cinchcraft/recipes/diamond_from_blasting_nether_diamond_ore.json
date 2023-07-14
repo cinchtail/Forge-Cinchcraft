@@ -1,8 +1,9 @@
 {
   "type": "minecraft:blasting",
+  "category": "misc",
   "cookingtime": 100,
-  "experience": 0.7,
-  "group": "ruby",
+  "experience": 1.0,
+  "group": "diamond",
   "ingredient": {
     "item": "cinchcraft:nether_diamond_ore"
   },
