@@ -49,6 +49,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(MOSSY_DEEPSLATE_BRICKS);
         blockWithItem(MOSSY_DEEPSLATE_TILES);
         blockWithItem(CRACKED_QUARTZ_BRICKS);
+        blockWithItem(MOSSY_NETHER_BRICKS);
 
         slabBlock((SlabBlock) TUFF_SLAB.get(), blockTexture(Blocks.TUFF),
                 blockTexture(Blocks.TUFF));
@@ -92,6 +93,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 blockLoc(CRACKED_QUARTZ_BRICKS));
         slabBlock((SlabBlock) SMOOTH_BASALT_SLAB.get(), blockTexture(Blocks.SMOOTH_BASALT),
                 blockTexture(Blocks.SMOOTH_BASALT));
+        slabBlock((SlabBlock) MOSSY_NETHER_BRICK_SLAB.get(), blockLoc(MOSSY_NETHER_BRICKS),
+                blockLoc(MOSSY_NETHER_BRICKS));
 
         stairsBlock((StairBlock) SMOOTH_STONE_STAIRS.get(), blockTexture(Blocks.SMOOTH_STONE));
         stairsBlock((StairBlock) TUFF_STAIRS.get(), blockTexture(Blocks.TUFF));
@@ -115,6 +118,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock((StairBlock) CRACKED_MUD_BRICK_STAIRS.get(), blockLoc(CRACKED_MUD_BRICKS));
         stairsBlock((StairBlock) CRACKED_QUARTZ_BRICK_STAIRS.get(), blockLoc(CRACKED_QUARTZ_BRICKS));
         stairsBlock((StairBlock) SMOOTH_BASALT_STAIRS.get(), blockTexture(Blocks.SMOOTH_BASALT));
+        stairsBlock((StairBlock) MOSSY_NETHER_BRICK_STAIRS.get(), blockLoc(MOSSY_NETHER_BRICKS));
 
 
         vanillaWallBlock(SMOOTH_STONE_WALL, blockVanillaBlockLoc(Blocks.SMOOTH_STONE));
@@ -148,9 +152,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         modWallBlock(CRACKED_RED_NETHER_BRICK_WALL, blockLoc(CRACKED_RED_NETHER_BRICKS));
         modWallBlock(CRACKED_MUD_BRICK_WALL, blockLoc(CRACKED_MUD_BRICKS));
         modWallBlock(CRACKED_QUARTZ_BRICK_WALL, blockLoc(CRACKED_QUARTZ_BRICKS));
+        modWallBlock(MOSSY_NETHER_BRICK_WALL, blockLoc(MOSSY_NETHER_BRICKS));
 
 
-        fenceBlock((FenceBlock) RED_NETHER_BRICK_FENCE.get(), blockVanillaBlockLoc(Blocks.RED_NETHER_BRICKS));
+        vanillaFenceBlock((FenceBlock) RED_NETHER_BRICK_FENCE.get(), blockVanillaBlockLoc(Blocks.RED_NETHER_BRICKS));
+        fenceBlock((FenceBlock) MOSSY_NETHER_BRICK_FENCE.get(), blockLoc(MOSSY_NETHER_BRICKS));
 
 
         buttonBlock((ButtonBlock) POLISHED_DEEPSLATE_BUTTON.get(), blockTexture(Blocks.POLISHED_DEEPSLATE));
@@ -172,7 +178,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         super.wallBlock((WallBlock) block.get(), texture);
         models().wallInventory(getName(block) + "_inventory", texture);
     }
-    public void fenceBlock(FenceBlock block, ResourceLocation texture) {
+    public void vanillaFenceBlock(FenceBlock block, ResourceLocation texture) {
         super.fenceBlock( block, texture);
         String baseName = key(block).toString();
         fourWayBlock(block,

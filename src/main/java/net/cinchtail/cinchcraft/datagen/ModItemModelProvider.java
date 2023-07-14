@@ -58,6 +58,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.RUBY_HOE);
 
 
+        fenceItem(ModBlocks.MOSSY_NETHER_BRICK_FENCE, ModBlocks.MOSSY_NETHER_BRICKS);
+
+
         buttonItem(ModBlocks.POLISHED_DEEPSLATE_BUTTON, Blocks.POLISHED_DEEPSLATE);
         buttonItem(ModBlocks.IRON_BUTTON, Blocks.IRON_BLOCK);
         buttonItem(ModBlocks.GOLD_BUTTON, Blocks.GOLD_BLOCK);
@@ -144,6 +147,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("smooth_basalt_stairs", modLoc("block/smooth_basalt_stairs"));
         withExistingParent("smooth_basalt_slab", modLoc("block/smooth_basalt_slab"));
         withExistingParent("smooth_basalt_wall", modLoc("block/smooth_basalt_wall_inventory"));
+        withExistingParent("mossy_nether_brick_stairs", modLoc("block/mossy_nether_brick_stairs"));
+        withExistingParent("mossy_nether_brick_slab", modLoc("block/mossy_nether_brick_slab"));
+        withExistingParent("mossy_nether_brick_wall", modLoc("block/mossy_nether_brick_wall_inventory"));
     }
     private void simpleItem(RegistryObject<Item> item) {
         withExistingParent(item.getId().getPath(),
@@ -159,8 +165,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         this.withExistingParent(Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block.get())).getPath(), mcLoc("block/button_inventory"))
                 .texture("texture",  new ResourceLocation("minecraft", "block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(baseBlock)).getPath()));
     }
-    public void fenceItem(RegistryObject<Block> block, Block baseBlock) {
+    public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block.get())).getPath(), mcLoc("block/fence_inventory"))
-                .texture("texture",  new ResourceLocation("minecraft", "block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(baseBlock)).getPath()));
+                .texture("texture",  new ResourceLocation(Cinchcraft.MOD_ID, "block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(baseBlock.get())).getPath()));
     }
 }

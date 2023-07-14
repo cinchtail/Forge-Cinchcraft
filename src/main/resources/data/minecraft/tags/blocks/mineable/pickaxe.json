@@ -109,6 +109,11 @@
     "cinchcraft:polished_deepslate_pressure_plate",
     "cinchcraft:polished_deepslate_button",
     "cinchcraft:iron_button",
-    "cinchcraft:gold_button"
+    "cinchcraft:gold_button",
+    "cinchcraft:mossy_nether_bricks",
+    "cinchcraft:mossy_nether_brick_stairs",
+    "cinchcraft:mossy_nether_brick_slab",
+    "cinchcraft:mossy_nether_brick_wall",
+    "cinchcraft:mossy_nether_brick_fence"
   ]
 }
