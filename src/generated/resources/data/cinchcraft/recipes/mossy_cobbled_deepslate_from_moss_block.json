@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "mossy_cobblestone",
+  "category": "misc",
   "ingredients": [
     {
       "item": "minecraft:cobbled_deepslate"
     },
     {
-      "item": "minecraft:vine"
+      "item": "minecraft:moss_block"
     }
   ],
   "result": {

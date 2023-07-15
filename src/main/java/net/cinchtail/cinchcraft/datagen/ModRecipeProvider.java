@@ -991,6 +991,56 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Items.GOLD_INGOT), RecipeCategory.BUILDING_BLOCKS, ModBlocks.GOLD_BUTTON.get())
                 .unlockedBy("has_gold_ingot", inventoryTrigger(ItemPredicate.Builder.item().of(Items.GOLD_INGOT).build()))
                 .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "gold_button_wall_from_stonecutting"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.MOSSY_COBBLED_DEEPSLATE.get())
+                .requires(Blocks.COBBLED_DEEPSLATE)
+                .requires(Blocks.MOSS_BLOCK)
+                .unlockedBy("has_moss_block", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.MOSS_BLOCK).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_cobbled_deepslate_from_moss_block"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.MOSSY_COBBLED_DEEPSLATE.get())
+                .requires(Blocks.COBBLED_DEEPSLATE)
+                .requires(Blocks.VINE)
+                .unlockedBy("has_vine", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.VINE).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_cobbled_deepslate_from_vine"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_COBBLED_DEEPSLATE_STAIRS.get(),4)
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .define('A', ModBlocks.MOSSY_COBBLED_DEEPSLATE.get())
+                .unlockedBy("has_mossy_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.MOSSY_COBBLED_DEEPSLATE.get()).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.MOSSY_COBBLED_DEEPSLATE.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_COBBLED_DEEPSLATE_STAIRS.get())
+                .unlockedBy("has_mossy_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.MOSSY_COBBLED_DEEPSLATE.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_cobbled_deepslate_stairs_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_COBBLED_DEEPSLATE_SLAB.get(),6)
+                .pattern("AAA")
+                .define('A', ModBlocks.MOSSY_COBBLED_DEEPSLATE.get())
+                .unlockedBy("has_mossy_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.MOSSY_COBBLED_DEEPSLATE.get()).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.MOSSY_COBBLED_DEEPSLATE.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_COBBLED_DEEPSLATE_SLAB.get(),2)
+                .unlockedBy("has_mossy_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.MOSSY_COBBLED_DEEPSLATE.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_cobbled_deepslate_slab_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_COBBLED_DEEPSLATE_WALL.get(),6)
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModBlocks.MOSSY_COBBLED_DEEPSLATE.get())
+                .unlockedBy("has_mossy_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.MOSSY_COBBLED_DEEPSLATE.get()).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.MOSSY_COBBLED_DEEPSLATE.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_COBBLED_DEEPSLATE_WALL.get())
+                .unlockedBy("has_mossy_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.MOSSY_COBBLED_DEEPSLATE.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_cobbled_deepslate_wall_from_stonecutting"));
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
