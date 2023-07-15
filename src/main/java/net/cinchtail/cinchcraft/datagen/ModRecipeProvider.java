@@ -1147,20 +1147,85 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_vine", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.VINE).build()))
                 .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_deepslate_tile_from_vine"));
-    }
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_MUD_BRICK_STAIRS.get(),4)
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .define('A', ModBlocks.MOSSY_MUD_BRICKS.get())
+                .unlockedBy("has_mossy_mud_brick_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.MOSSY_MUD_BRICKS.get()).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.MOSSY_MUD_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_MUD_BRICK_STAIRS.get())
+                .unlockedBy("has_mossy_mud_brick_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.MOSSY_MUD_BRICKS.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_mud_brick_stairs_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_MUD_BRICK_SLAB.get(),6)
+                .pattern("AAA")
+                .define('A', ModBlocks.MOSSY_MUD_BRICKS.get())
+                .unlockedBy("has_mossy_mud_brick_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.MOSSY_MUD_BRICKS.get()).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.MOSSY_MUD_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_MUD_BRICK_SLAB.get(),2)
+                .unlockedBy("has_mossy_mud_brick_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.MOSSY_MUD_BRICKS.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_mud_brick_slab_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_MUD_BRICK_WALL.get(),6)
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModBlocks.MOSSY_MUD_BRICKS.get())
+                .unlockedBy("has_mossy_mud_brick_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.MOSSY_MUD_BRICKS.get()).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.MOSSY_MUD_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_MUD_BRICK_WALL.get())
+                .unlockedBy("has_mossy_mud_brick_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.MOSSY_MUD_BRICKS.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_mud_brick_wall_from_stonecutting"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.MOSSY_MUD_BRICKS.get())
+                .group("mossy_mud_bricks")
+                .requires(Blocks.MUD_BRICKS)
+                .requires(Blocks.MOSS_BLOCK)
+                .unlockedBy("has_moss_block", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.MOSS_BLOCK).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_mud_brick_from_moss_block"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.MOSSY_MUD_BRICKS.get())
+                .group("mossy_mud_bricks")
+                .requires(Blocks.MUD_BRICKS)
+                .requires(Blocks.VINE)
+                .unlockedBy("has_vine", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.VINE).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_mud_brick_from_vine"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_ANDESITE_WALL.get(),6)
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', Blocks.ANDESITE_WALL)
+                .unlockedBy("has_polished_andesite", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.ANDESITE_WALL).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.POLISHED_ANDESITE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_ANDESITE_WALL.get())
+                .unlockedBy("has_polished_andesite", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.POLISHED_ANDESITE).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_andesite_wall_from_stonecutting"));
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.ANDESITE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_ANDESITE_WALL.get())
+                .unlockedBy("has_andesite", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.ANDESITE).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_andesite_wall_from_stonecutting_from_andesite"));
+    }
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
                                       float pExperience, int pCookingTIme, String pGroup) {
         oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult,
                 pExperience, pCookingTIme, pGroup, "_from_smelting");
     }
-
     protected static void oreBlasting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
                                       float pExperience, int pCookingTime, String pGroup) {
         oreCooking(pFinishedRecipeConsumer, RecipeSerializer.BLASTING_RECIPE, pIngredients, pCategory, pResult,
                 pExperience, pCookingTime, pGroup, "_from_blasting");
     }
-
     protected static void oreCooking(Consumer<FinishedRecipe> pFinishedRecipeConsumer, RecipeSerializer<? extends AbstractCookingRecipe> pCookingSerializer,
                                      List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName) {
         for(ItemLike itemlike : pIngredients) {

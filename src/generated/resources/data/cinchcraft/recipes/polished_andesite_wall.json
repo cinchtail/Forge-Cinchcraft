@@ -1,16 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:polished_andesite"
+    "A": {
+      "item": "minecraft:andesite_wall"
     }
   },
   "pattern": [
-    "###",
-    "###"
+    "AAA",
+    "AAA"
   ],
   "result": {
     "count": 6,
     "item": "cinchcraft:polished_andesite_wall"
-  }
+  },
+  "show_notification": true
 }
