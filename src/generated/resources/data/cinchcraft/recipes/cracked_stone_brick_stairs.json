@@ -1,18 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "stone_stairs",
+  "category": "building",
   "key": {
-    "#": {
+    "A": {
       "item": "minecraft:cracked_stone_bricks"
     }
   },
   "pattern": [
-    "#  ",
-    "## ",
-    "###"
+    "A  ",
+    "AA ",
+    "AAA"
   ],
   "result": {
     "count": 4,
     "item": "cinchcraft:cracked_stone_brick_stairs"
-  }
+  },
+  "show_notification": true
 }
