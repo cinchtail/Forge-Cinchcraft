@@ -6,6 +6,7 @@ import net.cinchtail.cinchcraft.event.ModEvents;
 import net.cinchtail.cinchcraft.event.WanderingTraderTrades;
 import net.cinchtail.cinchcraft.item.ModCreativeModeTabs;
 import net.cinchtail.cinchcraft.item.ModItems;
+import net.cinchtail.cinchcraft.loot.ModLootModifiers;
 import net.cinchtail.cinchcraft.potion.ModPotions;
 import net.cinchtail.cinchcraft.sound.ModSounds;
 import net.cinchtail.cinchcraft.util.BetterBrewingRecipe;
@@ -51,7 +52,7 @@ public class Cinchcraft
         //ModVillagers.register(modEventBus);
 
         ModBiomeModifiers.register(modEventBus);
-        //ModLootModifiers.register(modEventBus);
+        ModLootModifiers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::clientSetup);

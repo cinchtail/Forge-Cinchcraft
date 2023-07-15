@@ -1,0 +1,11 @@
+{
+  "entries": [
+    "cinchcraft:enchanted_book_from_trail_ruins",
+    "cinchcraft:pitcher_plant_root_from_pitcher_crop",
+    "cinchcraft:bundle_from_trail_ruins",
+    "cinchcraft:ruby_horse_armor_from_jungle_temple",
+    "cinchcraft:ruby_horse_armor_from_village_armorer",
+    "cinchcraft:ruby_horse_armor_from_dungeon"
+  ],
+  "replace": false
+}

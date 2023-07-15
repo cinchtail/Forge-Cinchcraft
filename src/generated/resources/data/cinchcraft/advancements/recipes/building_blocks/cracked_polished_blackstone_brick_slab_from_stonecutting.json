@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cracked_nether_bricks": {
+    "has_cracked_polished_blackstone_bricks": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:cracked_nether_bricks"
+              "minecraft:cracked_polished_blackstone_bricks"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "cinchcraft:cracked_nether_brick_wall_from_stonecutting"
+        "recipe": "cinchcraft:cracked_polished_blackstone_brick_slab_from_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_cracked_nether_bricks",
+      "has_cracked_polished_blackstone_bricks",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "cinchcraft:cracked_nether_brick_wall_from_stonecutting"
+      "cinchcraft:cracked_polished_blackstone_brick_slab_from_stonecutting"
     ]
   },
   "sends_telemetry_event": false

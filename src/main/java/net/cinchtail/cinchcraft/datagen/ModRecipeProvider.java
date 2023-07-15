@@ -692,7 +692,43 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_NETHER_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_NETHER_BRICK_WALL.get())
                 .unlockedBy("has_cracked_nether_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.CRACKED_NETHER_BRICKS).build()))
-                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_nether_brick_wall_from_stonecutting"));
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_polished_brick_wall_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_STAIRS.get(),4)
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .define('A', Items.CRACKED_POLISHED_BLACKSTONE_BRICKS)
+                .unlockedBy("has_cracked_polished_blackstone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.CRACKED_POLISHED_BLACKSTONE_BRICKS).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_STAIRS.get())
+                .unlockedBy("has_cracked_polished_blackstone_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_polished_blackstone_brick_stairs_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_SLAB.get(),6)
+                .pattern("AAA")
+                .define('A', Items.CRACKED_POLISHED_BLACKSTONE_BRICKS)
+                .unlockedBy("has_cracked_polished_blackstone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.CRACKED_POLISHED_BLACKSTONE_BRICKS).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_SLAB.get(),2)
+                .unlockedBy("has_cracked_polished_blackstone_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_polished_blackstone_brick_slab_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_WALL.get(),6)
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', Items.CRACKED_POLISHED_BLACKSTONE_BRICKS)
+                .unlockedBy("has_cracked_polished_blackstone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.CRACKED_POLISHED_BLACKSTONE_BRICKS).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_WALL.get())
+                .unlockedBy("has_cracked_polished_blackstone_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_polished_blackstone_brick_wall_from_stonecutting"));
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
