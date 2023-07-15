@@ -474,7 +474,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
                 Ingredient.of(Items.DIAMOND_HORSE_ARMOR), Ingredient.of(Items.NETHERITE_INGOT),
                 RecipeCategory.TRANSPORTATION, ModItems.NETHERITE_HORSE_ARMOR.get()).unlocks("has_netherite_ingot",
-                has(Items.NETHERITE_INGOT)).save(pWriter, getItemName(ModItems.NETHERITE_HORSE_ARMOR.get()) + "_smithing");
+                has(Items.NETHERITE_INGOT)).save(pWriter, getItemName(ModItems.NETHERITE_HORSE_ARMOR.get()) + "_from_smithing");
 
         //Blocks
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_END_STONE_BRICKS.get())
@@ -583,7 +583,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(ModBlocks.CRACKED_MUD_BRICKS.get()).build()))
                 .save(pWriter);
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_MUD_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_MUD_BRICK_STAIRS.get());
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_MUD_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_MUD_BRICK_STAIRS.get())
+                .unlockedBy("has_cracked_mud_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.CRACKED_MUD_BRICKS.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_mud_brick_stairs_from_stonecutting"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_MUD_BRICK_SLAB.get(),6)
                 .pattern("AAA")
@@ -592,6 +594,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(ModBlocks.CRACKED_MUD_BRICKS.get()).build()))
                 .save(pWriter);
 
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_MUD_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_MUD_BRICK_SLAB.get(),2)
+                .unlockedBy("has_cracked_mud_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.CRACKED_MUD_BRICKS.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_mud_brick_slab_from_stonecutting"));
+
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_MUD_BRICK_WALL.get(),6)
                 .pattern("AAA")
                 .pattern("AAA")
@@ -599,6 +605,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_cracked_mud_bricks", inventoryTrigger(ItemPredicate.Builder.item().
                         of(ModBlocks.CRACKED_MUD_BRICKS.get()).build()))
                 .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_MUD_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_MUD_BRICK_WALL.get())
+                .unlockedBy("has_cracked_mud_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.CRACKED_MUD_BRICKS.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_mud_brick_wall_from_stonecutting"));
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
