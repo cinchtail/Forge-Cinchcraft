@@ -1,18 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "deepslate_stairs",
+  "category": "building",
   "key": {
-    "#": {
+    "A": {
       "item": "minecraft:cracked_deepslate_tiles"
     }
   },
   "pattern": [
-    "#  ",
-    "## ",
-    "###"
+    "A  ",
+    "AA ",
+    "AAA"
   ],
   "result": {
     "count": 4,
     "item": "cinchcraft:cracked_deepslate_tile_stairs"
-  }
+  },
+  "show_notification": true
 }

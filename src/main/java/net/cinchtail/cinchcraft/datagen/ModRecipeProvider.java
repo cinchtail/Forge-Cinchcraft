@@ -13,11 +13,8 @@ import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
-import org.checkerframework.checker.units.qual.C;
 
-import javax.annotation.Nullable;
 import java.util.List;
 import java.util.function.Consumer;
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
@@ -29,6 +26,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     private static final List<ItemLike> NETHER_LAPIS = List.of(ModBlocks.NETHER_LAPIS_LAZULI_ORE.get());
     private static final List<ItemLike> NETHER_EMERALD = List.of(ModBlocks.NETHER_EMERALD_ORE.get());
     private static final List<ItemLike> NETHER_DIAMOND = List.of(ModBlocks.NETHER_DIAMOND_ORE.get());
+    private static final List<ItemLike> CRACKED_MUD_BRICKS = List.of(ModBlocks.CRACKED_MUD_BRICKS.get());
 
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
@@ -161,6 +159,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         oreSmelting(pWriter, NETHER_DIAMOND, RecipeCategory.MISC, Items.DIAMOND, 1.0f, 200, "diamond");
         oreBlasting(pWriter, NETHER_DIAMOND, RecipeCategory.MISC, Items.DIAMOND, 1.0f, 100, "diamond");
+
+        //Cracked Block Recipes
+
 
         //Blackstone Tools
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BLACKSTONE_SWORD.get())
@@ -470,8 +471,134 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(Items.GLOWSTONE_DUST).build()))
                 .save(pWriter);
 
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.of(Items.DIAMOND_HORSE_ARMOR), Ingredient.of(Items.NETHERITE_INGOT),
+                RecipeCategory.TRANSPORTATION, ModItems.NETHERITE_HORSE_ARMOR.get()).unlocks("has_netherite_ingot",
+                has(Items.NETHERITE_INGOT)).save(pWriter, getItemName(ModItems.NETHERITE_HORSE_ARMOR.get()) + "_smithing");
+
+        //Blocks
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_END_STONE_BRICKS.get())
+                .pattern("A")
+                .pattern("A")
+                .define('A', Items.END_STONE_BRICK_SLAB)
+                .unlockedBy("has_end_stone_brick_slab", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.END_STONE_BRICK_SLAB).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_MUD_BRICKS.get())
+                .pattern("A")
+                .pattern("A")
+                .define('A', Items.MUD_BRICK_SLAB)
+                .unlockedBy("has_mud_brick_slab", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.MUD_BRICK_SLAB).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_RED_NETHER_BRICKS.get())
+                .pattern("A")
+                .pattern("A")
+                .define('A', Items.RED_NETHER_BRICK_SLAB)
+                .unlockedBy("has_red_nether_brick_slab", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.RED_NETHER_BRICK_SLAB).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CALCITE_STAIRS.get(),4)
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .define('A', Items.CALCITE)
+                .unlockedBy("has_calcite", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.CALCITE).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CALCITE_SLAB.get(),6)
+                .pattern("AAA")
+                .define('A', Items.CALCITE)
+                .unlockedBy("has_calcite", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.CALCITE).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CALCITE_WALL.get(),6)
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', Items.CALCITE)
+                .unlockedBy("has_calcite", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.CALCITE).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_BRICK_STAIRS.get(),4)
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .define('A', Items.CRACKED_DEEPSLATE_BRICKS)
+                .unlockedBy("has_cracked_deepslate_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.CRACKED_DEEPSLATE_BRICKS).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_BRICK_SLAB.get(),6)
+                .pattern("AAA")
+                .define('A', Items.CRACKED_DEEPSLATE_BRICKS)
+                .unlockedBy("has_cracked_deepslate_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.CRACKED_DEEPSLATE_BRICKS).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_BRICK_WALL.get(),6)
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', Items.CRACKED_DEEPSLATE_BRICKS)
+                .unlockedBy("has_cracked_deepslate_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.CRACKED_DEEPSLATE_BRICKS).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_TILE_STAIRS.get(),4)
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .define('A', Items.CRACKED_DEEPSLATE_TILES)
+                .unlockedBy("has_cracked_deepslate_tiles", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.CRACKED_DEEPSLATE_BRICKS).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_TILE_SLAB.get(),6)
+                .pattern("AAA")
+                .define('A', Items.CRACKED_DEEPSLATE_TILES)
+                .unlockedBy("has_cracked_deepslate_tiles", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.CRACKED_DEEPSLATE_BRICKS).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_TILE_WALL.get(),6)
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', Items.CRACKED_DEEPSLATE_TILES)
+                .unlockedBy("has_cracked_deepslate_tiles", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.CRACKED_DEEPSLATE_BRICKS).build()))
+                .save(pWriter);
 
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_MUD_BRICK_STAIRS.get(),4)
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .define('A', ModBlocks.CRACKED_MUD_BRICKS.get())
+                .unlockedBy("has_cracked_mud_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.CRACKED_MUD_BRICKS.get()).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_MUD_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_MUD_BRICK_STAIRS.get());
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_MUD_BRICK_SLAB.get(),6)
+                .pattern("AAA")
+                .define('A', ModBlocks.CRACKED_MUD_BRICKS.get())
+                .unlockedBy("has_cracked_mud_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.CRACKED_MUD_BRICKS.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_MUD_BRICK_WALL.get(),6)
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModBlocks.CRACKED_MUD_BRICKS.get())
+                .unlockedBy("has_cracked_mud_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.CRACKED_MUD_BRICKS.get()).build()))
+                .save(pWriter);
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
@@ -493,5 +620,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                             pCookingSerializer).group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
                     .save(pFinishedRecipeConsumer, Cinchcraft.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
+    }
+    protected static void netheriteSmithing(Consumer<FinishedRecipe> finishedRecipeConsumer, Item item, RecipeCategory recipeCategory, Item item1) {
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), Ingredient.of(item), Ingredient.of(Items.NETHERITE_INGOT), recipeCategory, item1).unlocks("has_netherite_ingot", has(Items.NETHERITE_INGOT)).save(finishedRecipeConsumer, getItemName(item1) + "_smithing");
+    }
+    public static SingleItemRecipeBuilder stonecutting(Ingredient ingredient, RecipeCategory recipeCategory, ItemLike itemLike) {
+        return new SingleItemRecipeBuilder(recipeCategory, RecipeSerializer.STONECUTTER, ingredient, itemLike, 1);
     }
 }
