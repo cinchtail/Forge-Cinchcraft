@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cracked_stone_bricks": {
+    "has_cut_red_sandstone_bricks": {
       "conditions": {
         "items": [
           {
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "cinchcraft:cracked_stone_brick_wall_from_stonecutting"
+        "recipe": "cinchcraft:cracked_cut_red_sandstone_wall_from_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_cracked_stone_bricks",
+      "has_cut_red_sandstone_bricks",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "cinchcraft:cracked_stone_brick_wall_from_stonecutting"
+      "cinchcraft:cracked_cut_red_sandstone_wall_from_stonecutting"
     ]
   },
   "sends_telemetry_event": false

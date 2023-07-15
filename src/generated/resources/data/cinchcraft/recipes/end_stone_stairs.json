@@ -1,18 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "stone_stairs",
+  "category": "building",
   "key": {
-    "#": {
+    "A": {
       "item": "minecraft:end_stone"
     }
   },
   "pattern": [
-    "#  ",
-    "## ",
-    "###"
+    "A  ",
+    "AA ",
+    "AAA"
   ],
   "result": {
     "count": 4,
     "item": "cinchcraft:end_stone_stairs"
-  }
+  },
+  "show_notification": true
 }
