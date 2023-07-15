@@ -7,7 +7,6 @@ import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -27,7 +26,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     private static final List<ItemLike> NETHER_LAPIS = List.of(ModBlocks.NETHER_LAPIS_LAZULI_ORE.get());
     private static final List<ItemLike> NETHER_EMERALD = List.of(ModBlocks.NETHER_EMERALD_ORE.get());
     private static final List<ItemLike> NETHER_DIAMOND = List.of(ModBlocks.NETHER_DIAMOND_ORE.get());
-    private static final List<ItemLike> CRACKED_MUD_BRICKS = List.of(ModBlocks.CRACKED_MUD_BRICKS.get());
 
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
@@ -161,8 +159,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreSmelting(pWriter, NETHER_DIAMOND, RecipeCategory.MISC, Items.DIAMOND, 1.0f, 200, "diamond");
         oreBlasting(pWriter, NETHER_DIAMOND, RecipeCategory.MISC, Items.DIAMOND, 1.0f, 100, "diamond");
 
-        //Cracked Block Recipes
-
+        //Cracked Block Smelting Recipes
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(Blocks.MUD_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_MUD_BRICKS.get(), 0.1F, 200)
+                .unlockedBy("has_mud_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.MUD_BRICKS).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_mud_bricks"));
 
         //Blackstone Tools
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BLACKSTONE_SWORD.get())
@@ -606,7 +606,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(Items.CRACKED_DEEPSLATE_BRICKS).build()))
                 .save(pWriter);
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_DEEPSLATE_TILES), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_TILE_SLAB.get())
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_DEEPSLATE_TILES), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_TILE_SLAB.get(),2)
                 .unlockedBy("has_cracked_deepslate_tiles", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.CRACKED_DEEPSLATE_TILES).build()))
                 .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_deepslate_tile_slab_from_stonecutting"));
 
@@ -618,7 +618,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(Items.CRACKED_DEEPSLATE_BRICKS).build()))
                 .save(pWriter);
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_DEEPSLATE_TILES), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_TILE_WALL.get(),2)
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_DEEPSLATE_TILES), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_TILE_WALL.get())
                 .unlockedBy("has_cracked_deepslate_tiles", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.CRACKED_DEEPSLATE_TILES).build()))
                 .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_deepslate_tile_wall_from_stonecutting"));
 
@@ -678,11 +678,5 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                             pCookingSerializer).group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
                     .save(pFinishedRecipeConsumer, Cinchcraft.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
-    }
-    protected static void netheriteSmithing(Consumer<FinishedRecipe> finishedRecipeConsumer, Item item, RecipeCategory recipeCategory, Item item1) {
-        SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), Ingredient.of(item), Ingredient.of(Items.NETHERITE_INGOT), recipeCategory, item1).unlocks("has_netherite_ingot", has(Items.NETHERITE_INGOT)).save(finishedRecipeConsumer, getItemName(item1) + "_smithing");
-    }
-    public static SingleItemRecipeBuilder stonecutting(Ingredient ingredient, RecipeCategory recipeCategory, ItemLike itemLike) {
-        return new SingleItemRecipeBuilder(recipeCategory, RecipeSerializer.STONECUTTER, ingredient, itemLike, 1);
     }
 }
