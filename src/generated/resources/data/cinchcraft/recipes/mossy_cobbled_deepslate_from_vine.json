@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
+  "group": "mossy_cobbled_bricks",
   "ingredients": [
     {
       "item": "minecraft:cobbled_deepslate"

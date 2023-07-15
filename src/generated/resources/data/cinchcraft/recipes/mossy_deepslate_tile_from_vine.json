@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "mossy_cobblestone",
+  "category": "misc",
+  "group": "mossy_deeplate_tiles",
   "ingredients": [
     {
       "item": "minecraft:deepslate_tiles"
