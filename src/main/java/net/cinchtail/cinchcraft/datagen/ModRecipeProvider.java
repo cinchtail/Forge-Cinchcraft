@@ -13,6 +13,7 @@ import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.List;
@@ -485,6 +486,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(Items.END_STONE_BRICK_SLAB).build()))
                 .save(pWriter);
 
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_END_STONE_BRICKS.get())
+                .unlockedBy("has_end_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.END_STONE_BRICKS).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "chiseled_end_stone_bricks_from_stonecutting"));
+
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_MUD_BRICKS.get())
                 .pattern("A")
                 .pattern("A")
@@ -493,6 +498,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(Items.MUD_BRICK_SLAB).build()))
                 .save(pWriter);
 
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.MUD_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_MUD_BRICKS.get())
+                .unlockedBy("has_mud_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.MUD_BRICKS).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "chiseled_mud_bricks_from_stonecutting"));
+
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_RED_NETHER_BRICKS.get())
                 .pattern("A")
                 .pattern("A")
@@ -500,6 +509,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_red_nether_brick_slab", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Items.RED_NETHER_BRICK_SLAB).build()))
                 .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.RED_NETHER_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_RED_NETHER_BRICKS.get())
+                .unlockedBy("has_red_nether_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.RED_NETHER_BRICKS).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "chiseled_red_nether_bricks_from_stonecutting"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CALCITE_STAIRS.get(),4)
                 .pattern("A  ")
@@ -510,12 +523,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(Items.CALCITE).build()))
                 .save(pWriter);
 
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CALCITE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CALCITE_STAIRS.get())
+                .unlockedBy("has_calcite", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.CALCITE).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "calcite_stairs_from_stonecutting"));
+
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CALCITE_SLAB.get(),6)
                 .pattern("AAA")
                 .define('A', Items.CALCITE)
                 .unlockedBy("has_calcite", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Items.CALCITE).build()))
                 .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CALCITE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CALCITE_SLAB.get(),2)
+                .unlockedBy("has_calcite", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.CALCITE).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "calcite_slab_from_stonecutting"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CALCITE_WALL.get(),6)
                 .pattern("AAA")
@@ -524,6 +545,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_calcite", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Items.CALCITE).build()))
                 .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CALCITE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CALCITE_WALL.get())
+                .unlockedBy("has_calcite", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.CALCITE).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "calcite_wall_from_stonecutting"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_BRICK_STAIRS.get(),4)
                 .pattern("A  ")
@@ -534,12 +559,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(Items.CRACKED_DEEPSLATE_BRICKS).build()))
                 .save(pWriter);
 
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_DEEPSLATE_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_BRICK_STAIRS.get())
+                .unlockedBy("has_cracked_deepslate_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.CRACKED_DEEPSLATE_BRICKS).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_deepslate_brick_stairs_from_stonecutting"));
+
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_BRICK_SLAB.get(),6)
                 .pattern("AAA")
                 .define('A', Items.CRACKED_DEEPSLATE_BRICKS)
                 .unlockedBy("has_cracked_deepslate_bricks", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Items.CRACKED_DEEPSLATE_BRICKS).build()))
                 .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_DEEPSLATE_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_BRICK_SLAB.get(),2)
+                .unlockedBy("has_cracked_deepslate_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.CRACKED_DEEPSLATE_BRICKS).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_deepslate_brick_slab_from_stonecutting"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_BRICK_WALL.get(),6)
                 .pattern("AAA")
@@ -548,6 +581,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_cracked_deepslate_bricks", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Items.CRACKED_DEEPSLATE_BRICKS).build()))
                 .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_DEEPSLATE_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_BRICK_WALL.get())
+                .unlockedBy("has_cracked_deepslate_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.CRACKED_DEEPSLATE_BRICKS).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_deepslate_brick_wall_from_stonecutting"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_TILE_STAIRS.get(),4)
                 .pattern("A  ")
@@ -558,12 +595,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(Items.CRACKED_DEEPSLATE_BRICKS).build()))
                 .save(pWriter);
 
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_DEEPSLATE_TILES), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_TILE_STAIRS.get())
+                .unlockedBy("has_cracked_deepslate_tiles", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.CRACKED_DEEPSLATE_TILES).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_deepslate_tile_stairs_from_stonecutting"));
+
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_TILE_SLAB.get(),6)
                 .pattern("AAA")
                 .define('A', Items.CRACKED_DEEPSLATE_TILES)
                 .unlockedBy("has_cracked_deepslate_tiles", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Items.CRACKED_DEEPSLATE_BRICKS).build()))
                 .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_DEEPSLATE_TILES), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_TILE_SLAB.get())
+                .unlockedBy("has_cracked_deepslate_tiles", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.CRACKED_DEEPSLATE_TILES).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_deepslate_tile_slab_from_stonecutting"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_TILE_WALL.get(),6)
                 .pattern("AAA")
@@ -573,6 +618,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(Items.CRACKED_DEEPSLATE_BRICKS).build()))
                 .save(pWriter);
 
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_DEEPSLATE_TILES), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_TILE_WALL.get(),2)
+                .unlockedBy("has_cracked_deepslate_tiles", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.CRACKED_DEEPSLATE_TILES).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_deepslate_tile_wall_from_stonecutting"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_MUD_BRICK_STAIRS.get(),4)
                 .pattern("A  ")
