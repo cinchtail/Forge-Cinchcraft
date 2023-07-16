@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "A": {
+      "item": "minecraft:smooth_stone"
+    }
+  },
+  "pattern": [
+    "A  ",
+    "AA ",
+    "AAA"
+  ],
+  "result": {
+    "count": 4,
+    "item": "cinchcraft:smooth_stone_stairs"
+  },
+  "show_notification": true
+}

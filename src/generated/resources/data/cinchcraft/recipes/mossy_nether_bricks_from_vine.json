@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "mossy_nether_bricks",
+  "ingredients": [
+    {
+      "item": "minecraft:nether_bricks"
+    },
+    {
+      "item": "minecraft:vine"
+    }
+  ],
+  "result": {
+    "item": "cinchcraft:mossy_nether_bricks"
+  }
+}
