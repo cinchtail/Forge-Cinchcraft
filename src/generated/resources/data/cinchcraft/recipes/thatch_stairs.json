@@ -1,18 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "building",
+  "category": "building",
   "key": {
-    "#": {
+    "A": {
       "item": "cinchcraft:thatch_block"
     }
   },
   "pattern": [
-    "#  ",
-    "## ",
-    "###"
+    "A  ",
+    "AA ",
+    "AAA"
   ],
   "result": {
     "count": 4,
     "item": "cinchcraft:thatch_stairs"
-  }
+  },
+  "show_notification": true
 }

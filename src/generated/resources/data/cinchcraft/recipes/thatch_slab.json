@@ -1,16 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "building",
+  "category": "building",
   "key": {
-    "#": {
+    "A": {
       "item": "cinchcraft:thatch_block"
     }
   },
   "pattern": [
-    "###"
+    "AAA"
   ],
   "result": {
     "count": 6,
     "item": "cinchcraft:thatch_slab"
-  }
+  },
+  "show_notification": true
 }

@@ -1,16 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "###",
-    "###"
-  ],
+  "category": "building",
   "key": {
-    "#": {
+    "A": {
       "item": "cinchcraft:reeds"
     }
   },
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"
+  ],
   "result": {
     "item": "cinchcraft:thatch_block"
-  }
+  },
+  "show_notification": true
 }

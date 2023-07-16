@@ -172,6 +172,53 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_red_nether_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.RED_NETHER_BRICKS).build()))
                 .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_red_nether_bricks"));
 
+        //Reeds Recipes
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.THATCH_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.REEDS.get())
+                .unlockedBy("has_reeds", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.REEDS.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.THATCH_STAIRS.get(),4)
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .define('A', ModItems.THATCH_BLOCK.get())
+                .unlockedBy("has_thatch_block", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.THATCH_BLOCK.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.THATCH_SLAB.get(),6)
+                .pattern("AAA")
+                .define('A', ModItems.THATCH_BLOCK.get())
+                .unlockedBy("has_thatch_block", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.THATCH_BLOCK.get()).build()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.REEDS.get(), 9)
+                .requires(ModItems.THATCH_BLOCK.get())
+                .group("reeds")
+                .unlockedBy("has_thatch_block", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.THATCH_BLOCK.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "reeds_from_thatch_block"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.REEDS.get(), 6)
+                .requires(ModItems.THATCH_STAIRS.get())
+                .group("reeds")
+                .unlockedBy("has_thatch_stairs", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.THATCH_STAIRS.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "reeds_from_thatch_stairs"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.REEDS.get(), 4)
+                .requires(ModItems.THATCH_SLAB.get())
+                .group("reeds")
+                .unlockedBy("has_thatch_slab", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.THATCH_SLAB.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "reeds_from_thatch_slab"));
+
         //Blackstone Tools
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BLACKSTONE_SWORD.get())
                 .pattern("A")

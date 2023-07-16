@@ -1,13 +1,14 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "building",
+  "category": "misc",
+  "group": "reeds",
   "ingredients": [
     {
-      "item": "cinchcraft:thatch_slab"
+      "item": "cinchcraft:thatch_stairs"
     }
   ],
   "result": {
-    "count": 4,
+    "count": 6,
     "item": "cinchcraft:reeds"
   }
 }
