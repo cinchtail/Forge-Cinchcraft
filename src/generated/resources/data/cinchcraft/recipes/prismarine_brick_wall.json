@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "A": {
-      "item": "minecraft:polished_andesite"
+      "item": "minecraft:prismarine_bricks"
     }
   },
   "pattern": [
@@ -12,7 +12,7 @@
   ],
   "result": {
     "count": 6,
-    "item": "cinchcraft:polished_andesite_wall"
+    "item": "cinchcraft:prismarine_brick_wall"
   },
   "show_notification": true
 }

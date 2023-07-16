@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_polished_andesite": {
+    "has_polished_dripstone_block": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:polished_andesite"
+              "cinchcraft:polished_dripstone_block"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "cinchcraft:polished_andesite_wall"
+        "recipe": "cinchcraft:polished_dripstone_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_polished_andesite",
+      "has_polished_dripstone_block",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "cinchcraft:polished_andesite_wall"
+      "cinchcraft:polished_dripstone_slab"
     ]
   },
   "sends_telemetry_event": false

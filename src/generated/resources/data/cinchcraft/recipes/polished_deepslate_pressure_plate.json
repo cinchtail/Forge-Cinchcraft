@@ -3,16 +3,14 @@
   "category": "building",
   "key": {
     "A": {
-      "item": "minecraft:polished_andesite"
+      "item": "minecraft:polished_deepslate"
     }
   },
   "pattern": [
-    "AAA",
-    "AAA"
+    "AA"
   ],
   "result": {
-    "count": 6,
-    "item": "cinchcraft:polished_andesite_wall"
+    "item": "cinchcraft:polished_deepslate_pressure_plate"
   },
   "show_notification": true
 }

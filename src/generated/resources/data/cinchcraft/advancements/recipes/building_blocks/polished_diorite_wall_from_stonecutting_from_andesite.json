@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_polished_andesite": {
+    "has_diorite": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:polished_andesite"
+              "minecraft:diorite"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "cinchcraft:polished_andesite_wall"
+        "recipe": "cinchcraft:polished_diorite_wall_from_stonecutting_from_andesite"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_polished_andesite",
+      "has_diorite",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "cinchcraft:polished_andesite_wall"
+      "cinchcraft:polished_diorite_wall_from_stonecutting_from_andesite"
     ]
   },
   "sends_telemetry_event": false

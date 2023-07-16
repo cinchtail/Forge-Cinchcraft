@@ -3,16 +3,16 @@
   "category": "building",
   "key": {
     "A": {
-      "item": "minecraft:polished_andesite"
+      "item": "minecraft:dripstone_block"
     }
   },
   "pattern": [
-    "AAA",
-    "AAA"
+    "AA",
+    "AA"
   ],
   "result": {
-    "count": 6,
-    "item": "cinchcraft:polished_andesite_wall"
+    "count": 4,
+    "item": "cinchcraft:polished_dripstone_block"
   },
   "show_notification": true
 }

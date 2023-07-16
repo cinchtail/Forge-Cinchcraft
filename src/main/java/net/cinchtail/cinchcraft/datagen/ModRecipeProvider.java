@@ -1203,9 +1203,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_ANDESITE_WALL.get(),6)
                 .pattern("AAA")
                 .pattern("AAA")
-                .define('A', Blocks.ANDESITE_WALL)
+                .define('A', Blocks.POLISHED_ANDESITE)
                 .unlockedBy("has_polished_andesite", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.ANDESITE_WALL).build()))
+                        of(Blocks.POLISHED_ANDESITE).build()))
                 .save(pWriter);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.POLISHED_ANDESITE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_ANDESITE_WALL.get())
@@ -1215,6 +1215,265 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.ANDESITE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_ANDESITE_WALL.get())
                 .unlockedBy("has_andesite", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.ANDESITE).build()))
                 .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_andesite_wall_from_stonecutting_from_andesite"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CALCITE_STAIRS.get(),4)
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .define('A', ModBlocks.POLISHED_CALCITE.get())
+                .unlockedBy("has_polished_calcite", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.POLISHED_CALCITE.get()).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.POLISHED_CALCITE.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CALCITE_STAIRS.get())
+                .unlockedBy("has_polished_calcite", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.POLISHED_CALCITE.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_calcite_stairs_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CALCITE_SLAB.get(),6)
+                .pattern("AAA")
+                .define('A', ModBlocks.POLISHED_CALCITE.get())
+                .unlockedBy("has_polished_calcite", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.POLISHED_CALCITE.get()).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.POLISHED_CALCITE.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CALCITE_SLAB.get(),2)
+                .unlockedBy("has_polished_calcite", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.POLISHED_CALCITE.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_calcite_slab_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CALCITE_WALL.get(),6)
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModBlocks.POLISHED_CALCITE.get())
+                .unlockedBy("has_polished_calcite", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.POLISHED_CALCITE.get()).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.POLISHED_CALCITE.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CALCITE_WALL.get())
+                .unlockedBy("has_polished_calcite", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.POLISHED_CALCITE.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_calcite_wall_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CALCITE.get(),4)
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', Blocks.CALCITE)
+                .unlockedBy("has_calcite", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.CALCITE).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CALCITE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CALCITE.get())
+                .unlockedBy("has_calcite", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.CALCITE).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_calcite_from_stonecutting"));
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CALCITE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CALCITE_STAIRS.get())
+                .unlockedBy("has_calcite", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.CALCITE).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_calcite_stairs_from_stonecutting_from_calcite"));
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CALCITE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CALCITE_SLAB.get(),2)
+                .unlockedBy("has_calcite", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.CALCITE).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_calcite_slab_from_stonecutting_from_calcite"));
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CALCITE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CALCITE_WALL.get())
+                .unlockedBy("has_calcite", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.CALCITE).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_calcite_wall_from_stonecutting_from_calcite"));
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DEEPSLATE_PRESSURE_PLATE.get())
+                .pattern("AA")
+                .define('A', Blocks.POLISHED_DEEPSLATE)
+                .unlockedBy("has_polished_deepslate", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.POLISHED_DEEPSLATE).build()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.POLISHED_DEEPSLATE_BUTTON.get())
+                .requires(Blocks.POLISHED_DEEPSLATE)
+                .unlockedBy("has_polished_deepslate", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.POLISHED_DEEPSLATE).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DIORITE_WALL.get(),6)
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', Blocks.POLISHED_DIORITE)
+                .unlockedBy("has_polished_diorite", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.POLISHED_DIORITE).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.POLISHED_DIORITE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DIORITE_WALL.get())
+                .unlockedBy("has_polished_diorite", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.POLISHED_DIORITE).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_diorite_wall_from_stonecutting"));
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.DIORITE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DIORITE_WALL.get())
+                .unlockedBy("has_diorite", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.DIORITE).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_diorite_wall_from_stonecutting_from_andesite"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DRIPSTONE_BLOCK.get(),4)
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', Blocks.DRIPSTONE_BLOCK)
+                .unlockedBy("has_dripstone_block", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.DRIPSTONE_BLOCK).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.DRIPSTONE_BLOCK), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DRIPSTONE_BLOCK.get())
+                .unlockedBy("has_dripstone_block", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.DRIPSTONE_BLOCK).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_dripstone_block_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DRIPSTONE_STAIRS.get(),4)
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .define('A', ModBlocks.POLISHED_DRIPSTONE_BLOCK.get())
+                .unlockedBy("has_polished_dripstone_block", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.POLISHED_DRIPSTONE_BLOCK.get()).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.POLISHED_DRIPSTONE_BLOCK.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DRIPSTONE_STAIRS.get())
+                .unlockedBy("has_polished_dripstone_block", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.POLISHED_DRIPSTONE_BLOCK.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_dripstone_stairs_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DRIPSTONE_SLAB.get(),6)
+                .pattern("AAA")
+                .define('A', ModBlocks.POLISHED_DRIPSTONE_BLOCK.get())
+                .unlockedBy("has_polished_dripstone_block", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.POLISHED_DRIPSTONE_BLOCK.get()).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.POLISHED_DRIPSTONE_BLOCK.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DRIPSTONE_SLAB.get(),2)
+                .unlockedBy("has_polished_dripstone_block", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.POLISHED_DRIPSTONE_BLOCK.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_dripstone_slab_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DRIPSTONE_WALL.get(),6)
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModBlocks.POLISHED_DRIPSTONE_BLOCK.get())
+                .unlockedBy("has_polished_dripstone_block", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.POLISHED_DRIPSTONE_BLOCK.get()).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.POLISHED_DRIPSTONE_BLOCK.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DRIPSTONE_WALL.get())
+                .unlockedBy("has_polished_dripstone_block", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.POLISHED_DRIPSTONE_BLOCK.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_dripstone_wall_from_stonecutting"));
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.DRIPSTONE_BLOCK), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DRIPSTONE_STAIRS.get())
+                .unlockedBy("has_dripstone_block", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.DRIPSTONE_BLOCK).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_dripstone_stairs_from_stonecutting_from_dripstone_block"));
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.DRIPSTONE_BLOCK), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DRIPSTONE_SLAB.get(),2)
+                .unlockedBy("has_dripstone_block", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.DRIPSTONE_BLOCK).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_dripstone_slab_from_stonecutting_from_dripstone_block"));
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.DRIPSTONE_BLOCK), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DRIPSTONE_WALL.get())
+                .unlockedBy("has_dripstone_block", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.DRIPSTONE_BLOCK).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_dripstone_wall_from_stonecutting_from_dripstone_block"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_GRANITE_WALL.get(),6)
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', Blocks.POLISHED_GRANITE)
+                .unlockedBy("has_polished_granite", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.POLISHED_GRANITE).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.POLISHED_GRANITE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_GRANITE_WALL.get())
+                .unlockedBy("has_polished_granite", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.POLISHED_GRANITE).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_granite_wall_from_stonecutting"));
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.GRANITE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_GRANITE_WALL.get())
+                .unlockedBy("has_granite", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.GRANITE).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_granite_wall_from_stonecutting_from_granite"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF.get(),4)
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', Blocks.TUFF)
+                .unlockedBy("has_tuff", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.TUFF).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.TUFF), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF.get())
+                .unlockedBy("has_tuff", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.TUFF).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_tuff_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF_STAIRS.get(),4)
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .define('A', ModBlocks.POLISHED_TUFF.get())
+                .unlockedBy("has_polished_tuff", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.POLISHED_TUFF.get()).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.POLISHED_TUFF.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF_STAIRS.get())
+                .unlockedBy("has_polished_tuff", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.POLISHED_TUFF.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_tuff_stairs_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF_SLAB.get(),6)
+                .pattern("AAA")
+                .define('A', ModBlocks.POLISHED_TUFF.get())
+                .unlockedBy("has_polished_tuff", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.POLISHED_TUFF.get()).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.POLISHED_TUFF.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF_SLAB.get(),2)
+                .unlockedBy("has_polished_tuff", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.POLISHED_TUFF.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_tuff_slab_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF_WALL.get(),6)
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModBlocks.POLISHED_TUFF.get())
+                .unlockedBy("has_polished_tuff", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.POLISHED_TUFF.get()).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.POLISHED_TUFF.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF_WALL.get())
+                .unlockedBy("has_polished_tuff", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.POLISHED_TUFF.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_tuff_wall_from_stonecutting"));
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.TUFF), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF_STAIRS.get())
+                .unlockedBy("has_tuff", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.TUFF).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_tuff_stairs_from_stonecutting_from_tuff"));
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.TUFF), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF_SLAB.get(),2)
+                .unlockedBy("has_tuff", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.TUFF).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_tuff_slab_from_stonecutting_from_tuff"));
+
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.TUFF), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF_WALL.get())
+                .unlockedBy("has_tuff", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.TUFF).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "polished_tuff_wall_from_stonecutting_from_tuff"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PRISMARINE_BRICK_WALL.get(),6)
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', Blocks.PRISMARINE_BRICKS)
+                .unlockedBy("has_prismarine_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.PRISMARINE_BRICKS).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.PRISMARINE_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.PRISMARINE_BRICK_WALL.get())
+                .unlockedBy("has_prismarine_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.PRISMARINE_BRICKS).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "prismarine_brick_wall_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPUR_WALL.get(),6)
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', Blocks.PURPUR_BLOCK)
+                .unlockedBy("has_purpur_block", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.PURPUR_BLOCK).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.PURPUR_BLOCK), RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPUR_WALL.get())
+                .unlockedBy("has_purpur_block", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.PURPUR_BLOCK).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "purpur_wall_from_stonecutting"));
     }
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
                                       float pExperience, int pCookingTIme, String pGroup) {

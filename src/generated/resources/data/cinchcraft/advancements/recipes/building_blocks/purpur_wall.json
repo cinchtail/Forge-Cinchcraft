@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_polished_andesite": {
+    "has_purpur_block": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:polished_andesite"
+              "minecraft:purpur_block"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "cinchcraft:polished_andesite_wall"
+        "recipe": "cinchcraft:purpur_wall"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_polished_andesite",
+      "has_purpur_block",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "cinchcraft:polished_andesite_wall"
+      "cinchcraft:purpur_wall"
     ]
   },
   "sends_telemetry_event": false
