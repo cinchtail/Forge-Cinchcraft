@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-13T23:36:05.6622549	Item Models: cinchcraft
+// 1.20.1	2023-07-17T00:04:41.1269659	Item Models: cinchcraft
 774809724c0c051db5a823287ccfb162c5f16b47 assets/cinchcraft/models/item/ancient_slime_stew.json
 1c90b5f18401efcc168cf75aad20b84b9f739d50 assets/cinchcraft/models/item/blackstone_axe.json
 c4e0813bbff9221790d53c7968580579b0dbd043 assets/cinchcraft/models/item/blackstone_hoe.json
@@ -38,6 +38,10 @@ da4b6036e554c9b57a2e79167f36a77c7d30311c assets/cinchcraft/models/item/cracked_r
 08637c1c45a87eb3f61bfe6a2fd7a482bda1b0a4 assets/cinchcraft/models/item/cracked_stone_brick_slab.json
 e2e7a342286a6f34a6a2abdd31bf42630604667c assets/cinchcraft/models/item/cracked_stone_brick_stairs.json
 d743e6fe23bf40faab117216890a381df2b9992f assets/cinchcraft/models/item/cracked_stone_brick_wall.json
+5b2e2dc70a0a2cdf9406940400b2c5a4089564a4 assets/cinchcraft/models/item/crimson_mossy_nether_brick_fence.json
+b108c44e36c7e3dcd07b3d6fcc53887f18f0a1a9 assets/cinchcraft/models/item/crimson_mossy_nether_brick_slab.json
+61cd76ee845ef6b97d103da062b60ab50dc1cd1f assets/cinchcraft/models/item/crimson_mossy_nether_brick_stairs.json
+0e56a037728498e3a81ec206bad10f39146fc1a4 assets/cinchcraft/models/item/crimson_mossy_nether_brick_wall.json
 b6e0b504eba3fb346870e282e98232ce9d41c683 assets/cinchcraft/models/item/cut_red_sandstone_wall.json
 635c7b977e72addfc35b13041f09985e41e6e334 assets/cinchcraft/models/item/cut_sandstone_wall.json
 611978c0bbead0bb37e92ad9eaeeb99737aa7414 assets/cinchcraft/models/item/dark_prismarine_wall.json
@@ -118,3 +122,7 @@ cbce7f9bf763c6e6bb84470a9c17645f4a8e0119 assets/cinchcraft/models/item/thatch_st
 22186061a9ad557c7a34ce55d2e4e9158ff37d09 assets/cinchcraft/models/item/tuff_stairs.json
 c522e2152dd6f61229978fc8970d44c5d04015df assets/cinchcraft/models/item/tuff_wall.json
 63bfaf8d1b56289536af74b1865e9dd3a98796ca assets/cinchcraft/models/item/vegetable_stew.json
+0b88e6306e14482bcc90b247c38bebd91a834cb8 assets/cinchcraft/models/item/warped_mossy_nether_brick_fence.json
+c1fe6d8622a9b2cbb7cb2820d592c840ce03cd60 assets/cinchcraft/models/item/warped_mossy_nether_brick_slab.json
+9ab7a118a828babcc5b63e2a4f185643ad4f6e27 assets/cinchcraft/models/item/warped_mossy_nether_brick_stairs.json
+630bba49738cf4bcfe44f27a068354dc6c6727c0 assets/cinchcraft/models/item/warped_mossy_nether_brick_wall.json

@@ -442,17 +442,49 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS).strength(2.0F, 6.0F)
                     .requiresCorrectToolForDrops().sound(SoundType.NETHER_BRICKS)));
     public static final RegistryObject<Block> MOSSY_NETHER_BRICK_STAIRS = registerBlock("mossy_nether_brick_stairs",
-            () -> new StairBlock(() -> ModBlocks.CRACKED_RED_NETHER_BRICKS.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.CRACKED_NETHER_BRICKS).requiresCorrectToolForDrops()
+            () -> new StairBlock(Blocks.NETHER_BRICK_STAIRS::defaultBlockState,
+                    BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS).requiresCorrectToolForDrops()
                             .strength(2.0F, 6.0F).sound(SoundType.NETHER_BRICKS)));
     public static final RegistryObject<Block> MOSSY_NETHER_BRICK_SLAB = registerBlock("mossy_nether_brick_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CRACKED_NETHER_BRICKS)
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS)
                     .requiresCorrectToolForDrops().strength(2.0F, 6.0F).sound(SoundType.NETHER_BRICKS)));
     public static final RegistryObject<Block> MOSSY_NETHER_BRICK_WALL = registerBlock("mossy_nether_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CRACKED_NETHER_BRICKS)
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS)
                     .requiresCorrectToolForDrops().strength(2.0F, 6.0F).sound(SoundType.NETHER_BRICKS)));
     public static final RegistryObject<Block> MOSSY_NETHER_BRICK_FENCE = registerBlock("mossy_nether_brick_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS)
+                    .strength(2.5f).requiresCorrectToolForDrops().sound(SoundType.NETHER_BRICKS)));
+    public static final RegistryObject<Block> CRIMSON_MOSSY_NETHER_BRICKS = registerBlock("crimson_mossy_nether_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS).strength(2.0F, 6.0F)
+                    .requiresCorrectToolForDrops().sound(SoundType.NETHER_BRICKS)));
+    public static final RegistryObject<Block> CRIMSON_MOSSY_NETHER_BRICK_STAIRS = registerBlock("crimson_mossy_nether_brick_stairs",
+            () -> new StairBlock(Blocks.NETHER_BRICK_STAIRS::defaultBlockState,
+                    BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS).requiresCorrectToolForDrops()
+                            .strength(2.0F, 6.0F).sound(SoundType.NETHER_BRICKS)));
+    public static final RegistryObject<Block> CRIMSON_MOSSY_NETHER_BRICK_SLAB = registerBlock("crimson_mossy_nether_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS)
+                    .requiresCorrectToolForDrops().strength(2.0F, 6.0F).sound(SoundType.NETHER_BRICKS)));
+    public static final RegistryObject<Block> CRIMSON_MOSSY_NETHER_BRICK_WALL = registerBlock("crimson_mossy_nether_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS)
+                    .requiresCorrectToolForDrops().strength(2.0F, 6.0F).sound(SoundType.NETHER_BRICKS)));
+    public static final RegistryObject<Block> CRIMSON_MOSSY_NETHER_BRICK_FENCE = registerBlock("crimson_mossy_nether_brick_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(2.5f).requiresCorrectToolForDrops().sound(SoundType.NETHER_BRICKS)));
+    public static final RegistryObject<Block> WARPED_MOSSY_NETHER_BRICKS = registerBlock("warped_mossy_nether_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS).strength(2.0F, 6.0F)
+                    .requiresCorrectToolForDrops().sound(SoundType.NETHER_BRICKS)));
+    public static final RegistryObject<Block> WARPED_MOSSY_NETHER_BRICK_STAIRS = registerBlock("warped_mossy_nether_brick_stairs",
+            () -> new StairBlock(Blocks.NETHER_BRICK_STAIRS::defaultBlockState,
+                    BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS).requiresCorrectToolForDrops()
+                            .strength(2.0F, 6.0F).sound(SoundType.NETHER_BRICKS)));
+    public static final RegistryObject<Block> WARPED_MOSSY_NETHER_BRICK_SLAB = registerBlock("warped_mossy_nether_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS)
+                    .requiresCorrectToolForDrops().strength(2.0F, 6.0F).sound(SoundType.NETHER_BRICKS)));
+    public static final RegistryObject<Block> WARPED_MOSSY_NETHER_BRICK_WALL = registerBlock("warped_mossy_nether_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS)
+                    .requiresCorrectToolForDrops().strength(2.0F, 6.0F).sound(SoundType.NETHER_BRICKS)));
+    public static final RegistryObject<Block> WARPED_MOSSY_NETHER_BRICK_FENCE = registerBlock("warped_mossy_nether_brick_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS)
                     .strength(2.5f).requiresCorrectToolForDrops().sound(SoundType.NETHER_BRICKS)));
 
 

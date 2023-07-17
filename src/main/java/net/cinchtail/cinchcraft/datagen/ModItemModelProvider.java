@@ -59,6 +59,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
 
         fenceItem(ModBlocks.MOSSY_NETHER_BRICK_FENCE, ModBlocks.MOSSY_NETHER_BRICKS);
+        fenceItem(ModBlocks.CRIMSON_MOSSY_NETHER_BRICK_FENCE, ModBlocks.CRIMSON_MOSSY_NETHER_BRICKS);
+        fenceItem(ModBlocks.WARPED_MOSSY_NETHER_BRICK_FENCE, ModBlocks.WARPED_MOSSY_NETHER_BRICKS);
 
 
         buttonItem(ModBlocks.POLISHED_DEEPSLATE_BUTTON, Blocks.POLISHED_DEEPSLATE);
@@ -150,6 +152,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("mossy_nether_brick_stairs", modLoc("block/mossy_nether_brick_stairs"));
         withExistingParent("mossy_nether_brick_slab", modLoc("block/mossy_nether_brick_slab"));
         withExistingParent("mossy_nether_brick_wall", modLoc("block/mossy_nether_brick_wall_inventory"));
+        withExistingParent("crimson_mossy_nether_brick_stairs", modLoc("block/crimson_mossy_nether_brick_stairs"));
+        withExistingParent("crimson_mossy_nether_brick_slab", modLoc("block/crimson_mossy_nether_brick_slab"));
+        withExistingParent("crimson_mossy_nether_brick_wall", modLoc("block/crimson_mossy_nether_brick_wall_inventory"));
+        withExistingParent("warped_mossy_nether_brick_stairs", modLoc("block/warped_mossy_nether_brick_stairs"));
+        withExistingParent("warped_mossy_nether_brick_slab", modLoc("block/warped_mossy_nether_brick_slab"));
+        withExistingParent("warped_mossy_nether_brick_wall", modLoc("block/warped_mossy_nether_brick_wall_inventory"));
     }
     private void simpleItem(RegistryObject<Item> item) {
         withExistingParent(item.getId().getPath(),
