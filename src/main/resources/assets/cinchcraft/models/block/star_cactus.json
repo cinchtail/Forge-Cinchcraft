@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "cinchcraft:block/small_cactus"
+    "cross": "cinchcraft:block/star_cactus"
   },
   "render_type": "cutout"
 }
