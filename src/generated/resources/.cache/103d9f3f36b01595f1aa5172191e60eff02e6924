@@ -1,8 +1,9 @@
-// 1.20.1	2023-07-10T16:24:26.7665185	Registries
+// 1.20.1	2023-07-16T20:15:32.3169019	Registries
 9afdabb896b769c1117b97a80849596948e71d60 data/cinchcraft/worldgen/configured_feature/alyssum.json
 92df84a7d9cdf13d72d83184c20146b65e5b8fb3 data/cinchcraft/worldgen/configured_feature/blueberries.json
 f00ef514c715d19ce216e62b0bc018cdb21a042e data/cinchcraft/worldgen/configured_feature/bubble_flower.json
 3fd09cc6fdc3582e97a7676107ac189342f6bcae data/cinchcraft/worldgen/configured_feature/butter_cup.json
+efe202430b623aa944949ad6c53f4a88b152f4cd data/cinchcraft/worldgen/configured_feature/cattails.json
 1ac86230d9a66694a044eabd06aca9b5466487ce data/cinchcraft/worldgen/configured_feature/crocus.json
 9eb7677aa836475d58a113476f1d2e4a07259f8f data/cinchcraft/worldgen/configured_feature/lapis_lazuli_ore.json
 2f5b8fb5dddbe7a232a20844bace4bd107c15769 data/cinchcraft/worldgen/configured_feature/lupine.json
@@ -22,6 +23,7 @@ ce942dcbf393cfb6b64ec6fd3013354e3c9056cf data/cinchcraft/worldgen/placed_feature
 4973243185fd4a03d1a5627d8b23b5cfb5564ff2 data/cinchcraft/worldgen/placed_feature/blueberries_placed.json
 45cc2066f6e1bc2eb460ad886870244fd7a54b2a data/cinchcraft/worldgen/placed_feature/bubble_flower_placed.json
 67287b118ed67d457640f27645a143d08731fa10 data/cinchcraft/worldgen/placed_feature/butter_cup_placed.json
+f058f551ea173cbebc5344a15b83712b2ea29219 data/cinchcraft/worldgen/placed_feature/cattails_placed.json
 047b4ee3fe58432939e6cd86873af3ebd9448592 data/cinchcraft/worldgen/placed_feature/crocus_placed.json
 13b8b9da5f8ffdf23ddb7a9134da79e088bb6c92 data/cinchcraft/worldgen/placed_feature/lupine_placed.json
 d153b7a189e4cce7c561c3f4adc8105aff9a4237 data/cinchcraft/worldgen/placed_feature/nether_coal_ore_placed.json

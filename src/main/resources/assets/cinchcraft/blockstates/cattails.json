@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "cinchcraft:block/cattails_bottom"
+    },
+    "half=upper": {
+      "model": "cinchcraft:block/cattails_top"
+    }
+  }
+}

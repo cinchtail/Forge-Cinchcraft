@@ -280,6 +280,8 @@ public class ModBlocks {
                     .sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
     public static final RegistryObject<Block> STALK = BLOCKS.register("stalk",
             () -> new DoublePlantBlock(BlockBehaviour.Properties.copy(Blocks.TALL_GRASS)));
+    public static final RegistryObject<Block> CATTAILS = BLOCKS.register("cattails",
+            () -> new Cattails(BlockBehaviour.Properties.copy(Blocks.LILAC).sound(SoundType.SMALL_DRIPLEAF)));
 
 
     //Crops

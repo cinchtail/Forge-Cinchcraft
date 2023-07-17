@@ -1,0 +1,5 @@
+{
+  "type": "cinchcraft:vegetal",
+  "biomes": "#minecraft:is_cattails_biomes",
+  "feature": "cinchcraft:cattails_placed"
+}

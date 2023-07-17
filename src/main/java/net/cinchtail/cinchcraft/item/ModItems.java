@@ -143,6 +143,9 @@ public class ModItems {
     public static final RegistryObject<Item> REEDS = ITEMS.register("reeds",
             () -> new ItemNameBlockItem(ModBlocks.REEDS.get(),
                     new Item.Properties()));
+    public static final RegistryObject<Item> CATTAILS = ITEMS.register("cattails",
+            () -> new ItemNameBlockItem(ModBlocks.CATTAILS.get(),
+                    new Item.Properties()));
     public static final RegistryObject<Item> BUTTER_CUP = ITEMS.register("butter_cup",
             () -> new ItemNameBlockItem(ModBlocks.BUTTER_CUP.get(),
                     new Item.Properties()));

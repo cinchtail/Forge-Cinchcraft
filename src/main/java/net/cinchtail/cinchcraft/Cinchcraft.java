@@ -84,6 +84,7 @@ public class Cinchcraft
         ComposterBlock.COMPOSTABLES.put(ModItems.SMALL_CACTUS.get(), 0.65f);
         ComposterBlock.COMPOSTABLES.put(ModItems.FIRE_FERN.get(), 0.65f);
         ComposterBlock.COMPOSTABLES.put(ModItems.REEDS.get(), 0.65f);
+        ComposterBlock.COMPOSTABLES.put(ModItems.CATTAILS.get(), 0.65f);
         ComposterBlock.COMPOSTABLES.put(ModItems.STALK.get(), 0.65f);
     }
 
@@ -247,6 +248,7 @@ public class Cinchcraft
             event.accept(ModItems.THATCH_STAIRS);
             event.accept(ModItems.THATCH_SLAB);
             event.accept(ModItems.REEDS);
+            event.accept(ModItems.CATTAILS);
             //event.accept(ModItems.APPLE_LOG);
             //event.accept(ModItems.APPLE_WOOD);
             //event.accept(ModItems.STRIPPED_APPLE_LOG);

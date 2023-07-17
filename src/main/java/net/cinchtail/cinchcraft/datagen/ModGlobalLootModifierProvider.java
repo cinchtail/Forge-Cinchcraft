@@ -8,6 +8,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.CarrotBlock;
 import net.minecraft.world.level.block.PitcherCropBlock;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.Half;
@@ -42,14 +43,6 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
         add("ruby_horse_armor_from_dungeon", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/simple_dungeon")).build(),
                 LootItemRandomChanceCondition.randomChance(0.35f).build() }, ModItems.RUBY_HORSE_ARMOR.get()));
-
-        /*add("bundle_from_trail_ruins", new AddItemModifier(new LootItemCondition[] {
-                new LootTableIdCondition.Builder(new ResourceLocation("archaeology/trail_ruins_rare")).build(),
-                LootItemRandomChanceCondition.randomChance(0.5f).build() },Items.BUNDLE));
-
-        add("enchanted_book_from_trail_ruins", new AddItemModifier(new LootItemCondition[] {
-                new LootTableIdCondition.Builder(new ResourceLocation("archaeology/trail_ruins_rare")).build(),
-                LootItemRandomChanceCondition.randomChance(0.5f).build() },Items.BOOK));*/
     }
 
 }

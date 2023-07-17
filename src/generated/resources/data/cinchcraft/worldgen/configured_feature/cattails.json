@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:random_patch",
+  "config": {
+    "feature": {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "config": {
+          "to_place": {
+            "type": "minecraft:simple_state_provider",
+            "state": {
+              "Name": "cinchcraft:cattails",
+              "Properties": {
+                "facing": "north",
+                "half": "lower",
+                "waterlogged": "true"
+              }
+            }
+          }
+        }
+      },
+      "placement": []
+    },
+    "tries": 50,
+    "xz_spread": 6,
+    "y_spread": 2
+  }
+}
