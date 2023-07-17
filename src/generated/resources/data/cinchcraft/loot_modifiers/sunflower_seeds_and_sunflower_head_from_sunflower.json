@@ -1,0 +1,13 @@
+{
+  "type": "cinchcraft:remove_item",
+  "conditions": [
+    {
+      "block": "minecraft:sunflower",
+      "condition": "minecraft:block_state_property",
+      "properties": {
+        "half": "upper"
+      }
+    }
+  ],
+  "item": "cinchcraft:sunflower_head"
+}

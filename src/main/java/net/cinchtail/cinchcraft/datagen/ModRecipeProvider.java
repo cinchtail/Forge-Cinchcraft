@@ -176,6 +176,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.BRICKS).build()))
                 .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_bricks"));
 
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(Blocks.PRISMARINE_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_PRISMARINE_BRICKS.get(), 0.1F, 200)
+                .unlockedBy("has_prismarine_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.PRISMARINE_BRICKS).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_prismarine_bricks"));
+
         //Reeds Recipes
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.THATCH_BLOCK.get())
                 .pattern("AAA")
@@ -1943,6 +1947,42 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_BRICK_WALL.get())
                 .unlockedBy("has_cracked_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.CRACKED_BRICKS.get()).build()))
                 .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_brick_wall_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_PRISMARINE_BRICK_STAIRS.get(),4)
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .define('A', ModBlocks.CRACKED_PRISMARINE_BRICKS.get())
+                .unlockedBy("has_prismarine_cracked_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.CRACKED_PRISMARINE_BRICKS.get()).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_PRISMARINE_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_PRISMARINE_BRICK_STAIRS.get())
+                .unlockedBy("has_prismarine_cracked_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.CRACKED_PRISMARINE_BRICKS.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_prismarine_brick_stairs_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_PRISMARINE_BRICK_SLAB.get(),6)
+                .pattern("AAA")
+                .define('A', ModBlocks.CRACKED_PRISMARINE_BRICKS.get())
+                .unlockedBy("has_prismarine_cracked_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.CRACKED_PRISMARINE_BRICKS.get()).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_PRISMARINE_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_PRISMARINE_BRICK_SLAB.get(),2)
+                .unlockedBy("has_prismarine_cracked_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.CRACKED_PRISMARINE_BRICKS.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_prismarine_brick_slab_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_PRISMARINE_BRICK_WALL.get(),6)
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModBlocks.CRACKED_PRISMARINE_BRICKS.get())
+                .unlockedBy("has_prismarine_cracked_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.CRACKED_PRISMARINE_BRICKS.get()).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_PRISMARINE_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_PRISMARINE_BRICK_WALL.get())
+                .unlockedBy("has_prismarine_cracked_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.CRACKED_PRISMARINE_BRICKS.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_prismarine_brick_wall_from_stonecutting"));
     }
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
                                       float pExperience, int pCookingTIme, String pGroup) {

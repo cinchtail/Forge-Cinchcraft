@@ -3,12 +3,14 @@ package net.cinchtail.cinchcraft.datagen;
 import net.cinchtail.cinchcraft.Cinchcraft;
 import net.cinchtail.cinchcraft.item.ModItems;
 import net.cinchtail.cinchcraft.loot.AddItemModifier;
+import net.cinchtail.cinchcraft.loot.RemoveItemModifier;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CarrotBlock;
+import net.minecraft.world.level.block.DoublePlantBlock;
 import net.minecraft.world.level.block.PitcherCropBlock;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.Half;
@@ -31,6 +33,11 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
                         .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(PitcherCropBlock.AGE, 4)
                                 .hasProperty(PitcherCropBlock.HALF, DoubleBlockHalf.UPPER)).build(),
                 }, ModItems.PITCHER_PLANT_ROOT.get()));
+
+        add("sunflower_seeds_and_sunflower_head_from_sunflower", new RemoveItemModifier(new LootItemCondition[] {
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.SUNFLOWER)
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoublePlantBlock.HALF, DoubleBlockHalf.UPPER)).build(),
+        }, ModItems.SUNFLOWER_HEAD.get()));
 
         add("ruby_horse_armor_from_jungle_temple", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/jungle_temple")).build(),

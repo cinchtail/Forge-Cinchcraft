@@ -500,6 +500,19 @@ public class ModBlocks {
     public static final RegistryObject<Block> CRACKED_BRICK_WALL = registerBlock("cracked_brick_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)
                     .requiresCorrectToolForDrops().strength(2.0F, 6.0F).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> CRACKED_PRISMARINE_BRICKS = registerBlock("cracked_prismarine_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.PRISMARINE_BRICKS).instrument(NoteBlockInstrument.BASEDRUM).strength(1.5F, 6.0F)
+                    .sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> CRACKED_PRISMARINE_BRICK_STAIRS = registerBlock("cracked_prismarine_brick_stairs",
+            () -> new StairBlock(Blocks.PRISMARINE_BRICKS::defaultBlockState,
+                    BlockBehaviour.Properties.copy(Blocks.PRISMARINE_BRICKS).requiresCorrectToolForDrops()
+                            .strength(1.5F, 6.0F).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> CRACKED_PRISMARINE_BRICK_SLAB = registerBlock("cracked_prismarine_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.PRISMARINE_BRICKS)
+                    .requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> CRACKED_PRISMARINE_BRICK_WALL = registerBlock("cracked_prismarine_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.PRISMARINE_BRICKS)
+                    .requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.STONE)));
 
 
 

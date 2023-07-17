@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "cinchcraft:block/cracked_prismarine_brick_slab"
+    },
+    "type=double": {
+      "model": "cinchcraft:block/cracked_prismarine_bricks"
+    },
+    "type=top": {
+      "model": "cinchcraft:block/cracked_prismarine_brick_slab_top"
+    }
+  }
+}

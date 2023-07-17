@@ -128,6 +128,10 @@
     "cinchcraft:cracked_brick_wall",
     "cinchcraft:cracked_brick_slab",
     "cinchcraft:cracked_brick_stairs",
-    "cinchcraft:cracked_bricks"
+    "cinchcraft:cracked_bricks",
+    "cinchcraft:cracked_prismarine_brick_wall",
+    "cinchcraft:cracked_prismarine_brick_slab",
+    "cinchcraft:cracked_prismarine_brick_stairs",
+    "cinchcraft:cracked_prismarine_bricks"
   ]
 }

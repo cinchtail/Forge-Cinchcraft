@@ -1,6 +1,7 @@
-// 1.20.1	2023-07-16T17:36:58.3319767	Global Loot Modifiers : cinchcraft
+// 1.20.1	2023-07-17T14:29:56.068107	Global Loot Modifiers : cinchcraft
 44d2b3ac4b14ab6c1c3284c427db02a0be15fd0d data/cinchcraft/loot_modifiers/pitcher_plant_root_from_pitcher_crop.json
 7ae35d438f33b26fe71869fe065a61f2d589e776 data/cinchcraft/loot_modifiers/ruby_horse_armor_from_dungeon.json
 47516fbd365194f39d903ef79d5c606855a6ecdc data/cinchcraft/loot_modifiers/ruby_horse_armor_from_jungle_temple.json
 c1992abf09100bffe1b9961f9eae73ca85329ec8 data/cinchcraft/loot_modifiers/ruby_horse_armor_from_village_armorer.json
-de2cd095511ea664c3ec14ac748573a09ce8197a data/forge/loot_modifiers/global_loot_modifiers.json
+f834a44c22d08a901d2b8ab7201a68bb1152c6ed data/cinchcraft/loot_modifiers/sunflower_seeds_and_sunflower_head_from_sunflower.json
+310a3afab0386e510bbd04e15f869f5c0bc5038d data/forge/loot_modifiers/global_loot_modifiers.json

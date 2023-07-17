@@ -1,5 +1,6 @@
 package net.cinchtail.cinchcraft;
 
+import com.google.common.collect.ImmutableSet;
 import com.mojang.logging.LogUtils;
 import net.cinchtail.cinchcraft.block.ModBlocks;
 import net.cinchtail.cinchcraft.event.ModEvents;
@@ -11,6 +12,8 @@ import net.cinchtail.cinchcraft.potion.ModPotions;
 import net.cinchtail.cinchcraft.sound.ModSounds;
 import net.cinchtail.cinchcraft.util.BetterBrewingRecipe;
 import net.cinchtail.cinchcraft.world.biomemods.ModBiomeModifiers;
+import net.minecraft.world.entity.npc.Villager;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
@@ -26,6 +29,9 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Mod(Cinchcraft.MOD_ID)
 public class Cinchcraft
@@ -86,6 +92,18 @@ public class Cinchcraft
         ComposterBlock.COMPOSTABLES.put(ModItems.REEDS.get(), 0.65f);
         ComposterBlock.COMPOSTABLES.put(ModItems.CATTAILS.get(), 0.65f);
         ComposterBlock.COMPOSTABLES.put(ModItems.STALK.get(), 0.65f);
+
+        /*Stream<Item> vanillaWantedItems = Villager.WANTED_ITEMS.stream();
+        Stream<Item> modWantedItems = Stream.of(ModItems.CARROT_SEEDS.get(), Items.CARROT);
+        Villager.WANTED_ITEMS = ImmutableSet.copyOf(
+                Stream.concat(vanillaWantedItems, modWantedItems)
+                        .collect(Collectors.toSet()));
+
+        Stream<Item> vanillaWantedItems1 = Villager.WANTED_ITEMS.stream();
+        Stream<Item> modWantedItems1 = Stream.of(ModItems.SUNFLOWER_SEEDS.get());
+        Villager.WANTED_ITEMS = ImmutableSet.copyOf(
+                Stream.concat(vanillaWantedItems1, modWantedItems1)
+                        .collect(Collectors.toSet()));*/
     }
 
     @Mod.EventBusSubscriber(modid = Cinchcraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -204,6 +222,10 @@ public class Cinchcraft
             event.accept(ModBlocks.QUARTZ_BRICK_STAIRS);
             event.accept(ModBlocks.QUARTZ_BRICK_SLAB);
             event.accept(ModBlocks.QUARTZ_BRICK_WALL);
+            event.accept(ModBlocks.CRACKED_PRISMARINE_BRICKS);
+            event.accept(ModBlocks.CRACKED_PRISMARINE_BRICK_STAIRS);
+            event.accept(ModBlocks.CRACKED_PRISMARINE_BRICK_SLAB);
+            event.accept(ModBlocks.CRACKED_PRISMARINE_BRICK_WALL);
             event.accept(ModBlocks.CHISELED_END_STONE_BRICKS);
             event.accept(ModBlocks.END_STONE_STAIRS);
             event.accept(ModBlocks.END_STONE_SLAB);
