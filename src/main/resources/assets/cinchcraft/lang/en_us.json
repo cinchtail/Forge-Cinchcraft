@@ -274,5 +274,9 @@
   "block.cinchcraft.cracked_quartz_brick_wall": "Cracked Quartz Brick Wall",
   "block.cinchcraft.smooth_basalt_stairs": "Smooth Basalt Stairs",
   "block.cinchcraft.smooth_basalt_slab": "Smooth Basalt Slab",
-  "block.cinchcraft.smooth_basalt_wall": "Smooth Basalt Wall"
+  "block.cinchcraft.smooth_basalt_wall": "Smooth Basalt Wall",
+  "block.cinchcraft.cracked_bricks": "Cracked Bricks",
+  "block.cinchcraft.cracked_brick_wall": "Cracked Brick Wall",
+  "block.cinchcraft.cracked_brick_slab": "Cracked Brick Slab",
+  "block.cinchcraft.cracked_brick_stairs": "Cracked Brick Stairs"
 }

@@ -10,6 +10,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -486,6 +487,19 @@ public class ModBlocks {
     public static final RegistryObject<Block> WARPED_MOSSY_NETHER_BRICK_FENCE = registerBlock("warped_mossy_nether_brick_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS)
                     .strength(2.5f).requiresCorrectToolForDrops().sound(SoundType.NETHER_BRICKS)));
+    public static final RegistryObject<Block> CRACKED_BRICKS = registerBlock("cracked_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS).instrument(NoteBlockInstrument.BASEDRUM).strength(2.0F, 6.0F)
+                    .sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> CRACKED_BRICK_STAIRS = registerBlock("cracked_brick_stairs",
+            () -> new StairBlock(Blocks.BRICKS::defaultBlockState,
+                    BlockBehaviour.Properties.copy(Blocks.BRICKS).requiresCorrectToolForDrops()
+                            .strength(2.0F, 6.0F).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> CRACKED_BRICK_SLAB = registerBlock("cracked_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)
+                    .requiresCorrectToolForDrops().strength(2.0F, 6.0F).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> CRACKED_BRICK_WALL = registerBlock("cracked_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)
+                    .requiresCorrectToolForDrops().strength(2.0F, 6.0F).sound(SoundType.STONE)));
 
 
 

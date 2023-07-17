@@ -124,6 +124,10 @@
     "cinchcraft:crimson_mossy_nether_brick_wall",
     "cinchcraft:crimson_mossy_nether_brick_slab",
     "cinchcraft:crimson_mossy_nether_brick_stairs",
-    "cinchcraft:crimson_mossy_nether_brick_fence"
+    "cinchcraft:crimson_mossy_nether_brick_fence",
+    "cinchcraft:cracked_brick_wall",
+    "cinchcraft:cracked_brick_slab",
+    "cinchcraft:cracked_brick_stairs",
+    "cinchcraft:cracked_bricks"
   ]
 }

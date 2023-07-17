@@ -193,6 +193,10 @@ public class Cinchcraft
             event.accept(ModBlocks.MOSSY_MUD_BRICK_STAIRS);
             event.accept(ModBlocks.MOSSY_MUD_BRICK_SLAB);
             event.accept(ModBlocks.MOSSY_MUD_BRICK_WALL);
+            event.accept(ModBlocks.CRACKED_BRICKS);
+            event.accept(ModBlocks.CRACKED_BRICK_STAIRS);
+            event.accept(ModBlocks.CRACKED_BRICK_SLAB);
+            event.accept(ModBlocks.CRACKED_BRICK_WALL);
             event.accept(ModBlocks.CRACKED_QUARTZ_BRICKS);
             event.accept(ModBlocks.CRACKED_QUARTZ_BRICK_STAIRS);
             event.accept(ModBlocks.CRACKED_QUARTZ_BRICK_SLAB);
