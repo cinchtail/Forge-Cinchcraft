@@ -93,17 +93,12 @@ public class Cinchcraft
         ComposterBlock.COMPOSTABLES.put(ModItems.CATTAILS.get(), 0.65f);
         ComposterBlock.COMPOSTABLES.put(ModItems.STALK.get(), 0.65f);
 
-        /*Stream<Item> vanillaWantedItems = Villager.WANTED_ITEMS.stream();
-        Stream<Item> modWantedItems = Stream.of(ModItems.CARROT_SEEDS.get(), Items.CARROT);
+        Stream<Item> vanillaWantedItems = Villager.WANTED_ITEMS.stream();
+        Stream<Item> modWantedItems = Stream.of(ModItems.SUNFLOWER_SEEDS.get(),
+                ModItems.CARROT_SEEDS.get());
         Villager.WANTED_ITEMS = ImmutableSet.copyOf(
                 Stream.concat(vanillaWantedItems, modWantedItems)
                         .collect(Collectors.toSet()));
-
-        Stream<Item> vanillaWantedItems1 = Villager.WANTED_ITEMS.stream();
-        Stream<Item> modWantedItems1 = Stream.of(ModItems.SUNFLOWER_SEEDS.get());
-        Villager.WANTED_ITEMS = ImmutableSet.copyOf(
-                Stream.concat(vanillaWantedItems1, modWantedItems1)
-                        .collect(Collectors.toSet()));*/
     }
 
     @Mod.EventBusSubscriber(modid = Cinchcraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
