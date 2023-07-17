@@ -25,7 +25,7 @@ public class WanderingTraderTrades {
                 , 7, 4));
         event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.SMALL_ROSE.get(), 1)
                 , 7, 4));
-        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.SMALL_CACTUS.get(), 1)
+        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.STAR_CACTUS.get(), 1)
                 , 7, 4));
         event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.ALYSSUM.get(), 1)
                 , 7, 4));
@@ -57,8 +57,6 @@ public class WanderingTraderTrades {
                 , 4, 10));
         event.getRareTrades().add(new BasicItemListing(2, new ItemStack(ModItems.PINEAPPLE.get(), 1)
                 , 5, 3));
-        event.getGenericTrades().add(new BasicItemListing(2, new ItemStack(ModBlocks.SMALL_CACTUS.get(), 1)
-                , 8, 3));
         event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(Items.HONEYCOMB, 1)
                 , 6, 3));
         event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(Items.INK_SAC, 1)

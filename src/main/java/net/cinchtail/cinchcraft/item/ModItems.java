@@ -161,8 +161,8 @@ public class ModItems {
     public static final RegistryObject<Item> LUPINE = ITEMS.register("lupine",
             () -> new ItemNameBlockItem(ModBlocks.LUPINE.get(),
                     new Item.Properties()));
-    public static final RegistryObject<Item> SMALL_CACTUS = ITEMS.register("small_cactus",
-            () -> new ItemNameBlockItem(ModBlocks.SMALL_CACTUS.get(),
+    public static final RegistryObject<Item> STAR_CACTUS = ITEMS.register("star_cactus",
+            () -> new ItemNameBlockItem(ModBlocks.STAR_CACTUS.get(),
                     new Item.Properties()));
     public static final RegistryObject<Item> STALK = ITEMS.register("stalk",
             () -> new StalkItem(ModBlocks.STALK.get(),

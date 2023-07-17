@@ -1,0 +1,5 @@
+{
+  "type": "cinchcraft:vegetal",
+  "biomes": "#minecraft:is_star_cactus_biomes",
+  "feature": "cinchcraft:star_cactus_placed"
+}

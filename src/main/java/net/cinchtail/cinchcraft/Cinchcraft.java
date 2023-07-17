@@ -81,7 +81,7 @@ public class Cinchcraft
         ComposterBlock.COMPOSTABLES.put(ModItems.CROCUS.get(), 0.65f);
         ComposterBlock.COMPOSTABLES.put(ModItems.ALYSSUM.get(), 0.65f);
         ComposterBlock.COMPOSTABLES.put(ModItems.LUPINE.get(), 0.65f);
-        ComposterBlock.COMPOSTABLES.put(ModItems.SMALL_CACTUS.get(), 0.65f);
+        ComposterBlock.COMPOSTABLES.put(ModItems.STAR_CACTUS.get(), 0.65f);
         ComposterBlock.COMPOSTABLES.put(ModItems.FIRE_FERN.get(), 0.65f);
         ComposterBlock.COMPOSTABLES.put(ModItems.REEDS.get(), 0.65f);
         ComposterBlock.COMPOSTABLES.put(ModItems.CATTAILS.get(), 0.65f);
@@ -99,7 +99,7 @@ public class Cinchcraft
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CROCUS.getId(), ModBlocks.POTTED_CROCUS);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.ALYSSUM.getId(), ModBlocks.POTTED_ALYSSUM);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.LUPINE.getId(), ModBlocks.POTTED_LUPINE);
-                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.SMALL_CACTUS.getId(), ModBlocks.POTTED_SMALL_CACTUS);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.STAR_CACTUS.getId(), ModBlocks.POTTED_STAR_CACTUS);
 
                 BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
                         Items.GLOW_BERRIES, ModPotions.GLOWING_POTION.get()));
@@ -273,7 +273,7 @@ public class Cinchcraft
             event.accept(ModItems.ALYSSUM);
             event.accept(ModItems.SMALL_ROSE);
             event.accept(ModItems.LUPINE);
-            event.accept(ModItems.SMALL_CACTUS);
+            event.accept(ModItems.STAR_CACTUS);
             event.accept(ModItems.STALK);
         }
         if(event.getTab() == ModCreativeModeTabs.CINCHCRAFT_ITEM_TAB.get()) {
