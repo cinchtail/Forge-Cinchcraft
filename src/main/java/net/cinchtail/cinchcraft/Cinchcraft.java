@@ -112,10 +112,8 @@ public class Cinchcraft
             });
         }
     }
-
     public void clientSetup(final FMLClientSetupEvent event) {
     }
-
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTab() == ModCreativeModeTabs.CINCHCRAFT_BLOCK_TAB.get()) {
             event.accept(ModBlocks.BLOCK_OF_RUBY);
