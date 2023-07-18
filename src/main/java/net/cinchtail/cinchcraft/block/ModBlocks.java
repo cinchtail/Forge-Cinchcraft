@@ -11,7 +11,6 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
-import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -248,8 +247,6 @@ public class ModBlocks {
 
 
     //Plants
-    public static final RegistryObject<Block> REEDS = BLOCKS.register("reeds",
-            () -> new ReedsBlock(BlockBehaviour.Properties.copy(Blocks.LILAC).sound(SoundType.SMALL_DRIPLEAF)));
     public static final RegistryObject<Block> BUTTER_CUP = BLOCKS.register("butter_cup",
             () -> new FlowerBlock(MobEffects.DARKNESS, 6, BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()));
     public static final RegistryObject<FlowerPotBlock> POTTED_BUTTER_CUP = BLOCKS.register("potted_butter_cup",
@@ -298,6 +295,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> SUNFLOWER_CROP = BLOCKS.register("sunflower_crop",
             () -> new ModSunflowerCropBlock(BlockBehaviour.Properties.copy(Blocks.PITCHER_CROP)
                     .noOcclusion().sound(SoundType.GRASS)));
+    public static final RegistryObject<Block> REEDS = BLOCKS.register("reeds",
+            () -> new ReedsCropBlock(BlockBehaviour.Properties.copy(Blocks.PITCHER_CROP).noOcclusion().sound(SoundType.SMALL_DRIPLEAF)));
 
 
     //New Block Sets
