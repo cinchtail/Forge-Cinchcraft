@@ -54,6 +54,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(WARPED_MOSSY_NETHER_BRICKS);
         blockWithItem(CRACKED_BRICKS);
         blockWithItem(CRACKED_PRISMARINE_BRICKS);
+        blockWithItem(CRACKED_END_STONE_BRICKS);
 
         slabBlock((SlabBlock) TUFF_SLAB.get(), blockTexture(Blocks.TUFF),
                 blockTexture(Blocks.TUFF));
@@ -107,6 +108,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 blockLoc(CRACKED_BRICKS));
         slabBlock((SlabBlock) CRACKED_PRISMARINE_BRICK_SLAB.get(), blockLoc(CRACKED_PRISMARINE_BRICKS),
                 blockLoc(CRACKED_PRISMARINE_BRICKS));
+        slabBlock((SlabBlock) CRACKED_END_STONE_BRICK_SLAB.get(), blockLoc(CRACKED_END_STONE_BRICKS),
+                blockLoc(CRACKED_END_STONE_BRICKS));
 
         stairsBlock((StairBlock) SMOOTH_STONE_STAIRS.get(), blockTexture(Blocks.SMOOTH_STONE));
         stairsBlock((StairBlock) TUFF_STAIRS.get(), blockTexture(Blocks.TUFF));
@@ -135,6 +138,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock((StairBlock) WARPED_MOSSY_NETHER_BRICK_STAIRS.get(), blockLoc(WARPED_MOSSY_NETHER_BRICKS));
         stairsBlock((StairBlock) CRACKED_BRICK_STAIRS.get(), blockLoc(CRACKED_BRICKS));
         stairsBlock((StairBlock) CRACKED_PRISMARINE_BRICK_STAIRS.get(), blockLoc(CRACKED_PRISMARINE_BRICKS));
+        stairsBlock((StairBlock) CRACKED_END_STONE_BRICK_STAIRS.get(), blockLoc(CRACKED_END_STONE_BRICKS));
 
 
         vanillaWallBlock(SMOOTH_STONE_WALL, blockVanillaBlockLoc(Blocks.SMOOTH_STONE));
@@ -173,6 +177,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         modWallBlock(WARPED_MOSSY_NETHER_BRICK_WALL, blockLoc(WARPED_MOSSY_NETHER_BRICKS));
         modWallBlock(CRACKED_BRICK_WALL, blockLoc(CRACKED_BRICKS));
         modWallBlock(CRACKED_PRISMARINE_BRICK_WALL, blockLoc(CRACKED_PRISMARINE_BRICKS));
+        modWallBlock(CRACKED_END_STONE_BRICK_WALL, blockLoc(CRACKED_END_STONE_BRICKS));
 
 
         vanillaFenceBlock((FenceBlock) RED_NETHER_BRICK_FENCE.get(), blockVanillaBlockLoc(Blocks.RED_NETHER_BRICKS));

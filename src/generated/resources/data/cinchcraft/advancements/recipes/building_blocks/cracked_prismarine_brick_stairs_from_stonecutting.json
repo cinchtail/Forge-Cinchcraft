@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_prismarine_cracked_bricks": {
+    "has_cracked_prismarine_bricks": {
       "conditions": {
         "items": [
           {
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_prismarine_cracked_bricks",
+      "has_cracked_prismarine_bricks",
       "has_the_recipe"
     ]
   ],

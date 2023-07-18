@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cracked_prismarine_bricks": {
+    "has_cracked_end_stone_bricks": {
       "conditions": {
         "items": [
           {
             "items": [
-              "cinchcraft:cracked_prismarine_bricks"
+              "cinchcraft:cracked_end_stone_bricks"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "cinchcraft:cracked_prismarine_brick_stairs"
+        "recipe": "cinchcraft:cracked_end_stone_brick_slab_from_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_cracked_prismarine_bricks",
+      "has_cracked_end_stone_bricks",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "cinchcraft:cracked_prismarine_brick_stairs"
+      "cinchcraft:cracked_end_stone_brick_slab_from_stonecutting"
     ]
   },
   "sends_telemetry_event": false

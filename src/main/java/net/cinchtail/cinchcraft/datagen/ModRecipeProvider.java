@@ -180,6 +180,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_prismarine_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.PRISMARINE_BRICKS).build()))
                 .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_prismarine_bricks"));
 
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(Blocks.END_STONE_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_END_STONE_BRICKS.get(), 0.1F, 200)
+                .unlockedBy("has_end_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.END_STONE_BRICKS).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_end_stone_bricks"));
+
         //Reeds Recipes
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.THATCH_BLOCK.get())
                 .pattern("AAA")
@@ -1963,36 +1967,74 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', ModBlocks.CRACKED_PRISMARINE_BRICKS.get())
-                .unlockedBy("has_prismarine_cracked_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                .unlockedBy("has_cracked_prismarine_bricks", inventoryTrigger(ItemPredicate.Builder.item().
                         of(ModBlocks.CRACKED_PRISMARINE_BRICKS.get()).build()))
                 .save(pWriter);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_PRISMARINE_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_PRISMARINE_BRICK_STAIRS.get())
-                .unlockedBy("has_prismarine_cracked_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.CRACKED_PRISMARINE_BRICKS.get()).build()))
+                .unlockedBy("has_cracked_prismarine_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.CRACKED_PRISMARINE_BRICKS.get()).build()))
                 .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_prismarine_brick_stairs_from_stonecutting"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_PRISMARINE_BRICK_SLAB.get(),6)
                 .pattern("AAA")
                 .define('A', ModBlocks.CRACKED_PRISMARINE_BRICKS.get())
-                .unlockedBy("has_prismarine_cracked_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                .unlockedBy("has_cracked_prismarine_bricks", inventoryTrigger(ItemPredicate.Builder.item().
                         of(ModBlocks.CRACKED_PRISMARINE_BRICKS.get()).build()))
                 .save(pWriter);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_PRISMARINE_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_PRISMARINE_BRICK_SLAB.get(),2)
-                .unlockedBy("has_prismarine_cracked_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.CRACKED_PRISMARINE_BRICKS.get()).build()))
+                .unlockedBy("has_cracked_prismarine_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.CRACKED_PRISMARINE_BRICKS.get()).build()))
                 .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_prismarine_brick_slab_from_stonecutting"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_PRISMARINE_BRICK_WALL.get(),6)
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', ModBlocks.CRACKED_PRISMARINE_BRICKS.get())
-                .unlockedBy("has_prismarine_cracked_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                .unlockedBy("has_cracked_prismarine_bricks", inventoryTrigger(ItemPredicate.Builder.item().
                         of(ModBlocks.CRACKED_PRISMARINE_BRICKS.get()).build()))
                 .save(pWriter);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_PRISMARINE_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_PRISMARINE_BRICK_WALL.get())
-                .unlockedBy("has_prismarine_cracked_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.CRACKED_PRISMARINE_BRICKS.get()).build()))
+                .unlockedBy("has_cracked_prismarine_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.CRACKED_PRISMARINE_BRICKS.get()).build()))
                 .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_prismarine_brick_wall_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_END_STONE_BRICK_STAIRS.get(),4)
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .define('A', ModBlocks.CRACKED_END_STONE_BRICKS.get())
+                .unlockedBy("has_cracked_end_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.CRACKED_END_STONE_BRICKS.get()).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_END_STONE_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_END_STONE_BRICK_STAIRS.get())
+                .unlockedBy("has_cracked_end_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.CRACKED_END_STONE_BRICKS.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_end_stone_brick_stairs_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_END_STONE_BRICK_SLAB.get(),6)
+                .pattern("AAA")
+                .define('A', ModBlocks.CRACKED_END_STONE_BRICKS.get())
+                .unlockedBy("has_cracked_end_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.CRACKED_END_STONE_BRICKS.get()).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_END_STONE_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_END_STONE_BRICK_SLAB.get(),2)
+                .unlockedBy("has_cracked_end_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.CRACKED_END_STONE_BRICKS.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_end_stone_brick_slab_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_END_STONE_BRICK_WALL.get(),6)
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModBlocks.CRACKED_END_STONE_BRICKS.get())
+                .unlockedBy("has_cracked_end_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.CRACKED_END_STONE_BRICKS.get()).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_END_STONE_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_END_STONE_BRICK_WALL.get())
+                .unlockedBy("has_cracked_end_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.CRACKED_END_STONE_BRICKS.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_end_stone_brick_wall_from_stonecutting"));
+
+
     }
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
                                       float pExperience, int pCookingTIme, String pGroup) {

@@ -132,6 +132,10 @@
     "cinchcraft:cracked_prismarine_brick_wall",
     "cinchcraft:cracked_prismarine_brick_slab",
     "cinchcraft:cracked_prismarine_brick_stairs",
-    "cinchcraft:cracked_prismarine_bricks"
+    "cinchcraft:cracked_prismarine_bricks",
+    "cinchcraft:cracked_end_stone_brick_wall",
+    "cinchcraft:cracked_end_stone_brick_slab",
+    "cinchcraft:cracked_end_stone_brick_stairs",
+    "cinchcraft:cracked_end_stone_bricks"
   ]
 }

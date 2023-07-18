@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-17T17:42:00.1207692	Item Models: cinchcraft
+// 1.20.1	2023-07-18T13:05:08.1501024	Item Models: cinchcraft
 774809724c0c051db5a823287ccfb162c5f16b47 assets/cinchcraft/models/item/ancient_slime_stew.json
 1c90b5f18401efcc168cf75aad20b84b9f739d50 assets/cinchcraft/models/item/blackstone_axe.json
 c4e0813bbff9221790d53c7968580579b0dbd043 assets/cinchcraft/models/item/blackstone_hoe.json
@@ -22,6 +22,9 @@ a35336b2ef2b14f9bebf579dc0c6b99494255c3f assets/cinchcraft/models/item/cracked_b
 2700188d069eb66eb57550a0dac548b0b874523a assets/cinchcraft/models/item/cracked_deepslate_tile_slab.json
 5372e35008bce90160cdb4020b6fbefa1796014d assets/cinchcraft/models/item/cracked_deepslate_tile_stairs.json
 16356650260fdcbf6ae0600a05e8a5253544b09f assets/cinchcraft/models/item/cracked_deepslate_tile_wall.json
+25ed84123879062d18ae6fdb3de8ed9f48dd1b45 assets/cinchcraft/models/item/cracked_end_stone_brick_slab.json
+4c967e4d5c21b95cf8a9c65c605ef66aa4cfc54e assets/cinchcraft/models/item/cracked_end_stone_brick_stairs.json
+40aa25fdd30e7e75df34a400d123ade0bc615e0f assets/cinchcraft/models/item/cracked_end_stone_brick_wall.json
 9ff98cee6ae9a8e78d9a44c001ba498a31547d75 assets/cinchcraft/models/item/cracked_mud_brick_slab.json
 a5bd74bd3d28be1182f4463978671dcac98230ce assets/cinchcraft/models/item/cracked_mud_brick_stairs.json
 c6378d37d1c4216b40feb0174e882004b9ab5336 assets/cinchcraft/models/item/cracked_mud_brick_wall.json
