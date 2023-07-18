@@ -540,6 +540,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 RecipeCategory.TRANSPORTATION, ModItems.NETHERITE_HORSE_ARMOR.get()).unlocks("has_netherite_ingot",
                 has(Items.NETHERITE_INGOT)).save(pWriter, getItemName(ModItems.NETHERITE_HORSE_ARMOR.get()) + "_from_smithing");
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.BUNDLE)
+                .pattern("TAT")
+                .pattern("A A")
+                .pattern("AAA")
+                .define('A', Items.RABBIT_HIDE)
+                .define('T', Items.STRING)
+                .unlockedBy("has_rabit_hide", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.RABBIT_HIDE).build()))
+                .save(pWriter);
+
         //Blocks
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_END_STONE_BRICKS.get())
                 .pattern("A")

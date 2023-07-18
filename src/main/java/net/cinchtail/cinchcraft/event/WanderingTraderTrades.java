@@ -64,8 +64,14 @@ public class WanderingTraderTrades {
         event.getGenericTrades().add(new BasicItemListing(2, new ItemStack(Items.GLOW_INK_SAC, 1)
                 , 5, 3));
         event.getRareTrades().add(new BasicItemListing(1, new ItemStack(ModItems.RUBY.get(), 1)
-        , 9, 3));
+                , 9, 3));
         event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.SUNFLOWER_SEEDS.get(), 2)
                 , 7, 3));
+        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.REEDS.get(), 2)
+                , 9, 3));
+        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.CATTAILS.get(), 1)
+                , 5, 3));
+        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(Items.SNOWBALL, 4)
+                , 4, 3));
     }
 }

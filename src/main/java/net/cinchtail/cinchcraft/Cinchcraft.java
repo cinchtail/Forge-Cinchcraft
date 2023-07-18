@@ -78,6 +78,7 @@ public class Cinchcraft
         ComposterBlock.COMPOSTABLES.put(Items.POISONOUS_POTATO, 0.2f);
         ComposterBlock.COMPOSTABLES.put(ModItems.CARROT_SEEDS.get(), 0.3f);
         ComposterBlock.COMPOSTABLES.put(ModItems.SUNFLOWER_SEEDS.get(), 0.3f);
+        ComposterBlock.COMPOSTABLES.put(ModItems.SUNFLOWER_HEAD.get(), 1f);
         ComposterBlock.COMPOSTABLES.put(ModItems.BLUEBERRY_PIE.get(), 1f);
         ComposterBlock.COMPOSTABLES.put(ModItems.BLUEBERRIES.get(), 0.3f);
         ComposterBlock.COMPOSTABLES.put(ModItems.STRAWBERRIES.get(), 0.3f);
