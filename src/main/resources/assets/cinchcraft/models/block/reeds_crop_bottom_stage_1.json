@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "cinchcraft:block/reeds_crop_bottom_stage_1"
+  },
+  "render_type": "cutout"
+}

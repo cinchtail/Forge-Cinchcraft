@@ -28,6 +28,9 @@ import javax.annotation.Nullable;
 
 public class ReedsCropBlock extends DoublePlantBlock implements SimpleWaterloggedBlock, BonemealableBlock {
     public static final IntegerProperty AGE = BlockStateProperties.AGE_4;
+    public static final int MAX_AGE = 4;
+    private static final int DOUBLE_PLANT_AGE_INTERSECTION = 3;
+    private static final int BONEMEAL_INCREASE = 1;
     private static final VoxelShape FULL_UPPER_SHAPE = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 15.0D, 13.0D);
     private static final VoxelShape FULL_LOWER_SHAPE = Block.box(3.0D, -1.0D, 3.0D, 13.0D, 16.0D, 13.0D);
     private static final VoxelShape[] UPPER_SHAPE_BY_AGE = new VoxelShape[]{Block.box(5.0D, 0.0D, 5.0D, 11.0D, 10.0D, 11.0D), FULL_UPPER_SHAPE};
@@ -160,16 +163,16 @@ public class ReedsCropBlock extends DoublePlantBlock implements SimpleWaterlogge
     }
     private static boolean canGrowInto(LevelReader levelReader, BlockPos pos) {
         BlockState blockstate = levelReader.getBlockState(pos);
-        return blockstate.isAir() || blockstate.is(ModBlocks.REEDS.get());
+        return blockstate.isAir() || blockstate.is(ModBlocks.REEDS_CROP.get());
     }
     private static boolean sufficientLight(LevelReader levelReader, BlockPos pos) {
         return levelReader.getRawBrightness(pos, 0) >= 8 || levelReader.canSeeSky(pos);
     }
     private static boolean isLower(BlockState blockState) {
-        return blockState.is(ModBlocks.REEDS.get()) && blockState.getValue(HALF) == DoubleBlockHalf.LOWER;
+        return blockState.is(ModBlocks.REEDS_CROP.get()) && blockState.getValue(HALF) == DoubleBlockHalf.LOWER;
     }
     private static boolean isUpper(BlockState blockState) {
-        return blockState.is(ModBlocks.REEDS.get()) && blockState.getValue(HALF) == DoubleBlockHalf.UPPER;
+        return blockState.is(ModBlocks.REEDS_CROP.get()) && blockState.getValue(HALF) == DoubleBlockHalf.UPPER;
     }
     private boolean canGrow(LevelReader levelReader, BlockPos pos, BlockState blockState, int i) {
         return !this.isMaxAge(blockState) && sufficientLight(levelReader, pos) && (i < 3 || canGrowInto(levelReader, pos.above()));
@@ -189,7 +192,8 @@ public class ReedsCropBlock extends DoublePlantBlock implements SimpleWaterlogge
     }
     public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos pos, BlockState blockState, boolean b) {
         ReedsCropBlock.PosAndState reedsCropBlock$posandstate = this.getLowerHalf(levelReader, pos, blockState);
-        return reedsCropBlock$posandstate != null && this.canGrow(levelReader, reedsCropBlock$posandstate.pos, reedsCropBlock$posandstate.state, reedsCropBlock$posandstate.state.getValue(AGE) + 1);
+        return reedsCropBlock$posandstate != null && this.canGrow(levelReader, reedsCropBlock$posandstate.pos,
+                reedsCropBlock$posandstate.state, reedsCropBlock$posandstate.state.getValue(AGE) + 1);
     }
     public boolean isBonemealSuccess(Level level, RandomSource randomSource, BlockPos pos, BlockState blockState) {
         return true;
@@ -201,7 +205,7 @@ public class ReedsCropBlock extends DoublePlantBlock implements SimpleWaterlogge
         }
     }
     public ItemStack getCloneItemStack(BlockGetter blockGetter, BlockPos pos, BlockState blockState) {
-        return new ItemStack(ModItems.SUNFLOWER_SEEDS.get());
+        return new ItemStack(ModItems.REEDS.get());
     }
     record PosAndState(BlockPos pos, BlockState state) {
     }

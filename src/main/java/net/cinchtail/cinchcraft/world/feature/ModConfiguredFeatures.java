@@ -109,9 +109,9 @@ public class ModConfiguredFeatures {
         register(context, NETHER_EMERALD_KEY, Feature.ORE, new OreConfiguration(NETHER_EMERALD_ORES.get(),3));
         register(context, NETHER_DIAMOND_ORE_KEY, Feature.ORE, new OreConfiguration(NETHER_DIAMOND_ORES.get(),3));
 
-        register(context, REEDS_KEY, Feature.RANDOM_PATCH,
+        /*register(context, REEDS_KEY, Feature.RANDOM_PATCH,
                 new RandomPatchConfiguration(50, 6, 2, PlacementUtils.inlinePlaced(Feature.SIMPLE_BLOCK,
-                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.REEDS.get().defaultBlockState())))));
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.REEDS_CROP.get().defaultBlockState().setValue(BlueBerryBushBlock.AGE, 3))))));*/
         register(context, CATTAILS_KEY, Feature.RANDOM_PATCH,
                 new RandomPatchConfiguration(50, 6, 2, PlacementUtils.inlinePlaced(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.CATTAILS.get().defaultBlockState())))));
