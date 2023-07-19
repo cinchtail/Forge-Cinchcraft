@@ -85,9 +85,9 @@ public class ModPlacedFeatures {
                 commonOrePlacement(2, // VeinsPerChunk
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
 
-        /*register(context, REEDS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.REEDS_KEY),
+        register(context, REEDS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.REEDS_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(5), InSquarePlacement.spread(),
-                        PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()));*/
+                        PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()));
         register(context, CATTAILS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CATTAILS_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(5), InSquarePlacement.spread(),
                         PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()));

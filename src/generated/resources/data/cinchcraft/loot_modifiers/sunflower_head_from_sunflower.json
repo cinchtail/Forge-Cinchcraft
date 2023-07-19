@@ -1,13 +1,13 @@
 {
-  "type": "cinchcraft:remove_item",
+  "type": "cinchcraft:add_item",
   "conditions": [
     {
       "block": "minecraft:sunflower",
       "condition": "minecraft:block_state_property",
       "properties": {
-        "half": "upper"
+        "half": "lower"
       }
     }
   ],
-  "item": "cinchcraft:sunflower_head"
+  "item": "cinchcraft:stalk"
 }

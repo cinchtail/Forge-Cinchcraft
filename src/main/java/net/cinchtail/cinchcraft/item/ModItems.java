@@ -141,7 +141,7 @@ public class ModItems {
             () -> new ItemNameBlockItem(ModBlocks.CARVED_MELON.get(),
                     new Item.Properties()));
     public static final RegistryObject<Item> REEDS = ITEMS.register("reeds",
-            () -> new ItemNameBlockItem(ModBlocks.REEDS_CROP.get(),
+            () -> new ItemNameBlockItem(ModBlocks.REEDS.get(),
                     new Item.Properties()));
     public static final RegistryObject<Item> CATTAILS = ITEMS.register("cattails",
             () -> new ItemNameBlockItem(ModBlocks.CATTAILS.get(),

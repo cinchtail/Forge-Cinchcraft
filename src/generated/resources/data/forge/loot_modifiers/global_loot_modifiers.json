@@ -1,10 +1,11 @@
 {
   "entries": [
-    "cinchcraft:sunflower_seeds_and_sunflower_head_from_sunflower",
     "cinchcraft:pitcher_plant_root_from_pitcher_crop",
+    "cinchcraft:stalk_from_sunflower",
     "cinchcraft:ruby_horse_armor_from_jungle_temple",
     "cinchcraft:ruby_horse_armor_from_village_armorer",
-    "cinchcraft:ruby_horse_armor_from_dungeon"
+    "cinchcraft:ruby_horse_armor_from_dungeon",
+    "cinchcraft:sunflower_head_from_sunflower"
   ],
   "replace": false
 }

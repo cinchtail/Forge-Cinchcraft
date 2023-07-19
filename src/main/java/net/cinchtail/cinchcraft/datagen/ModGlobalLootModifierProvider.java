@@ -34,10 +34,15 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
                                 .hasProperty(PitcherCropBlock.HALF, DoubleBlockHalf.UPPER)).build(),
                 }, ModItems.PITCHER_PLANT_ROOT.get()));
 
-        add("sunflower_seeds_and_sunflower_head_from_sunflower", new RemoveItemModifier(new LootItemCondition[] {
+        add("stalk_from_sunflower", new RemoveItemModifier(new LootItemCondition[] {
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.SUNFLOWER)
-                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoublePlantBlock.HALF, DoubleBlockHalf.UPPER)).build(),
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoublePlantBlock.HALF, DoubleBlockHalf.LOWER)).build(),
         }, ModItems.SUNFLOWER_HEAD.get()));
+
+        add("sunflower_head_from_sunflower", new AddItemModifier(new LootItemCondition[] {
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.SUNFLOWER)
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoublePlantBlock.HALF, DoubleBlockHalf.LOWER)).build(),
+        }, ModItems.STALK.get()));
 
         add("ruby_horse_armor_from_jungle_temple", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/jungle_temple")).build(),
