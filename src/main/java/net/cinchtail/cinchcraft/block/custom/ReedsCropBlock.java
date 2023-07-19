@@ -169,10 +169,10 @@ public class ReedsCropBlock extends DoublePlantBlock implements SimpleWaterlogge
         return levelReader.getRawBrightness(pos, 0) >= 8 || levelReader.canSeeSky(pos);
     }
     private static boolean isLower(BlockState blockState) {
-        return blockState.is(ModBlocks.REEDS_CROP.get()) && blockState.getValue(HALF) == DoubleBlockHalf.LOWER;
+        return blockState.is(ModBlocks.REEDS_CROP.get()) && blockState.getValue(HALF) == DoubleBlockHalf.LOWER && blockState.getValue(WATERLOGGED);
     }
     private static boolean isUpper(BlockState blockState) {
-        return blockState.is(ModBlocks.REEDS_CROP.get()) && blockState.getValue(HALF) == DoubleBlockHalf.UPPER;
+        return blockState.is(ModBlocks.REEDS_CROP.get()) && blockState.getValue(HALF) == DoubleBlockHalf.UPPER && !blockState.getValue(WATERLOGGED);
     }
     private boolean canGrow(LevelReader levelReader, BlockPos pos, BlockState blockState, int i) {
         return !this.isMaxAge(blockState) && sufficientLight(levelReader, pos) && (i < 3 || canGrowInto(levelReader, pos.above()));
