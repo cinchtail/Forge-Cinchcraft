@@ -84,7 +84,7 @@ public class ReedsCropBlock extends DoublePlantBlock implements SimpleWaterlogge
                     && levelReader.getFluidState(pos).is(Fluids.WATER)
                     && levelReader.getFluidState(pos.above()).isEmpty()
                     && sufficientLight(levelReader, pos)
-                    && (blockState.getValue(AGE) < 3 || isUpper(levelReader.getBlockState(pos.above())));
+                    && (blockState.getValue(AGE) < 3);
         }
 
         else
