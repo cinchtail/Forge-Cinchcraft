@@ -7,13 +7,12 @@
     },
     "I": {
       "item": "minecraft:stick"
-    },
-    "X": []
+    }
   },
   "pattern": [
-    "AAA",
-    "XIX",
-    "XIX"
+    "A",
+    "A",
+    "I"
   ],
   "result": {
     "item": "cinchcraft:ruby_sword"
