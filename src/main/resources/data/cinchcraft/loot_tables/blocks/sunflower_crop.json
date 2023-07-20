@@ -142,33 +142,33 @@
                   }
                 }
               ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cinchcraft:sunflower_head",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1,
+              "add": false
+            }
+          ],
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "cinchcraft:sunflower_crop",
+              "properties": {
+                "age": "4"
+              }
             },
             {
-              "type": "minecraft:item",
-              "name": "cinchcraft:sunflower_head",
-              "functions": [
-                {
-                  "function": "minecraft:set_count",
-                  "count": 1,
-                  "add": false
-                }
-              ],
-              "conditions": [
-                {
-                  "condition": "minecraft:block_state_property",
-                  "block": "cinchcraft:sunflower_crop",
-                  "properties": {
-                    "age": "4"
-                  }
-                },
-                {
-                  "condition": "minecraft:block_state_property",
-                  "block": "cinchcraft:sunflower_crop",
-                  "properties": {
-                    "half": "lower"
-                  }
-                }
-              ]
+              "condition": "minecraft:block_state_property",
+              "block": "cinchcraft:sunflower_crop",
+              "properties": {
+                "half": "lower"
+              }
             }
           ]
         }
