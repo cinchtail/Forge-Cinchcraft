@@ -1,9 +1,14 @@
 {
   "entries": [
+    "cinchcraft:spyglass_from_shipwreck",
+    "cinchcraft:test_item_from_sniffer_digging",
     "cinchcraft:pitcher_plant_root_from_pitcher_crop",
     "cinchcraft:stalk_from_sunflower",
+    "cinchcraft:nautilus_shell_from_cold_ocean_ruin_archeology",
+    "cinchcraft:ruby_horse_armor_from_desert_pyramid",
     "cinchcraft:ruby_horse_armor_from_jungle_temple",
     "cinchcraft:ruby_horse_armor_from_village_armorer",
+    "cinchcraft:carrot_seeds_from_shipwreck",
     "cinchcraft:ruby_horse_armor_from_dungeon",
     "cinchcraft:sunflower_head_from_sunflower"
   ],

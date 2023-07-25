@@ -11,6 +11,7 @@ import net.cinchtail.cinchcraft.loot.ModLootModifiers;
 import net.cinchtail.cinchcraft.potion.ModPotions;
 import net.cinchtail.cinchcraft.sound.ModSounds;
 import net.cinchtail.cinchcraft.util.BetterBrewingRecipe;
+import net.cinchtail.cinchcraft.villagers.ModVillagers;
 import net.cinchtail.cinchcraft.world.biomemods.ModBiomeModifiers;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.item.Item;
@@ -55,7 +56,7 @@ public class Cinchcraft
 
         ModSounds.register(modEventBus);
 
-        //ModVillagers.register(modEventBus);
+        ModVillagers.register(modEventBus);
 
         ModBiomeModifiers.register(modEventBus);
         ModLootModifiers.register(modEventBus);

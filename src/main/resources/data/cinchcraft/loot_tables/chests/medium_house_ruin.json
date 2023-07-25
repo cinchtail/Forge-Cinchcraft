@@ -128,4 +128,3 @@
     }
   ]
 }
-///give Dev minecraft:chest{BlockEntityTag:{LootTable:"cinchcraft:chests/medium_house_ruin"}}
