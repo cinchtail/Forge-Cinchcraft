@@ -517,7 +517,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(ModItems.BUTTER_CUP.get()).build()))
                 .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "yellow_dye_from_butter_cup"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.SUNFLOWER_SEEDS.get(), 4)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.SUNFLOWER_SEEDS.get(), 2)
                 .requires(ModItems.SUNFLOWER_HEAD.get())
                 .unlockedBy("has_sunflower_head", inventoryTrigger(ItemPredicate.Builder.item().
                         of(ModItems.SUNFLOWER_HEAD.get()).build()))

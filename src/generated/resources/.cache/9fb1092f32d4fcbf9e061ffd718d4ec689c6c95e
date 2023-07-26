@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-18T13:05:08.1531031	Recipes
+// 1.20.1	2023-07-25T17:04:05.9558684	Recipes
 ef37a285b893b9a792f24ed07e04aa152f10295b data/cinchcraft/advancements/recipes/building_blocks/calcite_slab.json
 d6d379dbc6bc2439c647f060ab688271c3218ff5 data/cinchcraft/advancements/recipes/building_blocks/calcite_slab_from_stonecutting.json
 bdf7cc9e1f445d040b55d99fb85b777b3c38db3f data/cinchcraft/advancements/recipes/building_blocks/calcite_stairs.json
@@ -613,7 +613,7 @@ b9c4c5327177440db3b0e2ab120d899fd3b3d077 data/cinchcraft/recipes/smooth_stone_wa
 5a469d859a34fa22b9b50d63a799a7c3e3f459d1 data/cinchcraft/recipes/smooth_stone_wall_from_stonecutting.json
 e0f754092647a06c4ac28219a80ee043e89f00af data/cinchcraft/recipes/stone_wall.json
 16860f7e0abf9c8acf5ad28d5ea047567448d312 data/cinchcraft/recipes/stone_wall_from_stonecutting.json
-634e51562444ad99b4eeb113e2e410afae72a395 data/cinchcraft/recipes/sunflower_seeds.json
+aef06e0f7973a1090250f8d9aa4ed3b421f0184b data/cinchcraft/recipes/sunflower_seeds.json
 e3c652708557f4beab0259c50ad1d390d84f7097 data/cinchcraft/recipes/thatch_block.json
 3a8385b25e0161e8137e2c3a5d74e1b353d09336 data/cinchcraft/recipes/thatch_slab.json
 aeec5d2f3ce6f192a8c3a41c8159688670ac941c data/cinchcraft/recipes/thatch_stairs.json
