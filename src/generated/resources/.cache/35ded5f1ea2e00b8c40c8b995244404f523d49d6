@@ -1,7 +1,9 @@
-// 1.20.1	2023-07-27T00:39:08.882485	Item Models: cinchcraft
+// 1.20.1	2023-07-27T13:05:32.6074525	Item Models: cinchcraft
 774809724c0c051db5a823287ccfb162c5f16b47 assets/cinchcraft/models/item/ancient_slime_stew.json
 f946135c414ac93b59835f78246ad3384293ff63 assets/cinchcraft/models/item/azalea_button.json
 f6a38d13872655ca39d5085ed0efbd0135a1d203 assets/cinchcraft/models/item/azalea_fence.json
+c9d1c3501c7c7f6aa55fe283ee4a1103377b24b2 assets/cinchcraft/models/item/azalea_hanging_sign.json
+f8a18d06fd7740599d88e04f6897d907b8d1d33a assets/cinchcraft/models/item/azalea_sign.json
 b3b384db390a4f0cca63c9d4a5da6e470035bafb assets/cinchcraft/models/item/azalea_slab.json
 4b00cfc8095d4fb379df6a9996d43fd098693704 assets/cinchcraft/models/item/azalea_stairs.json
 1c90b5f18401efcc168cf75aad20b84b9f739d50 assets/cinchcraft/models/item/blackstone_axe.json

@@ -3,6 +3,8 @@ package net.cinchtail.cinchcraft.block;
 import net.cinchtail.cinchcraft.Cinchcraft;
 import net.cinchtail.cinchcraft.block.custom.*;
 import net.cinchtail.cinchcraft.item.ModItems;
+import net.cinchtail.cinchcraft.util.ModBlockSetType;
+import net.cinchtail.cinchcraft.util.ModWoodTypes;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
@@ -562,6 +564,14 @@ public class ModBlocks {
     public static final RegistryObject<Block> AZALEA_BUTTON = BLOCKS.register("azalea_button",
             () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON).sound(SoundType.WOOD),
                     ModBlockSetType.AZALEA, 10, true));
+    public static final RegistryObject<Block> AZALEA_SIGN = BLOCKS.register("azalea_sign",
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.AZALEA));
+    public static final RegistryObject<Block> AZALEA_WALL_SIGN = BLOCKS.register("azalea_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.AZALEA));
+    public static final RegistryObject<Block> AZALEA_HANGING_SIGN = BLOCKS.register("azalea_hanging_sign",
+            () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.AZALEA));
+    public static final RegistryObject<Block> AZALEA_WALL_HANGING_SIGN = BLOCKS.register("azalea_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.AZALEA));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

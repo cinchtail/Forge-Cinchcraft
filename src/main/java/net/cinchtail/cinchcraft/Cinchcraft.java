@@ -3,6 +3,7 @@ package net.cinchtail.cinchcraft;
 import com.google.common.collect.ImmutableSet;
 import com.mojang.logging.LogUtils;
 import net.cinchtail.cinchcraft.block.ModBlocks;
+import net.cinchtail.cinchcraft.block.entity.ModBlockEntities;
 import net.cinchtail.cinchcraft.event.ModEvents;
 import net.cinchtail.cinchcraft.event.WanderingTraderTrades;
 import net.cinchtail.cinchcraft.item.ModCreativeModeTabs;
@@ -11,8 +12,10 @@ import net.cinchtail.cinchcraft.loot.ModLootModifiers;
 import net.cinchtail.cinchcraft.potion.ModPotions;
 import net.cinchtail.cinchcraft.sound.ModSounds;
 import net.cinchtail.cinchcraft.util.BetterBrewingRecipe;
+import net.cinchtail.cinchcraft.util.ModWoodTypes;
 import net.cinchtail.cinchcraft.villagers.ModVillagers;
 import net.cinchtail.cinchcraft.world.biomemods.ModBiomeModifiers;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -52,7 +55,7 @@ public class Cinchcraft
         ModPotions.register(modEventBus);
         //ModEffects.register(modEventBus);
 
-        //ModBlockEntities.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
 
         ModSounds.register(modEventBus);
 
@@ -109,6 +112,8 @@ public class Cinchcraft
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             event.enqueueWork(() -> {
+                Sheets.addWoodType(ModWoodTypes.AZALEA);
+
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.BUTTER_CUP.getId(), ModBlocks.POTTED_BUTTER_CUP);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.SMALL_ROSE.getId(), ModBlocks.POTTED_SMALL_ROSE);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CROCUS.getId(), ModBlocks.POTTED_CROCUS);
@@ -255,6 +260,8 @@ public class Cinchcraft
             event.accept(ModItems.AZALEA_SLAB);
             event.accept(ModItems.AZALEA_FENCE);
             event.accept(ModItems.AZALEA_FENCE_GATE);
+            event.accept(ModItems.AZALEA_SIGN);
+            event.accept(ModItems.AZALEA_HANGING_SIGN);
             event.accept(ModItems.AZALEA_BUTTON);
             event.accept(ModItems.AZALEA_PRESSURE_PLATE);
             event.accept(ModBlocks.SMOOTH_STONE_STAIRS);

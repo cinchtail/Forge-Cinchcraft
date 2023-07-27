@@ -1,4 +1,4 @@
-package net.cinchtail.cinchcraft.block;
+package net.cinchtail.cinchcraft.util;
 
 import it.unimi.dsi.fastutil.objects.ObjectArraySet;
 import net.minecraft.world.level.block.state.properties.BlockSetType;

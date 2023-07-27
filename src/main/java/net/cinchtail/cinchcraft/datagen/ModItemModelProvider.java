@@ -41,6 +41,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SUNFLOWER_HEAD);
 
 
+        simpleItem(ModItems.AZALEA_SIGN);
+        simpleItem(ModItems.AZALEA_HANGING_SIGN);
+
+
         handheldItem(ModItems.DEEPSLATE_SWORD);
         handheldItem(ModItems.DEEPSLATE_PICKAXE);
         handheldItem(ModItems.DEEPSLATE_AXE);

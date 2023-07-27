@@ -1,12 +1,14 @@
-// 1.20.1	2023-07-27T00:44:18.3519384	Block States: cinchcraft
+// 1.20.1	2023-07-27T13:05:32.6124543	Block States: cinchcraft
 7901b6f250fe4c595ef99b172bda946030802c32 assets/cinchcraft/blockstates/azalea_button.json
 eb838eda8d050729f9a7bf558c65d74e041a114b assets/cinchcraft/blockstates/azalea_fence.json
 c3ef53eb2fca0392bad15911636f889b18e85413 assets/cinchcraft/blockstates/azalea_fence_gate.json
 cb42fed80b72d6af0ac5b23f9299324941ab9c50 assets/cinchcraft/blockstates/azalea_log.json
 d00e88bec12d7e681356b18e6376180984fb5a03 assets/cinchcraft/blockstates/azalea_planks.json
 91c291ee514b9582837ce38f64d8fbc50bd33fc8 assets/cinchcraft/blockstates/azalea_pressure_plate.json
+d39a43623ffb638168f4b78c18c525220aeb528b assets/cinchcraft/blockstates/azalea_sign.json
 29f3ae400161788d9408915d915a320f5d771f4c assets/cinchcraft/blockstates/azalea_slab.json
 551a6619e7129adc2a393d7de67f7684cd3bf20d assets/cinchcraft/blockstates/azalea_stairs.json
+d39a43623ffb638168f4b78c18c525220aeb528b assets/cinchcraft/blockstates/azalea_wall_sign.json
 652b31f36c0d434ab9277911b0a15d62576e8c69 assets/cinchcraft/blockstates/azalea_wood.json
 f11bd51ce93467b2ba8364b304367f7cec9bdded assets/cinchcraft/blockstates/block_of_ruby.json
 572a9fc390f1034f3b74accd88bcbddd9e755e95 assets/cinchcraft/blockstates/calcite_slab.json
@@ -153,6 +155,7 @@ c541eb3475ff97ab61af5c1921c9e74bcd7425e8 assets/cinchcraft/models/block/azalea_l
 d4660edb715ef7609e31241cf325c68a8e60fefc assets/cinchcraft/models/block/azalea_planks.json
 2df0ab4d9955338858ef2bc7552a5bfcc6090178 assets/cinchcraft/models/block/azalea_pressure_plate.json
 fdbc981744f55eeaa6fd3329c9948917cd692890 assets/cinchcraft/models/block/azalea_pressure_plate_down.json
+05a3543be3626a0a2cd846dfa1d9d5d7f2d76a9b assets/cinchcraft/models/block/azalea_sign.json
 055c369de8c80dbf7232b48b170832a1b046ef9f assets/cinchcraft/models/block/azalea_slab.json
 d1ba8a9721857564e1197ab0dc7bbecfdb64ec0f assets/cinchcraft/models/block/azalea_slab_top.json
 6a50ba76171934e93099bad3acd86e10ede8e0f2 assets/cinchcraft/models/block/azalea_stairs.json

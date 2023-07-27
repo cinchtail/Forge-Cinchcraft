@@ -200,6 +200,12 @@ public class ModItems {
     public static final RegistryObject<Item> AZALEA_PRESSURE_PLATE = ITEMS.register("azalea_pressure_plate",
             () -> new ModWoodenFullBlockItem(ModBlocks.AZALEA_PRESSURE_PLATE.get(),
                     new Item.Properties()));
+    public static final RegistryObject<Item> AZALEA_SIGN = ITEMS.register("azalea_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.AZALEA_SIGN.get(), ModBlocks.AZALEA_WALL_SIGN.get()));
+    public static final RegistryObject<Item> AZALEA_HANGING_SIGN = ITEMS.register("azalea_hanging_sign",
+            () -> new HangingSignItem(ModBlocks.AZALEA_HANGING_SIGN.get(), ModBlocks.AZALEA_WALL_HANGING_SIGN.get(),
+                    new Item.Properties().stacksTo(16)));
+
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

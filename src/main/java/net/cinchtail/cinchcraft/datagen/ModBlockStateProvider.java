@@ -211,6 +211,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ResourceLocation(Cinchcraft.MOD_ID, "block/stripped_azalea_log"));
 
 
+        signBlock(((StandingSignBlock) AZALEA_SIGN.get()), ((WallSignBlock) ModBlocks.AZALEA_WALL_SIGN.get()),
+                blockTexture(ModBlocks.AZALEA_PLANKS.get()));
+
+
         blockItem(AZALEA_PRESSURE_PLATE);
         blockItem(POLISHED_DEEPSLATE_PRESSURE_PLATE);
         blockItem(AZALEA_LOG);
@@ -218,6 +222,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(STRIPPED_AZALEA_LOG);
         blockItem(STRIPPED_AZALEA_WOOD);
         blockItem(AZALEA_FENCE_GATE);
+
+
     }
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));

@@ -94,6 +94,8 @@
   "item.cinchcraft.azalea_button": "Azalea Button",
   "item.cinchcraft.azalea_pressure_plate": "Azalea Pressure Plate",
   "item.cinchcraft.azalea_fence_gate": "Azalea Fence Gate",
+  "block.cinchcraft.azalea_sign": "Azalea Sign",
+  "block.cinchcraft.azalea_hanging_sign": "Azalea Hanging Sign",
 
   "itemGroup.cinchcraft_blocks": "Cinchcraft Blocks",
   "itemGroup.cinchcraft_items": "Cinchcraft Items",
