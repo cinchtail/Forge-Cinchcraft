@@ -190,7 +190,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fenceBlock((FenceBlock) WARPED_MOSSY_NETHER_BRICK_FENCE.get(), blockLoc(WARPED_MOSSY_NETHER_BRICKS));
         fenceBlock((FenceBlock) AZALEA_FENCE.get(), blockLoc(AZALEA_PLANKS));
 
-        fenceGateBlock((FenceGateBlock) AZALEA_FENCE_GATE.get(), blockTexture(AZALEA_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) AZALEA_FENCE_GATE.get(), blockLoc(AZALEA_PLANKS));
 
 
         buttonBlock((ButtonBlock) POLISHED_DEEPSLATE_BUTTON.get(), blockTexture(Blocks.POLISHED_DEEPSLATE));
@@ -217,6 +217,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(AZALEA_WOOD);
         blockItem(STRIPPED_AZALEA_LOG);
         blockItem(STRIPPED_AZALEA_WOOD);
+        blockItem(AZALEA_FENCE_GATE);
     }
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));

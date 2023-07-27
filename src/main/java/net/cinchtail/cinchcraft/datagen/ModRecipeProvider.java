@@ -184,6 +184,101 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_end_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.END_STONE_BRICKS).build()))
                 .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_end_stone_bricks"));
 
+        //Azalea Wood Recipes
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_PLANKS.get(), 4)
+                .group("azalea_planks")
+                .requires(ModItems.AZALEA_LOG.get())
+                .unlockedBy("has_azalea_log", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.AZALEA_LOG.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "azalea_planks_from_azalea_log"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_PLANKS.get(), 4)
+                .group("azalea_planks")
+                .requires(ModItems.AZALEA_WOOD.get())
+                .unlockedBy("has_azalea_wood", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.AZALEA_WOOD.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "azalea_planks_from_azalea_wood"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_PLANKS.get(), 3)
+                .group("azalea_planks")
+                .requires(ModItems.STRIPPED_AZALEA_LOG.get())
+                .unlockedBy("has_stripped_azalea_log", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.STRIPPED_AZALEA_LOG.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "azalea_planks_from_stripped_azalea_log"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_PLANKS.get(), 3)
+                .group("azalea_planks")
+                .requires(ModItems.STRIPPED_AZALEA_WOOD.get())
+                .unlockedBy("has_stripped_azalea_wood", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.STRIPPED_AZALEA_WOOD.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "azalea_planks_from_stripped_azalea_wood"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_WOOD.get(),3)
+                .group("azalea_wood")
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModItems.AZALEA_LOG.get())
+                .unlockedBy("has_azalea_log", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.AZALEA_LOG.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.STRIPPED_AZALEA_WOOD.get(),3)
+                .group("azalea_wood")
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModItems.STRIPPED_AZALEA_LOG.get())
+                .unlockedBy("has_stripped_azalea_log", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.STRIPPED_AZALEA_LOG.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_STAIRS.get(),4)
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .define('A', ModItems.AZALEA_PLANKS.get())
+                .unlockedBy("has_azalea_planks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.AZALEA_PLANKS.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AZALEA_SLAB.get(),6)
+                .pattern("AAA")
+                .define('A', ModItems.AZALEA_PLANKS.get())
+                .unlockedBy("has_azalea_planks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.AZALEA_PLANKS.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AZALEA_FENCE.get(),6)
+                .pattern("ATA")
+                .pattern("ATA")
+                .define('A', ModItems.AZALEA_PLANKS.get())
+                .define('T', Items.STICK)
+                .unlockedBy("has_azalea_planks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.AZALEA_PLANKS.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AZALEA_FENCE_GATE.get(),6)
+                .pattern("ATA")
+                .pattern("ATA")
+                .define('T', ModItems.AZALEA_PLANKS.get())
+                .define('A', Items.STICK)
+                .unlockedBy("has_azalea_planks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.AZALEA_PLANKS.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AZALEA_PRESSURE_PLATE.get())
+                .pattern("AA")
+                .define('A', ModItems.AZALEA_PLANKS.get())
+                .unlockedBy("has_azalea_planks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.AZALEA_PLANKS.get()).build()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_BUTTON.get())
+                .requires(ModItems.AZALEA_PLANKS.get())
+                .unlockedBy("has_azalea_planks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.AZALEA_PLANKS.get()).build()))
+                .save(pWriter);
+
         //Reeds Recipes
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.THATCH_BLOCK.get())
                 .pattern("AAA")

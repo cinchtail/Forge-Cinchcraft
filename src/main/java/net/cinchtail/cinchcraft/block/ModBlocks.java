@@ -541,7 +541,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> STRIPPED_AZALEA_WOOD = BLOCKS.register("stripped_azalea_wood",
             () -> new ModFlammableAzaleaLogBlock(BlockBehaviour.Properties.copy(STRIPPED_OAK_WOOD).sound(SoundType.WOOD).strength(1.5f),
                     true, 20, 5));
-    public static final RegistryObject<Block> AZALEA_PLANKS = registerBlock("azalea_planks",
+    public static final RegistryObject<Block> AZALEA_PLANKS = BLOCKS.register("azalea_planks",
             () -> new ModFlammableBlock(BlockBehaviour.Properties.copy(OAK_PLANKS).sound(SoundType.WOOD).strength(1.5f),
                     true, 20, 5));
     public static final RegistryObject<Block> AZALEA_STAIRS = BLOCKS.register("azalea_stairs",
@@ -554,12 +554,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> AZALEA_FENCE = BLOCKS.register("azalea_fence",
             () -> new ModFlammableFenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB).sound(SoundType.WOOD).strength(1.5f),
                     true, 20, 5));
-    public static final RegistryObject<Block> AZALEA_FENCE_GATE = registerBlock("azalea_fence_gate",
-            () -> new ModFlammableFenceGateBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
-    public static final RegistryObject<Block> AZALEA_PRESSURE_PLATE = registerBlock("azalea_pressure_plate",
+    public static final RegistryObject<Block> AZALEA_FENCE_GATE = BLOCKS.register("azalea_fence_gate",
+            () -> new ModFlammableFenceGateBlock(BlockBehaviour.Properties.copy(OAK_PLANKS), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final RegistryObject<Block> AZALEA_PRESSURE_PLATE = BLOCKS.register("azalea_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
-                    BlockBehaviour.Properties.copy(Blocks.POLISHED_BLACKSTONE_PRESSURE_PLATE).sound(SoundType.WOOD), ModBlockSetType.AZALEA));
-    public static final RegistryObject<Block> AZALEA_BUTTON = registerBlock("azalea_button",
+                    BlockBehaviour.Properties.copy(OAK_PRESSURE_PLATE).sound(SoundType.WOOD), ModBlockSetType.AZALEA));
+    public static final RegistryObject<Block> AZALEA_BUTTON = BLOCKS.register("azalea_button",
             () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON).sound(SoundType.WOOD),
                     ModBlockSetType.AZALEA, 10, true));
 

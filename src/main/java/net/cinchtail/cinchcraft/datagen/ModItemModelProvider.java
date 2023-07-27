@@ -67,7 +67,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         buttonItem(ModBlocks.POLISHED_DEEPSLATE_BUTTON, Blocks.POLISHED_DEEPSLATE);
         buttonItem(ModBlocks.IRON_BUTTON, Blocks.IRON_BLOCK);
         buttonItem(ModBlocks.GOLD_BUTTON, Blocks.GOLD_BLOCK);
-        buttonItem(ModBlocks.AZALEA_BUTTON, ModBlocks.AZALEA_PLANKS.get());
+        modButtonItem(ModBlocks.AZALEA_BUTTON, ModBlocks.AZALEA_PLANKS.get());
 
 
         withExistingParent("smooth_stone_stairs", modLoc("block/smooth_stone_stairs"));
@@ -185,6 +185,10 @@ public class ModItemModelProvider extends ItemModelProvider {
     public void buttonItem(RegistryObject<Block> block, Block baseBlock) {
         this.withExistingParent(Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block.get())).getPath(), mcLoc("block/button_inventory"))
                 .texture("texture",  new ResourceLocation("minecraft", "block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(baseBlock)).getPath()));
+    }
+    public void modButtonItem(RegistryObject<Block> block, Block baseBlock) {
+        this.withExistingParent(Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block.get())).getPath(), mcLoc("block/button_inventory"))
+                .texture("texture",  new ResourceLocation(Cinchcraft.MOD_ID, "block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(baseBlock)).getPath()));
     }
     public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block.get())).getPath(), mcLoc("block/fence_inventory"))

@@ -254,9 +254,9 @@ public class Cinchcraft
             event.accept(ModItems.AZALEA_STAIRS);
             event.accept(ModItems.AZALEA_SLAB);
             event.accept(ModItems.AZALEA_FENCE);
+            event.accept(ModItems.AZALEA_FENCE_GATE);
             event.accept(ModItems.AZALEA_BUTTON);
             event.accept(ModItems.AZALEA_PRESSURE_PLATE);
-            event.accept(ModItems.AZALEA_FENCE_GATE);
             event.accept(ModBlocks.SMOOTH_STONE_STAIRS);
             event.accept(ModBlocks.SMOOTH_STONE_WALL);
             event.accept(ModBlocks.CUT_SANDSTONE_STAIRS);

@@ -2,8 +2,8 @@
   "replace": false,
   "values": [
     "cinchcraft:azalea_log",
-    "cinchcraft:apple_wood",
-    "cinchcraft:stripped_apple_log",
-    "cinchcraft:stripped_apple_wood"
+    "cinchcraft:azalea_wood",
+    "cinchcraft:stripped_azalea_log",
+    "cinchcraft:stripped_azalea_wood"
   ]
 }

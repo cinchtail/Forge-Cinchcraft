@@ -1,6 +1,17 @@
 {
   "replace": false,
   "values": [
-    "cinchcraft:carved_melon"
+    "cinchcraft:carved_melon",
+    "cinchcraft:azalea_log",
+    "cinchcraft:azalea_wood",
+    "cinchcraft:stripped_azalea_log",
+    "cinchcraft:stripped_azalea_wood",
+    "cinchcraft:azalea_planks",
+    "cinchcraft:azalea_stairs",
+    "cinchcraft:azalea_slab",
+    "cinchcraft:azalea_fence",
+    "cinchcraft:azalea_fence_gate",
+    "cinchcraft:azalea_pressure_plate",
+    "cinchcraft:azalea_button"
   ]
 }
