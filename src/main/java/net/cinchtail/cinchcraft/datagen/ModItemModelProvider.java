@@ -8,6 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -43,6 +44,10 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(ModItems.AZALEA_SIGN);
         simpleItem(ModItems.AZALEA_HANGING_SIGN);
+
+
+        simpleBlockItem(ModBlocks.AZALEA_DOOR);
+
 
 
         handheldItem(ModItems.DEEPSLATE_SWORD);
@@ -175,6 +180,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("cracked_end_stone_brick_wall", modLoc("block/cracked_end_stone_brick_wall_inventory"));
         withExistingParent("azalea_stairs", modLoc("block/azalea_stairs"));
         withExistingParent("azalea_slab", modLoc("block/azalea_slab"));
+    }
+    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Cinchcraft.MOD_ID,"item/" + item.getId().getPath()));
     }
     private void simpleItem(RegistryObject<Item> item) {
         withExistingParent(item.getId().getPath(),

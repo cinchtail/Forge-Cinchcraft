@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_top_right_open",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "cinchcraft:block/azalea_door_bottom",
+    "top": "cinchcraft:block/azalea_door_top"
+  }
+}

@@ -558,6 +558,10 @@ public class ModBlocks {
                     true, 20, 5));
     public static final RegistryObject<Block> AZALEA_FENCE_GATE = BLOCKS.register("azalea_fence_gate",
             () -> new ModFlammableFenceGateBlock(BlockBehaviour.Properties.copy(OAK_PLANKS), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final RegistryObject<Block> AZALEA_DOOR = BLOCKS.register("azalea_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(OAK_DOOR), ModBlockSetType.AZALEA));
+    public static final RegistryObject<Block> AZALEA_TRAPDOOR = BLOCKS.register("azalea_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(OAK_TRAPDOOR), ModBlockSetType.AZALEA));
     public static final RegistryObject<Block> AZALEA_PRESSURE_PLATE = BLOCKS.register("azalea_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
                     BlockBehaviour.Properties.copy(OAK_PRESSURE_PLATE).sound(SoundType.WOOD), ModBlockSetType.AZALEA));

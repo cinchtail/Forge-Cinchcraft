@@ -214,6 +214,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         signBlock(((StandingSignBlock) AZALEA_SIGN.get()), ((WallSignBlock) ModBlocks.AZALEA_WALL_SIGN.get()),
                 blockTexture(ModBlocks.AZALEA_PLANKS.get()));
 
+        doorBlockWithRenderType((DoorBlock) AZALEA_DOOR.get(), modLoc("block/azalea_door_bottom"), modLoc("block/azalea_door_top"), "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock) AZALEA_TRAPDOOR.get(), modLoc("block/azalea_trapdoor"), true, "cutout");
+
 
         blockItem(AZALEA_PRESSURE_PLATE);
         blockItem(POLISHED_DEEPSLATE_PRESSURE_PLATE);
@@ -222,8 +225,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(STRIPPED_AZALEA_LOG);
         blockItem(STRIPPED_AZALEA_WOOD);
         blockItem(AZALEA_FENCE_GATE);
+        trapDoorBlockItem(AZALEA_TRAPDOOR, "_bottom");
 
 
+    }
+    private void trapDoorBlockItem(RegistryObject<Block> blockRegistryObject, String appendix) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("cinchcraft:block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get())).getPath() + appendix));
     }
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));

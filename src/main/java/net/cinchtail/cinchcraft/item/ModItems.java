@@ -194,6 +194,12 @@ public class ModItems {
     public static final RegistryObject<Item> AZALEA_FENCE_GATE = ITEMS.register("azalea_fence_gate",
             () -> new ModWoodenFullBlockItem(ModBlocks.AZALEA_FENCE_GATE.get(),
                     new Item.Properties()));
+    public static final RegistryObject<Item> AZALEA_TRAPDOOR = ITEMS.register("azalea_trapdoor",
+            () -> new ModWoodenFullBlockItem(ModBlocks.AZALEA_TRAPDOOR.get(),
+                    new Item.Properties()));
+    public static final RegistryObject<Item> AZALEA_DOOR = ITEMS.register("azalea_door",
+            () -> new ModWoodenFullBlockItem(ModBlocks.AZALEA_DOOR.get(),
+                    new Item.Properties()));
     public static final RegistryObject<Item> AZALEA_BUTTON = ITEMS.register("azalea_button",
             () -> new ModWoodenButtonItem(ModBlocks.AZALEA_BUTTON.get(),
                     new Item.Properties()));
