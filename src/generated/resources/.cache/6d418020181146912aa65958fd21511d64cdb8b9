@@ -1,4 +1,5 @@
-// 1.20.1	2023-07-18T13:05:08.1571039	Block States: cinchcraft
+// 1.20.1	2023-07-26T21:59:41.364044	Block States: cinchcraft
+cb42fed80b72d6af0ac5b23f9299324941ab9c50 assets/cinchcraft/blockstates/azalea_log.json
 f11bd51ce93467b2ba8364b304367f7cec9bdded assets/cinchcraft/blockstates/block_of_ruby.json
 572a9fc390f1034f3b74accd88bcbddd9e755e95 assets/cinchcraft/blockstates/calcite_slab.json
 e2c4cf035c154522e443b639e851c872dd7ea69d assets/cinchcraft/blockstates/calcite_stairs.json
@@ -129,6 +130,8 @@ d5e65d5399fef833b65d47ba18a40544b360799f assets/cinchcraft/blockstates/warped_mo
 7d62f56b516e4013f44ad11d5eb3a305fb9761ca assets/cinchcraft/blockstates/warped_mossy_nether_brick_slab.json
 b1630c752c5d3a501d473656e4953aa5833d43b8 assets/cinchcraft/blockstates/warped_mossy_nether_brick_stairs.json
 a83e2232130795295a7f95c5c53be1756370250d assets/cinchcraft/blockstates/warped_mossy_nether_brick_wall.json
+c541eb3475ff97ab61af5c1921c9e74bcd7425e8 assets/cinchcraft/models/block/azalea_log.json
+512b3f5053d0fa0e95db70e126664d5b1f3d38cc assets/cinchcraft/models/block/azalea_log_horizontal.json
 a964abbd2a161d2c0cd472d6321313a27026b555 assets/cinchcraft/models/block/block_of_ruby.json
 8fe3b55fe33e787b3417c31d0cce9c1e29f5b7f6 assets/cinchcraft/models/block/calcite_slab.json
 4f9e683dd39a73f3365b227ef8add8eea05c0858 assets/cinchcraft/models/block/calcite_slab_top.json
@@ -462,6 +465,7 @@ a0ec62afa3f73011e96762c3aa06c119f82ab6a2 assets/cinchcraft/models/block/warped_m
 636785c0167322fd428774cb2860fa863051298d assets/cinchcraft/models/block/warped_mossy_nether_brick_wall_post.json
 77142c54e123ad37150ae49d608ebf77c841bb51 assets/cinchcraft/models/block/warped_mossy_nether_brick_wall_side.json
 9aeddc00ca0b236de61a8585e96c194869e70904 assets/cinchcraft/models/block/warped_mossy_nether_brick_wall_side_tall.json
+00fcd2c889c4745ad0efe68cab32bbac9dd2c164 assets/cinchcraft/models/item/azalea_log.json
 907c7066e5d72f4599e37728c40e3bf97b14d713 assets/cinchcraft/models/item/block_of_ruby.json
 a90e047a139a699fbb5b26b467cc50d6ff30f8b1 assets/cinchcraft/models/item/chiseled_end_stone_bricks.json
 65f829a6c58d347e1bf6fa5d8beb73713a19b93b assets/cinchcraft/models/item/chiseled_mud_bricks.json

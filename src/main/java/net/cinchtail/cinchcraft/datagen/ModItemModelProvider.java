@@ -61,11 +61,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         fenceItem(ModBlocks.MOSSY_NETHER_BRICK_FENCE, ModBlocks.MOSSY_NETHER_BRICKS);
         fenceItem(ModBlocks.CRIMSON_MOSSY_NETHER_BRICK_FENCE, ModBlocks.CRIMSON_MOSSY_NETHER_BRICKS);
         fenceItem(ModBlocks.WARPED_MOSSY_NETHER_BRICK_FENCE, ModBlocks.WARPED_MOSSY_NETHER_BRICKS);
+        fenceItem(ModBlocks.AZALEA_FENCE, ModBlocks.AZALEA_PLANKS);
 
 
         buttonItem(ModBlocks.POLISHED_DEEPSLATE_BUTTON, Blocks.POLISHED_DEEPSLATE);
         buttonItem(ModBlocks.IRON_BUTTON, Blocks.IRON_BLOCK);
         buttonItem(ModBlocks.GOLD_BUTTON, Blocks.GOLD_BLOCK);
+        buttonItem(ModBlocks.AZALEA_BUTTON, ModBlocks.AZALEA_PLANKS.get());
 
 
         withExistingParent("smooth_stone_stairs", modLoc("block/smooth_stone_stairs"));
@@ -167,6 +169,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("cracked_end_stone_brick_stairs", modLoc("block/cracked_end_stone_brick_stairs"));
         withExistingParent("cracked_end_stone_brick_slab", modLoc("block/cracked_end_stone_brick_slab"));
         withExistingParent("cracked_end_stone_brick_wall", modLoc("block/cracked_end_stone_brick_wall_inventory"));
+        withExistingParent("azalea_stairs", modLoc("block/azalea_stairs"));
+        withExistingParent("azalea_slab", modLoc("block/azalea_slab"));
     }
     private void simpleItem(RegistryObject<Item> item) {
         withExistingParent(item.getId().getPath(),

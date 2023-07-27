@@ -167,6 +167,39 @@ public class ModItems {
     public static final RegistryObject<Item> STALK = ITEMS.register("stalk",
             () -> new StalkItem(ModBlocks.STALK.get(),
                     new Item.Properties()));
+    public static final RegistryObject<Item> AZALEA_LOG = ITEMS.register("azalea_log",
+            () -> new ModWoodenFullBlockItem(ModBlocks.AZALEA_LOG.get(),
+                    new Item.Properties()));
+    public static final RegistryObject<Item> AZALEA_WOOD = ITEMS.register("azalea_wood",
+            () -> new ModWoodenFullBlockItem(ModBlocks.AZALEA_WOOD.get(),
+                    new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_AZALEA_LOG = ITEMS.register("stripped_azalea_log",
+            () -> new ModWoodenFullBlockItem(ModBlocks.STRIPPED_AZALEA_LOG.get(),
+                    new Item.Properties()));
+    public static final RegistryObject<Item> STRIPPED_AZALEA_WOOD = ITEMS.register("stripped_azalea_wood",
+            () -> new ModWoodenFullBlockItem(ModBlocks.STRIPPED_AZALEA_WOOD.get(),
+                    new Item.Properties()));
+    public static final RegistryObject<Item> AZALEA_PLANKS = ITEMS.register("azalea_planks",
+            () -> new ModWoodenFullBlockItem(ModBlocks.AZALEA_PLANKS.get(),
+                    new Item.Properties()));
+    public static final RegistryObject<Item> AZALEA_STAIRS = ITEMS.register("azalea_stairs",
+            () -> new ModWoodenFullBlockItem(ModBlocks.AZALEA_STAIRS.get(),
+                    new Item.Properties()));
+    public static final RegistryObject<Item> AZALEA_SLAB = ITEMS.register("azalea_slab",
+            () -> new ModWoodenSlabItem(ModBlocks.AZALEA_SLAB.get(),
+                    new Item.Properties()));
+    public static final RegistryObject<Item> AZALEA_FENCE = ITEMS.register("azalea_fence",
+            () -> new ModWoodenFullBlockItem(ModBlocks.AZALEA_FENCE.get(),
+                    new Item.Properties()));
+    public static final RegistryObject<Item> AZALEA_FENCE_GATE = ITEMS.register("azalea_fence_gate",
+            () -> new ModWoodenFullBlockItem(ModBlocks.AZALEA_FENCE_GATE.get(),
+                    new Item.Properties()));
+    public static final RegistryObject<Item> AZALEA_BUTTON = ITEMS.register("azalea_button",
+            () -> new ModWoodenButtonItem(ModBlocks.AZALEA_BUTTON.get(),
+                    new Item.Properties()));
+    public static final RegistryObject<Item> AZALEA_PRESSURE_PLATE = ITEMS.register("azalea_pressure_plate",
+            () -> new ModWoodenFullBlockItem(ModBlocks.AZALEA_PRESSURE_PLATE.get(),
+                    new Item.Properties()));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

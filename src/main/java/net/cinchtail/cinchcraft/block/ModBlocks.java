@@ -3,6 +3,7 @@ package net.cinchtail.cinchcraft.block;
 import net.cinchtail.cinchcraft.Cinchcraft;
 import net.cinchtail.cinchcraft.block.custom.*;
 import net.cinchtail.cinchcraft.item.ModItems;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
@@ -17,6 +18,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
+
+import static net.minecraft.world.level.block.Blocks.*;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
@@ -526,19 +529,48 @@ public class ModBlocks {
     public static final RegistryObject<Block> CRACKED_END_STONE_BRICK_WALL = registerBlock("cracked_end_stone_brick_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE_BRICKS)
                     .requiresCorrectToolForDrops().strength(3.0F, 9.0F).sound(SoundType.STONE)));
-
-
+    public static final RegistryObject<Block> AZALEA_LOG = BLOCKS.register("azalea_log",
+            () -> new ModFlammableAzaleaLogBlock(BlockBehaviour.Properties.copy(OAK_LOG).sound(SoundType.WOOD).strength(1.5f),
+                    true, 20, 5));
+    public static final RegistryObject<Block> AZALEA_WOOD = BLOCKS.register("azalea_wood",
+            () -> new ModFlammableAzaleaLogBlock(BlockBehaviour.Properties.copy(OAK_WOOD).sound(SoundType.WOOD).strength(1.5f),
+                    true, 20, 5));
+    public static final RegistryObject<Block> STRIPPED_AZALEA_LOG = BLOCKS.register("stripped_azalea_log",
+            () -> new ModFlammableAzaleaLogBlock(BlockBehaviour.Properties.copy(STRIPPED_OAK_LOG).sound(SoundType.WOOD).strength(1.5f),
+                    true, 20, 5));
+    public static final RegistryObject<Block> STRIPPED_AZALEA_WOOD = BLOCKS.register("stripped_azalea_wood",
+            () -> new ModFlammableAzaleaLogBlock(BlockBehaviour.Properties.copy(STRIPPED_OAK_WOOD).sound(SoundType.WOOD).strength(1.5f),
+                    true, 20, 5));
+    public static final RegistryObject<Block> AZALEA_PLANKS = registerBlock("azalea_planks",
+            () -> new ModFlammableBlock(BlockBehaviour.Properties.copy(OAK_PLANKS).sound(SoundType.WOOD).strength(1.5f),
+                    true, 20, 5));
+    public static final RegistryObject<Block> AZALEA_STAIRS = BLOCKS.register("azalea_stairs",
+            () -> new ModFlammableStairBlock(() -> ModBlocks.AZALEA_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).sound(SoundType.WOOD).strength(1.5f),
+                    true, 20, 5));
+    public static final RegistryObject<Block> AZALEA_SLAB = BLOCKS.register("azalea_slab",
+            () -> new ModFlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB).sound(SoundType.WOOD).strength(1.5f),
+                    true, 20, 5));
+    public static final RegistryObject<Block> AZALEA_FENCE = BLOCKS.register("azalea_fence",
+            () -> new ModFlammableFenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB).sound(SoundType.WOOD).strength(1.5f),
+                    true, 20, 5));
+    public static final RegistryObject<Block> AZALEA_FENCE_GATE = registerBlock("azalea_fence_gate",
+            () -> new ModFlammableFenceGateBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final RegistryObject<Block> AZALEA_PRESSURE_PLATE = registerBlock("azalea_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
+                    BlockBehaviour.Properties.copy(Blocks.POLISHED_BLACKSTONE_PRESSURE_PLATE).sound(SoundType.WOOD), ModBlockSetType.AZALEA));
+    public static final RegistryObject<Block> AZALEA_BUTTON = registerBlock("azalea_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON).sound(SoundType.WOOD),
+                    ModBlockSetType.AZALEA, 10, true));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
         return toReturn;
     }
-
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
-
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }

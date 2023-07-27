@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_mud_disk_biomes",
+  "features": "cinchcraft:mud_disk_placed",
+  "step": "local_modifications"
+}

@@ -55,6 +55,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(CRACKED_BRICKS);
         blockWithItem(CRACKED_PRISMARINE_BRICKS);
         blockWithItem(CRACKED_END_STONE_BRICKS);
+        blockWithItem(AZALEA_PLANKS);
 
         slabBlock((SlabBlock) TUFF_SLAB.get(), blockTexture(Blocks.TUFF),
                 blockTexture(Blocks.TUFF));
@@ -110,6 +111,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 blockLoc(CRACKED_PRISMARINE_BRICKS));
         slabBlock((SlabBlock) CRACKED_END_STONE_BRICK_SLAB.get(), blockLoc(CRACKED_END_STONE_BRICKS),
                 blockLoc(CRACKED_END_STONE_BRICKS));
+        slabBlock((SlabBlock) AZALEA_SLAB.get(), blockLoc(AZALEA_PLANKS),
+                blockLoc(AZALEA_PLANKS));
 
         stairsBlock((StairBlock) SMOOTH_STONE_STAIRS.get(), blockTexture(Blocks.SMOOTH_STONE));
         stairsBlock((StairBlock) TUFF_STAIRS.get(), blockTexture(Blocks.TUFF));
@@ -139,6 +142,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock((StairBlock) CRACKED_BRICK_STAIRS.get(), blockLoc(CRACKED_BRICKS));
         stairsBlock((StairBlock) CRACKED_PRISMARINE_BRICK_STAIRS.get(), blockLoc(CRACKED_PRISMARINE_BRICKS));
         stairsBlock((StairBlock) CRACKED_END_STONE_BRICK_STAIRS.get(), blockLoc(CRACKED_END_STONE_BRICKS));
+        stairsBlock((StairBlock) AZALEA_STAIRS.get(), blockLoc(AZALEA_PLANKS));
 
 
         vanillaWallBlock(SMOOTH_STONE_WALL, blockVanillaBlockLoc(Blocks.SMOOTH_STONE));
@@ -184,15 +188,35 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fenceBlock((FenceBlock) MOSSY_NETHER_BRICK_FENCE.get(), blockLoc(MOSSY_NETHER_BRICKS));
         fenceBlock((FenceBlock) CRIMSON_MOSSY_NETHER_BRICK_FENCE.get(), blockLoc(CRIMSON_MOSSY_NETHER_BRICKS));
         fenceBlock((FenceBlock) WARPED_MOSSY_NETHER_BRICK_FENCE.get(), blockLoc(WARPED_MOSSY_NETHER_BRICKS));
+        fenceBlock((FenceBlock) AZALEA_FENCE.get(), blockLoc(AZALEA_PLANKS));
+
+        fenceGateBlock((FenceGateBlock) AZALEA_FENCE_GATE.get(), blockTexture(AZALEA_PLANKS.get()));
 
 
         buttonBlock((ButtonBlock) POLISHED_DEEPSLATE_BUTTON.get(), blockTexture(Blocks.POLISHED_DEEPSLATE));
         buttonBlock((ButtonBlock) IRON_BUTTON.get(), blockTexture(Blocks.IRON_BLOCK));
         buttonBlock((ButtonBlock) GOLD_BUTTON.get(), blockTexture(Blocks.GOLD_BLOCK));
+        buttonBlock((ButtonBlock) AZALEA_BUTTON.get(), blockLoc(AZALEA_PLANKS));
 
 
         pressurePlateBlock((PressurePlateBlock) POLISHED_DEEPSLATE_PRESSURE_PLATE.get(), blockTexture(Blocks.POLISHED_DEEPSLATE));
-        blockItem(ModBlocks.POLISHED_DEEPSLATE_PRESSURE_PLATE);
+        pressurePlateBlock((PressurePlateBlock) AZALEA_PRESSURE_PLATE.get(), blockLoc(AZALEA_PLANKS));
+
+
+        logBlock(((RotatedPillarBlock) AZALEA_LOG.get()));
+        axisBlock(((RotatedPillarBlock) AZALEA_WOOD.get()), blockTexture(AZALEA_LOG.get()), blockTexture(AZALEA_LOG.get()));
+        axisBlock((RotatedPillarBlock) STRIPPED_AZALEA_LOG.get(), new ResourceLocation(Cinchcraft.MOD_ID, "block/stripped_azalea_log"),
+                new ResourceLocation(Cinchcraft.MOD_ID, "block/stripped_azalea_log_top"));
+        axisBlock((RotatedPillarBlock) STRIPPED_AZALEA_WOOD.get(), new ResourceLocation(Cinchcraft.MOD_ID, "block/stripped_azalea_log"),
+                new ResourceLocation(Cinchcraft.MOD_ID, "block/stripped_azalea_log"));
+
+
+        blockItem(AZALEA_PRESSURE_PLATE);
+        blockItem(POLISHED_DEEPSLATE_PRESSURE_PLATE);
+        blockItem(AZALEA_LOG);
+        blockItem(AZALEA_WOOD);
+        blockItem(STRIPPED_AZALEA_LOG);
+        blockItem(STRIPPED_AZALEA_WOOD);
     }
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
