@@ -248,7 +248,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(ModItems.AZALEA_PLANKS.get()).build()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AZALEA_FENCE.get(),6)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AZALEA_FENCE.get(),3)
                 .pattern("ATA")
                 .pattern("ATA")
                 .define('A', ModItems.AZALEA_PLANKS.get())
@@ -257,7 +257,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(ModItems.AZALEA_PLANKS.get()).build()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AZALEA_FENCE_GATE.get(),6)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AZALEA_FENCE_GATE.get())
                 .pattern("ATA")
                 .pattern("ATA")
                 .define('T', ModItems.AZALEA_PLANKS.get())
@@ -1702,7 +1702,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_quartz_block", inventoryTrigger(ItemPredicate.Builder.item().of(Blocks.QUARTZ_BLOCK).build()))
                 .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "quartz_block_wall_from_stonecutting"));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_NETHER_BRICK_FENCE.get(),6)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_NETHER_BRICK_FENCE.get(),3)
                 .pattern("ATA")
                 .pattern("ATA")
                 .define('A', Blocks.RED_NETHER_BRICKS)
@@ -1908,7 +1908,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_mossy_nether_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.MOSSY_NETHER_BRICKS.get()).build()))
                 .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_nether_brick_wall_from_stonecutting"));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_NETHER_BRICK_FENCE.get(),6)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_NETHER_BRICK_FENCE.get(),3)
                 .pattern("ATA")
                 .pattern("ATA")
                 .define('A', ModBlocks.MOSSY_NETHER_BRICKS.get())
@@ -1960,7 +1960,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_crimson_mossy_nether_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.CRIMSON_MOSSY_NETHER_BRICKS.get()).build()))
                 .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "crimson_mossy_nether_brick_wall_from_stonecutting"));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRIMSON_MOSSY_NETHER_BRICK_FENCE.get(),6)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRIMSON_MOSSY_NETHER_BRICK_FENCE.get(),3)
                 .pattern("ATA")
                 .pattern("ATA")
                 .define('A', ModBlocks.CRIMSON_MOSSY_NETHER_BRICKS.get())
@@ -2012,7 +2012,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_warped_mossy_nether_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.WARPED_MOSSY_NETHER_BRICKS.get()).build()))
                 .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "warped_mossy_nether_brick_wall_from_stonecutting"));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WARPED_MOSSY_NETHER_BRICK_FENCE.get(),6)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WARPED_MOSSY_NETHER_BRICK_FENCE.get(),3)
                 .pattern("ATA")
                 .pattern("ATA")
                 .define('A', ModBlocks.WARPED_MOSSY_NETHER_BRICKS.get())

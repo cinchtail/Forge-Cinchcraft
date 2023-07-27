@@ -1,21 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "building",
+  "category": "misc",
   "key": {
-    "A": {
-      "item": "minecraft:red_nether_bricks"
-    },
-    "T": {
+    "#": {
       "item": "minecraft:nether_brick"
+    },
+    "W": {
+      "item": "minecraft:nether_bricks"
     }
   },
   "pattern": [
-    "ATA",
-    "ATA"
+    "W#W",
+    "W#W"
   ],
   "result": {
     "count": 3,
-    "item": "cinchcraft:red_nether_brick_fence"
+    "item": "minecraft:nether_brick_fence"
   },
   "show_notification": true
 }
