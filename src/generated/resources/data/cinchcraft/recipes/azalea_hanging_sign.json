@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "A": {
+      "item": "cinchcraft:stripped_azalea_log"
+    },
+    "T": {
+      "item": "minecraft:chain"
+    }
+  },
+  "pattern": [
+    "T T",
+    "AAA",
+    "AAA"
+  ],
+  "result": {
+    "count": 6,
+    "item": "cinchcraft:azalea_hanging_sign"
+  },
+  "show_notification": true
+}

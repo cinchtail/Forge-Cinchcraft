@@ -17,7 +17,6 @@ public record ModNetherPlantBiomeModifier(HolderSet<Biome> biomes, Holder<Placed
         }
 
     }
-
     @Override
     public Codec<? extends BiomeModifier> codec() {
         return ModBiomeModifiers.NETHER_VEGETAL_MODIFIER.get();

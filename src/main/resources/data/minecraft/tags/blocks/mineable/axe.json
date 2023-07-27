@@ -12,6 +12,10 @@
     "cinchcraft:azalea_fence",
     "cinchcraft:azalea_fence_gate",
     "cinchcraft:azalea_pressure_plate",
-    "cinchcraft:azalea_button"
+    "cinchcraft:azalea_button",
+    "cinchcraft:azalea_door",
+    "cinchcraft:azalea_trapdoor",
+    "cinchcraft:azalea_sign",
+    "cinchcraft:azalea_hanging_sign"
   ]
 }

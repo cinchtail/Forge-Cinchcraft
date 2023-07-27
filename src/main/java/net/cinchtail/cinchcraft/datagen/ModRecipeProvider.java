@@ -279,6 +279,43 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(ModItems.AZALEA_PLANKS.get()).build()))
                 .save(pWriter);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_SIGN.get(),3)
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern(" T ")
+                .define('A', ModItems.AZALEA_PLANKS.get())
+                .define('T', Items.STICK)
+                .unlockedBy("has_azalea_planks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.AZALEA_PLANKS.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_HANGING_SIGN.get(),6)
+                .pattern("T T")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.STRIPPED_AZALEA_LOG.get())
+                .define('T', Items.CHAIN)
+                .unlockedBy("has_azalea_planks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.AZALEA_PLANKS.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_DOOR.get())
+                .pattern("AA")
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModItems.AZALEA_PLANKS.get())
+                .unlockedBy("has_azalea_planks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.AZALEA_PLANKS.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_TRAPDOOR.get(),2)
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.AZALEA_PLANKS.get())
+                .unlockedBy("has_azalea_planks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.AZALEA_PLANKS.get()).build()))
+                .save(pWriter);
+
         //Reeds Recipes
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.THATCH_BLOCK.get())
                 .pattern("AAA")
