@@ -185,7 +185,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_end_stone_bricks"));
 
         //Azalea Wood Recipes
-
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_PLANKS.get(), 4)
                 .group("azalea_planks")
                 .requires(ModItems.AZALEA_LOG.get())
