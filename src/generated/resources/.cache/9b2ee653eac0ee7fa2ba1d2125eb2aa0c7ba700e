@@ -1,5 +1,6 @@
-// 1.20.1	2023-07-25T17:04:05.9658704	Global Loot Modifiers : cinchcraft
+// 1.20.1	2023-07-31T20:03:20.3799372	Global Loot Modifiers : cinchcraft
 12995015b0f19776d52ff569ebd31ab6dd5a1664 data/cinchcraft/loot_modifiers/carrot_seeds_from_shipwreck.json
+ee3786f8bb4592b73ab2e75bb54d3bbeb5126fbc data/cinchcraft/loot_modifiers/nautilus_shell_from_cold_ocean_ruin.json
 44d2b3ac4b14ab6c1c3284c427db02a0be15fd0d data/cinchcraft/loot_modifiers/pitcher_plant_root_from_pitcher_crop.json
 6cb4274dfa8227c08608bfc44da947d9dad5e7ff data/cinchcraft/loot_modifiers/ruby_horse_armor_from_desert_pyramid.json
 7ae35d438f33b26fe71869fe065a61f2d589e776 data/cinchcraft/loot_modifiers/ruby_horse_armor_from_dungeon.json
@@ -8,4 +9,4 @@ c1992abf09100bffe1b9961f9eae73ca85329ec8 data/cinchcraft/loot_modifiers/ruby_hor
 c820235d1f383b530080f17ba1dba77f8b6d7407 data/cinchcraft/loot_modifiers/spyglass_from_shipwreck.json
 ed2043727ee5cc5b64f8df1f654b17592b6f63b8 data/cinchcraft/loot_modifiers/stalk_from_sunflower.json
 99c9b41bae33d05965f1153bde3562673c50c3cf data/cinchcraft/loot_modifiers/sunflower_head_from_sunflower.json
-87bd3a0d2e49ea352c26ff5ddc578db57504de3b data/forge/loot_modifiers/global_loot_modifiers.json
+a91f9a918f8d5ccd5e1a1b2e2768a25fe9d05741 data/forge/loot_modifiers/global_loot_modifiers.json

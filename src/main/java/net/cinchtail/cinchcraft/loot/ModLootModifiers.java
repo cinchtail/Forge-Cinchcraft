@@ -18,6 +18,9 @@ public class ModLootModifiers {
     public static final RegistryObject<Codec<? extends IGlobalLootModifier>> REMOVE_ITEM =
             LOOT_MODIFIER_SERIALIZERS.register("remove_item", RemoveItemModifier.CODEC);
 
+    public static final RegistryObject<Codec<? extends IGlobalLootModifier>> ADD_ITEM_TO_SUSPICIOUSE_BLOCK =
+            LOOT_MODIFIER_SERIALIZERS.register("add_suspiciouse_block", AddItemToSuspiciousBlockModifier.CODEC);
+
     public static void register(IEventBus eventBus) {
         LOOT_MODIFIER_SERIALIZERS.register(eventBus);
     }

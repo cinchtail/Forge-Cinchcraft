@@ -3,6 +3,7 @@ package net.cinchtail.cinchcraft.datagen;
 import net.cinchtail.cinchcraft.Cinchcraft;
 import net.cinchtail.cinchcraft.item.ModItems;
 import net.cinchtail.cinchcraft.loot.AddItemModifier;
+import net.cinchtail.cinchcraft.loot.AddItemToSuspiciousBlockModifier;
 import net.cinchtail.cinchcraft.loot.RemoveItemModifier;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.PackOutput;
@@ -67,6 +68,10 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
         add("carrot_seeds_from_shipwreck", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/shipwreck_supply")).build(),
                 LootItemRandomChanceCondition.randomChance(0.75f).build() }, ModItems.CARROT_SEEDS.get()));
+
+        add("nautilus_shell_from_cold_ocean_ruin", new AddItemToSuspiciousBlockModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(new ResourceLocation("archaeology/ocean_ruin_cold")).build() },
+                Items.NAUTILUS_SHELL));
     }
 
 }
