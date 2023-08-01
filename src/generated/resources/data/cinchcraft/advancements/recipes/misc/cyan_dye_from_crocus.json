@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "cinchcraft:magenta_dye_from_crocus"
+        "recipe": "cinchcraft:cyan_dye_from_crocus"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "cinchcraft:magenta_dye_from_crocus"
+      "cinchcraft:cyan_dye_from_crocus"
     ]
   },
   "sends_telemetry_event": false

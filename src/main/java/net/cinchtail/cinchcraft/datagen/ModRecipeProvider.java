@@ -626,11 +626,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(ModItems.LUPINE.get()).build()))
                 .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cyan_dye_from_lupine"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.MAGENTA_DYE)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.CYAN_DYE)
                 .requires(ModItems.CROCUS.get())
                 .unlockedBy("has_crocus", inventoryTrigger(ItemPredicate.Builder.item().
                         of(ModItems.CROCUS.get()).build()))
-                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "magenta_dye_from_crocus"));
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cyan_dye_from_crocus"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.PURPLE_DYE)
                 .requires(ModBlocks.BUBBLE_FLOWER.get())
