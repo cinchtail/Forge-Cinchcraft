@@ -56,6 +56,5 @@ public class VillageAddition {
         addBuildingToPool(templatePoolRegistry, processorListRegistry,
                 new ResourceLocation("minecraft:village/taiga/houses"),
                 "cinchcraft:village_addition/taiga_bee_keeper_house", 100);
-
     }
 }
