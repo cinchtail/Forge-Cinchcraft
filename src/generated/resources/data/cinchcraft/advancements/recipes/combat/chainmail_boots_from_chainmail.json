@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_rabit_hide": {
+    "has_chainmail": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:rabbit_hide"
+              "cinchcraft:chainmail"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:bundle"
+        "recipe": "cinchcraft:chainmail_boots_from_chainmail"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_rabit_hide",
+      "has_chainmail",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:bundle"
+      "cinchcraft:chainmail_boots_from_chainmail"
     ]
   },
   "sends_telemetry_event": false

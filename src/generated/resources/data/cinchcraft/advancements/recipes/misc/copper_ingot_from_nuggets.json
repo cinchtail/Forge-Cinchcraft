@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_chainmail": {
+    "has_copper_nugget": {
       "conditions": {
         "items": [
           {
             "items": [
-              "cinchcraft:chainmail"
+              "cinchcraft:copper_nugget"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:chainmail_leggings"
+        "recipe": "cinchcraft:copper_ingot_from_nuggets"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_chainmail",
+      "has_copper_nugget",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:chainmail_leggings"
+      "cinchcraft:copper_ingot_from_nuggets"
     ]
   },
   "sends_telemetry_event": false

@@ -362,6 +362,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(ModItems.THATCH_SLAB.get()).build()))
                 .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "reeds_from_thatch_slab"));
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, Items.PACKED_MUD)
+                .pattern("AT")
+                .define('A', Items.MUD)
+                .define('T', ModItems.REEDS.get())
+                .unlockedBy("has_reeds", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.REEDS.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "packed_mud_from_reeds"));
+
         //Blackstone Tools
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BLACKSTONE_SWORD.get())
                 .pattern("A")
@@ -472,7 +480,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', ModItems.COPPER_NUGGET.get())
                 .unlockedBy("has_copper_nugget", inventoryTrigger(ItemPredicate.Builder.item().
                         of(ModItems.COPPER_NUGGET.get()).build()))
-                .save(pWriter);
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "copper_ingot_from_nuggets"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.COPPER_NUGGET.get(), 9)
                 .requires(Items.COPPER_INGOT)
@@ -516,7 +524,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', ModItems.CHAINMAIL.get())
                 .unlockedBy("has_chainmail", inventoryTrigger(ItemPredicate.Builder.item().
                         of(ModItems.CHAINMAIL.get()).build()))
-                .save(pWriter);
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "chainmail_helmet_from_chainmail"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, Items.CHAINMAIL_CHESTPLATE)
                 .pattern("A A")
@@ -525,7 +533,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', ModItems.CHAINMAIL.get())
                 .unlockedBy("has_chainmail", inventoryTrigger(ItemPredicate.Builder.item().
                         of(ModItems.CHAINMAIL.get()).build()))
-                .save(pWriter);
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "chainmail_chestplate_from_chainmail"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, Items.CHAINMAIL_LEGGINGS)
                 .pattern("AAA")
@@ -534,7 +542,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', ModItems.CHAINMAIL.get())
                 .unlockedBy("has_chainmail", inventoryTrigger(ItemPredicate.Builder.item().
                         of(ModItems.CHAINMAIL.get()).build()))
-                .save(pWriter);
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "chainmail_leggings_from_chainmail"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, Items.CHAINMAIL_BOOTS)
                 .pattern("A A")
@@ -542,7 +550,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', ModItems.CHAINMAIL.get())
                 .unlockedBy("has_chainmail", inventoryTrigger(ItemPredicate.Builder.item().
                         of(ModItems.CHAINMAIL.get()).build()))
-                .save(pWriter);
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "chainmail_boots_from_chainmail"));
 
         //Food Recipes
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.BLUEBERRY_PIE.get())
@@ -673,7 +681,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
                 Ingredient.of(Items.DIAMOND_HORSE_ARMOR), Ingredient.of(Items.NETHERITE_INGOT),
                 RecipeCategory.TRANSPORTATION, ModItems.NETHERITE_HORSE_ARMOR.get()).unlocks("has_netherite_ingot",
-                has(Items.NETHERITE_INGOT)).save(pWriter, getItemName(ModItems.NETHERITE_HORSE_ARMOR.get()) + "_from_smithing");
+                has(Items.NETHERITE_INGOT))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, getItemName(ModItems.NETHERITE_HORSE_ARMOR.get()) + "_from_smithing"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.BUNDLE)
                 .pattern("TAT")
@@ -683,7 +692,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('T', Items.STRING)
                 .unlockedBy("has_rabit_hide", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Items.RABBIT_HIDE).build()))
-                .save(pWriter);
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "mod_bundle_recipe"));
 
         //Blocks
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_END_STONE_BRICKS.get())

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_chainmail": {
+    "has_reeds": {
       "conditions": {
         "items": [
           {
             "items": [
-              "cinchcraft:chainmail"
+              "cinchcraft:reeds"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:chainmail_helmet"
+        "recipe": "cinchcraft:packed_mud_from_reeds"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_chainmail",
+      "has_reeds",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:chainmail_helmet"
+      "cinchcraft:packed_mud_from_reeds"
     ]
   },
   "sends_telemetry_event": false

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_netherite_ingot": {
+    "has_chainmail": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:netherite_ingot"
+              "cinchcraft:chainmail"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:netherite_horse_armor_from_smithing"
+        "recipe": "cinchcraft:chainmail_chestplate_from_chainmail"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_netherite_ingot",
+      "has_chainmail",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:netherite_horse_armor_from_smithing"
+      "cinchcraft:chainmail_chestplate_from_chainmail"
     ]
   },
   "sends_telemetry_event": false

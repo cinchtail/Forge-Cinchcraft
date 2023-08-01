@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:chainmail_boots"
+        "recipe": "cinchcraft:chainmail_leggings_from_chainmail"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:chainmail_boots"
+      "cinchcraft:chainmail_leggings_from_chainmail"
     ]
   },
   "sends_telemetry_event": false

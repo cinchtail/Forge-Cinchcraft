@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_copper_nugget": {
+    "has_rabit_hide": {
       "conditions": {
         "items": [
           {
             "items": [
-              "cinchcraft:copper_nugget"
+              "minecraft:rabbit_hide"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:copper_ingot"
+        "recipe": "cinchcraft:mod_bundle_recipe"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_copper_nugget",
+      "has_rabit_hide",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:copper_ingot"
+      "cinchcraft:mod_bundle_recipe"
     ]
   },
   "sends_telemetry_event": false
