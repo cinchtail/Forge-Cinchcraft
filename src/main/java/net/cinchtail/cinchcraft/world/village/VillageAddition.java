@@ -22,13 +22,6 @@ import java.util.List;
 public class VillageAddition {
     private static final ResourceKey<StructureProcessorList> EMPTY_PROCESSOR_LIST_KEY = ResourceKey.create(
             Registries.PROCESSOR_LIST, new ResourceLocation("minecraft", "empty"));
-
-    /**
-     * Adds the building to the targeted pool.
-     * We will call this in addNewVillageBuilding method further down to add to every village.
-     * <p>
-     * Note: This is an additive operation which means multiple mods can do this and they stack with each other safely.
-     */
     private static void addBuildingToPool(Registry<StructureTemplatePool> templatePoolRegistry,
                                           Registry<StructureProcessorList> processorListRegistry,
                                           ResourceLocation poolRL,
@@ -51,27 +44,18 @@ public class VillageAddition {
         listOfPieceEntries.add(new Pair<>(piece, weight));
         pool.rawTemplates = listOfPieceEntries;
     }
-
-    /**
-     * We use FMLServerAboutToStartEvent as the dynamic registry exists now and all JSON worldgen files were parsed.
-     * Mod compat is best done here.
-     */
     @SubscribeEvent
     public static void addNewVillageBuilding(final ServerAboutToStartEvent event) {
         Registry<StructureTemplatePool> templatePoolRegistry = event.getServer().registryAccess().registry(Registries.TEMPLATE_POOL).orElseThrow();
         Registry<StructureProcessorList> processorListRegistry = event.getServer().registryAccess().registry(Registries.PROCESSOR_LIST).orElseThrow();
 
-        /*addBuildingToPool(templatePoolRegistry, processorListRegistry,
-                new ResourceLocation("minecraft:village/plains/houses"),
-                "cinchcraft:plains_bee_keeper_house", 15);
-
         addBuildingToPool(templatePoolRegistry, processorListRegistry,
-                new ResourceLocation("minecraft:village/savanna/houses"),
-                "cinchcraft:savanna_weaponsmith_is_to_rare", 20);
+                new ResourceLocation("minecraft:village/plains/houses"),
+                "cinchcraft:village_addition/plains_bee_keeper_house", 100);
 
         addBuildingToPool(templatePoolRegistry, processorListRegistry,
                 new ResourceLocation("minecraft:village/taiga/houses"),
-                "cinchcraft:taiga_bee_keeper_house", 100);*/
+                "cinchcraft:village_addition/taiga_bee_keeper_house", 100);
 
     }
 }
