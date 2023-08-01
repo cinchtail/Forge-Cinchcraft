@@ -21,7 +21,7 @@
     "target": {
       "type": "minecraft:matching_blocks",
       "blocks": [
-        "minecraft:dirt",
+        "minecraft:grass_block",
         "minecraft:packed_mud"
       ]
     }

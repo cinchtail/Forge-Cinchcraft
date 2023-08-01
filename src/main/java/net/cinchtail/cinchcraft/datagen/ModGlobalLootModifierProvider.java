@@ -3,18 +3,17 @@ package net.cinchtail.cinchcraft.datagen;
 import net.cinchtail.cinchcraft.Cinchcraft;
 import net.cinchtail.cinchcraft.item.ModItems;
 import net.cinchtail.cinchcraft.loot.AddItemModifier;
-import net.cinchtail.cinchcraft.loot.AddItemToSuspiciousBlockModifier;
+import net.cinchtail.cinchcraft.loot.CommonAddItemToSuspiciouseBlockModifier;
+import net.cinchtail.cinchcraft.loot.RareAddItemToSuspiciousBlockModifier;
 import net.cinchtail.cinchcraft.loot.RemoveItemModifier;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.CarrotBlock;
 import net.minecraft.world.level.block.DoublePlantBlock;
 import net.minecraft.world.level.block.PitcherCropBlock;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
-import net.minecraft.world.level.block.state.properties.Half;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
@@ -69,9 +68,17 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/shipwreck_supply")).build(),
                 LootItemRandomChanceCondition.randomChance(0.75f).build() }, ModItems.CARROT_SEEDS.get()));
 
-        add("nautilus_shell_from_cold_ocean_ruin", new AddItemToSuspiciousBlockModifier(new LootItemCondition[] {
+        add("nautilus_shell_from_cold_ocean_ruin", new RareAddItemToSuspiciousBlockModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("archaeology/ocean_ruin_cold")).build() },
                 Items.NAUTILUS_SHELL));
+
+        add("nautilus_shell_from_cold_ocean_ruin", new RareAddItemToSuspiciousBlockModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(new ResourceLocation("archaeology/ocean_ruin_warm")).build() },
+                Items.NAUTILUS_SHELL));
+
+        add("book_from_trail_ruin_common", new CommonAddItemToSuspiciouseBlockModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(new ResourceLocation("archaeology/trail_ruins_common")).build() },
+                Items.BOOK));
     }
 
 }

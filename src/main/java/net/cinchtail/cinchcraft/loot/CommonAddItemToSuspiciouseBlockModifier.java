@@ -15,13 +15,13 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Supplier;
 
-public class AddItemToSuspiciousBlockModifier extends LootModifier {
-    public static final Supplier<Codec<AddItemToSuspiciousBlockModifier>> CODEC = Suppliers.memoize(()
+public class CommonAddItemToSuspiciouseBlockModifier extends LootModifier {
+    public static final Supplier<Codec<CommonAddItemToSuspiciouseBlockModifier>> CODEC = Suppliers.memoize(()
             -> RecordCodecBuilder.create(inst -> codecStart(inst).and(ForgeRegistries.ITEMS.getCodec()
-            .fieldOf("item").forGetter(m -> m.item)).apply(inst, AddItemToSuspiciousBlockModifier::new)));
+            .fieldOf("item").forGetter(m -> m.item)).apply(inst, CommonAddItemToSuspiciouseBlockModifier::new)));
     private final Item item;
 
-    public AddItemToSuspiciousBlockModifier(LootItemCondition[] conditionsIn, Item item) {
+    public CommonAddItemToSuspiciouseBlockModifier(LootItemCondition[] conditionsIn, Item item) {
         super(conditionsIn);
         this.item = item;
     }
@@ -29,16 +29,15 @@ public class AddItemToSuspiciousBlockModifier extends LootModifier {
     @Override
     protected @NotNull ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
         for (LootItemCondition condition : this.conditions) {
-            if(!condition.test(context)) {
+            if (!condition.test(context)) {
                 return generatedLoot;
             }
         }
 
-        if(context.getRandom().nextFloat() < 0.1f) { // THIS IS WAY TOO HIGH. Suggest something like 0.11f ish
+        if (context.getRandom().nextFloat() < 0.17f) {
             generatedLoot.clear();
             generatedLoot.add(new ItemStack(this.item));
         }
-
         return generatedLoot;
     }
 

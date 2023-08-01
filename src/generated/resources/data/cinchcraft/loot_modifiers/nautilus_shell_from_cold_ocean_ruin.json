@@ -1,9 +1,9 @@
 {
-  "type": "cinchcraft:add_suspiciouse_block",
+  "type": "cinchcraft:rare_add_suspiciouse_block",
   "conditions": [
     {
       "condition": "forge:loot_table_id",
-      "loot_table_id": "minecraft:archaeology/ocean_ruin_cold"
+      "loot_table_id": "minecraft:archaeology/ocean_ruin_warm"
     }
   ],
   "item": "minecraft:nautilus_shell"
