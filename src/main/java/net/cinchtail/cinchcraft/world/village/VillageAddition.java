@@ -51,14 +51,14 @@ public class VillageAddition {
 
         addBuildingToPool(templatePoolRegistry, processorListRegistry,
                 new ResourceLocation("minecraft:village/plains/houses"),
-                "cinchcraft:village_addition/plains_bee_keeper_house", 12);
+                "cinchcraft:village_addition/plains_bee_keeper_house", 10);
 
         addBuildingToPool(templatePoolRegistry, processorListRegistry,
                 new ResourceLocation("minecraft:village/taiga/houses"),
-                "cinchcraft:village_addition/taiga_bee_keeper_house", 12);
+                "cinchcraft:village_addition/taiga_bee_keeper_house", 15);
 
         addBuildingToPool(templatePoolRegistry, processorListRegistry,
                 new ResourceLocation("minecraft:village/savanna/houses"),
-                "cinchcraft:village_addition/savanna_bee_keeper_house", 9);
+                "cinchcraft:village_addition/savanna_bee_keeper_house", 7);
     }
 }
