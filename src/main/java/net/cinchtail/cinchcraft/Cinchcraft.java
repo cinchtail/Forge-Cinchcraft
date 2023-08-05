@@ -9,6 +9,7 @@ import net.cinchtail.cinchcraft.event.WanderingTraderTrades;
 import net.cinchtail.cinchcraft.item.ModCreativeModeTabs;
 import net.cinchtail.cinchcraft.item.ModItems;
 import net.cinchtail.cinchcraft.loot.ModLootModifiers;
+import net.cinchtail.cinchcraft.mixins.MixinBeehivePoi;
 import net.cinchtail.cinchcraft.potion.ModPotions;
 import net.cinchtail.cinchcraft.sound.ModSounds;
 import net.cinchtail.cinchcraft.util.BetterBrewingRecipe;
@@ -71,6 +72,8 @@ public class Cinchcraft
         MinecraftForge.EVENT_BUS.register(new ModEvents());
 
         MinecraftForge.EVENT_BUS.register(this);
+
+        MinecraftForge.EVENT_BUS.register(MixinBeehivePoi.class);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
