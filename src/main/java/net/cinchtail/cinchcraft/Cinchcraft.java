@@ -32,6 +32,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import org.spongepowered.asm.launch.MixinBootstrap;
 
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -101,6 +102,8 @@ public class Cinchcraft
         Villager.WANTED_ITEMS = ImmutableSet.copyOf(
                 Stream.concat(vanillaWantedItems, modWantedItems)
                         .collect(Collectors.toSet()));
+
+        MixinBootstrap.init();
     }
 
     @Mod.EventBusSubscriber(modid = Cinchcraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)

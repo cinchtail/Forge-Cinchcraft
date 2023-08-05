@@ -18,7 +18,7 @@ import java.util.List;
 public class VillagerTrades {
     @SubscribeEvent
     public static void addCustomTrades(VillagerTradesEvent event) {
-        if (event.getType() == ModVillagers.BEE_KEEPER.get()) {
+        if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.HONEYCOMB, 3);
             int villagerLevel = 1;
@@ -28,7 +28,7 @@ public class VillagerTrades {
                     stack, 7, 1, 0.02F));
 
         }
-        if (event.getType() == ModVillagers.BEE_KEEPER.get()) {
+        if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.BEE_NEST, 1);
             int villagerLevel = 1;
@@ -37,7 +37,7 @@ public class VillagerTrades {
                     new ItemStack(Items.EMERALD, 5),
                     stack, 5, 3, 0.02F));
         }
-        if (event.getType() == ModVillagers.BEE_KEEPER.get()) {
+        if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.BEEHIVE, 1);
             int villagerLevel = 1;
@@ -46,7 +46,7 @@ public class VillagerTrades {
                     new ItemStack(Items.EMERALD, 5),
                     stack, 5, 3, 0.02F));
         }
-        if (event.getType() == ModVillagers.BEE_KEEPER.get()) {
+        if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(ModBlocks.SMALL_ROSE.get(), 5);
             int villagerLevel = 1;
@@ -55,7 +55,7 @@ public class VillagerTrades {
                     new ItemStack(Items.EMERALD, 1),
                     stack, 10, 2, 0.02F));
         }
-        if (event.getType() == ModVillagers.BEE_KEEPER.get()) {
+        if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.EMERALD, 1);
             int villagerLevel = 2;
@@ -64,7 +64,7 @@ public class VillagerTrades {
                     new ItemStack(Items.RED_TULIP, 2),
                     stack, 6, 2, 0.02F));
         }
-        if (event.getType() == ModVillagers.BEE_KEEPER.get()) {
+        if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.EMERALD, 1);
             int villagerLevel = 2;
@@ -73,7 +73,7 @@ public class VillagerTrades {
                     new ItemStack(Items.ORANGE_TULIP, 2),
                     stack, 6, 2, 0.02F));
         }
-        if (event.getType() == ModVillagers.BEE_KEEPER.get()) {
+        if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.EMERALD, 1);
             int villagerLevel = 2;
@@ -82,7 +82,7 @@ public class VillagerTrades {
                     new ItemStack(Items.PINK_TULIP, 2),
                     stack, 6, 2, 0.02F));
         }
-        if (event.getType() == ModVillagers.BEE_KEEPER.get()) {
+        if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.EMERALD, 1);
             int villagerLevel = 2;
@@ -92,7 +92,7 @@ public class VillagerTrades {
                     stack, 6, 2, 0.02F));
 
         }
-        if (event.getType() == ModVillagers.BEE_KEEPER.get()) {
+        if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.EMERALD, 1);
             int villagerLevel = 2;
@@ -101,7 +101,7 @@ public class VillagerTrades {
                     new ItemStack(ModBlocks.CROCUS.get(), 2),
                     stack, 8, 2, 0.02F));
         }
-        if (event.getType() == ModVillagers.BEE_KEEPER.get()) {
+        if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.EMERALD, 1);
             int villagerLevel = 2;
@@ -110,7 +110,7 @@ public class VillagerTrades {
                     new ItemStack(ModBlocks.ALYSSUM.get(), 2),
                     stack, 8, 2, 0.02F));
         }
-        if (event.getType() == ModVillagers.BEE_KEEPER.get()) {
+        if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.EMERALD, 1);
             int villagerLevel = 2;
@@ -119,7 +119,7 @@ public class VillagerTrades {
                     new ItemStack(ModBlocks.LUPINE.get(), 2),
                     stack, 8, 2, 0.02F));
         }
-        if (event.getType() == ModVillagers.BEE_KEEPER.get()) {
+        if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.EMERALD, 1);
             int villagerLevel = 2;
@@ -128,7 +128,7 @@ public class VillagerTrades {
                     new ItemStack(ModBlocks.BUTTER_CUP.get(), 2),
                     stack, 8, 2, 0.02F));
         }
-        if (event.getType() == ModVillagers.BEE_KEEPER.get()) {
+        if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.EMERALD, 1);
             int villagerLevel = 2;
@@ -137,7 +137,7 @@ public class VillagerTrades {
                     new ItemStack(Items.LILY_OF_THE_VALLEY, 2),
                     stack, 8, 2, 0.02F));
         }
-        if (event.getType() == ModVillagers.BEE_KEEPER.get()) {
+        if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.EMERALD, 1);
             int villagerLevel = 2;
@@ -146,7 +146,7 @@ public class VillagerTrades {
                     new ItemStack(Items.BLUE_ORCHID, 2),
                     stack, 8, 2, 0.02F));
         }
-        if (event.getType() == ModVillagers.BEE_KEEPER.get()) {
+        if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.EMERALD, 1);
             int villagerLevel = 2;
@@ -155,7 +155,7 @@ public class VillagerTrades {
                     new ItemStack(Items.ALLIUM, 2),
                     stack, 8, 2, 0.02F));
         }
-        if (event.getType() == ModVillagers.BEE_KEEPER.get()) {
+        if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.EMERALD, 1);
             int villagerLevel = 3;
@@ -164,7 +164,7 @@ public class VillagerTrades {
                     new ItemStack(Items.GLASS_BOTTLE, 4),
                     stack, 6, 2, 0.02F));
         }
-        if (event.getType() == ModVillagers.BEE_KEEPER.get()) {
+        if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.SUGAR, 6);
             int villagerLevel = 3;
@@ -173,7 +173,7 @@ public class VillagerTrades {
                     new ItemStack(Items.EMERALD, 1),
                     stack, 16, 2, 0.02F));
         }
-        if (event.getType() == ModVillagers.BEE_KEEPER.get()) {
+        if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.EMERALD, 4);
             int villagerLevel = 3;
@@ -182,7 +182,7 @@ public class VillagerTrades {
                     new ItemStack(Items.SHEARS, 1),
                     stack, 7, 3, 0.02F));
         }
-        if (event.getType() == ModVillagers.BEE_KEEPER.get()) {
+        if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.ROSE_BUSH, 2);
             int villagerLevel = 3;
@@ -191,7 +191,7 @@ public class VillagerTrades {
                     new ItemStack(Items.EMERALD, 1),
                     stack, 8, 3, 0.02F));
         }
-        if (event.getType() == ModVillagers.BEE_KEEPER.get()) {
+        if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.LILAC, 2);
             int villagerLevel = 3;
@@ -200,7 +200,7 @@ public class VillagerTrades {
                     new ItemStack(Items.EMERALD, 1),
                     stack, 8, 3, 0.02F));
         }
-        if (event.getType() == ModVillagers.BEE_KEEPER.get()) {
+        if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.PEONY, 2);
             int villagerLevel = 3;
@@ -209,7 +209,7 @@ public class VillagerTrades {
                     new ItemStack(Items.EMERALD, 1),
                     stack, 8, 3, 0.02F));
         }
-        if (event.getType() == ModVillagers.BEE_KEEPER.get()) {
+        if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.HONEY_BOTTLE, 1);
             int villagerLevel = 4;
@@ -218,7 +218,7 @@ public class VillagerTrades {
                     new ItemStack(Items.EMERALD, 1),
                     stack, 6, 4, 0.02F));
         }
-        if (event.getType() == ModVillagers.BEE_KEEPER.get()) {
+        if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.EMERALD, 1);
             int villagerLevel = 4;
@@ -227,7 +227,7 @@ public class VillagerTrades {
                     new ItemStack(ModItems.BLUEBERRIES.get(), 6),
                     stack, 12, 4, 0.02F));
         }
-        if (event.getType() == ModVillagers.BEE_KEEPER.get()) {
+        if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.EMERALD, 1);
             int villagerLevel = 4;
@@ -236,7 +236,7 @@ public class VillagerTrades {
                     new ItemStack(ModItems.STRAWBERRIES.get(), 6),
                     stack, 12, 4, 0.02F));
         }
-        if (event.getType() == ModVillagers.BEE_KEEPER.get()) {
+        if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.HONEYCOMB_BLOCK, 1);
             int villagerLevel = 5;
@@ -245,7 +245,7 @@ public class VillagerTrades {
                     new ItemStack(Items.EMERALD, 2),
                     stack, 4, 4, 0.02F));
         }
-        if (event.getType() == ModVillagers.BEE_KEEPER.get()) {
+        if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.HONEY_BLOCK, 1);
             int villagerLevel = 5;
