@@ -7,7 +7,7 @@
       "weight": 5,
       "element": {
         "location": "cinchcraft:ruined_mob_grinders/ruined_mob_grinder_basic_1_killing_chamber_1",
-        "processors": "minecraft:empty",
+        "processors": "cinchcraft:make_stone_bricks_cracked",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -16,7 +16,7 @@
       "weight": 5,
       "element": {
         "location": "cinchcraft:ruined_mob_grinders/ruined_mob_grinder_basic_1_killing_chamber_2",
-        "processors": "minecraft:empty",
+        "processors": "cinchcraft:make_stone_bricks_cracked",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
