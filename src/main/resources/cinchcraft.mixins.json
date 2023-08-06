@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "com.cinchtail.cinchcraft.mixin",
+  "package": "net.cinchtail.cinchcraft.mixins",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "MixinBeehivePoi"
