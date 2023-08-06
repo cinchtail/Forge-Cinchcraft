@@ -1,7 +1,7 @@
 {
   "type": "minecraft:jigsaw",
   "start_pool": "cinchcraft:ruined_mob_grinder_basic_1/start_pool",
-  "size": 2,
+  "size": 6,
   "max_distance_from_center": 80,
   "biomes": "#cinchcraft:has_structure/ruined_mob_grinder_normal",
   "step": "underground_structures",
@@ -9,7 +9,6 @@
   "start_height": {
     "absolute": -30
   },
-  "project_start_to_heightmap": "WORLD_SURFACE_WG",
   "use_expansion_hack": false,
   "spawn_overrides": {}
 }
