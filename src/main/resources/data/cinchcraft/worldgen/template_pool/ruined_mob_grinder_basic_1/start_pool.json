@@ -1,12 +1,12 @@
 {
-  "name": "cinchcraft:abandoned_farm_house/start_pool",
+  "name": "cinchcraft:ruined_mob_grinder_basic_1/start_pool",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
-        "location": "cinchcraft:abandoned_farm_house",
-        "processors": "cinchcraft:make_cobblestone_mossy",
+        "location": "cinchcraft:ruined_mob_grinder_basic_1",
+        "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }

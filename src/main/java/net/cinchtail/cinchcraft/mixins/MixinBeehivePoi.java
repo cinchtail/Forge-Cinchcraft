@@ -24,7 +24,7 @@ public class MixinBeehivePoi {
             try {
                 Field maxTicketsField = PoiType.class.getDeclaredField("maxTickets");
                 maxTicketsField.setAccessible(true);
-                maxTicketsField.setInt(beehive, 0);
+                maxTicketsField.setInt(beehive, 1);
 
                 Field validRangeField = PoiType.class.getDeclaredField("validRange");
                 validRangeField.setAccessible(true);

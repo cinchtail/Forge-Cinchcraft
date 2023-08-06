@@ -1,0 +1,25 @@
+{
+
+  "name": "cinchcraft:killing_chamber/side_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 7,
+      "element": {
+        "location": "cinchcraft:ruined_mob_grinders/ruined_mob_grinder_basic_1_killing_chamber_1",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "cinchcraft:ruined_mob_grinders/ruined_mob_grinder_basic_1_killing_chamber_2",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

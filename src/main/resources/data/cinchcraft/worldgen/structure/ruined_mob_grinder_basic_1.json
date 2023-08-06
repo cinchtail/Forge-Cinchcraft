@@ -1,13 +1,13 @@
 {
   "type": "minecraft:jigsaw",
-  "start_pool": "cinchcraft:villager_ruin_1/start_pool",
+  "start_pool": "cinchcraft:ruined_mob_grinder_basic_1/start_pool",
   "size": 2,
   "max_distance_from_center": 80,
-  "biomes": "#cinchcraft:has_structure/villager_ruin_1",
-  "step": "surface_structures",
-  "terrain_adaptation": "beard_thin",
+  "biomes": "#cinchcraft:has_structure/ruined_mob_grinder_normal",
+  "step": "underground_structures",
+  "terrain_adaptation": "bury",
   "start_height": {
-    "absolute": 0
+    "absolute": -30
   },
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
   "use_expansion_hack": false,
