@@ -7,7 +7,7 @@
   "step": "underground_structures",
   "terrain_adaptation": "bury",
   "start_height": {
-    "absolute": -30
+    "absolute": 0
   },
   "use_expansion_hack": false,
   "spawn_overrides": {}

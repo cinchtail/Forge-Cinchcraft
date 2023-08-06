@@ -4,7 +4,7 @@
   "fallback": "minecraft:empty",
   "elements": [
     {
-      "weight": 7,
+      "weight": 5,
       "element": {
         "location": "cinchcraft:ruined_mob_grinders/ruined_mob_grinder_basic_1_killing_chamber_1",
         "processors": "minecraft:empty",
@@ -13,7 +13,7 @@
       }
     },
     {
-      "weight": 3,
+      "weight": 5,
       "element": {
         "location": "cinchcraft:ruined_mob_grinders/ruined_mob_grinder_basic_1_killing_chamber_2",
         "processors": "minecraft:empty",
