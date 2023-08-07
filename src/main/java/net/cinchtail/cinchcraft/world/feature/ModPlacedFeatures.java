@@ -61,7 +61,7 @@ public class ModPlacedFeatures {
                         HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(90))));
 
         register(context, NETHER_RUBY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_RUBY_ORE_KEY),
-                commonOrePlacement(4, // VeinsPerChunk
+                commonOrePlacement(3, // VeinsPerChunk
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
         register(context, NETHER_IRON_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_IRON_ORE_KEY),
                 commonOrePlacement(6, // VeinsPerChunk

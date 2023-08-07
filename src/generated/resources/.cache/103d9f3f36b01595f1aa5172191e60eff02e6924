@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-19T17:17:53.3503652	Registries
+// 1.20.1	2023-08-07T12:33:02.8882422	Registries
 9afdabb896b769c1117b97a80849596948e71d60 data/cinchcraft/worldgen/configured_feature/alyssum.json
 92df84a7d9cdf13d72d83184c20146b65e5b8fb3 data/cinchcraft/worldgen/configured_feature/blueberries.json
 f00ef514c715d19ce216e62b0bc018cdb21a042e data/cinchcraft/worldgen/configured_feature/bubble_flower.json
@@ -33,7 +33,7 @@ ec1437c87c15a64e10e4ed10b2b83c0ea5218124 data/cinchcraft/worldgen/placed_feature
 8a6f5903a380df045a980514876706488c4aedb6 data/cinchcraft/worldgen/placed_feature/nether_iron_ore_placed.json
 7642b213d16b7ab3941c34e325dacc6cb460f82d data/cinchcraft/worldgen/placed_feature/nether_lapis_lazuli_ore_placed.json
 e46d4c947d9db83861466cf2fccdb1b1dacd2749 data/cinchcraft/worldgen/placed_feature/nether_redstone_ore_placed.json
-34e44cebf93668119e9d55869fa7f867031ab5c7 data/cinchcraft/worldgen/placed_feature/nether_ruby_ore_placed.json
+057522864f63dfc3e2a45fcce3803e3ecf6b3410 data/cinchcraft/worldgen/placed_feature/nether_ruby_ore_placed.json
 4e7bc5ff1fecf0360c824811a5cbfce04d44f8b6 data/cinchcraft/worldgen/placed_feature/pineapple_placed.json
 a664d0fcd3ec843cf5e64ccae048c5762bfee014 data/cinchcraft/worldgen/placed_feature/reeds_placed.json
 5efb62c972a62634213c01fbac47c78425cb8464 data/cinchcraft/worldgen/placed_feature/ruby_ore_placed.json

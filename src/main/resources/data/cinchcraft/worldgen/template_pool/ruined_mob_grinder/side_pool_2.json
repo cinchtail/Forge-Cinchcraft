@@ -11,6 +11,15 @@
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:ruined_mob_grinders/adapters/ruined_mob_grinder_adapter",
+        "processors": "cinchcraft:make_stone_bricks_cracked",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
     }
   ]
 }
