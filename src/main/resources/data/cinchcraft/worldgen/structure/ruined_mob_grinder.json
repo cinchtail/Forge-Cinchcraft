@@ -1,6 +1,6 @@
 {
   "type": "minecraft:jigsaw",
-  "start_pool": "cinchcraft:ruined_mob_grinder_basic_1/start_pool",
+  "start_pool": "cinchcraft:ruined_mob_grinder/start_pool",
   "size": 6,
   "max_distance_from_center": 80,
   "biomes": "#cinchcraft:has_structure/ruined_mob_grinder_normal",

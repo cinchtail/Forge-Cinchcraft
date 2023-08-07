@@ -1,0 +1,25 @@
+{
+
+  "name": "cinchcraft:killing_chamber_section/side_pool_3",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:ruined_mob_grinders/killing_chambers/sections/ruined_mob_grinder_killing_chamber_section_1",
+        "processors": "cinchcraft:make_stone_bricks_cracked",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:ruined_mob_grinders/killing_chambers/sections/ruined_mob_grinder_killing_chamber_section_2",
+        "processors": "cinchcraft:make_stone_bricks_cracked",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

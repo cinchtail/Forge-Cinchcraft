@@ -1,14 +1,14 @@
 {
   "structures": [
     {
-      "structure": "cinchcraft:ruined_mob_grinder_basic_1",
+      "structure": "cinchcraft:ruined_mob_grinder",
       "weight": 1
     }
   ],
   "placement": {
     "salt": 1609095472,
     "spacing": 110,
-    "separation": 90,
+    "separation": 30,
     "type": "minecraft:random_spread"
   }
 }

@@ -1,11 +1,12 @@
 {
-  "name": "cinchcraft:ruined_mob_grinder_basic_1/start_pool",
+
+  "name": "cinchcraft:killing_chamber_connect/side_pool_2",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
-        "location": "cinchcraft:ruined_mob_grinders/ruined_mob_grinder_basic_1",
+        "location": "cinchcraft:ruined_mob_grinders/killing_chambers/sections/ruined_mob_grinder_killing_chamber_section_base",
         "processors": "cinchcraft:make_stone_bricks_cracked",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"

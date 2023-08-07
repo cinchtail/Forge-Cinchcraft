@@ -6,8 +6,8 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:powder_snow_bucket",
-          "weight": 3
+          "name": "minecraft:bone",
+          "weight": 10
         },
         {
           "type": "minecraft:item",
@@ -16,13 +16,13 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 3.0,
-                "min": 1.0
+                "max": 20.0,
+                "min": 15.0
               },
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:packed_ice",
+          "name": "minecraft:string",
           "weight": 3
         },
         {
@@ -54,7 +54,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:snowball",
+          "name": "minecraft:rotten_flesh",
           "weight": 5
         },
         {
@@ -86,27 +86,12 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:chainmail_helmet",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:iron_chestplate",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:iron_boots",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:item",
-          "name": "cinchcraft:deepslate_sword",
-          "weight": 2
-        },
-        {
-          "type": "minecraft:item",
           "name": "minecraft:bow",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_sword",
           "weight": 1
         },
         {
@@ -123,8 +108,8 @@
       ],
       "rolls": {
         "type": "minecraft:uniform",
-        "max": 6.0,
-        "min": 3.0
+        "max": 15.0,
+        "min": 10.0
       }
     }
   ]
