@@ -1,120 +1,117 @@
 {
-  "type": "minecraft:chest",
   "pools": [
     {
-      "bonus_rolls": 0.0,
+      "bonus_rolls": 0.5,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "minecraft:rotten_flesh",
-          "weight": 10
-        },
-        {
-          "type": "minecraft:item",
+          "type": "item",
+          "name": "minecraft:spider_eye",
+          "weight": 3,
           "functions": [
             {
-              "add": false,
+              "function": "minecraft:set_count",
               "count": {
-                "type": "minecraft:uniform",
-                "max": 20.0,
-                "min": 15.0
-              },
-              "function": "minecraft:set_count"
+                "max": 8,
+                "min": 5
+              }
             }
-          ],
+          ]
+        },
+        {
+          "type": "item",
           "name": "minecraft:string",
-          "weight": 3
-        },
-        {
-          "type": "minecraft:item",
+          "weight": 5,
           "functions": [
             {
-              "add": false,
+              "function": "minecraft:set_count",
               "count": {
-                "type": "minecraft:uniform",
-                "max": 3.0,
-                "min": 1.0
-              },
-              "function": "minecraft:set_count"
+                "max": 15,
+                "min": 5
+              }
             }
-          ],
-          "name": "minecraft:iron_ingot",
-          "weight": 3
+          ]
         },
         {
-          "type": "minecraft:item",
-          "functions": [
+          "type": "alternatives",
+          "children": [
             {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 9.0,
-                "min": 2.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
-          "name": "minecraft:bone",
-          "weight": 5
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
+              "type": "item",
+              "name": "minecraft:iron_ingot",
+              "weight": 1
+            },
             {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 3.0,
-                "min": 1.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
-          "name": "minecraft:bread",
-          "weight": 10
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
+              "type": "item",
+              "name": "minecraft:bread",
+              "weight": 1
+            },
             {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 3.0,
-                "min": 1.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
-          "name": "minecraft:carrot",
-          "weight": 3
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:iron_sword",
-          "weight": 1
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:potato",
-          "weight": 3
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
+              "type": "item",
+              "name": "minecraft:bucket",
+              "weight": 1
+            },
             {
-              "function": "minecraft:enchant_with_levels",
-              "levels": 10.0,
-              "treasure": true
+              "type": "item",
+              "name": "cinchcraft:ruby",
+              "weight": 1
+            },
+            {
+              "type": "item",
+              "name": "minecraft:fermented_spider_eye",
+              "weight": 1
+            },
+            {
+              "type": "minecraft:item",
+              "functions": [
+                {
+                  "function": "minecraft:enchant_with_levels",
+                  "levels": 15.0,
+                  "treasure": true
+                }
+              ],
+              "name": "minecraft:book",
+              "weight": 1
+            },
+            {
+              "type": "minecraft:item",
+              "functions": [
+                {
+                  "enchantments": [
+                    "minecraft:bane_of_arthropods"
+                  ],
+                  "function": "minecraft:enchant_randomly"
+                }
+              ],
+              "name": "minecraft:book",
+              "weight": 3
             }
-          ],
-          "name": "minecraft:book"
+          ]
+        },
+        {
+          "type": "alternatives",
+          "children": [
+            {
+              "type": "item",
+              "name": "minecraft:iron_sword",
+              "weight": 1,
+              "functions": [
+                {
+                  "add": false,
+                  "damage": {
+                    "type": "minecraft:uniform",
+                    "max": 1.0,
+                    "min": 0.8
+                  },
+                  "function": "minecraft:set_damage"
+                }
+              ]
+            }
+          ]
         }
       ],
       "rolls": {
         "type": "minecraft:uniform",
-        "max": 6.0,
-        "min": 3.0
+        "max": 20.0,
+        "min": 10.0
       }
     }
   ]
