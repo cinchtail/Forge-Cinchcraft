@@ -1,7 +1,7 @@
 {
   "type": "minecraft:jigsaw",
   "start_pool": "cinchcraft:abandoned_archeology_site/start_pool",
-  "size": 2,
+  "size": 3,
   "max_distance_from_center": 80,
   "biomes": "#cinchcraft:has_structure/abandoned_archeology_site",
   "step": "surface_structures",
