@@ -1,0 +1,148 @@
+{
+  "pools": [
+    {
+      "bonus_rolls": 0.5,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:rotten_flesh",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "max": 15,
+                "min": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:bone",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "max": 15,
+                "min": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:arrow",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "max": 10,
+                "min": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "alternatives",
+          "children": [
+            {
+              "type": "item",
+              "name": "minecraft:carrot",
+              "weight": 2
+            },
+            {
+              "type": "item",
+              "name": "minecraft:potato",
+              "weight": 2
+            },
+            {
+              "type": "item",
+              "name": "minecraft:iron_ingot",
+              "weight": 1
+            },
+            {
+              "type": "item",
+              "name": "minecraft:bread",
+              "weight": 1
+            },
+            {
+              "type": "item",
+              "name": "minecraft:bucket",
+              "weight": 1
+            },
+            {
+              "type": "item",
+              "name": "cinchcraft:ruby",
+              "weight": 1
+            },
+            {
+              "type": "item",
+              "name": "minecraft:string",
+              "weight": 1
+            },
+            {
+              "type": "minecraft:item",
+              "functions": [
+                {
+                  "function": "minecraft:enchant_with_levels",
+                  "levels": 10.0,
+                  "treasure": true
+                }
+              ],
+              "name": "minecraft:book",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "type": "alternatives",
+          "children": [
+            {
+              "type": "item",
+              "name": "minecraft:iron_sword",
+              "weight": 1,
+              "functions": [
+                {
+                  "add": false,
+                  "damage": {
+                    "type": "minecraft:uniform",
+                    "max": 1.0,
+                    "min": 0.8
+                  },
+                  "function": "minecraft:set_damage"
+                }
+              ]
+            },
+            {
+              "type": "item",
+              "name": "minecraft:bow",
+              "weight": 1,
+              "functions": [
+                {
+                  "function": "minecraft:enchant_randomly"
+                },
+                {
+                  "add": false,
+                  "damage": {
+                    "type": "minecraft:uniform",
+                    "max": 1.0,
+                    "min": 0.8
+                  },
+                  "function": "minecraft:set_damage"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 20.0,
+        "min": 10.0
+      }
+    }
+  ]
+}
