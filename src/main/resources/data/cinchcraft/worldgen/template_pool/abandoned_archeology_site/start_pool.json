@@ -6,16 +6,16 @@
       "weight": 1,
       "element": {
         "location": "cinchcraft:abandoned_archeology_sites/abandoned_archeology_site_top_1",
-        "processors": "cinchcraft:coarse_dirt_and_gravel_mixed_into_dirt",
+        "processors": "cinchcraft:abandoned_archeology_site_processor",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
     },
     {
-      "weight": 1,
+      "weight": 10,
       "element": {
         "location": "cinchcraft:abandoned_archeology_sites/abandoned_archeology_site_top_2",
-        "processors": "cinchcraft:coarse_dirt_and_gravel_mixed_into_dirt",
+        "processors": "cinchcraft:abandoned_archeology_site_processor",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
@@ -24,7 +24,7 @@
       "weight": 1,
       "element": {
         "location": "cinchcraft:abandoned_archeology_sites/abandoned_archeology_site_top_3",
-        "processors": "cinchcraft:coarse_dirt_and_gravel_mixed_into_dirt",
+        "processors": "cinchcraft:abandoned_archeology_site_processor",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }

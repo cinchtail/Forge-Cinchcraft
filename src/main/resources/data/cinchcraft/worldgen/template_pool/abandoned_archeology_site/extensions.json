@@ -1,13 +1,14 @@
 {
-  "name": "cinchcraft:abandoned_archeology_site_connect_2/side_pool_2",
+  "name": "cinchcraft:abandoned_archeology_site/extensions",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
-        "location": "cinchcraft:abandoned_archeology_sites/abandoned_archeology_site_bottom",
+        "location": "cinchcraft:abandoned_archeology_sites/abandoned_archeology_site_extension_1",
         "processors": "cinchcraft:abandoned_archeology_site_processor",
         "projection": "rigid",
+        "terrain_adaptation": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
     }
