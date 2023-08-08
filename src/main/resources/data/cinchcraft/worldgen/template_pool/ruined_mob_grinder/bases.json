@@ -12,7 +12,7 @@
       }
     },
     {
-      "weight": 2,
+      "weight": 1,
       "element": {
         "location": "cinchcraft:ruined_mob_grinders/bases/ruined_mob_grinder_base_2",
         "processors": "cinchcraft:make_stone_bricks_cracked",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "weight": 2,
+      "weight": 1,
       "element": {
         "location": "cinchcraft:ruined_mob_grinders/bases/ruined_mob_grinder_base_3",
         "processors": "cinchcraft:make_stone_bricks_cracked",
@@ -30,7 +30,7 @@
       }
     },
     {
-      "weight": 2,
+      "weight": 1,
       "element": {
         "location": "cinchcraft:ruined_mob_grinders/bases/ruined_mob_grinder_base_4",
         "processors": "cinchcraft:make_stone_bricks_cracked",
@@ -57,7 +57,7 @@
       }
     },
     {
-      "weight": 2,
+      "weight": 1,
       "element": {
         "location": "cinchcraft:ruined_mob_grinders/bases/ruined_mob_grinder_spider_base_1",
         "processors": "minecraft:empty",
@@ -66,7 +66,7 @@
       }
     },
     {
-      "weight": 2,
+      "weight": 1,
       "element": {
         "location": "cinchcraft:ruined_mob_grinders/bases/ruined_mob_grinder_spider_base_2",
         "processors": "minecraft:empty",
