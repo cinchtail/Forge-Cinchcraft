@@ -1,0 +1,18 @@
+{
+  "structures": [
+    {
+      "structure": "cinchcraft:abandoned_archeology_site",
+      "weight": 1
+    },
+    {
+      "structure": "cinchcraft:desert_abandoned_archeology_site",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 1142967512,
+    "spacing": 70,
+    "separation": 40,
+    "type": "minecraft:random_spread"
+  }
+}
