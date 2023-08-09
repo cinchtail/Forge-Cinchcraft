@@ -76,8 +76,6 @@ public class Cinchcraft
         MinecraftForge.EVENT_BUS.register(new ModEvents());
 
         MinecraftForge.EVENT_BUS.register(this);
-
-        MinecraftForge.EVENT_BUS.register(MixinBeehivePoi.class);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -109,8 +107,6 @@ public class Cinchcraft
         Villager.WANTED_ITEMS = ImmutableSet.copyOf(
                 Stream.concat(vanillaWantedItems, modWantedItems)
                         .collect(Collectors.toSet()));
-
-        MixinBootstrap.init();
     }
 
     @Mod.EventBusSubscriber(modid = Cinchcraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
