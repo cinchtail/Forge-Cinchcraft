@@ -17,17 +17,16 @@ public class MixinBeehivePoi {
             method = "register",
             ordinal = 0,
             at = @At(
-                    value = "LOAD"
-            )
-    )
-    private static PoiType modifyBeehivePOI(
+                    value = "LOAD"))
+
+    private static PoiType cinchcraft$modifyBeehivePOI(
             PoiType poiType,
             Registry<PoiType> registry,
             ResourceKey<PoiType> key,
             Set<BlockState> states,
             int ticketCount,
-            int searchDistance
-    ) {
+            int searchDistance) {
+
         if (key != PoiTypes.BEEHIVE) {
             return poiType;
         }
@@ -37,40 +36,9 @@ public class MixinBeehivePoi {
         return new PoiType(
                 states,
                 ticketCount,
-                searchDistance
-        );
+                searchDistance);
     }
 }
-//@Inject(method = "bootstrap", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/ai/village/poi/PoiTypes;register(Lnet/minecraft/core/Registry;Lnet/minecraft/resources/ResourceKey;Ljava/util/Set;II)Lnet/minecraft/world/entity/ai/village/poi/PoiType;"))
-
-/*@Mixin(PoiTypes.class)
-public class MixinBeehivePoi {
-    private static final Logger LOGGER = LogUtils.getLogger();
-    @Shadow
-    private static ResourceKey<PoiType> BEEHIVE;
-
-    @Inject(method = "bootstrap", at = @At("TAIL"))
-    private static void modifyBeehivePOI(Registry<PoiType> registry, CallbackInfoReturnable<PoiType> callbackInfo) {
-        PoiType beehive = registry.get(BEEHIVE);
-        LOGGER.info("hive " + beehive);
-        LOGGER.info("return value " + callbackInfo.getReturnValue());
-        if (callbackInfo.getReturnValue() == beehive) {
-            try {
-
-                LOGGER.info("trying?");
-                Field maxTicketsField = PoiType.class.getDeclaredField("maxTickets");
-                maxTicketsField.setAccessible(true);
-                maxTicketsField.setInt(beehive, 1);
-
-                Field validRangeField = PoiType.class.getDeclaredField("validRange");
-                validRangeField.setAccessible(true);
-                validRangeField.setInt(beehive, 1);
-            } catch (NoSuchFieldException | IllegalAccessException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-}*/
 
 
 
