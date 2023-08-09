@@ -18,6 +18,8 @@ import java.util.List;
 public class VillagerTrades {
     @SubscribeEvent
     public static void addCustomTrades(VillagerTradesEvent event) {
+
+        //Level 1 Trades
         if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.HONEYCOMB, 3);
@@ -55,6 +57,8 @@ public class VillagerTrades {
                     new ItemStack(Items.EMERALD, 1),
                     stack, 10, 2, 0.02F));
         }
+
+        //Level 2 Trades
         if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.EMERALD, 1);
@@ -155,6 +159,8 @@ public class VillagerTrades {
                     new ItemStack(Items.ALLIUM, 2),
                     stack, 8, 2, 0.02F));
         }
+
+        //Level 3 Trades
         if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.EMERALD, 1);
@@ -209,6 +215,8 @@ public class VillagerTrades {
                     new ItemStack(Items.EMERALD, 1),
                     stack, 8, 3, 0.02F));
         }
+
+        //Level 4 Trades
         if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.HONEY_BOTTLE, 1);
@@ -236,6 +244,8 @@ public class VillagerTrades {
                     new ItemStack(ModItems.STRAWBERRIES.get(), 6),
                     stack, 12, 4, 0.02F));
         }
+
+        //Level 5 Trades
         if (event.getType() == ModVillagers.BEEKEEPER.get()) {
             Int2ObjectMap<List<net.minecraft.world.entity.npc.VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.HONEYCOMB_BLOCK, 1);

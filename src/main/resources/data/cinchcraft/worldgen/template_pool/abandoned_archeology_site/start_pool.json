@@ -12,7 +12,7 @@
       }
     },
     {
-      "weight": 10,
+      "weight": 1,
       "element": {
         "location": "cinchcraft:abandoned_archeology_sites/abandoned_archeology_site_top_2",
         "processors": "cinchcraft:abandoned_archeology_site_processor",

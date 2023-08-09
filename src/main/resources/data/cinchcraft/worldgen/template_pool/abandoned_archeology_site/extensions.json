@@ -11,6 +11,16 @@
         "terrain_adaptation": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:abandoned_archeology_sites/abandoned_archeology_site_extension_2",
+        "processors": "cinchcraft:abandoned_archeology_site_processor",
+        "projection": "rigid",
+        "terrain_adaptation": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
     }
   ]
 }
