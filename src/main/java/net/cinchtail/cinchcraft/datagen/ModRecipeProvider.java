@@ -315,6 +315,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(ModItems.AZALEA_PLANKS.get()).build()))
                 .save(pWriter);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_BOAT.get())
+                .pattern("A A")
+                .pattern("AAA")
+                .define('A', ModItems.AZALEA_PLANKS.get())
+                .unlockedBy("has_azalea_planks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.AZALEA_PLANKS.get()).build()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_CHEST_BOAT.get())
+                .requires(ModItems.AZALEA_BOAT.get())
+                .requires(Items.CHEST)
+                .unlockedBy("has_azalea_boat", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.AZALEA_BOAT.get()).build()))
+                .save(pWriter);
+
         //Reeds Recipes
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.THATCH_BLOCK.get())
                 .pattern("AAA")

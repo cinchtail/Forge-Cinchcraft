@@ -1,5 +1,7 @@
-// 1.20.1	2023-08-01T15:36:46.9313446	Recipes
+// 1.20.1	2023-08-08T22:53:57.2780253	Recipes
+64790cf6d3934787f6f39b569f3a52b419e4d8bb data/cinchcraft/advancements/recipes/building_blocks/azalea_boat.json
 788daf1d83a15f0c7849c98bffaee274b37251ef data/cinchcraft/advancements/recipes/building_blocks/azalea_button.json
+3d5aae4ce58c6986a2dbc4f3954dd2221753b242 data/cinchcraft/advancements/recipes/building_blocks/azalea_chest_boat.json
 53145546e93a989b0ec6944a8ea2e0368c95d099 data/cinchcraft/advancements/recipes/building_blocks/azalea_door.json
 c467a84ee776c0a248f7d0f2f4e0d19788b6a5f1 data/cinchcraft/advancements/recipes/building_blocks/azalea_fence.json
 497a6e420922a14f152eb9b9f839960ec38be702 data/cinchcraft/advancements/recipes/building_blocks/azalea_fence_gate.json
@@ -342,7 +344,9 @@ e6a715ee3b7df57357f62d0a3db822d55ac72afe data/cinchcraft/advancements/recipes/to
 e35176f79faf794b4ef9ae0d7d8b177bcfd47b0c data/cinchcraft/advancements/recipes/tools/ruby_shovel.json
 e8efb511635eeb38b345e5fcad654b241d0106c0 data/cinchcraft/advancements/recipes/transportation/netherite_horse_armor_from_smithing.json
 b583a0c3f8b290aa03004df2072409d0a9905356 data/cinchcraft/recipes/ancient_slime_stew.json
+1217677cb44ad1c8ce77f27dbbb6ec4db0b5f7bc data/cinchcraft/recipes/azalea_boat.json
 73c71f694025c6aad977941421930541b074ea74 data/cinchcraft/recipes/azalea_button.json
+b87f282c13d88379bac66fec9e22eddebed6f2a0 data/cinchcraft/recipes/azalea_chest_boat.json
 0a9e50d09e7de55fb4001d21d3fd4e90d6b224aa data/cinchcraft/recipes/azalea_door.json
 677e9a827a6a7169fe0c103e5c20782fdf867def data/cinchcraft/recipes/azalea_fence.json
 5375a1f60922c6412d8bfce66830ff5140df313c data/cinchcraft/recipes/azalea_fence_gate.json
