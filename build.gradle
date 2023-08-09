@@ -3,7 +3,7 @@ plugins {
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
-    id 'org.spongepowered.mixin' version '0.7-SNAPSHOT' apply true
+    id 'org.spongepowered.mixin' version '0.7-SNAPSHOT' apply(true)
 }
 
 version = '0.3-1.20.1'
@@ -38,6 +38,7 @@ minecraft {
         client {
             workingDirectory project.file('run')
 
+            arg '-mixin.config=cinchcraft.mixins.json'
             // Recommended logging data for a userdev environment
             // The markers can be added/remove as needed separated by commas.
             // "SCAN": For mods scan.
@@ -62,6 +63,7 @@ minecraft {
 
         server {
             workingDirectory project.file('run')
+            arg '-mixin.config=cinchcraft.mixins.json'
 
             property 'forge.logging.markers', 'REGISTRIES'
 
@@ -132,12 +134,15 @@ repositories {
     }
 }
 
+mixin {
+    add sourceSets.main, "cinchcraft.refmap.json"
+}
+
 dependencies {
     // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft', it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.20.1-47.1.3'
-
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
     // compile against the JEI API but do not include it at runtime
@@ -156,9 +161,6 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 }
-mixin {
-    config 'mixins.cinchcraft.json'
-}
 
 // Example for how to get properties into the manifest for reading at runtime.
 jar {
@@ -170,7 +172,8 @@ jar {
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "cinchtail",
-                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+                "MixinConfigs"            : "cinchcraft.mixins.json"
         ])
     }
 }

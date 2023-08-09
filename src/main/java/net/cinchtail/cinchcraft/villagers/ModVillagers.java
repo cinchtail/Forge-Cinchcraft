@@ -16,7 +16,7 @@ public class ModVillagers {
 
     public static final RegistryObject<VillagerProfession> BEEKEEPER =
             VILLAGER_PROFESSIONS.register("beekeeper", () -> new VillagerProfession("beekeeper",
-                    x -> x.is(key -> key == PoiTypes.BEEHIVE), x -> x.is(key -> key == PoiTypes.BEEHIVE), ImmutableSet.of(), ImmutableSet.of(),
+                    x -> x.is(PoiTypes.BEEHIVE), x -> x.is(PoiTypes.BEEHIVE), ImmutableSet.of(), ImmutableSet.of(),
                     SoundEvents.BEEHIVE_SHEAR));
 
     public static void register(IEventBus eventBus) {
