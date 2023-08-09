@@ -26,9 +26,9 @@ public class MixinBeehivePoi {
                 maxTicketsField.setAccessible(true);
                 maxTicketsField.setInt(beehive, 1);
 
-                Field validRangeField = PoiType.class.getDeclaredField("validRange");
-                validRangeField.setAccessible(true);
-                validRangeField.setInt(beehive, 4);
+                //Field validRangeField = PoiType.class.getDeclaredField("validRange");
+                //validRangeField.setAccessible(true);
+                //validRangeField.setInt(beehive, 4);
             } catch (NoSuchFieldException | IllegalAccessException e) {
                 e.printStackTrace();
             }
