@@ -219,6 +219,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BLACKSTONE_AXE.get());
                         output.accept(ModItems.BLACKSTONE_SHOVEL.get());
                         output.accept(ModItems.BLACKSTONE_HOE.get());
+                        output.accept(ModItems.AZALEA_BOAT.get());
+                        output.accept(ModItems.AZALEA_CHEST_BOAT.get());
                         output.accept(ModItems.NETHERITE_HORSE_ARMOR.get());
                         output.accept(ModItems.RUBY_HORSE_ARMOR.get());
                         //output.accept(ModItems.EMERALD_HORSE_ARMOR.get());

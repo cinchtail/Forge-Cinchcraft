@@ -98,6 +98,8 @@
   "block.cinchcraft.azalea_hanging_sign": "Azalea Hanging Sign",
   "item.cinchcraft.azalea_door": "Azalea Door",
   "item.cinchcraft.azalea_trapdoor": "Azalea Trapdoor",
+  "item.cinchcraft.azalea_boat": "Azalea Boat",
+  "item.cinchcraft.azalea_chest_boat": "Azalea Chest Boat",
 
   "itemGroup.cinchcraft_blocks": "Cinchcraft Blocks",
   "itemGroup.cinchcraft_items": "Cinchcraft Items",
@@ -105,6 +107,7 @@
   "effect.cinchcraft.shinny_and_green": "Shinny And Green",
 
   "entity.minecraft.villager.cinchcraft.beekeeper": "Beekeeper",
+  "entity.cinchcraft.mod_chest_boat": "Chest Boat",
 
   "item.minecraft.potion.effect.glowing_potion": "Potion Of Glowing",
   "item.minecraft.splash_potion.effect.glowing_potion": "Splash Potion Of Glowing",

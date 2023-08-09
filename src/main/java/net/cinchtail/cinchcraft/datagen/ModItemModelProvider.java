@@ -44,6 +44,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(ModItems.AZALEA_SIGN);
         simpleItem(ModItems.AZALEA_HANGING_SIGN);
+        simpleItem(ModItems.AZALEA_BOAT);
+        simpleItem(ModItems.AZALEA_CHEST_BOAT);
 
 
         simpleBlockItem(ModBlocks.AZALEA_DOOR);

@@ -2,6 +2,7 @@ package net.cinchtail.cinchcraft.item;
 
 import net.cinchtail.cinchcraft.Cinchcraft;
 import net.cinchtail.cinchcraft.block.ModBlocks;
+import net.cinchtail.cinchcraft.entity.custom.ModBoatEntity;
 import net.cinchtail.cinchcraft.item.custom.*;
 import net.cinchtail.cinchcraft.sound.ModSounds;
 import net.minecraft.world.item.*;
@@ -38,13 +39,16 @@ public class ModItems {
             () -> new RecordItem(8, ModSounds.DOG_MUSIC_DISC, new Item.Properties().rarity(Rarity.RARE).stacksTo(1), 2900));
     public static final RegistryObject<Item> KYOTO_MUSIC_DISC = ITEMS.register("kyoto_music_disc",
             () -> new RecordItem(6, ModSounds.KYOTO_MUSIC_DISC, new Item.Properties().rarity(Rarity.RARE).stacksTo(1), 4980));
+    public static final RegistryObject<Item> AZALEA_BOAT = ITEMS.register("azalea_boat",
+            () -> new ModBoatItem(false, ModBoatEntity.Type.AZALEA, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> AZALEA_CHEST_BOAT = ITEMS.register("azalea_chest_boat",
+            () -> new ModBoatItem(true, ModBoatEntity.Type.AZALEA, new Item.Properties().stacksTo(1)));
 
     //Foods
     public static final RegistryObject<Item> VEGETABLE_STEW = ITEMS.register("vegetable_stew",
             () -> new BowlFoodItem(new Item.Properties().stacksTo(1).food(ModFoods.VEGETABLE_STEW)));
     public static final RegistryObject<Item> NETHER_STEW = ITEMS.register("nether_stew",
             () -> new BowlFoodItem(new Item.Properties().stacksTo(1).food(ModFoods.NETHER_STEW)));
-
     public static final RegistryObject<Item> ANCIENT_SLIME_STEW = ITEMS.register("ancient_slime_stew",
             () -> new BowlFoodItem(new Item.Properties().stacksTo(1).food(ModFoods.ANCIENT_SLIME_STEW)));
     public static final RegistryObject<Item> BLUEBERRIES = ITEMS.register("blueberries",

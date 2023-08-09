@@ -4,6 +4,8 @@ import com.google.common.collect.ImmutableSet;
 import com.mojang.logging.LogUtils;
 import net.cinchtail.cinchcraft.block.ModBlocks;
 import net.cinchtail.cinchcraft.block.entity.ModBlockEntities;
+import net.cinchtail.cinchcraft.entity.ModEntities;
+import net.cinchtail.cinchcraft.entity.client.ModBoatRenderer;
 import net.cinchtail.cinchcraft.event.ModEvents;
 import net.cinchtail.cinchcraft.event.WanderingTraderTrades;
 import net.cinchtail.cinchcraft.item.ModCreativeModeTabs;
@@ -17,6 +19,7 @@ import net.cinchtail.cinchcraft.util.ModWoodTypes;
 import net.cinchtail.cinchcraft.villagers.ModVillagers;
 import net.cinchtail.cinchcraft.world.biomemods.ModBiomeModifiers;
 import net.minecraft.client.renderer.Sheets;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -59,11 +62,12 @@ public class Cinchcraft
         ModBlockEntities.register(modEventBus);
 
         ModSounds.register(modEventBus);
-
         ModVillagers.register(modEventBus);
 
         ModBiomeModifiers.register(modEventBus);
         ModLootModifiers.register(modEventBus);
+
+        ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::clientSetup);
@@ -132,6 +136,9 @@ public class Cinchcraft
                         Items.REDSTONE, ModPotions.LONG_GLOWING_POTION.get()));
                 BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(ModPotions.BLINDNESS_POTION.get(),
                         Items.REDSTONE, ModPotions.LONG_BLINDNESS_POTION.get()));
+
+                EntityRenderers.register(ModEntities.MOD_BOAT.get(), pContext -> new ModBoatRenderer(pContext, false));
+                EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.get(), pContext -> new ModBoatRenderer(pContext, true));
             });
         }
     }
