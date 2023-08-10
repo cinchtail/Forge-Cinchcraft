@@ -11,7 +11,6 @@ import net.cinchtail.cinchcraft.event.WanderingTraderTrades;
 import net.cinchtail.cinchcraft.item.ModCreativeModeTabs;
 import net.cinchtail.cinchcraft.item.ModItems;
 import net.cinchtail.cinchcraft.loot.ModLootModifiers;
-import net.cinchtail.cinchcraft.mixins.MixinBeehivePoi;
 import net.cinchtail.cinchcraft.potion.ModPotions;
 import net.cinchtail.cinchcraft.sound.ModSounds;
 import net.cinchtail.cinchcraft.util.BetterBrewingRecipe;
@@ -36,7 +35,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
-import org.spongepowered.asm.launch.MixinBootstrap;
 
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
