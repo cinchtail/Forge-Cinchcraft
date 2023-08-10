@@ -5,7 +5,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "cinchcraft:abandoned_archeology_sites/abandoned_archeology_site_extension_1",
+        "location": "cinchcraft:abandoned_archeology_sites/normal/extensions/abandoned_archeology_site_extension_1",
         "processors": "cinchcraft:abandoned_archeology_site_processor",
         "projection": "rigid",
         "terrain_adaptation": "rigid",
@@ -15,7 +15,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "cinchcraft:abandoned_archeology_sites/abandoned_archeology_site_extension_2",
+        "location": "cinchcraft:abandoned_archeology_sites/normal/extensions/abandoned_archeology_site_extension_2",
         "processors": "cinchcraft:abandoned_archeology_site_processor",
         "projection": "rigid",
         "terrain_adaptation": "rigid",

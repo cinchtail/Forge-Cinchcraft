@@ -5,7 +5,16 @@
     {
       "weight": 1,
       "element": {
-        "location": "cinchcraft:abandoned_archeology_sites/desert_abandoned_archeology_site_top",
+        "location": "cinchcraft:abandoned_archeology_sites/desert/top/desert_abandoned_archeology_site_top_1",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:abandoned_archeology_sites/desert/top/desert_abandoned_archeology_site_top_2",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
