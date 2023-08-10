@@ -13,7 +13,6 @@ import net.cinchtail.cinchcraft.item.ModItems;
 import net.cinchtail.cinchcraft.loot.ModLootModifiers;
 import net.cinchtail.cinchcraft.potion.ModPotions;
 import net.cinchtail.cinchcraft.sound.ModSounds;
-import net.cinchtail.cinchcraft.util.BetterBrewingRecipe;
 import net.cinchtail.cinchcraft.util.ModWoodTypes;
 import net.cinchtail.cinchcraft.villagers.ModVillagers;
 import net.cinchtail.cinchcraft.world.biomemods.ModBiomeModifiers;
@@ -22,12 +21,12 @@ import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.PotionBrewing;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -121,14 +120,10 @@ public class Cinchcraft
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.LUPINE.getId(), ModBlocks.POTTED_LUPINE);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.STAR_CACTUS.getId(), ModBlocks.POTTED_STAR_CACTUS);
 
-                BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
-                        Items.GLOW_BERRIES, ModPotions.GLOWING_POTION.get()));
-                BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
-                        Items.INK_SAC, ModPotions.BLINDNESS_POTION.get()));
-                BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(ModPotions.GLOWING_POTION.get(),
-                        Items.REDSTONE, ModPotions.LONG_GLOWING_POTION.get()));
-                BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(ModPotions.BLINDNESS_POTION.get(),
-                        Items.REDSTONE, ModPotions.LONG_BLINDNESS_POTION.get()));
+                PotionBrewing.addMix(Potions.AWKWARD, Items.GLOW_BERRIES, ModPotions.GLOWING_POTION.get());
+                PotionBrewing.addMix(Potions.AWKWARD, Items.INK_SAC, ModPotions.BLINDNESS_POTION.get());
+                PotionBrewing.addMix(ModPotions.GLOWING_POTION.get(), Items.REDSTONE, ModPotions.LONG_GLOWING_POTION.get());
+                PotionBrewing.addMix(ModPotions.BLINDNESS_POTION.get(), Items.REDSTONE, ModPotions.LONG_BLINDNESS_POTION.get());
 
                 EntityRenderers.register(ModEntities.MOD_BOAT.get(), pContext -> new ModBoatRenderer(pContext, false));
                 EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.get(), pContext -> new ModBoatRenderer(pContext, true));
