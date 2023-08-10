@@ -102,8 +102,7 @@ public class Cinchcraft
         ComposterBlock.COMPOSTABLES.put(ModItems.STALK.get(), 0.65f);
 
         Stream<Item> vanillaWantedItems = Villager.WANTED_ITEMS.stream();
-        Stream<Item> modWantedItems = Stream.of(ModItems.SUNFLOWER_SEEDS.get(),
-                ModItems.CARROT_SEEDS.get());
+        Stream<Item> modWantedItems = Stream.of(ModItems.CARROT_SEEDS.get());
         Villager.WANTED_ITEMS = ImmutableSet.copyOf(
                 Stream.concat(vanillaWantedItems, modWantedItems)
                         .collect(Collectors.toSet()));
