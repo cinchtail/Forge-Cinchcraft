@@ -16,6 +16,8 @@
     "cinchcraft:azalea_door",
     "cinchcraft:azalea_trapdoor",
     "cinchcraft:azalea_sign",
-    "cinchcraft:azalea_hanging_sign"
+    "cinchcraft:azalea_wall_sign",
+    "cinchcraft:azalea_hanging_sign",
+    "cinchcraft:azalea_wall_hanging_sign"
   ]
 }

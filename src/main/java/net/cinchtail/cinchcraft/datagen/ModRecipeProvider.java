@@ -199,14 +199,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(ModItems.AZALEA_WOOD.get()).build()))
                 .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "azalea_planks_from_azalea_wood"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_PLANKS.get(), 3)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_PLANKS.get(), 4)
                 .group("azalea_planks")
                 .requires(ModItems.STRIPPED_AZALEA_LOG.get())
                 .unlockedBy("has_stripped_azalea_log", inventoryTrigger(ItemPredicate.Builder.item().
                         of(ModItems.STRIPPED_AZALEA_LOG.get()).build()))
                 .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "azalea_planks_from_stripped_azalea_log"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_PLANKS.get(), 3)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_PLANKS.get(), 4)
                 .group("azalea_planks")
                 .requires(ModItems.STRIPPED_AZALEA_WOOD.get())
                 .unlockedBy("has_stripped_azalea_wood", inventoryTrigger(ItemPredicate.Builder.item().
