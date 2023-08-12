@@ -13,12 +13,7 @@ import java.util.Set;
 
 @Mixin(PoiTypes.class)
 public class MixinBeehivePoi {
-    @ModifyVariable(
-            method = "register",
-            ordinal = 0,
-            at = @At(
-                    value = "LOAD"))
-
+    @ModifyVariable(method = "register", ordinal = 0, at = @At(value = "LOAD"))
     private static PoiType cinchcraft$modifyBeehivePOI(
             PoiType poiType,
             Registry<PoiType> registry,
@@ -39,7 +34,3 @@ public class MixinBeehivePoi {
                 searchDistance);
     }
 }
-
-
-
-

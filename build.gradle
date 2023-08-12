@@ -136,6 +136,7 @@ repositories {
 
 mixin {
     add sourceSets.main, "cinchcraft.refmap.json"
+    config 'cinchcraft.mixins.json'
 }
 
 dependencies {
@@ -173,7 +174,6 @@ jar {
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "cinchtail",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
-                "MixinConfigs"            : "cinchcraft.mixins.json"
         ])
     }
 }
