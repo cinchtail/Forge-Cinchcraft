@@ -15,8 +15,6 @@ public class WanderingTraderTrades {
     @SubscribeEvent
     public void ModWanderingTraderTrades(WandererTradesEvent event)
     {
-        event.getGenericTrades().add(new BasicItemListing(8, new ItemStack(Items.BUNDLE, 1)
-                , 1, 10));
         event.getGenericTrades().add(new BasicItemListing(5, new ItemStack(Items.TADPOLE_BUCKET, 1)
                 , 5, 5));
         event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.CROCUS.get(), 1)
