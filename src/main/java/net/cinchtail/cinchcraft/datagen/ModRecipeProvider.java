@@ -699,15 +699,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 has(Items.NETHERITE_INGOT))
                 .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, getItemName(ModItems.NETHERITE_HORSE_ARMOR.get()) + "_from_smithing"));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.BUNDLE)
-                .pattern("TAT")
-                .pattern("A A")
-                .pattern("AAA")
-                .define('A', Items.RABBIT_HIDE)
-                .define('T', Items.STRING)
-                .unlockedBy("has_rabit_hide", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.RABBIT_HIDE).build()))
-                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "mod_bundle_recipe"));
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, Items.STRING, 4)
+                .requires(Items.WHITE_WOOL)
+                .unlockedBy("has_white_wool", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Items.WHITE_WOOL).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "string_from_wool"));
+
 
         //Blocks
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_END_STONE_BRICKS.get())
