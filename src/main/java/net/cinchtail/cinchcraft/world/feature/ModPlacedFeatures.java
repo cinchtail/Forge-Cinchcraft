@@ -43,7 +43,6 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> BLUEBERRIES_PLACED_KEY = createKey("blueberries_placed");
     public static final ResourceKey<PlacedFeature> PINEAPPLE_PLANT_PLACED_KEY = createKey("pineapple_placed");
     public static final ResourceKey<PlacedFeature> STRAWBERRY_PLACED_KEY = createKey("strawberry_placed");
-    //public static final ResourceKey<PlacedFeature> MOD_SWEET_BERRIE_PLACED_KEY = createKey("mod_sweet_berrie_placed");
     //public static final ResourceKey<PlacedFeature> ICICLE_CEILING = createKey("icicle_ceiling");
     public static final ResourceKey<PlacedFeature> REEDS_PLACED_KEY = createKey("reeds_placed");
     public static final ResourceKey<PlacedFeature> CATTAILS_PLACED_KEY = createKey("cattails_placed");
@@ -92,36 +91,33 @@ public class ModPlacedFeatures {
                 List.of(RarityFilter.onAverageOnceEvery(5), InSquarePlacement.spread(),
                         PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()));
         register(context, BLUEBERRIES_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLUEBERRIES_KEY),
-                List.of(RarityFilter.onAverageOnceEvery(18),
+                List.of(RarityFilter.onAverageOnceEvery(16),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         register(context, BUTTER_CUP_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BUTTER_CUP_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(20),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         register(context, CROCUS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CROCUS_KEY),
-                List.of(RarityFilter.onAverageOnceEvery(16),
+                List.of(RarityFilter.onAverageOnceEvery(12),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         register(context, ALYSSUM_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ALYSSUM_KEY),
-                List.of(RarityFilter.onAverageOnceEvery(16),
+                List.of(RarityFilter.onAverageOnceEvery(14),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         register(context, LUPINE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LUPINE_KEY),
-                List.of(RarityFilter.onAverageOnceEvery(16),
+                List.of(RarityFilter.onAverageOnceEvery(14),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         register(context, BUBBLE_FLOWER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BUBBLE_FLOWER_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(42),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
 
         register(context, PINEAPPLE_PLANT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.PINEAPPLE_PLANT_KEY),
-                List.of(RarityFilter.onAverageOnceEvery(24),
+                List.of(RarityFilter.onAverageOnceEvery(22),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
-        /*register(context, MOD_SWEET_BERRIE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MOD_SWEET_BERRIE_KEY),
-                List.of(RarityFilter.onAverageOnceEvery(18),
-                        InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));*/
         register(context, STRAWBERRY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STRAWBERRY_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(70),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
 
         register(context, STAR_CACTUS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STAR_CACTUS_KEY),
-                List.of(RarityFilter.onAverageOnceEvery(42),
+                List.of(RarityFilter.onAverageOnceEvery(40),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
 
         /*register(context, ICICLE_CEILING, configuredFeatures.getOrThrow(ModConfiguredFeatures.ICICLE_KEY), CountPlacement.of(256),

@@ -56,7 +56,6 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> BLUEBERRIES_KEY = registerKey("blueberries");
     public static final ResourceKey<ConfiguredFeature<?, ?>> PINEAPPLE_PLANT_KEY = registerKey("pineapple");
     public static final ResourceKey<ConfiguredFeature<?, ?>> STRAWBERRY_KEY = registerKey("strawberry");
-    //public static final ResourceKey<ConfiguredFeature<?, ?>> MOD_SWEET_BERRIE_KEY = registerKey("mod_sweet_berrie");
     //public static final ResourceKey<ConfiguredFeature<?, ?>> ICICLE_KEY = registerKey("icicle");
     public static final ResourceKey<ConfiguredFeature<?, ?>> REEDS_KEY = registerKey("reeds");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CATTAILS_KEY = registerKey("cattails");
