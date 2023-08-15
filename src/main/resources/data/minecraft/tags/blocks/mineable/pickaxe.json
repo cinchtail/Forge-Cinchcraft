@@ -136,6 +136,10 @@
     "cinchcraft:cracked_end_stone_brick_wall",
     "cinchcraft:cracked_end_stone_brick_slab",
     "cinchcraft:cracked_end_stone_brick_stairs",
-    "cinchcraft:cracked_end_stone_bricks"
+    "cinchcraft:cracked_end_stone_bricks",
+    "cinchcraft:mossy_brick_wall",
+    "cinchcraft:mossy_brick_slab",
+    "cinchcraft:mossy_brick_stairs",
+    "cinchcraft:mossy_bricks"
   ]
 }

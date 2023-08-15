@@ -1,4 +1,4 @@
-// 1.20.1	2023-08-08T20:34:50.0663958	Item Models: cinchcraft
+// 1.20.1	2023-08-14T23:52:45.1513615	Item Models: cinchcraft
 774809724c0c051db5a823287ccfb162c5f16b47 assets/cinchcraft/models/item/ancient_slime_stew.json
 56f5e9dc708fc4c9cdf2ede2af80e98be3212353 assets/cinchcraft/models/item/azalea_boat.json
 f946135c414ac93b59835f78246ad3384293ff63 assets/cinchcraft/models/item/azalea_button.json
@@ -78,6 +78,9 @@ bf4895a7763d6af76f4cd14c644214c192dc8491 assets/cinchcraft/models/item/end_stone
 4af6ed68e7401ec6bee526510460875f85e2c592 assets/cinchcraft/models/item/gold_button.json
 836fd8e7649ff60620300a97b544374de38b0d55 assets/cinchcraft/models/item/iron_button.json
 0a1f7e01a9d29342ef10e022cce88e13c52448b2 assets/cinchcraft/models/item/kyoto_music_disc.json
+8f3b197b1a75131b7ff262ea4743ed679c8f9d4e assets/cinchcraft/models/item/mossy_brick_slab.json
+1fb4f9a83c009ce3a5b0ec8ef855abb79026830d assets/cinchcraft/models/item/mossy_brick_stairs.json
+526d5e2b5ba8565baacf81ef19312385c1f1a285 assets/cinchcraft/models/item/mossy_brick_wall.json
 34d0fd57cd8b1660f30e22a47e3d6a9b09ddbffc assets/cinchcraft/models/item/mossy_cobbled_deepslate_slab.json
 15d333433e873f1b33f41b7458557660b806420e assets/cinchcraft/models/item/mossy_cobbled_deepslate_stairs.json
 da0ae90ef81b75ff08d910a3680c57a34bfc2673 assets/cinchcraft/models/item/mossy_cobbled_deepslate_wall.json

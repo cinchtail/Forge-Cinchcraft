@@ -2186,6 +2186,57 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_cracked_end_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.CRACKED_END_STONE_BRICKS.get()).build()))
                 .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "cracked_end_stone_brick_wall_from_stonecutting"));
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_BRICK_STAIRS.get(),4)
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .define('A', ModBlocks.MOSSY_BRICKS.get())
+                .unlockedBy("has_mossy_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.MOSSY_BRICKS.get()).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.MOSSY_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_BRICK_STAIRS.get())
+                .unlockedBy("has_mossy_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.MOSSY_BRICKS.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_brick_stairs_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_BRICK_SLAB.get(),6)
+                .pattern("AAA")
+                .define('A', ModBlocks.MOSSY_BRICKS.get())
+                .unlockedBy("has_mossy_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.MOSSY_BRICKS.get()).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.MOSSY_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_BRICK_SLAB.get(),2)
+                .unlockedBy("has_mossy_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.MOSSY_BRICKS.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_brick_slab_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_BRICK_WALL.get(),6)
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModBlocks.MOSSY_BRICKS.get())
+                .unlockedBy("has_mossy_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.MOSSY_BRICKS.get()).build()))
+                .save(pWriter);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.MOSSY_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_BRICK_WALL.get())
+                .unlockedBy("has_mossy_bricks", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.MOSSY_BRICKS.get()).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_brick_wall_from_stonecutting"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_BRICKS.get())
+                .group("mossy_bricks")
+                .requires(Blocks.BRICKS)
+                .requires(Blocks.MOSS_BLOCK)
+                .unlockedBy("has_moss_block", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.MOSS_BLOCK).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_brick_from_moss_block"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_BRICKS.get())
+                .group("mossy_bricks")
+                .requires(Blocks.BRICKS)
+                .requires(Blocks.VINE)
+                .unlockedBy("has_vine", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.VINE).build()))
+                .save(pWriter, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_brick_from_vine"));
 
     }
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

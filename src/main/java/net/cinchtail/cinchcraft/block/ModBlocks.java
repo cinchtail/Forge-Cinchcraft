@@ -5,6 +5,7 @@ import net.cinchtail.cinchcraft.block.custom.*;
 import net.cinchtail.cinchcraft.item.ModItems;
 import net.cinchtail.cinchcraft.util.ModBlockSetType;
 import net.cinchtail.cinchcraft.util.ModWoodTypes;
+import net.minecraft.client.resources.model.Material;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
@@ -248,8 +249,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> GOLD_BUTTON = registerBlock("gold_button",
             () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BUTTON).sound(SoundType.METAL),
                     BlockSetType.GOLD, 10, true));
-
-
+    public static final RegistryObject<Block> ICICLE = registerBlock("icicle",
+            () -> new PointedDripstoneBlock(BlockBehaviour.Properties.copy(POINTED_DRIPSTONE).noOcclusion().sound(SoundType.GLASS).randomTicks()
+                    .instabreak().dynamicShape().requiresCorrectToolForDrops().strength(1.0F, 2.0F).offsetType(BlockBehaviour.OffsetType.XZ)));
 
     //Plants
     public static final RegistryObject<Block> BUTTER_CUP = BLOCKS.register("butter_cup",
@@ -503,6 +505,19 @@ public class ModBlocks {
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)
                     .requiresCorrectToolForDrops().strength(2.0F, 6.0F).sound(SoundType.STONE)));
     public static final RegistryObject<Block> CRACKED_BRICK_WALL = registerBlock("cracked_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)
+                    .requiresCorrectToolForDrops().strength(2.0F, 6.0F).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> MOSSY_BRICKS = registerBlock("mossy_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS).instrument(NoteBlockInstrument.BASEDRUM).strength(2.0F, 6.0F)
+                    .sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> MOSSY_BRICK_STAIRS = registerBlock("mossy_brick_stairs",
+            () -> new StairBlock(Blocks.BRICKS::defaultBlockState,
+                    BlockBehaviour.Properties.copy(Blocks.BRICKS).requiresCorrectToolForDrops()
+                            .strength(2.0F, 6.0F).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> MOSSY_BRICK_SLAB = registerBlock("mossy_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)
+                    .requiresCorrectToolForDrops().strength(2.0F, 6.0F).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> MOSSY_BRICK_WALL = registerBlock("mossy_brick_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)
                     .requiresCorrectToolForDrops().strength(2.0F, 6.0F).sound(SoundType.STONE)));
     public static final RegistryObject<Block> CRACKED_PRISMARINE_BRICKS = registerBlock("cracked_prismarine_bricks",
