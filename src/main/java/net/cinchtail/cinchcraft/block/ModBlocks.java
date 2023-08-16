@@ -15,6 +15,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -250,8 +251,8 @@ public class ModBlocks {
             () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BUTTON).sound(SoundType.METAL),
                     BlockSetType.GOLD, 10, true));
     public static final RegistryObject<Block> ICICLE = registerBlock("icicle",
-            () -> new PointedDripstoneBlock(BlockBehaviour.Properties.copy(POINTED_DRIPSTONE).noOcclusion().sound(SoundType.GLASS).randomTicks()
-                    .instabreak().dynamicShape().requiresCorrectToolForDrops().strength(1.0F, 2.0F).offsetType(BlockBehaviour.OffsetType.XZ)));
+            () -> new IcicleBlock(BlockBehaviour.Properties.of().mapColor(MapColor.ICE).noOcclusion()
+                    .sound(SoundType.GLASS).randomTicks().instabreak().dynamicShape().offsetType(BlockBehaviour.OffsetType.XZ)));
 
     //Plants
     public static final RegistryObject<Block> BUTTER_CUP = BLOCKS.register("butter_cup",

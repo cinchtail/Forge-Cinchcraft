@@ -174,6 +174,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.IRON_BUTTON.get());
                         output.accept(ModBlocks.GOLD_BUTTON.get());
                         output.accept(ModItems.CARVED_MELON.get());
+                        output.accept(ModBlocks.ICICLE.get());
                         output.accept(ModItems.GLOWSTONE_TORCH.get());
                         output.accept(ModItems.THATCH_BLOCK.get());
                         output.accept(ModItems.THATCH_STAIRS.get());

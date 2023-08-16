@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_icicle_biomes",
+  "features": "cinchcraft:icicle_down_placed",
+  "step": "underground_decoration"
+}
