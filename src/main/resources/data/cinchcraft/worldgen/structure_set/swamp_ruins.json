@@ -1,11 +1,7 @@
 {
   "structures": [
     {
-      "structure": "cinchcraft:swamp_ruin_1",
-      "weight": 1
-    },
-    {
-      "structure": "cinchcraft:swamp_ruin_2",
+      "structure": "cinchcraft:swamp_ruins",
       "weight": 1
     }
   ],

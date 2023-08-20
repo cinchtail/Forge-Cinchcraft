@@ -1,7 +1,16 @@
 {
-  "name": "cinchcraft:swamp_ruin_2/start_pool",
+  "name": "cinchcraft:swamp_ruin_1/start_pool",
   "fallback": "minecraft:empty",
   "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:swamp_ruins/swamp_ruin_1",
+        "processors": "cinchcraft:make_stone_bricks_mossy_and_cracked",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
     {
       "weight": 1,
       "element": {
