@@ -1,0 +1,27 @@
+{
+  "replace": true,
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "1": {
+      "item": "cinchcraft:sunflower_seeds"
+    },
+    "2": {
+      "item": "croptopia:salt"
+    },
+    "3": {
+      "item": "croptopia:pepper"
+    },
+    "4": {
+      "item": "croptopia:frying_pan"
+    }
+  },
+  "pattern": [
+    "123",
+    " 4 "
+  ],
+  "result": {
+    "item": "croptopia:roasted_sunflower_seeds"
+  },
+  "show_notification": true
+}
