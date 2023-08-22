@@ -21,7 +21,7 @@
       }
     },
     {
-      "weight": 11,
+      "weight": 1,
       "element": {
         "location": "cinchcraft:swamp_ruins/swamp_ruin_3",
         "processors": "cinchcraft:make_cobblestone_and_stone_bricks_mossy_and_cracked",
