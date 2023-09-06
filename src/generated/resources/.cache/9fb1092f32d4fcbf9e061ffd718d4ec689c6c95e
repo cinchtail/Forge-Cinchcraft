@@ -1,4 +1,4 @@
-// 1.20.1	2023-08-15T00:14:59.830291	Recipes
+// 1.20.1	2023-09-06T16:18:00.0467501	Recipes
 64790cf6d3934787f6f39b569f3a52b419e4d8bb data/cinchcraft/advancements/recipes/building_blocks/azalea_boat.json
 788daf1d83a15f0c7849c98bffaee274b37251ef data/cinchcraft/advancements/recipes/building_blocks/azalea_button.json
 3d5aae4ce58c6986a2dbc4f3954dd2221753b242 data/cinchcraft/advancements/recipes/building_blocks/azalea_chest_boat.json
@@ -355,7 +355,7 @@ b583a0c3f8b290aa03004df2072409d0a9905356 data/cinchcraft/recipes/ancient_slime_s
 1217677cb44ad1c8ce77f27dbbb6ec4db0b5f7bc data/cinchcraft/recipes/azalea_boat.json
 73c71f694025c6aad977941421930541b074ea74 data/cinchcraft/recipes/azalea_button.json
 b87f282c13d88379bac66fec9e22eddebed6f2a0 data/cinchcraft/recipes/azalea_chest_boat.json
-0a9e50d09e7de55fb4001d21d3fd4e90d6b224aa data/cinchcraft/recipes/azalea_door.json
+25c181479c909a5aff32ddaed1c911f0b7dd918f data/cinchcraft/recipes/azalea_door.json
 677e9a827a6a7169fe0c103e5c20782fdf867def data/cinchcraft/recipes/azalea_fence.json
 5375a1f60922c6412d8bfce66830ff5140df313c data/cinchcraft/recipes/azalea_fence_gate.json
 48e34858566c3b65d49f2f12ce0c10951c53742e data/cinchcraft/recipes/azalea_hanging_sign.json
