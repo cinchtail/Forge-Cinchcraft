@@ -26,15 +26,6 @@
         "provider": {
           "type": "minecraft:simple_state_provider",
           "state": {
-            "Name": "minecraft:packed_ice"
-          }
-        }
-      },
-      {
-        "height": 1,
-        "provider": {
-          "type": "minecraft:simple_state_provider",
-          "state": {
             "Name": "cinchcraft:icicle",
             "Properties": {
               "thickness": "base",
