@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
-  "biomes": "#minecraft:is_icicle_biomes",
+  "biomes": "#minecraft:is_ice_cave_biomes",
   "features": "cinchcraft:underground_packed_ice_placed",
   "step": "underground_ores"
 }

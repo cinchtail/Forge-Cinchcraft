@@ -29,7 +29,7 @@
       "direction_of_search": "up",
       "max_steps": 12,
       "target_condition": {
-        "type": "minecraft:solid",
+        "type": "minecraft:has_sturdy_face",
         "direction": "down"
       }
     },
