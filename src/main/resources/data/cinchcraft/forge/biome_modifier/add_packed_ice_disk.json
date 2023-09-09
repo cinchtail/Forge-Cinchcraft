@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#minecraft:is_ice_cave_biomes",
-  "features": "cinchcraft:packed_ice_disk_placed",
-  "step": "underground_decoration"
-}

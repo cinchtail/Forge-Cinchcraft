@@ -43,7 +43,6 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> BLUEBERRIES_PLACED_KEY = createKey("blueberries_placed");
     public static final ResourceKey<PlacedFeature> PINEAPPLE_PLANT_PLACED_KEY = createKey("pineapple_placed");
     public static final ResourceKey<PlacedFeature> STRAWBERRY_PLACED_KEY = createKey("strawberry_placed");
-    //public static final ResourceKey<PlacedFeature> ICICLE_CEILING = createKey("icicle_ceiling");
     public static final ResourceKey<PlacedFeature> REEDS_PLACED_KEY = createKey("reeds_placed");
     public static final ResourceKey<PlacedFeature> CATTAILS_PLACED_KEY = createKey("cattails_placed");
 
@@ -119,11 +118,6 @@ public class ModPlacedFeatures {
         register(context, STAR_CACTUS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STAR_CACTUS_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(38),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
-
-        /*register(context, ICICLE_CEILING, configuredFeatures.getOrThrow(ModConfiguredFeatures.ICICLE_KEY), CountPlacement.of(256),
-                InSquarePlacement.spread(), PlacementUtils.RANGE_BOTTOM_TO_MAX_TERRAIN_HEIGHT, EnvironmentScanPlacement.scanningFor(Direction.UP,
-                        BlockPredicate.solid(), BlockPredicate.matchesTag(BlockTags.DRIPSTONE_REPLACEABLE), 12),
-                RandomOffsetPlacement.vertical(ConstantInt.of(0)), BiomeFilter.biome());*/
 
     }
 
