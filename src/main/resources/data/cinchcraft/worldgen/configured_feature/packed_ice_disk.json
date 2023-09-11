@@ -18,28 +18,10 @@
       },
       "rules": []
     },
-    "type": "minecraft:block_predicate_filter",
-    "predicate": {
-      "type": "minecraft:all_of",
-      "predicates": [
-        {
-          "type": "minecraft:any_of",
-          "predicates": [
-            {
-              "type": "minecraft:matching_blocks",
-              "blocks": "minecraft:stone"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:matching_blocks",
-          "blocks": "minecraft:air",
-          "offset": [
-            0,
-            1,
-            0
-          ]
-        }
+    "target": {
+      "type": "minecraft:matching_blocks",
+      "blocks": [
+        "minecraft:stone"
       ]
     }
   }
