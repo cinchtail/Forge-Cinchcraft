@@ -71,5 +71,7 @@ public class WanderingTraderTrades {
                 , 5, 3));
         event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(Items.SNOWBALL, 4)
                 , 4, 3));
+        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModBlocks.ICICLE.get(), 1)
+                , 8, 3));
     }
 }
