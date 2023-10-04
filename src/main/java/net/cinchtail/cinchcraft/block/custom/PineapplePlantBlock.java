@@ -82,9 +82,8 @@ public class PineapplePlantBlock extends BushBlock implements BonemealableBlock 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockBlockStateBuilder) {
         blockBlockStateBuilder.add(AGE);
     }
-
     @Override
-    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos pos, BlockState blockState, boolean b) {
+    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos pos, BlockState blockState) {
         return blockState.getValue(AGE) < 3;
     }
 

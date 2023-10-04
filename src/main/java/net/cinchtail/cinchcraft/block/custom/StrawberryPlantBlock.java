@@ -73,9 +73,8 @@ public class StrawberryPlantBlock extends BushBlock implements BonemealableBlock
             return super.use(blockState, level, pos, player, interactionHand, blockHitResult);
         }
     }
-
     @Override
-    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos pos, BlockState blockState, boolean b) {
+    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos pos, BlockState blockState) {
         return blockState.getValue(AGE) < 3;
     }
 

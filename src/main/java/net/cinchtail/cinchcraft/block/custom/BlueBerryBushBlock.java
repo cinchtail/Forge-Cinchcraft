@@ -89,9 +89,11 @@ public class BlueBerryBushBlock extends BushBlock implements BonemealableBlock {
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockBlockStateBuilder) {
         blockBlockStateBuilder.add(AGE);
     }
-    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos pos, BlockState blockState, boolean b) {
+    @Override
+    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos pos, BlockState blockState) {
         return blockState.getValue(AGE) < 3;
     }
+
     public boolean isBonemealSuccess(Level level, RandomSource randomSource, BlockPos pos, BlockState blockState) {
         return true;
     }

@@ -13,7 +13,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import java.util.function.Supplier;
+import java.util.List;
 
 public class AlyssumFlowerBlock extends BushBlock implements SuspiciousEffectHolder {
     protected static final VoxelShape SHAPE = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 3.0D, 14.0D);
@@ -47,5 +47,10 @@ public class AlyssumFlowerBlock extends BushBlock implements SuspiciousEffectHol
     public int getEffectDuration() {
         if (this.suspiciousStewEffect == null && !this.suspiciousStewEffectSupplier.get().isInstantenous()) return this.effectDuration * 20;
         return this.effectDuration;
+    }
+
+    @Override
+    public List<EffectEntry> m_294088_() {
+        return null;
     }
 }

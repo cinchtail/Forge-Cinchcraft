@@ -162,7 +162,7 @@ public class ModSunflowerCropBlock extends DoublePlantBlock implements Bonemeala
             return isLower(blockstate) ? new ModSunflowerCropBlock.PosAndState(blockpos, blockstate) : null;
         }
     }
-    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos pos, BlockState blockState, boolean b) {
+    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos pos, BlockState blockState) {
         ModSunflowerCropBlock.PosAndState modsunflowercropblock$posandstate = this.getLowerHalf(levelReader, pos, blockState);
         return modsunflowercropblock$posandstate != null && this.canGrow(levelReader, modsunflowercropblock$posandstate.pos, modsunflowercropblock$posandstate.state, modsunflowercropblock$posandstate.state.getValue(AGE) + 1);
     }
