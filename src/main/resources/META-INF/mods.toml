@@ -68,3 +68,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis lacinia magn
     versionRange="[1.19.4,1.21)"
     ordering="NONE"
     side="BOTH"
+[[dependencies.cinchcraft]]
+modId="terrablender"
+mandatory=true
+versionRange="${terrablender_version_range}"
+ordering="NONE"
+side="BOTH"

@@ -15,9 +15,11 @@ import net.cinchtail.cinchcraft.potion.ModPotions;
 import net.cinchtail.cinchcraft.sound.ModSounds;
 import net.cinchtail.cinchcraft.util.ModWoodTypes;
 import net.cinchtail.cinchcraft.villagers.ModVillagers;
+import net.cinchtail.cinchcraft.world.biome.ModOverworldRegion;
 import net.cinchtail.cinchcraft.world.biomemods.ModBiomeModifiers;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -36,6 +38,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import terrablender.api.Regions;
 
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -114,6 +117,8 @@ public class Cinchcraft
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             event.enqueueWork(() -> {
+                Regions.register(new ModOverworldRegion(new ResourceLocation(Cinchcraft.MOD_ID, "overworld"), 3));
+
                 Sheets.addWoodType(ModWoodTypes.AZALEA);
 
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.BUTTER_CUP.getId(), ModBlocks.POTTED_BUTTER_CUP);
