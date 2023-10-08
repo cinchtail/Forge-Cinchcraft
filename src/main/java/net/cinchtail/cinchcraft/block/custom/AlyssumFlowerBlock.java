@@ -17,40 +17,27 @@ import java.util.List;
 
 public class AlyssumFlowerBlock extends BushBlock implements SuspiciousEffectHolder {
     protected static final VoxelShape SHAPE = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 3.0D, 14.0D);
-    private final MobEffect suspiciousStewEffect;
-    private final int effectDuration;
 
-    private final java.util.function.Supplier<MobEffect> suspiciousStewEffectSupplier;
+    private final List<EffectEntry> f_290810_;
 
-    @Deprecated
-    public AlyssumFlowerBlock(MobEffect mobEffect, int i, BlockBehaviour.Properties properties) {
-        super(properties);
-        this.suspiciousStewEffect = mobEffect;
-        if (mobEffect.isInstantenous()) {
-            this.effectDuration = i;
+    public AlyssumFlowerBlock(MobEffect pSuspiciousStewEffect, int pEffectDuration, BlockBehaviour.Properties pProperties) {
+        super(pProperties);
+        int i;
+        if (pSuspiciousStewEffect.isInstantenous()) {
+            i = pEffectDuration;
         } else {
-            this.effectDuration = i * 20;
+            i = pEffectDuration * 20;
         }
-        this.suspiciousStewEffectSupplier = net.minecraftforge.registries.ForgeRegistries.MOB_EFFECTS.getDelegateOrThrow(mobEffect);
 
+        this.f_290810_ = List.of(new SuspiciousEffectHolder.EffectEntry(pSuspiciousStewEffect, i));
     }
 
-    public VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos pos, CollisionContext collisionContext) {
-        Vec3 vec3 = blockState.getOffset(blockGetter, pos);
+    public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
+        Vec3 vec3 = pState.getOffset(pLevel, pPos);
         return SHAPE.move(vec3.x, vec3.y, vec3.z);
     }
 
-    public MobEffect getSuspiciousEffect() {
-        return this.suspiciousStewEffectSupplier.get();
-    }
-
-    public int getEffectDuration() {
-        if (this.suspiciousStewEffect == null && !this.suspiciousStewEffectSupplier.get().isInstantenous()) return this.effectDuration * 20;
-        return this.effectDuration;
-    }
-
-    @Override
-    public List<EffectEntry> m_294088_() {
-        return null;
+    public List<SuspiciousEffectHolder.EffectEntry> m_294088_() {
+        return this.f_290810_;
     }
 }

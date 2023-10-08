@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "cinchcraft:cracked_bricks"
-  },
-  "result": "cinchcraft:cracked_brick_wall"
-}
