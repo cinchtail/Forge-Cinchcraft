@@ -2,6 +2,7 @@ package net.cinchtail.cinchcraft.datagen;
 
 import net.cinchtail.cinchcraft.Cinchcraft;
 import net.cinchtail.cinchcraft.block.ModBlocks;
+import net.cinchtail.cinchcraft.item.ModItems;
 import net.minecraft.advancements.Criterion;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.ItemPredicate;
@@ -42,14 +43,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', ModItems.RUBY.get())
-                .unlockedBy("has_ruby", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.RUBY.get()))
+                .unlockedBy("has_ruby", has(ModItems.RUBY.get()))
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RUBY.get(), 9)
                 .requires(ModBlocks.BLOCK_OF_RUBY.get())
-                .unlockedBy("has_block_of_ruby", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.BLOCK_OF_RUBY.get()))
+                .unlockedBy("has_block_of_ruby", has(ModBlocks.BLOCK_OF_RUBY.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.RUBY_SWORD.get())
@@ -58,8 +57,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("I")
                 .define('A', ModItems.RUBY.get())
                 .define('I', Items.STICK)
-                .unlockedBy("has_ruby", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.RUBY.get()))
+                .unlockedBy("has_ruby", has(ModItems.RUBY.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.RUBY_PICKAXE.get())
@@ -68,8 +66,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" I ")
                 .define('A', ModItems.RUBY.get())
                 .define('I', Items.STICK)
-                .unlockedBy("has_ruby", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.RUBY.get()))
+                .unlockedBy("has_ruby", has(ModItems.RUBY.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.RUBY_AXE.get())
@@ -78,8 +75,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" I ")
                 .define('A', ModItems.RUBY.get())
                 .define('I', Items.STICK)
-                .unlockedBy("has_ruby", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.RUBY.get()))
+                .unlockedBy("has_ruby", has(ModItems.RUBY.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.RUBY_SHOVEL.get())
@@ -88,8 +84,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("I")
                 .define('A', ModItems.RUBY.get())
                 .define('I', Items.STICK)
-                .unlockedBy("has_ruby", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.RUBY.get()))
+                .unlockedBy("has_ruby", has(ModItems.RUBY.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.RUBY_HOE.get())
@@ -98,16 +93,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" I")
                 .define('A', ModItems.RUBY.get())
                 .define('I', Items.STICK)
-                .unlockedBy("has_ruby", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.RUBY.get()))
+                .unlockedBy("has_ruby", has(ModItems.RUBY.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.RUBY_HELMET.get())
                 .pattern("AAA")
                 .pattern("A A")
                 .define('A', ModItems.RUBY.get())
-                .unlockedBy("has_ruby", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.RUBY.get()))
+                .unlockedBy("has_ruby", has(ModItems.RUBY.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.RUBY_CHESTPLATE.get())
@@ -115,8 +108,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', ModItems.RUBY.get())
-                .unlockedBy("has_ruby", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.RUBY.get()))
+                .unlockedBy("has_ruby", has(ModItems.RUBY.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.RUBY_LEGGINGS.get())
@@ -124,16 +116,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("A A")
                 .pattern("A A")
                 .define('A', ModItems.RUBY.get())
-                .unlockedBy("has_ruby", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.RUBY.get()))
+                .unlockedBy("has_ruby", has(ModItems.RUBY.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.RUBY_BOOTS.get())
                 .pattern("A A")
                 .pattern("A A")
                 .define('A', ModItems.RUBY.get())
-                .unlockedBy("has_ruby", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.RUBY.get()))
+                .unlockedBy("has_ruby", has(ModItems.RUBY.get()))
                 .save(consumer);
 
         oreSmelting(consumer, RUBY_SMELTABLES, RecipeCategory.MISC, ModItems.RUBY.get(), 0.8f, 200, "ruby");
@@ -190,29 +180,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_PLANKS.get(), 4)
                 .group("azalea_planks")
                 .requires(ModItems.AZALEA_LOG.get())
-                .unlockedBy("has_azalea_log", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.AZALEA_LOG.get()))
+                .unlockedBy("has_azalea_log", has(ModItems.AZALEA_LOG.get()))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "azalea_planks_from_azalea_log"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_PLANKS.get(), 4)
                 .group("azalea_planks")
                 .requires(ModItems.AZALEA_WOOD.get())
-                .unlockedBy("has_azalea_wood", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.AZALEA_WOOD.get()))
+                .unlockedBy("has_azalea_wood", has(ModItems.AZALEA_WOOD.get()))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "azalea_planks_from_azalea_wood"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_PLANKS.get(), 4)
                 .group("azalea_planks")
                 .requires(ModItems.STRIPPED_AZALEA_LOG.get())
-                .unlockedBy("has_stripped_azalea_log", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.STRIPPED_AZALEA_LOG.get()))
+                .unlockedBy("has_stripped_azalea_log", has(ModItems.STRIPPED_AZALEA_LOG.get()))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "azalea_planks_from_stripped_azalea_log"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_PLANKS.get(), 4)
                 .group("azalea_planks")
                 .requires(ModItems.STRIPPED_AZALEA_WOOD.get())
-                .unlockedBy("has_stripped_azalea_wood", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.STRIPPED_AZALEA_WOOD.get()))
+                .unlockedBy("has_stripped_azalea_wood", has(ModItems.STRIPPED_AZALEA_WOOD.get()))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "azalea_planks_from_stripped_azalea_wood"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_WOOD.get(),3)
@@ -220,8 +206,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA")
                 .pattern("AA")
                 .define('A', ModItems.AZALEA_LOG.get())
-                .unlockedBy("has_azalea_log", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.AZALEA_LOG.get()))
+                .unlockedBy("has_azalea_log", has(ModItems.AZALEA_LOG.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.STRIPPED_AZALEA_WOOD.get(),3)
@@ -229,8 +214,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA")
                 .pattern("AA")
                 .define('A', ModItems.STRIPPED_AZALEA_LOG.get())
-                .unlockedBy("has_stripped_azalea_log", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.STRIPPED_AZALEA_LOG.get()))
+                .unlockedBy("has_stripped_azalea_log", has(ModItems.STRIPPED_AZALEA_LOG.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_STAIRS.get(),4)
@@ -238,15 +222,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', ModItems.AZALEA_PLANKS.get())
-                .unlockedBy("has_azalea_planks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.AZALEA_PLANKS.get()))
+                .unlockedBy("has_azalea_planks", has(ModItems.AZALEA_PLANKS.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AZALEA_SLAB.get(),6)
                 .pattern("AAA")
                 .define('A', ModItems.AZALEA_PLANKS.get())
-                .unlockedBy("has_azalea_planks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.AZALEA_PLANKS.get()))
+                .unlockedBy("has_azalea_planks", has(ModItems.AZALEA_PLANKS.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AZALEA_FENCE.get(),3)
@@ -254,8 +236,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("ATA")
                 .define('A', ModItems.AZALEA_PLANKS.get())
                 .define('T', Items.STICK)
-                .unlockedBy("has_azalea_planks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.AZALEA_PLANKS.get()))
+                .unlockedBy("has_azalea_planks", has(ModItems.AZALEA_PLANKS.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AZALEA_FENCE_GATE.get())
@@ -263,21 +244,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("ATA")
                 .define('T', ModItems.AZALEA_PLANKS.get())
                 .define('A', Items.STICK)
-                .unlockedBy("has_azalea_planks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.AZALEA_PLANKS.get()))
+                .unlockedBy("has_azalea_planks", has(ModItems.AZALEA_PLANKS.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AZALEA_PRESSURE_PLATE.get())
                 .pattern("AA")
                 .define('A', ModItems.AZALEA_PLANKS.get())
-                .unlockedBy("has_azalea_planks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.AZALEA_PLANKS.get()))
+                .unlockedBy("has_azalea_planks", has(ModItems.AZALEA_PLANKS.get()))
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_BUTTON.get())
                 .requires(ModItems.AZALEA_PLANKS.get())
-                .unlockedBy("has_azalea_planks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.AZALEA_PLANKS.get()))
+                .unlockedBy("has_azalea_planks", has(ModItems.AZALEA_PLANKS.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_SIGN.get(),3)
@@ -286,8 +264,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" T ")
                 .define('A', ModItems.AZALEA_PLANKS.get())
                 .define('T', Items.STICK)
-                .unlockedBy("has_azalea_planks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.AZALEA_PLANKS.get()))
+                .unlockedBy("has_azalea_planks", has(ModItems.AZALEA_PLANKS.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_HANGING_SIGN.get(),6)
@@ -296,8 +273,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .define('A', ModItems.STRIPPED_AZALEA_LOG.get())
                 .define('T', Items.CHAIN)
-                .unlockedBy("has_azalea_planks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.AZALEA_PLANKS.get()))
+                .unlockedBy("has_azalea_planks", has(ModItems.AZALEA_PLANKS.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_DOOR.get(),3)
@@ -305,31 +281,27 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA")
                 .pattern("AA")
                 .define('A', ModItems.AZALEA_PLANKS.get())
-                .unlockedBy("has_azalea_planks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.AZALEA_PLANKS.get()))
+                .unlockedBy("has_azalea_planks", has(ModItems.AZALEA_PLANKS.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_TRAPDOOR.get(),2)
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', ModItems.AZALEA_PLANKS.get())
-                .unlockedBy("has_azalea_planks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.AZALEA_PLANKS.get()))
+                .unlockedBy("has_azalea_planks", has(ModItems.AZALEA_PLANKS.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_BOAT.get())
                 .pattern("A A")
                 .pattern("AAA")
                 .define('A', ModItems.AZALEA_PLANKS.get())
-                .unlockedBy("has_azalea_planks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.AZALEA_PLANKS.get()))
+                .unlockedBy("has_azalea_planks", has(ModItems.AZALEA_PLANKS.get()))
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_CHEST_BOAT.get())
                 .requires(ModItems.AZALEA_BOAT.get())
                 .requires(Items.CHEST)
-                .unlockedBy("has_azalea_boat", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.AZALEA_BOAT.get()))
+                .unlockedBy("has_azalea_boat", has(ModItems.AZALEA_BOAT.get()))
                 .save(consumer);
 
         //Reeds Recipes
@@ -338,8 +310,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', ModItems.REEDS.get())
-                .unlockedBy("has_reeds", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.REEDS.get()))
+                .unlockedBy("has_reeds", has(ModItems.REEDS.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.THATCH_STAIRS.get(),4)
@@ -347,44 +318,38 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', ModItems.THATCH_BLOCK.get())
-                .unlockedBy("has_thatch_block", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.THATCH_BLOCK.get()))
+                .unlockedBy("has_thatch_block", has(ModItems.THATCH_BLOCK.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.THATCH_SLAB.get(),6)
                 .pattern("AAA")
                 .define('A', ModItems.THATCH_BLOCK.get())
-                .unlockedBy("has_thatch_block", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.THATCH_BLOCK.get()))
+                .unlockedBy("has_thatch_block", has(ModItems.THATCH_BLOCK.get()))
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.REEDS.get(), 9)
                 .requires(ModItems.THATCH_BLOCK.get())
                 .group("reeds")
-                .unlockedBy("has_thatch_block", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.THATCH_BLOCK.get()))
+                .unlockedBy("has_thatch_block", has(ModItems.THATCH_BLOCK.get()))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "reeds_from_thatch_block"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.REEDS.get(), 6)
                 .requires(ModItems.THATCH_STAIRS.get())
                 .group("reeds")
-                .unlockedBy("has_thatch_stairs", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.THATCH_STAIRS.get()))
+                .unlockedBy("has_thatch_stairs", has(ModItems.THATCH_STAIRS.get()))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "reeds_from_thatch_stairs"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.REEDS.get(), 4)
                 .requires(ModItems.THATCH_SLAB.get())
                 .group("reeds")
-                .unlockedBy("has_thatch_slab", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.THATCH_SLAB.get()))
+                .unlockedBy("has_thatch_slab", has(ModItems.THATCH_SLAB.get()))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "reeds_from_thatch_slab"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, Items.PACKED_MUD)
                 .pattern("AT")
                 .define('A', Items.MUD)
                 .define('T', ModItems.REEDS.get())
-                .unlockedBy("has_reeds", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.REEDS.get()))
+                .unlockedBy("has_reeds", has(ModItems.REEDS.get()))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "packed_mud_from_reeds"));
 
         //Blackstone Tools
@@ -394,8 +359,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("I")
                 .define('A', Items.BLACKSTONE)
                 .define('I', Items.STICK)
-                .unlockedBy("has_blackstone", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.BLACKSTONE))
+                .unlockedBy("has_blackstone", has(Items.BLACKSTONE))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.BLACKSTONE_PICKAXE.get())
@@ -404,8 +368,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" I ")
                 .define('A', Items.BLACKSTONE)
                 .define('I', Items.STICK)
-                .unlockedBy("has_blackstone", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.BLACKSTONE))
+                .unlockedBy("has_blackstone", has(Items.BLACKSTONE))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.BLACKSTONE_AXE.get())
@@ -414,8 +377,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" I ")
                 .define('A', Items.BLACKSTONE)
                 .define('I', Items.STICK)
-                .unlockedBy("has_blackstone", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.BLACKSTONE))
+                .unlockedBy("has_blackstone", has(Items.BLACKSTONE))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.BLACKSTONE_SHOVEL.get())
@@ -424,8 +386,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("I")
                 .define('A', Items.BLACKSTONE)
                 .define('I', Items.STICK)
-                .unlockedBy("has_blackstone", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.BLACKSTONE))
+                .unlockedBy("has_blackstone", has(Items.BLACKSTONE))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.BLACKSTONE_HOE.get())
@@ -434,8 +395,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" I")
                 .define('A', Items.BLACKSTONE)
                 .define('I', Items.STICK)
-                .unlockedBy("has_blackstone", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.BLACKSTONE))
+                .unlockedBy("has_blackstone", has(Items.BLACKSTONE))
                 .save(consumer);
 
         //Deepslate Tools
@@ -445,8 +405,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("I")
                 .define('A', Items.COBBLED_DEEPSLATE)
                 .define('I', Items.STICK)
-                .unlockedBy("has_deepslate", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.COBBLED_DEEPSLATE))
+                .unlockedBy("has_deepslate", has(Items.COBBLED_DEEPSLATE))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.DEEPSLATE_PICKAXE.get())
@@ -455,8 +414,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" I ")
                 .define('A', Items.COBBLED_DEEPSLATE)
                 .define('I', Items.STICK)
-                .unlockedBy("has_deepslate", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.COBBLED_DEEPSLATE))
+                .unlockedBy("has_deepslate", has(Items.COBBLED_DEEPSLATE))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.DEEPSLATE_AXE.get())
@@ -465,8 +423,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" I ")
                 .define('A', Items.COBBLED_DEEPSLATE)
                 .define('I', Items.STICK)
-                .unlockedBy("has_deepslate", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.COBBLED_DEEPSLATE))
+                .unlockedBy("has_deepslate", has(Items.COBBLED_DEEPSLATE))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.DEEPSLATE_SHOVEL.get())
@@ -475,8 +432,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("I")
                 .define('A', Items.COBBLED_DEEPSLATE)
                 .define('I', Items.STICK)
-                .unlockedBy("has_deepslate", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.COBBLED_DEEPSLATE))
+                .unlockedBy("has_deepslate", has(Items.COBBLED_DEEPSLATE))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.DEEPSLATE_HOE.get())
@@ -485,8 +441,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" I")
                 .define('A', Items.COBBLED_DEEPSLATE)
                 .define('I', Items.STICK)
-                .unlockedBy("has_deepslate", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.COBBLED_DEEPSLATE))
+                .unlockedBy("has_deepslate", has(Items.COBBLED_DEEPSLATE))
                 .save(consumer);
 
         //Copper Recipes
@@ -495,35 +450,30 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', ModItems.COPPER_NUGGET.get())
-                .unlockedBy("has_copper_nugget", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.COPPER_NUGGET.get()))
+                .unlockedBy("has_copper_nugget", has(ModItems.COPPER_NUGGET.get()))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "copper_ingot_from_nuggets"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.COPPER_NUGGET.get(), 9)
                 .requires(Items.COPPER_INGOT)
-                .unlockedBy("has_copper_ingot", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.COPPER_INGOT))
+                .unlockedBy("has_copper_ingot", has(Items.COPPER_INGOT))
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.COPPER_INGOT, 2)
                 .requires(Items.CUT_COPPER)
                 .group("copper_ingot")
-                .unlockedBy("has_cut_copper", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.CUT_COPPER))
+                .unlockedBy("has_cut_copper", has(Items.CUT_COPPER))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "copper_ingot_from_cut_copper"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.COPPER_INGOT, 2)
                 .requires(Items.CUT_COPPER_STAIRS)
                 .group("copper_ingot")
-                .unlockedBy("has_cut_copper_stairs", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.CUT_COPPER_STAIRS))
+                .unlockedBy("has_cut_copper_stairs", has(Items.CUT_COPPER_STAIRS))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "copper_ingot_from_cut_copper_stairs"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.COPPER_INGOT, 1)
                 .requires(Items.CUT_COPPER_SLAB)
                 .group("copper_ingot")
-                .unlockedBy("has_cut_copper_slab", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.CUT_COPPER_SLAB))
+                .unlockedBy("has_cut_copper_slab", has(Items.CUT_COPPER_SLAB))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "copper_ingot_from_cut_copper_slab"));
 
         //Chainmail recipes
@@ -531,16 +481,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA")
                 .pattern("AA")
                 .define('A', Items.CHAIN)
-                .unlockedBy("has_chain", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.CHAIN))
+                .unlockedBy("has_chain", has(Items.CHAIN))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, Items.CHAINMAIL_HELMET)
                 .pattern("AAA")
                 .pattern("A A")
                 .define('A', ModItems.CHAINMAIL.get())
-                .unlockedBy("has_chainmail", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.CHAINMAIL.get()))
+                .unlockedBy("has_chainmail", has(ModItems.CHAINMAIL.get()))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "chainmail_helmet_from_chainmail"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, Items.CHAINMAIL_CHESTPLATE)
@@ -548,8 +496,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', ModItems.CHAINMAIL.get())
-                .unlockedBy("has_chainmail", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.CHAINMAIL.get()))
+                .unlockedBy("has_chainmail", has(ModItems.CHAINMAIL.get()))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "chainmail_chestplate_from_chainmail"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, Items.CHAINMAIL_LEGGINGS)
@@ -557,16 +504,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("A A")
                 .pattern("A A")
                 .define('A', ModItems.CHAINMAIL.get())
-                .unlockedBy("has_chainmail", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.CHAINMAIL.get()))
+                .unlockedBy("has_chainmail", has(ModItems.CHAINMAIL.get()))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "chainmail_leggings_from_chainmail"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, Items.CHAINMAIL_BOOTS)
                 .pattern("A A")
                 .pattern("A A")
                 .define('A', ModItems.CHAINMAIL.get())
-                .unlockedBy("has_chainmail", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.CHAINMAIL.get()))
+                .unlockedBy("has_chainmail", has(ModItems.CHAINMAIL.get()))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "chainmail_boots_from_chainmail"));
 
         //Food Recipes
@@ -576,8 +521,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModItems.BLUEBERRIES.get())
                 .requires(Items.EGG)
                 .requires(Items.SUGAR)
-                .unlockedBy("has_blueberry", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.BLUEBERRIES.get()))
+                .unlockedBy("has_blueberry", has(ModItems.BLUEBERRIES.get()))
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.ANCIENT_SLIME_STEW.get())
@@ -586,22 +530,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.TORCHFLOWER_SEEDS)
                 .requires(Items.SLIME_BALL)
                 .requires(Items.SLIME_BALL)
-                .unlockedBy("has_torchflower_seeds", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.TORCHFLOWER_SEEDS))
+                .unlockedBy("has_torchflower_seeds", has(Items.TORCHFLOWER_SEEDS))
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, Items.MELON_SLICE,9)
                 .requires(Items.MELON)
                 .group("melon_slices")
-                .unlockedBy("has_melon", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.MELON))
+                .unlockedBy("has_melon", has(Items.MELON))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "melon_slices"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, Items.MELON_SLICE,6)
                 .requires(ModItems.CARVED_MELON.get())
                 .group("melon_slices")
-                .unlockedBy("has_carved_melon", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.CARVED_MELON.get()))
+                .unlockedBy("has_carved_melon", has(ModItems.CARVED_MELON.get()))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "melon_slices_from_carved_melon"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.NETHER_STEW.get())
@@ -610,8 +551,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.CRIMSON_FUNGUS)
                 .requires(Items.NETHER_WART)
                 .requires(Items.MAGMA_CREAM)
-                .unlockedBy("has_nether_wart", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.NETHER_WART))
+                .unlockedBy("has_nether_wart", has(Items.NETHER_WART))
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.VEGETABLE_STEW.get())
@@ -621,8 +561,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.CARROT)
                 .requires(Items.BROWN_MUSHROOM)
                 .group("vegetable_stew")
-                .unlockedBy("has_vegetable_stew_ingredient", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.BEETROOT, Items.POTATO, Items.CARROT, Items.BROWN_MUSHROOM))
+                .unlockedBy("has_vegetable_stew_ingredient", has(Items.BOWL))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "vegetable_stew_from_brown_mushroom"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.VEGETABLE_STEW.get())
@@ -632,58 +571,49 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.CARROT)
                 .requires(Items.RED_MUSHROOM)
                 .group("vegetable_stew")
-                .unlockedBy("has_vegetable_stew_ingredient", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.BEETROOT, Items.POTATO, Items.CARROT, Items.RED_MUSHROOM))
+                .unlockedBy("has_vegetable_stew_ingredient", has(Items.BOWL))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "vegetable_stew_from_red_mushroom"));
 
         //Dye Recipes
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.CYAN_DYE)
                 .requires(ModItems.LUPINE.get())
-                .unlockedBy("has_lupine", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.LUPINE.get()))
+                .unlockedBy("has_lupine", has(ModItems.LUPINE.get()))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "cyan_dye_from_lupine"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.CYAN_DYE)
                 .requires(ModItems.CROCUS.get())
-                .unlockedBy("has_crocus", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.CROCUS.get()))
+                .unlockedBy("has_crocus", has(ModItems.CROCUS.get()))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "cyan_dye_from_crocus"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.PURPLE_DYE)
                 .requires(ModBlocks.BUBBLE_FLOWER.get())
-                .unlockedBy("has_bubble_flower", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.BUBBLE_FLOWER.get()))
+                .unlockedBy("has_bubble_flower", has(ModBlocks.BUBBLE_FLOWER.get()))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "purple_dye_from_bubble_flower"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.RED_DYE)
                 .requires(ModItems.SMALL_ROSE.get())
-                .unlockedBy("has_small_rose", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.SMALL_ROSE.get()))
+                .unlockedBy("has_small_rose", has(ModItems.SMALL_ROSE.get()))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "red_dye_from_small_rose"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.WHITE_DYE)
                 .requires(ModItems.ALYSSUM.get())
-                .unlockedBy("has_alyssum", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.ALYSSUM.get()))
+                .unlockedBy("has_alyssum", has(ModItems.ALYSSUM.get()))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "white_dye_from_alyssum"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.YELLOW_DYE)
                 .requires(ModItems.BUTTER_CUP.get())
-                .unlockedBy("has_butter_cup", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.BUTTER_CUP.get()))
+                .unlockedBy("has_butter_cup", has(ModItems.BUTTER_CUP.get()))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "yellow_dye_from_butter_cup"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.SUNFLOWER_SEEDS.get(), 2)
                 .requires(ModItems.SUNFLOWER_HEAD.get())
-                .unlockedBy("has_sunflower_head", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.SUNFLOWER_HEAD.get()))
+                .unlockedBy("has_sunflower_head", has(ModItems.SUNFLOWER_HEAD.get()))
                 .save(consumer);
 
         //Miscellaneous
         ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModItems.SMALL_ROSE.get(), 4)
                 .requires(Items.ROSE_BUSH)
-                .unlockedBy("has_rose_bush", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.ROSE_BUSH))
+                .unlockedBy("has_rose_bush", has(Items.ROSE_BUSH))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GLOWSTONE_TORCH.get())
@@ -691,8 +621,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("T")
                 .define('A', Items.GLOWSTONE_DUST)
                 .define('T', Items.STICK)
-                .unlockedBy("has_glowstone_dust", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.GLOWSTONE_DUST))
+                .unlockedBy("has_glowstone_dust", has(Items.GLOWSTONE_DUST))
                 .save(consumer);
 
         SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
@@ -703,8 +632,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, Items.STRING, 4)
                 .requires(Items.WHITE_WOOL)
-                .unlockedBy("has_white_wool", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.WHITE_WOOL))
+                .unlockedBy("has_white_wool", has(Items.WHITE_WOOL))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "string_from_wool"));
 
 
@@ -713,8 +641,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("A")
                 .pattern("A")
                 .define('A', Items.END_STONE_BRICK_SLAB)
-                .unlockedBy("has_end_stone_brick_slab", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.END_STONE_BRICK_SLAB))
+                .unlockedBy("has_end_stone_brick_slab", has(Items.END_STONE_BRICK_SLAB))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_END_STONE_BRICKS.get())
@@ -729,8 +656,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("A")
                 .pattern("A")
                 .define('A', Items.MUD_BRICK_SLAB)
-                .unlockedBy("has_mud_brick_slab", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.MUD_BRICK_SLAB))
+                .unlockedBy("has_mud_brick_slab", has(Items.MUD_BRICK_SLAB))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.MUD_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_MUD_BRICKS.get())
@@ -741,8 +667,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("A")
                 .pattern("A")
                 .define('A', Items.RED_NETHER_BRICK_SLAB)
-                .unlockedBy("has_red_nether_brick_slab", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.RED_NETHER_BRICK_SLAB))
+                .unlockedBy("has_red_nether_brick_slab", has(Items.RED_NETHER_BRICK_SLAB))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.RED_NETHER_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_RED_NETHER_BRICKS.get())
@@ -754,8 +679,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', Items.CALCITE)
-                .unlockedBy("has_calcite", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.CALCITE))
+                .unlockedBy("has_calcite", has(Items.CALCITE))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CALCITE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CALCITE_STAIRS.get())
@@ -765,8 +689,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CALCITE_SLAB.get(),6)
                 .pattern("AAA")
                 .define('A', Items.CALCITE)
-                .unlockedBy("has_calcite", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.CALCITE))
+                .unlockedBy("has_calcite", has(Items.CALCITE))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CALCITE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CALCITE_SLAB.get(),2)
@@ -777,8 +700,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', Items.CALCITE)
-                .unlockedBy("has_calcite", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.CALCITE))
+                .unlockedBy("has_calcite", has(Items.CALCITE))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CALCITE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CALCITE_WALL.get())
@@ -790,8 +712,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', Items.CRACKED_DEEPSLATE_BRICKS)
-                .unlockedBy("has_cracked_deepslate_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.CRACKED_DEEPSLATE_BRICKS))
+                .unlockedBy("has_cracked_deepslate_bricks", has(Items.CRACKED_DEEPSLATE_BRICKS))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_DEEPSLATE_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_BRICK_STAIRS.get())
@@ -801,8 +722,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_BRICK_SLAB.get(),6)
                 .pattern("AAA")
                 .define('A', Items.CRACKED_DEEPSLATE_BRICKS)
-                .unlockedBy("has_cracked_deepslate_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.CRACKED_DEEPSLATE_BRICKS))
+                .unlockedBy("has_cracked_deepslate_bricks", has(Items.CRACKED_DEEPSLATE_BRICKS))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_DEEPSLATE_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_BRICK_SLAB.get(),2)
@@ -813,8 +733,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', Items.CRACKED_DEEPSLATE_BRICKS)
-                .unlockedBy("has_cracked_deepslate_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.CRACKED_DEEPSLATE_BRICKS))
+                .unlockedBy("has_cracked_deepslate_bricks", has(Items.CRACKED_DEEPSLATE_BRICKS))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_DEEPSLATE_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_BRICK_WALL.get())
@@ -826,8 +745,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', Items.CRACKED_DEEPSLATE_TILES)
-                .unlockedBy("has_cracked_deepslate_tiles", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.CRACKED_DEEPSLATE_BRICKS))
+                .unlockedBy("has_cracked_deepslate_tiles", has(Items.CRACKED_DEEPSLATE_BRICKS))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_DEEPSLATE_TILES), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_TILE_STAIRS.get())
@@ -837,8 +755,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_TILE_SLAB.get(),6)
                 .pattern("AAA")
                 .define('A', Items.CRACKED_DEEPSLATE_TILES)
-                .unlockedBy("has_cracked_deepslate_tiles", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.CRACKED_DEEPSLATE_BRICKS))
+                .unlockedBy("has_cracked_deepslate_tiles", has(Items.CRACKED_DEEPSLATE_BRICKS))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_DEEPSLATE_TILES), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_TILE_SLAB.get(),2)
@@ -849,8 +766,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', Items.CRACKED_DEEPSLATE_TILES)
-                .unlockedBy("has_cracked_deepslate_tiles", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.CRACKED_DEEPSLATE_BRICKS))
+                .unlockedBy("has_cracked_deepslate_tiles", has(Items.CRACKED_DEEPSLATE_BRICKS))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_DEEPSLATE_TILES), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_DEEPSLATE_TILE_WALL.get())
@@ -862,8 +778,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', ModBlocks.CRACKED_MUD_BRICKS.get())
-                .unlockedBy("has_cracked_mud_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.CRACKED_MUD_BRICKS.get()))
+                .unlockedBy("has_cracked_mud_bricks", has(ModBlocks.CRACKED_MUD_BRICKS.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_MUD_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_MUD_BRICK_STAIRS.get())
@@ -873,8 +788,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_MUD_BRICK_SLAB.get(),6)
                 .pattern("AAA")
                 .define('A', ModBlocks.CRACKED_MUD_BRICKS.get())
-                .unlockedBy("has_cracked_mud_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.CRACKED_MUD_BRICKS.get()))
+                .unlockedBy("has_cracked_mud_bricks", has(ModBlocks.CRACKED_MUD_BRICKS.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_MUD_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_MUD_BRICK_SLAB.get(),2)
@@ -885,8 +799,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', ModBlocks.CRACKED_MUD_BRICKS.get())
-                .unlockedBy("has_cracked_mud_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.CRACKED_MUD_BRICKS.get()))
+                .unlockedBy("has_cracked_mud_bricks", has(ModBlocks.CRACKED_MUD_BRICKS.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_MUD_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_MUD_BRICK_WALL.get())
@@ -898,8 +811,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', Items.CRACKED_NETHER_BRICKS)
-                .unlockedBy("has_cracked_nether_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.CRACKED_NETHER_BRICKS))
+                .unlockedBy("has_cracked_nether_bricks", has(Items.CRACKED_NETHER_BRICKS))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_NETHER_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_NETHER_BRICK_STAIRS.get())
@@ -909,8 +821,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_NETHER_BRICK_SLAB.get(),6)
                 .pattern("AAA")
                 .define('A', Items.CRACKED_NETHER_BRICKS)
-                .unlockedBy("has_cracked_nether_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.CRACKED_NETHER_BRICKS))
+                .unlockedBy("has_cracked_nether_bricks", has(Items.CRACKED_NETHER_BRICKS))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_NETHER_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_NETHER_BRICK_SLAB.get(),2)
@@ -921,8 +832,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', Items.CRACKED_NETHER_BRICKS)
-                .unlockedBy("has_cracked_nether_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.CRACKED_NETHER_BRICKS))
+                .unlockedBy("has_cracked_nether_bricks", has(Items.CRACKED_NETHER_BRICKS))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_NETHER_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_NETHER_BRICK_WALL.get())
@@ -934,8 +844,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', Items.CRACKED_POLISHED_BLACKSTONE_BRICKS)
-                .unlockedBy("has_cracked_polished_blackstone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.CRACKED_POLISHED_BLACKSTONE_BRICKS))
+                .unlockedBy("has_cracked_polished_blackstone_bricks", has(Items.CRACKED_POLISHED_BLACKSTONE_BRICKS))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_STAIRS.get())
@@ -945,8 +854,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_SLAB.get(),6)
                 .pattern("AAA")
                 .define('A', Items.CRACKED_POLISHED_BLACKSTONE_BRICKS)
-                .unlockedBy("has_cracked_polished_blackstone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.CRACKED_POLISHED_BLACKSTONE_BRICKS))
+                .unlockedBy("has_cracked_polished_blackstone_bricks", has(Items.CRACKED_POLISHED_BLACKSTONE_BRICKS))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_SLAB.get(),2)
@@ -957,8 +865,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', Items.CRACKED_POLISHED_BLACKSTONE_BRICKS)
-                .unlockedBy("has_cracked_polished_blackstone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.CRACKED_POLISHED_BLACKSTONE_BRICKS))
+                .unlockedBy("has_cracked_polished_blackstone_bricks", has(Items.CRACKED_POLISHED_BLACKSTONE_BRICKS))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_WALL.get())
@@ -970,8 +877,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', ModBlocks.CRACKED_QUARTZ_BRICKS.get())
-                .unlockedBy("has_cracked_quartz_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.CRACKED_QUARTZ_BRICKS.get()))
+                .unlockedBy("has_cracked_quartz_bricks", has(ModBlocks.CRACKED_QUARTZ_BRICKS.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_QUARTZ_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_QUARTZ_BRICK_STAIRS.get())
@@ -981,8 +887,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_QUARTZ_BRICK_SLAB.get(),6)
                 .pattern("AAA")
                 .define('A', ModBlocks.CRACKED_QUARTZ_BRICKS.get())
-                .unlockedBy("has_cracked_quartz_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.CRACKED_QUARTZ_BRICKS.get()))
+                .unlockedBy("has_cracked_quartz_bricks", has(ModBlocks.CRACKED_QUARTZ_BRICKS.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_QUARTZ_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_QUARTZ_BRICK_SLAB.get(),2)
@@ -993,8 +898,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', ModBlocks.CRACKED_QUARTZ_BRICKS.get())
-                .unlockedBy("has_cracked_quartz_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.CRACKED_QUARTZ_BRICKS.get()))
+                .unlockedBy("has_cracked_quartz_bricks", has(ModBlocks.CRACKED_QUARTZ_BRICKS.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_QUARTZ_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_QUARTZ_BRICK_WALL.get())
@@ -1006,8 +910,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', ModBlocks.CRACKED_RED_NETHER_BRICKS.get())
-                .unlockedBy("has_cracked_red_nether_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.CRACKED_RED_NETHER_BRICKS.get()))
+                .unlockedBy("has_cracked_red_nether_bricks", has(ModBlocks.CRACKED_RED_NETHER_BRICKS.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_RED_NETHER_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_RED_NETHER_BRICK_STAIRS.get())
@@ -1017,8 +920,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_RED_NETHER_BRICK_SLAB.get(),6)
                 .pattern("AAA")
                 .define('A', ModBlocks.CRACKED_RED_NETHER_BRICKS.get())
-                .unlockedBy("has_cracked_red_nether_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.CRACKED_RED_NETHER_BRICKS.get()))
+                .unlockedBy("has_cracked_red_nether_bricks", has(ModBlocks.CRACKED_RED_NETHER_BRICKS.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_RED_NETHER_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_RED_NETHER_BRICK_SLAB.get(),2)
@@ -1029,8 +931,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', ModBlocks.CRACKED_RED_NETHER_BRICKS.get())
-                .unlockedBy("has_cracked_red_nether_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.CRACKED_RED_NETHER_BRICKS.get()))
+                .unlockedBy("has_cracked_red_nether_bricks", has(ModBlocks.CRACKED_RED_NETHER_BRICKS.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_RED_NETHER_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_RED_NETHER_BRICK_WALL.get())
@@ -1042,8 +943,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', Items.CRACKED_STONE_BRICKS)
-                .unlockedBy("has_cracked_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.CRACKED_STONE_BRICKS))
+                .unlockedBy("has_cracked_stone_bricks", has(Items.CRACKED_STONE_BRICKS))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_STONE_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_STONE_BRICK_STAIRS.get())
@@ -1053,8 +953,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_STONE_BRICK_SLAB.get(),6)
                 .pattern("AAA")
                 .define('A', Items.CRACKED_STONE_BRICKS)
-                .unlockedBy("has_cracked_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.CRACKED_STONE_BRICKS))
+                .unlockedBy("has_cracked_stone_bricks", has(Items.CRACKED_STONE_BRICKS))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_STONE_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_STONE_BRICK_SLAB.get(),2)
@@ -1065,8 +964,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', Items.CRACKED_STONE_BRICKS)
-                .unlockedBy("has_cracked_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.CRACKED_STONE_BRICKS))
+                .unlockedBy("has_cracked_stone_bricks", has(Items.CRACKED_STONE_BRICKS))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CRACKED_STONE_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_STONE_BRICK_WALL.get())
@@ -1078,8 +976,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', Items.CUT_RED_SANDSTONE)
-                .unlockedBy("has_cut_red_sandstone", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.CUT_RED_SANDSTONE))
+                .unlockedBy("has_cut_red_sandstone", has(Items.CUT_RED_SANDSTONE))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CUT_RED_SANDSTONE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_RED_SANDSTONE_STAIRS.get())
@@ -1090,8 +987,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', Items.CUT_RED_SANDSTONE)
-                .unlockedBy("has_cut_red_sandstone", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.CUT_RED_SANDSTONE))
+                .unlockedBy("has_cut_red_sandstone", has(Items.CUT_RED_SANDSTONE))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CUT_RED_SANDSTONE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_RED_SANDSTONE_WALL.get())
@@ -1103,8 +999,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', Items.CUT_SANDSTONE)
-                .unlockedBy("has_cut_sandstone", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.CUT_SANDSTONE))
+                .unlockedBy("has_cut_sandstone", has(Items.CUT_SANDSTONE))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CUT_SANDSTONE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_SANDSTONE_STAIRS.get())
@@ -1115,8 +1010,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', Items.CUT_SANDSTONE)
-                .unlockedBy("has_cut_sandstone", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.CUT_SANDSTONE))
+                .unlockedBy("has_cut_sandstone", has(Items.CUT_SANDSTONE))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CUT_SANDSTONE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_SANDSTONE_WALL.get())
@@ -1127,8 +1021,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', Items.DARK_PRISMARINE)
-                .unlockedBy("has_dark_prismarine", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.DARK_PRISMARINE))
+                .unlockedBy("has_dark_prismarine", has(Items.DARK_PRISMARINE))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.DARK_PRISMARINE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.DARK_PRISMARINE_WALL.get())
@@ -1140,8 +1033,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', Items.DRIPSTONE_BLOCK)
-                .unlockedBy("has_dripstone_block", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.DRIPSTONE_BLOCK))
+                .unlockedBy("has_dripstone_block", has(Items.DRIPSTONE_BLOCK))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.DRIPSTONE_BLOCK), RecipeCategory.BUILDING_BLOCKS, ModBlocks.DRIPSTONE_STAIRS.get())
@@ -1151,8 +1043,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DRIPSTONE_SLAB.get(),6)
                 .pattern("AAA")
                 .define('A', Items.DRIPSTONE_BLOCK)
-                .unlockedBy("has_dripstone_block", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.DRIPSTONE_BLOCK))
+                .unlockedBy("has_dripstone_block", has(Items.DRIPSTONE_BLOCK))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.DRIPSTONE_BLOCK), RecipeCategory.BUILDING_BLOCKS, ModBlocks.DRIPSTONE_SLAB.get(),2)
@@ -1163,8 +1054,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', Items.DRIPSTONE_BLOCK)
-                .unlockedBy("has_dripstone_block", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.DRIPSTONE_BLOCK))
+                .unlockedBy("has_dripstone_block", has(Items.DRIPSTONE_BLOCK))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.DRIPSTONE_BLOCK), RecipeCategory.BUILDING_BLOCKS, ModBlocks.DRIPSTONE_WALL.get())
@@ -1176,8 +1066,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', Items.END_STONE)
-                .unlockedBy("has_end_stone", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.END_STONE))
+                .unlockedBy("has_end_stone", has(Items.END_STONE))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.END_STONE_STAIRS.get())
@@ -1187,8 +1076,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.END_STONE_SLAB.get(),6)
                 .pattern("AAA")
                 .define('A', Items.END_STONE)
-                .unlockedBy("has_end_stone", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.END_STONE))
+                .unlockedBy("has_end_stone", has(Items.END_STONE))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.END_STONE_SLAB.get(),2)
@@ -1199,8 +1087,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', Items.END_STONE)
-                .unlockedBy("has_end_stone", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.END_STONE))
+                .unlockedBy("has_end_stone", has(Items.END_STONE))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.END_STONE_WALL.get())
@@ -1219,16 +1106,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .group("mossy_cobbled_bricks")
                 .requires(Blocks.COBBLED_DEEPSLATE)
                 .requires(Blocks.MOSS_BLOCK)
-                .unlockedBy("has_moss_block", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.MOSS_BLOCK))
+                .unlockedBy("has_moss_block", has(Blocks.MOSS_BLOCK))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_cobbled_deepslate_from_moss_block"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_COBBLED_DEEPSLATE.get())
                 .group("mossy_cobbled_bricks")
                 .requires(Blocks.COBBLED_DEEPSLATE)
                 .requires(Blocks.VINE)
-                .unlockedBy("has_vine", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.VINE))
+                .unlockedBy("has_vine", has(Blocks.VINE))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_cobbled_deepslate_from_vine"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_COBBLED_DEEPSLATE_STAIRS.get(),4)
@@ -1236,8 +1121,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', ModBlocks.MOSSY_COBBLED_DEEPSLATE.get())
-                .unlockedBy("has_mossy_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.MOSSY_COBBLED_DEEPSLATE.get()))
+                .unlockedBy("has_mossy_cobbled_deepslate", has(ModBlocks.MOSSY_COBBLED_DEEPSLATE.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.MOSSY_COBBLED_DEEPSLATE.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_COBBLED_DEEPSLATE_STAIRS.get())
@@ -1247,8 +1131,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_COBBLED_DEEPSLATE_SLAB.get(),6)
                 .pattern("AAA")
                 .define('A', ModBlocks.MOSSY_COBBLED_DEEPSLATE.get())
-                .unlockedBy("has_mossy_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.MOSSY_COBBLED_DEEPSLATE.get()))
+                .unlockedBy("has_mossy_cobbled_deepslate", has(ModBlocks.MOSSY_COBBLED_DEEPSLATE.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.MOSSY_COBBLED_DEEPSLATE.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_COBBLED_DEEPSLATE_SLAB.get(),2)
@@ -1259,8 +1142,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', ModBlocks.MOSSY_COBBLED_DEEPSLATE.get())
-                .unlockedBy("has_mossy_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.MOSSY_COBBLED_DEEPSLATE.get()))
+                .unlockedBy("has_mossy_cobbled_deepslate", has(ModBlocks.MOSSY_COBBLED_DEEPSLATE.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.MOSSY_COBBLED_DEEPSLATE.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_COBBLED_DEEPSLATE_WALL.get())
@@ -1272,8 +1154,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', ModBlocks.MOSSY_DEEPSLATE_BRICKS.get())
-                .unlockedBy("has_mossy_deepslate_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.MOSSY_DEEPSLATE_BRICKS.get()))
+                .unlockedBy("has_mossy_deepslate_bricks", has(ModBlocks.MOSSY_DEEPSLATE_BRICKS.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.MOSSY_DEEPSLATE_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_DEEPSLATE_BRICK_STAIRS.get())
@@ -1283,8 +1164,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_DEEPSLATE_BRICK_SLAB.get(),6)
                 .pattern("AAA")
                 .define('A', ModBlocks.MOSSY_DEEPSLATE_BRICKS.get())
-                .unlockedBy("has_mossy_deepslate_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.MOSSY_DEEPSLATE_BRICKS.get()))
+                .unlockedBy("has_mossy_deepslate_bricks", has(ModBlocks.MOSSY_DEEPSLATE_BRICKS.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.MOSSY_DEEPSLATE_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_DEEPSLATE_BRICK_SLAB.get(),2)
@@ -1295,8 +1175,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', ModBlocks.MOSSY_DEEPSLATE_BRICKS.get())
-                .unlockedBy("has_mossy_deepslate_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.MOSSY_DEEPSLATE_BRICKS.get()))
+                .unlockedBy("has_mossy_deepslate_bricks", has(ModBlocks.MOSSY_DEEPSLATE_BRICKS.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.MOSSY_DEEPSLATE_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_DEEPSLATE_BRICK_WALL.get())
@@ -1307,16 +1186,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .group("mossy_deeplate_bricks")
                 .requires(Blocks.DEEPSLATE_BRICKS)
                 .requires(Blocks.MOSS_BLOCK)
-                .unlockedBy("has_moss_block", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.MOSS_BLOCK))
+                .unlockedBy("has_moss_block", has(Blocks.MOSS_BLOCK))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_deepslate_brick_from_moss_block"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_DEEPSLATE_BRICKS.get())
                 .group("mossy_deeplate_bricks")
                 .requires(Blocks.DEEPSLATE_BRICKS)
                 .requires(Blocks.VINE)
-                .unlockedBy("has_vine", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.VINE))
+                .unlockedBy("has_vine", has(Blocks.VINE))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_deepslate_brick_from_vine"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_DEEPSLATE_TILE_STAIRS.get(),4)
@@ -1324,8 +1201,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', ModBlocks.MOSSY_DEEPSLATE_TILES.get())
-                .unlockedBy("has_mossy_deepslate_tile_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.MOSSY_DEEPSLATE_TILES.get()))
+                .unlockedBy("has_mossy_deepslate_tile_bricks", has(ModBlocks.MOSSY_DEEPSLATE_TILES.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.MOSSY_DEEPSLATE_TILES.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_DEEPSLATE_TILE_STAIRS.get())
@@ -1335,8 +1211,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_DEEPSLATE_TILE_SLAB.get(),6)
                 .pattern("AAA")
                 .define('A', ModBlocks.MOSSY_DEEPSLATE_TILES.get())
-                .unlockedBy("has_mossy_deepslate_tile_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.MOSSY_DEEPSLATE_TILES.get()))
+                .unlockedBy("has_mossy_deepslate_tile_bricks", has(ModBlocks.MOSSY_DEEPSLATE_TILES.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.MOSSY_DEEPSLATE_TILES.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_DEEPSLATE_TILE_SLAB.get(),2)
@@ -1347,8 +1222,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', ModBlocks.MOSSY_DEEPSLATE_TILES.get())
-                .unlockedBy("has_mossy_deepslate_tile_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.MOSSY_DEEPSLATE_TILES.get()))
+                .unlockedBy("has_mossy_deepslate_tile_bricks", has(ModBlocks.MOSSY_DEEPSLATE_TILES.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.MOSSY_DEEPSLATE_TILES.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_DEEPSLATE_TILE_WALL.get())
@@ -1359,16 +1233,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .group("mossy_deeplate_tiles")
                 .requires(Blocks.DEEPSLATE_TILES)
                 .requires(Blocks.MOSS_BLOCK)
-                .unlockedBy("has_moss_block", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.MOSS_BLOCK))
+                .unlockedBy("has_moss_block", has(Blocks.MOSS_BLOCK))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_deepslate_tile_from_moss_block"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.MOSSY_DEEPSLATE_TILES.get())
                 .group("mossy_deeplate_tiles")
                 .requires(Blocks.DEEPSLATE_TILES)
                 .requires(Blocks.VINE)
-                .unlockedBy("has_vine", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.VINE))
+                .unlockedBy("has_vine", has(Blocks.VINE))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_deepslate_tile_from_vine"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_MUD_BRICK_STAIRS.get(),4)
@@ -1376,8 +1248,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', ModBlocks.MOSSY_MUD_BRICKS.get())
-                .unlockedBy("has_mossy_mud_brick_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.MOSSY_MUD_BRICKS.get()))
+                .unlockedBy("has_mossy_mud_brick_bricks", has(ModBlocks.MOSSY_MUD_BRICKS.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.MOSSY_MUD_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_MUD_BRICK_STAIRS.get())
@@ -1387,8 +1258,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_MUD_BRICK_SLAB.get(),6)
                 .pattern("AAA")
                 .define('A', ModBlocks.MOSSY_MUD_BRICKS.get())
-                .unlockedBy("has_mossy_mud_brick_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.MOSSY_MUD_BRICKS.get()))
+                .unlockedBy("has_mossy_mud_brick_bricks", has(ModBlocks.MOSSY_MUD_BRICKS.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.MOSSY_MUD_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_MUD_BRICK_SLAB.get(),2)
@@ -1399,8 +1269,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', ModBlocks.MOSSY_MUD_BRICKS.get())
-                .unlockedBy("has_mossy_mud_brick_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.MOSSY_MUD_BRICKS.get()))
+                .unlockedBy("has_mossy_mud_brick_bricks", has(ModBlocks.MOSSY_MUD_BRICKS.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.MOSSY_MUD_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_MUD_BRICK_WALL.get())
@@ -1411,24 +1280,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .group("mossy_mud_bricks")
                 .requires(Blocks.MUD_BRICKS)
                 .requires(Blocks.MOSS_BLOCK)
-                .unlockedBy("has_moss_block", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.MOSS_BLOCK))
+                .unlockedBy("has_moss_block", has(Blocks.MOSS_BLOCK))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_mud_brick_from_moss_block"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_MUD_BRICKS.get())
                 .group("mossy_mud_bricks")
                 .requires(Blocks.MUD_BRICKS)
                 .requires(Blocks.VINE)
-                .unlockedBy("has_vine", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.VINE))
+                .unlockedBy("has_vine", has(Blocks.VINE))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_mud_brick_from_vine"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_ANDESITE_WALL.get(),6)
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', Blocks.POLISHED_ANDESITE)
-                .unlockedBy("has_polished_andesite", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.POLISHED_ANDESITE))
+                .unlockedBy("has_polished_andesite", has(Blocks.POLISHED_ANDESITE))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.POLISHED_ANDESITE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_ANDESITE_WALL.get())
@@ -1444,8 +1310,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', ModBlocks.POLISHED_CALCITE.get())
-                .unlockedBy("has_polished_calcite", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.POLISHED_CALCITE.get()))
+                .unlockedBy("has_polished_calcite", has(ModBlocks.POLISHED_CALCITE.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.POLISHED_CALCITE.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CALCITE_STAIRS.get())
@@ -1455,8 +1320,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CALCITE_SLAB.get(),6)
                 .pattern("AAA")
                 .define('A', ModBlocks.POLISHED_CALCITE.get())
-                .unlockedBy("has_polished_calcite", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.POLISHED_CALCITE.get()))
+                .unlockedBy("has_polished_calcite", has(ModBlocks.POLISHED_CALCITE.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.POLISHED_CALCITE.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CALCITE_SLAB.get(),2)
@@ -1467,8 +1331,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', ModBlocks.POLISHED_CALCITE.get())
-                .unlockedBy("has_polished_calcite", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.POLISHED_CALCITE.get()))
+                .unlockedBy("has_polished_calcite", has(ModBlocks.POLISHED_CALCITE.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.POLISHED_CALCITE.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CALCITE_WALL.get())
@@ -1479,8 +1342,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA")
                 .pattern("AA")
                 .define('A', Blocks.CALCITE)
-                .unlockedBy("has_calcite", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.CALCITE))
+                .unlockedBy("has_calcite", has(Blocks.CALCITE))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.CALCITE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_CALCITE.get())
@@ -1506,22 +1368,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DEEPSLATE_PRESSURE_PLATE.get())
                 .pattern("AA")
                 .define('A', Blocks.POLISHED_DEEPSLATE)
-                .unlockedBy("has_polished_deepslate", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.POLISHED_DEEPSLATE))
+                .unlockedBy("has_polished_deepslate", has(Blocks.POLISHED_DEEPSLATE))
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.POLISHED_DEEPSLATE_BUTTON.get())
                 .requires(Blocks.POLISHED_DEEPSLATE)
-                .unlockedBy("has_polished_deepslate", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.POLISHED_DEEPSLATE))
+                .unlockedBy("has_polished_deepslate", has(Blocks.POLISHED_DEEPSLATE))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DIORITE_WALL.get(),6)
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', Blocks.POLISHED_DIORITE)
-                .unlockedBy("has_polished_diorite", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.POLISHED_DIORITE))
+                .unlockedBy("has_polished_diorite", has(Blocks.POLISHED_DIORITE))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.POLISHED_DIORITE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DIORITE_WALL.get())
@@ -1536,8 +1395,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA")
                 .pattern("AA")
                 .define('A', Blocks.DRIPSTONE_BLOCK)
-                .unlockedBy("has_dripstone_block", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.DRIPSTONE_BLOCK))
+                .unlockedBy("has_dripstone_block", has(Blocks.DRIPSTONE_BLOCK))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.DRIPSTONE_BLOCK), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DRIPSTONE_BLOCK.get())
@@ -1549,8 +1407,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', ModBlocks.POLISHED_DRIPSTONE_BLOCK.get())
-                .unlockedBy("has_polished_dripstone_block", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.POLISHED_DRIPSTONE_BLOCK.get()))
+                .unlockedBy("has_polished_dripstone_block", has(ModBlocks.POLISHED_DRIPSTONE_BLOCK.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.POLISHED_DRIPSTONE_BLOCK.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DRIPSTONE_STAIRS.get())
@@ -1560,8 +1417,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DRIPSTONE_SLAB.get(),6)
                 .pattern("AAA")
                 .define('A', ModBlocks.POLISHED_DRIPSTONE_BLOCK.get())
-                .unlockedBy("has_polished_dripstone_block", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.POLISHED_DRIPSTONE_BLOCK.get()))
+                .unlockedBy("has_polished_dripstone_block", has(ModBlocks.POLISHED_DRIPSTONE_BLOCK.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.POLISHED_DRIPSTONE_BLOCK.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DRIPSTONE_SLAB.get(),2)
@@ -1572,8 +1428,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', ModBlocks.POLISHED_DRIPSTONE_BLOCK.get())
-                .unlockedBy("has_polished_dripstone_block", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.POLISHED_DRIPSTONE_BLOCK.get()))
+                .unlockedBy("has_polished_dripstone_block", has(ModBlocks.POLISHED_DRIPSTONE_BLOCK.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.POLISHED_DRIPSTONE_BLOCK.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_DRIPSTONE_WALL.get())
@@ -1599,8 +1454,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', Blocks.POLISHED_GRANITE)
-                .unlockedBy("has_polished_granite", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.POLISHED_GRANITE))
+                .unlockedBy("has_polished_granite", has(Blocks.POLISHED_GRANITE))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.POLISHED_GRANITE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_GRANITE_WALL.get())
@@ -1615,8 +1469,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA")
                 .pattern("AA")
                 .define('A', Blocks.TUFF)
-                .unlockedBy("has_tuff", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.TUFF))
+                .unlockedBy("has_tuff", has(Blocks.TUFF))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.TUFF), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF.get())
@@ -1628,8 +1481,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', ModBlocks.POLISHED_TUFF.get())
-                .unlockedBy("has_polished_tuff", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.POLISHED_TUFF.get()))
+                .unlockedBy("has_polished_tuff", has(ModBlocks.POLISHED_TUFF.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.POLISHED_TUFF.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF_STAIRS.get())
@@ -1639,8 +1491,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF_SLAB.get(),6)
                 .pattern("AAA")
                 .define('A', ModBlocks.POLISHED_TUFF.get())
-                .unlockedBy("has_polished_tuff", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.POLISHED_TUFF.get()))
+                .unlockedBy("has_polished_tuff", has(ModBlocks.POLISHED_TUFF.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.POLISHED_TUFF.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF_SLAB.get(),2)
@@ -1651,8 +1502,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', ModBlocks.POLISHED_TUFF.get())
-                .unlockedBy("has_polished_tuff", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModBlocks.POLISHED_TUFF.get()))
+                .unlockedBy("has_polished_tuff", has(ModBlocks.POLISHED_TUFF.get()))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.POLISHED_TUFF.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF_WALL.get())
@@ -1678,8 +1528,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', Blocks.PRISMARINE_BRICKS)
-                .unlockedBy("has_prismarine_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.PRISMARINE_BRICKS))
+                .unlockedBy("has_prismarine_bricks", has(Blocks.PRISMARINE_BRICKS))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.PRISMARINE_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.PRISMARINE_BRICK_WALL.get())
@@ -1690,8 +1539,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', Blocks.PURPUR_BLOCK)
-                .unlockedBy("has_purpur_block", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.PURPUR_BLOCK))
+                .unlockedBy("has_purpur_block", has(Blocks.PURPUR_BLOCK))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.PURPUR_BLOCK), RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPUR_WALL.get())
@@ -1703,8 +1551,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', Blocks.QUARTZ_BRICKS)
-                .unlockedBy("has_quartz_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.QUARTZ_BRICKS))
+                .unlockedBy("has_quartz_bricks", has(Blocks.QUARTZ_BRICKS))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.QUARTZ_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.QUARTZ_BRICK_STAIRS.get())
@@ -1714,8 +1561,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.QUARTZ_BRICK_SLAB.get(),6)
                 .pattern("AAA")
                 .define('A', Blocks.QUARTZ_BRICKS)
-                .unlockedBy("has_quartz_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.QUARTZ_BRICKS))
+                .unlockedBy("has_quartz_bricks", has(Blocks.QUARTZ_BRICKS))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.QUARTZ_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.QUARTZ_BRICK_SLAB.get(),2)
@@ -1726,8 +1572,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', Blocks.QUARTZ_BRICKS)
-                .unlockedBy("has_quartz_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.QUARTZ_BRICKS))
+                .unlockedBy("has_quartz_bricks", has(Blocks.QUARTZ_BRICKS))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.QUARTZ_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.QUARTZ_BRICK_WALL.get())
@@ -1753,8 +1598,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', Blocks.QUARTZ_BLOCK)
-                .unlockedBy("has_quartz_block", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.QUARTZ_BLOCK))
+                .unlockedBy("has_quartz_block", has(Blocks.QUARTZ_BLOCK))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.QUARTZ_BLOCK), RecipeCategory.BUILDING_BLOCKS, ModBlocks.QUARTZ_WALL.get())
@@ -1766,8 +1610,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("ATA")
                 .define('A', Blocks.RED_NETHER_BRICKS)
                 .define('T', Items.NETHER_BRICK)
-                .unlockedBy("has_red_nether_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.RED_NETHER_BRICKS))
+                .unlockedBy("has_red_nether_bricks", has(Blocks.RED_NETHER_BRICKS))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_BASALT_STAIRS.get(),4)
@@ -1775,8 +1618,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', Blocks.SMOOTH_BASALT)
-                .unlockedBy("has_smooth_basalt", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.SMOOTH_BASALT))
+                .unlockedBy("has_smooth_basalt", has(Blocks.SMOOTH_BASALT))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.SMOOTH_BASALT), RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_BASALT_STAIRS.get())
@@ -1786,8 +1628,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_BASALT_SLAB.get(),6)
                 .pattern("AAA")
                 .define('A', Blocks.SMOOTH_BASALT)
-                .unlockedBy("has_smooth_basalt", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.SMOOTH_BASALT))
+                .unlockedBy("has_smooth_basalt", has(Blocks.SMOOTH_BASALT))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.SMOOTH_BASALT), RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_BASALT_SLAB.get(),2)
@@ -1798,8 +1639,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', Blocks.SMOOTH_BASALT)
-                .unlockedBy("has_smooth_basalt", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.SMOOTH_BASALT))
+                .unlockedBy("has_smooth_basalt", has(Blocks.SMOOTH_BASALT))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.SMOOTH_BASALT), RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_BASALT_WALL.get())
@@ -1810,8 +1650,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', Blocks.SMOOTH_QUARTZ)
-                .unlockedBy("has_smooth_quartz", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.SMOOTH_QUARTZ))
+                .unlockedBy("has_smooth_quartz", has(Blocks.SMOOTH_QUARTZ))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.SMOOTH_QUARTZ), RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_QUARTZ_WALL.get())
@@ -1822,8 +1661,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', Blocks.SMOOTH_RED_SANDSTONE)
-                .unlockedBy("has_smooth_red_sandstone", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.SMOOTH_RED_SANDSTONE))
+                .unlockedBy("has_smooth_red_sandstone", has(Blocks.SMOOTH_RED_SANDSTONE))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.SMOOTH_RED_SANDSTONE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_RED_SANDSTONE_WALL.get())
@@ -1834,8 +1672,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', Blocks.SMOOTH_SANDSTONE)
-                .unlockedBy("has_smooth_sandstone", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.SMOOTH_SANDSTONE))
+                .unlockedBy("has_smooth_sandstone", has(Blocks.SMOOTH_SANDSTONE))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.SMOOTH_SANDSTONE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_SANDSTONE_WALL.get())
@@ -1847,8 +1684,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', Blocks.SMOOTH_STONE)
-                .unlockedBy("has_smooth_stone", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.SMOOTH_STONE))
+                .unlockedBy("has_smooth_stone", has(Blocks.SMOOTH_STONE))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.SMOOTH_STONE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_STONE_STAIRS.get())
@@ -1859,8 +1695,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', Blocks.SMOOTH_STONE)
-                .unlockedBy("has_smooth_stone", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.SMOOTH_STONE))
+                .unlockedBy("has_smooth_stone", has(Blocks.SMOOTH_STONE))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.SMOOTH_STONE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.SMOOTH_STONE_WALL.get())
@@ -1871,8 +1706,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .define('A', Blocks.STONE)
-                .unlockedBy("has_stone", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.STONE))
+                .unlockedBy("has_stone", has(Blocks.STONE))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.STONE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.STONE_WALL.get())
@@ -1884,8 +1718,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AA ")
                 .pattern("AAA")
                 .define('A', Items.TUFF)
-                .unlockedBy("has_tuff", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Items.TUFF))
+                .unlockedBy("has_tuff", has(Items.TUFF))
                 .save(consumer);
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.TUFF), RecipeCategory.BUILDING_BLOCKS, ModBlocks.TUFF_STAIRS.get())
@@ -1917,14 +1750,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .group("mossy_nether_bricks")
                 .requires(Blocks.NETHER_BRICKS)
                 .requires(Blocks.MOSS_BLOCK)
-                .unlockedBy("has_moss_block_and_mossy_nether_bricks", has(Blocks.MOSS_BLOCK, Blocks.NETHER_BRICKS))
+                .unlockedBy("has_moss_block_and_mossy_nether_bricks", has(Blocks.NETHER_BRICKS))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_nether_bricks_from_moss_block"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_NETHER_BRICKS.get())
                 .group("mossy_nether_bricks")
                 .requires(Blocks.NETHER_BRICKS)
                 .requires(Blocks.VINE)
-                .unlockedBy("has_vine_and_mossy_nether_bricks", has(Blocks.VINE, Blocks.NETHER_BRICKS))
+                .unlockedBy("has_vine_and_mossy_nether_bricks", has(Blocks.NETHER_BRICKS))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_nether_bricks_from_vine"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_NETHER_BRICK_STAIRS.get(),4)

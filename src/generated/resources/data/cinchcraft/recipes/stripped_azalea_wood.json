@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "azalea_wood",
+  "key": {
+    "A": {
+      "item": "cinchcraft:stripped_azalea_log"
+    }
+  },
+  "pattern": [
+    "AA",
+    "AA"
+  ],
+  "result": {
+    "count": 3,
+    "item": "cinchcraft:stripped_azalea_wood"
+  },
+  "show_notification": true
+}

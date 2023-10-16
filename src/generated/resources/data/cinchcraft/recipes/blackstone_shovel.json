@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "minecraft:blackstone"
+    },
+    "I": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "A",
+    "I",
+    "I"
+  ],
+  "result": {
+    "item": "cinchcraft:blackstone_shovel"
+  },
+  "show_notification": true
+}

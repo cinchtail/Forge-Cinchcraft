@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cinchcraft:sunflower_head"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "cinchcraft:sunflower_seeds"
+  }
+}

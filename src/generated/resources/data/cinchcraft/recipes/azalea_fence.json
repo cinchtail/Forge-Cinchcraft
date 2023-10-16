@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "A": {
+      "item": "cinchcraft:azalea_planks"
+    },
+    "T": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "ATA",
+    "ATA"
+  ],
+  "result": {
+    "count": 3,
+    "item": "cinchcraft:azalea_fence"
+  },
+  "show_notification": true
+}

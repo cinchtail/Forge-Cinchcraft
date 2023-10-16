@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cinchcraft:butter_cup"
+    }
+  ],
+  "result": {
+    "item": "minecraft:yellow_dye"
+  }
+}

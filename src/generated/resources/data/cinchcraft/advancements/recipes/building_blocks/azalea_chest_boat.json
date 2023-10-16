@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_azalea_boat": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cinchcraft:azalea_boat"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cinchcraft:azalea_chest_boat"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_azalea_boat"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cinchcraft:azalea_chest_boat"
+    ]
+  },
+  "sends_telemetry_event": false
+}
