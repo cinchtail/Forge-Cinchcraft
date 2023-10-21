@@ -46,7 +46,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> STRAWBERRY_KEY = registerKey("strawberry");
     public static final ResourceKey<ConfiguredFeature<?, ?>> REEDS_KEY = registerKey("reeds");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CATTAILS_KEY = registerKey("cattails");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> BUTTER_CUP_LARGE_KEY = registerKey("butter_cup_large");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LUPINE_LARGE_KEY = registerKey("lupine_large");
 
 
 
@@ -120,9 +120,9 @@ public class ModConfiguredFeatures {
         register(context, BUBBLE_FLOWER_KEY, Feature.FLOWER,
                 new RandomPatchConfiguration(20, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.BUBBLE_FLOWER.get())))));
-        register(context, BUTTER_CUP_LARGE_KEY, Feature.FLOWER,
-                new RandomPatchConfiguration(20, 10, 5, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
-                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.BUTTER_CUP.get())))));
+        register(context, LUPINE_LARGE_KEY, Feature.FLOWER,
+                new RandomPatchConfiguration(2800, 20, 5, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.LUPINE.get())))));
 
         register(context, PINEAPPLE_PLANT_KEY, Feature.FLOWER,
                 new RandomPatchConfiguration(15, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,

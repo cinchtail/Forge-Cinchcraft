@@ -1,9 +1,9 @@
 {
-  "feature": "cinchcraft:butter_cup_large",
+  "feature": "cinchcraft:lupine_large",
   "placement": [
     {
       "type": "minecraft:rarity_filter",
-      "chance": 8
+      "chance": 4
     },
     {
       "type": "minecraft:in_square"

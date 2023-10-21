@@ -8,7 +8,7 @@
           "to_place": {
             "type": "minecraft:simple_state_provider",
             "state": {
-              "Name": "cinchcraft:butter_cup"
+              "Name": "cinchcraft:lupine"
             }
           }
         }
@@ -23,8 +23,8 @@
         }
       ]
     },
-    "tries": 20,
-    "xz_spread": 10,
+    "tries": 2800,
+    "xz_spread": 20,
     "y_spread": 5
   }
 }
