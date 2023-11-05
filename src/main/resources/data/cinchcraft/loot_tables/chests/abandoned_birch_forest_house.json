@@ -22,7 +22,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:emerald",
+          "name": "minecraft:copper_ingot",
           "weight": 3
         },
         {
@@ -86,7 +86,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "minecraft:pumpkin_pie",
+          "name": "cinchcraft:blueberry_pie",
           "weight": 5
         },
         {
@@ -96,7 +96,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:iron_boots",
+          "name": "minecraft:iron_leggings",
           "weight": 4
         },
         {
@@ -107,6 +107,11 @@
           "type": "minecraft:item",
           "name": "minecraft:saddle",
           "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "weight": 2
         },
         {
           "type": "minecraft:item",
