@@ -28,6 +28,7 @@ import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.block.WeatheringCopper;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
@@ -91,6 +92,7 @@ public class Cinchcraft
         ComposterBlock.COMPOSTABLES.put(ModItems.BLUEBERRIES.get(), 0.3f);
         ComposterBlock.COMPOSTABLES.put(ModItems.STRAWBERRIES.get(), 0.3f);
         ComposterBlock.COMPOSTABLES.put(ModItems.PINEAPPLE.get(), 0.5f);
+        ComposterBlock.COMPOSTABLES.put(ModItems.PITCHER_PLANT_ROOT.get(), 0.65f);
         ComposterBlock.COMPOSTABLES.put(ModItems.CARVED_MELON.get(), 0.65f);
         ComposterBlock.COMPOSTABLES.put(ModItems.BUTTER_CUP.get(), 0.65f);
         ComposterBlock.COMPOSTABLES.put(ModItems.SMALL_ROSE.get(), 0.65f);
