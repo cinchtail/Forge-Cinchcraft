@@ -1,30 +1,22 @@
 {
   "structures": [
     {
-      "structure": "cinchcraft:abandoned_brick_house",
-      "weight": 2
+      "structure": "cinchcraft:abandoned_house",
+      "weight": 1
     },
     {
       "structure": "cinchcraft:small_house_ruin",
-      "weight": 10
-    },
-    {
-      "structure": "cinchcraft:medium_house_ruin",
-      "weight": 8
-    },
-    {
-      "structure": "cinchcraft:abandoned_farm_house",
-      "weight": 5
+      "weight": 1
     },
     {
       "structure": "cinchcraft:abandoned_birch_forest_house",
-      "weight": 5
+      "weight": 1
     }
   ],
   "placement": {
     "salt": 1642145474,
-    "spacing": 90,
-    "separation": 60,
+    "spacing": 60,
+    "separation": 40,
     "type": "minecraft:random_spread"
   }
 }
