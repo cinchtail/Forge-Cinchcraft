@@ -7,7 +7,7 @@ plugins {
     id 'org.spongepowered.mixin' version '0.7-SNAPSHOT' apply(true)
 }
 
-version = '0.9-1.20.4'
+version = mod_version + "-" + minecraft_version
 group = 'net.cinchtail.cinchcraft' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 
 base {
