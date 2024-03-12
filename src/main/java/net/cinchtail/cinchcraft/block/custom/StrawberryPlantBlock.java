@@ -36,8 +36,8 @@ public class StrawberryPlantBlock extends BushBlock implements BonemealableBlock
     }
 
     @Override
-    protected MapCodec<? extends BushBlock> m_304657_() {
-        return null;
+    protected MapCodec<? extends BushBlock> codec() {
+        return simpleCodec(StrawberryPlantBlock::new);
     }
 
     public ItemStack getCloneItemStack(BlockGetter blockGetter, BlockPos pos, BlockState blockState) {

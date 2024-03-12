@@ -18,9 +18,10 @@ public class CarvedMelonBlock extends HorizontalDirectionalBlock {
     }
 
     @Override
-    protected MapCodec<? extends HorizontalDirectionalBlock> m_304657_() {
-        return null;
+    protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
+        return simpleCodec(CarvedMelonBlock::new);
     }
+
 
     public BlockState getStateForPlacement(BlockPlaceContext p_51377_) {
         return this.defaultBlockState().setValue(FACING, p_51377_.getHorizontalDirection().getOpposite());

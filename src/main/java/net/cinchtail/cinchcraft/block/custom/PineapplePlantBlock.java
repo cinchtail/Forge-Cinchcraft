@@ -38,9 +38,10 @@ public class PineapplePlantBlock extends BushBlock implements BonemealableBlock 
     }
 
     @Override
-    protected MapCodec<? extends BushBlock> m_304657_() {
-        return null;
+    protected MapCodec<? extends BushBlock> codec() {
+        return simpleCodec(PineapplePlantBlock::new);
     }
+
 
     public ItemStack getCloneItemStack(BlockGetter blockGetter, BlockPos pos, BlockState blockState) {
         return new ItemStack(ModItems.PINEAPPLE.get());

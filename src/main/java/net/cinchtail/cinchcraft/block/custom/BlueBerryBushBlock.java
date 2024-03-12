@@ -44,8 +44,8 @@ public class BlueBerryBushBlock extends BushBlock implements BonemealableBlock {
     }
 
     @Override
-    protected MapCodec<? extends BushBlock> m_304657_() {
-        return simpleCodec(BlueberryBushBlock::new);
+    protected MapCodec<? extends BushBlock> codec() {
+        return simpleCodec(BlueBerryBushBlock::new);
     }
 
     public ItemStack getCloneItemStack(BlockGetter blockGetter, BlockPos pos, BlockState blockState) {

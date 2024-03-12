@@ -36,6 +36,6 @@ public class ModWorldGenProvider {
     }
 
     public static RegistriesDatapackGenerator RegistriesDatapackGenerator(GatherDataEvent event, PackOutput packOutput) {
-        return new RegistriesDatapackGenerator(packOutput, event.getLookupProvider().thenApply(ModWorldGenProvider::buildWorldgenRegistries), Set.of("nature_arise"));
+        return new RegistriesDatapackGenerator(packOutput, event.getLookupProvider().thenApply(ModWorldGenProvider::buildWorldgenRegistries), Set.of("cinchcraft"));
     }
 }

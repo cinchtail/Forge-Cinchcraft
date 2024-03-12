@@ -3,7 +3,6 @@ package net.cinchtail.cinchcraft.block.custom;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -14,17 +13,17 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class SmallCactusBlock extends BushBlock {
+public class StarCactusBlock extends BushBlock {
     protected static final float AABB_OFFSET = 3.0F;
     protected static final VoxelShape SHAPE = Block.box(5.0D, 0.0D, 5.0D, 11.0D, 10.0D, 11.0D);
 
-    public SmallCactusBlock(Properties properties) {
+    public StarCactusBlock(Properties properties) {
         super(properties);
     }
 
     @Override
-    protected MapCodec<? extends BushBlock> m_304657_() {
-        return null;
+    protected MapCodec<? extends BushBlock> codec() {
+        return simpleCodec(StarCactusBlock::new);
     }
 
 

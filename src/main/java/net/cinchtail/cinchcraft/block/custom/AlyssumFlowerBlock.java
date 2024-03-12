@@ -4,6 +4,7 @@ package net.cinchtail.cinchcraft.block.custom;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.BushBlock;
@@ -21,30 +22,27 @@ public class AlyssumFlowerBlock extends BushBlock implements SuspiciousEffectHol
 
     private final List<EffectEntry> f_290810_;
 
-    public AlyssumFlowerBlock(MobEffect pSuspiciousStewEffect, int pEffectDuration, BlockBehaviour.Properties pProperties) {
+    public AlyssumFlowerBlock(BlockBehaviour.Properties pProperties) {
         super(pProperties);
         int i;
-        if (pSuspiciousStewEffect.isInstantenous()) {
-            i = pEffectDuration;
+        if (MobEffects.CONFUSION.isInstantenous()) {
+            i = 12;
         } else {
-            i = pEffectDuration * 20;
+            i = 12 * 20;
         }
 
-        this.f_290810_ = List.of(new SuspiciousEffectHolder.EffectEntry(pSuspiciousStewEffect, i));
+        this.f_290810_ = List.of(new SuspiciousEffectHolder.EffectEntry(MobEffects.CONFUSION, i));
     }
-
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
         Vec3 vec3 = pState.getOffset(pLevel, pPos);
         return SHAPE.move(vec3.x, vec3.y, vec3.z);
     }
-
-    @Override
-    protected MapCodec<? extends BushBlock> m_304657_() {
-        return null;
-    }
-
     @Override
     public List<EffectEntry> getSuspiciousEffects() {
         return this.f_290810_;
+    }
+    @Override
+    protected MapCodec<AlyssumFlowerBlock> codec() {
+        return simpleCodec(AlyssumFlowerBlock::new);
     }
 }
