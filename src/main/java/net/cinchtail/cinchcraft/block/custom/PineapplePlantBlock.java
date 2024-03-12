@@ -1,5 +1,6 @@
 package net.cinchtail.cinchcraft.block.custom;
 
+import com.mojang.serialization.MapCodec;
 import net.cinchtail.cinchcraft.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -35,7 +36,12 @@ public class PineapplePlantBlock extends BushBlock implements BonemealableBlock 
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(AGE, 0));
     }
+
     @Override
+    protected MapCodec<? extends BushBlock> m_304657_() {
+        return null;
+    }
+
     public ItemStack getCloneItemStack(BlockGetter blockGetter, BlockPos pos, BlockState blockState) {
         return new ItemStack(ModItems.PINEAPPLE.get());
     }

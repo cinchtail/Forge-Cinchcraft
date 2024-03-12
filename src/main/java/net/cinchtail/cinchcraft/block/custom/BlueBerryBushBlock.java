@@ -1,5 +1,6 @@
 package net.cinchtail.cinchcraft.block.custom;
 
+import com.mojang.serialization.MapCodec;
 import net.cinchtail.cinchcraft.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -31,6 +32,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
+
 public class BlueBerryBushBlock extends BushBlock implements BonemealableBlock {
     public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
     private static final VoxelShape SAPLING_SHAPE = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 8.0D, 13.0D);
@@ -40,6 +42,12 @@ public class BlueBerryBushBlock extends BushBlock implements BonemealableBlock {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(AGE, 0));
     }
+
+    @Override
+    protected MapCodec<? extends BushBlock> m_304657_() {
+        return simpleCodec(BlueberryBushBlock::new);
+    }
+
     public ItemStack getCloneItemStack(BlockGetter blockGetter, BlockPos pos, BlockState blockState) {
         return new ItemStack(ModItems.BLUEBERRIES.get());
     }

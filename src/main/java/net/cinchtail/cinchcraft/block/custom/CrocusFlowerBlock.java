@@ -1,5 +1,6 @@
 package net.cinchtail.cinchcraft.block.custom;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.level.BlockGetter;
@@ -34,8 +35,13 @@ public class CrocusFlowerBlock extends BushBlock implements SuspiciousEffectHold
         Vec3 vec3 = pState.getOffset(pLevel, pPos);
         return SHAPE.move(vec3.x, vec3.y, vec3.z);
     }
+    @Override
+    protected MapCodec<? extends BushBlock> m_304657_() {
+        return null;
+    }
 
-    public List<SuspiciousEffectHolder.EffectEntry> m_294088_() {
+    @Override
+    public List<EffectEntry> getSuspiciousEffects() {
         return this.f_290810_;
     }
 }

@@ -1,5 +1,6 @@
 package net.cinchtail.cinchcraft.block.custom;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.Block;
@@ -15,6 +16,12 @@ public class CarvedMelonBlock extends HorizontalDirectionalBlock {
         super(p_51375_);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
     }
+
+    @Override
+    protected MapCodec<? extends HorizontalDirectionalBlock> m_304657_() {
+        return null;
+    }
+
     public BlockState getStateForPlacement(BlockPlaceContext p_51377_) {
         return this.defaultBlockState().setValue(FACING, p_51377_.getHorizontalDirection().getOpposite());
     }

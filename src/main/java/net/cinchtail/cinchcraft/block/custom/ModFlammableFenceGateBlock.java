@@ -6,11 +6,13 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.WoodType;
 
 public class ModFlammableFenceGateBlock extends FenceGateBlock {
 
-    public ModFlammableFenceGateBlock(Properties properties, SoundEvent soundEvent, SoundEvent soundEvent1) {
-        super(properties, soundEvent, soundEvent1);
+
+    public ModFlammableFenceGateBlock(WoodType pType, Properties pProperties) {
+        super(pType, pProperties);
     }
 
     @Override

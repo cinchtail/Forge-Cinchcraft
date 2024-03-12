@@ -1,6 +1,7 @@
 package net.cinchtail.cinchcraft.block.custom;
 
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.level.BlockGetter;
@@ -37,7 +38,13 @@ public class AlyssumFlowerBlock extends BushBlock implements SuspiciousEffectHol
         return SHAPE.move(vec3.x, vec3.y, vec3.z);
     }
 
-    public List<SuspiciousEffectHolder.EffectEntry> m_294088_() {
+    @Override
+    protected MapCodec<? extends BushBlock> m_304657_() {
+        return null;
+    }
+
+    @Override
+    public List<EffectEntry> getSuspiciousEffects() {
         return this.f_290810_;
     }
 }

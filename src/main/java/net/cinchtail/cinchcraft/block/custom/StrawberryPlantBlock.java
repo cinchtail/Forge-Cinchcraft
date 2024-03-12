@@ -1,5 +1,6 @@
 package net.cinchtail.cinchcraft.block.custom;
 
+import com.mojang.serialization.MapCodec;
 import net.cinchtail.cinchcraft.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -35,10 +36,14 @@ public class StrawberryPlantBlock extends BushBlock implements BonemealableBlock
     }
 
     @Override
+    protected MapCodec<? extends BushBlock> m_304657_() {
+        return null;
+    }
+
     public ItemStack getCloneItemStack(BlockGetter blockGetter, BlockPos pos, BlockState blockState) {
         return new ItemStack(ModItems.STRAWBERRIES.get());
     }
-    public VoxelShape getShape(BlockState p_54955_, BlockGetter p_54956_, BlockPos p_54957_, CollisionContext p_54958_) {
+    public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
         return SHAPE;
     }
     public boolean isRandomlyTicking(BlockState blockState) {

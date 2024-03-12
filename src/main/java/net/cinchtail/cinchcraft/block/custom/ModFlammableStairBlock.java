@@ -21,7 +21,7 @@ public class ModFlammableStairBlock extends StairBlock {
 
     public ModFlammableStairBlock(Supplier<BlockState> state, Properties properties,
                                   boolean isFlammable, int flammability, int fireSpreadSpeed) {
-        super(state, properties);
+        super((BlockState) state, properties);
 
         ModFlammableStairBlock.isFlammable = isFlammable;
         ModFlammableStairBlock.flammability = flammability;
