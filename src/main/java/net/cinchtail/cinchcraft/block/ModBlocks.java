@@ -565,7 +565,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> AZALEA_FENCE = BLOCKS.register("azalea_fence",
             () -> new ModFlammableFenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB).sound(SoundType.WOOD).strength(1.5f),
                     true, 20, 5));
-    public static final RegistryObject<Block> AZALEA_FENCE_GATE = registerBlock("azalea_fence_gate",
+    public static final RegistryObject<Block> AZALEA_FENCE_GATE = BLOCKS.register("azalea_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.ofFullCopy(OAK_FENCE_GATE),
                     SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE,
                     ModWoodTypes.AZALEA));
@@ -575,7 +575,7 @@ public class ModBlocks {
             () -> new TrapDoorBlock(ModBlockSetType.AZALEA, BlockBehaviour.Properties.ofFullCopy(OAK_TRAPDOOR)));
     public static final RegistryObject<Block> AZALEA_PRESSURE_PLATE = BLOCKS.register("azalea_pressure_plate",
             () -> new PressurePlateBlock(ModBlockSetType.AZALEA, BlockBehaviour.Properties.ofFullCopy(OAK_PRESSURE_PLATE)));
-    public static final RegistryObject<Block> AZALEA_BUTTON = registerBlock("azalea_button",
+    public static final RegistryObject<Block> AZALEA_BUTTON = BLOCKS.register("azalea_button",
             () -> new ButtonBlock(ModBlockSetType.AZALEA, 5, BlockBehaviour.Properties.ofFullCopy(OAK_BUTTON)));
     public static final RegistryObject<Block> AZALEA_SIGN = BLOCKS.register("azalea_sign",
             () -> new ModStandingSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SIGN), ModWoodTypes.AZALEA));
