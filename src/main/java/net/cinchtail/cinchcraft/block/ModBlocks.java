@@ -565,7 +565,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> AZALEA_FENCE = BLOCKS.register("azalea_fence",
             () -> new ModFlammableFenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB).sound(SoundType.WOOD).strength(1.5f),
                     true, 20, 5));
-    public static final RegistryObject<Block> AZALEA_FENCE_GATE = registerBlock("azalea_fence_gate",
+    public static final RegistryObject<Block> AZALEA_FENCE_GATE = BLOCKS.register("azalea_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.ofFullCopy(OAK_FENCE_GATE),
                     SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE,
                     ModWoodTypes.AZALEA));
