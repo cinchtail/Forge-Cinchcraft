@@ -13,15 +13,9 @@ public class ModFlammableStairBlock extends StairBlock {
     private static int flammability;
     private static int fireSpreadSpeed;
 
-    /** Tip: If you expand the constructor you can hand over the <p>
-     *  3 parameters as individual values for each block if you want <p>
-     *  That's interesting if you have wood types with different hardness <p><p>
-     *  OK, the boolean isFlammable is a bit sinn free. If the block isn't <p>
-     *  flammable you don't need a FlammableBlock class... ;) </p>*/
-
-    public ModFlammableStairBlock(Supplier<BlockState> state, Properties properties,
+    public ModFlammableStairBlock(BlockState state, Properties properties,
                                   boolean isFlammable, int flammability, int fireSpreadSpeed) {
-        super((BlockState) state, properties);
+        super(state, properties);
 
         ModFlammableStairBlock.isFlammable = isFlammable;
         ModFlammableStairBlock.flammability = flammability;

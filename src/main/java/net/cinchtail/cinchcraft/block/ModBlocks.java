@@ -556,7 +556,7 @@ public class ModBlocks {
             () -> new ModFlammableBlock(BlockBehaviour.Properties.ofFullCopy(OAK_PLANKS).sound(SoundType.WOOD).strength(1.5f),
                     true, 20, 5));
     public static final RegistryObject<Block> AZALEA_STAIRS = BLOCKS.register("azalea_stairs",
-            () -> new ModFlammableStairBlock(() -> ModBlocks.AZALEA_PLANKS.get().defaultBlockState(),
+            () -> new ModFlammableStairBlock(ModBlocks.AZALEA_PLANKS.get().defaultBlockState(),
                     BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_STAIRS).sound(SoundType.WOOD).strength(1.5f),
                     true, 20, 5));
     public static final RegistryObject<Block> AZALEA_SLAB = BLOCKS.register("azalea_slab",
