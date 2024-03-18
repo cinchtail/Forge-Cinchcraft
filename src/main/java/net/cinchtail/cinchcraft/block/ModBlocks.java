@@ -241,8 +241,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> POLISHED_DEEPSLATE_PRESSURE_PLATE = registerBlock("polished_deepslate_pressure_plate",
             () -> new PressurePlateBlock(BlockSetType.STONE, BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_BLACKSTONE_PRESSURE_PLATE).sound(SoundType.POLISHED_DEEPSLATE)));
     public static final RegistryObject<Block> POLISHED_DEEPSLATE_BUTTON = registerBlock("polished_deepslate_button", ModBlocks::modStoneButton);
-    public static final RegistryObject<Block> IRON_BUTTON = registerBlock("iron_button", ModBlocks::modMetalButton);
-    public static final RegistryObject<Block> GOLD_BUTTON = registerBlock("gold_button", ModBlocks::modMetalButton);
+    public static final RegistryObject<Block> IRON_BUTTON = registerBlock("iron_button", ModBlocks::modIronButton);
+    public static final RegistryObject<Block> GOLD_BUTTON = registerBlock("gold_button", ModBlocks::modGoldButton);
     public static final RegistryObject<Block> ICICLE = registerBlock("icicle",
             () -> new IcicleBlock(BlockBehaviour.Properties.of().mapColor(MapColor.ICE).noOcclusion()
                     .sound(SoundType.GLASS).randomTicks().instabreak().dynamicShape().offsetType(BlockBehaviour.OffsetType.XZ)));
@@ -575,7 +575,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> AZALEA_PRESSURE_PLATE = BLOCKS.register("azalea_pressure_plate",
             () -> new PressurePlateBlock(ModBlockSetType.AZALEA, BlockBehaviour.Properties.ofFullCopy(OAK_PRESSURE_PLATE)));
     public static final RegistryObject<Block> AZALEA_BUTTON = BLOCKS.register("azalea_button",
-            () -> new ButtonBlock(ModBlockSetType.AZALEA, 5, BlockBehaviour.Properties.ofFullCopy(OAK_BUTTON)));
+            () -> new ButtonBlock(ModBlockSetType.AZALEA, 30, BlockBehaviour.Properties.ofFullCopy(OAK_BUTTON)));
     public static final RegistryObject<Block> AZALEA_SIGN = BLOCKS.register("azalea_sign",
             () -> new ModStandingSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SIGN), ModWoodTypes.AZALEA));
     public static final RegistryObject<Block> AZALEA_WALL_SIGN = BLOCKS.register("azalea_wall_sign",
@@ -597,8 +597,11 @@ public class ModBlocks {
     private static Block modStoneButton() {
         return new ButtonBlock(BlockSetType.STONE, 20, BlockBehaviour.Properties.of().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY));
     }
-    private static Block modMetalButton() {
-        return new ButtonBlock(BlockSetType.STONE, 10, BlockBehaviour.Properties.of().noCollission().strength(0.8F).pushReaction(PushReaction.DESTROY));
+    private static Block modIronButton() {
+        return new ButtonBlock(BlockSetType.IRON, 10, BlockBehaviour.Properties.of().noCollission().strength(0.8F).pushReaction(PushReaction.DESTROY));
+    }
+    private static Block modGoldButton() {
+        return new ButtonBlock(BlockSetType.GOLD, 10, BlockBehaviour.Properties.of().noCollission().strength(0.8F).pushReaction(PushReaction.DESTROY));
     }
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
