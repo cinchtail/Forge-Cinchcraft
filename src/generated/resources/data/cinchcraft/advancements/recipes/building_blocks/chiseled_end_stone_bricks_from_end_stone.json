@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:chiseled_end_stone_bricks_from_end_stone"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

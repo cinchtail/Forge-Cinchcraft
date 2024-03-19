@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:yellow_dye_from_butter_cup"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

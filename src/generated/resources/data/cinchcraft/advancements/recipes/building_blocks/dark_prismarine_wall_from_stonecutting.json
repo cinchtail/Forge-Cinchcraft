@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:dark_prismarine_wall_from_stonecutting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

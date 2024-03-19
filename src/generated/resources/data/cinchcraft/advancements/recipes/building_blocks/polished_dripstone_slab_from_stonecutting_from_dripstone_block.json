@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:polished_dripstone_slab_from_stonecutting_from_dripstone_block"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:mossy_deepslate_tile_slab"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

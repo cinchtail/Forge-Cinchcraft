@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:red_dye_from_small_rose"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:cyan_dye_from_crocus"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

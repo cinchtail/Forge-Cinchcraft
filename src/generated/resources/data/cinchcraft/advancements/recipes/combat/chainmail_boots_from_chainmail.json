@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:chainmail_boots_from_chainmail"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

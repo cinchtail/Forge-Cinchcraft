@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:calcite_stairs_from_stonecutting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:copper_nugget"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

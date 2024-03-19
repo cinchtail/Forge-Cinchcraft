@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:ruby_sword"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

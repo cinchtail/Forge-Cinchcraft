@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:mossy_deepslate_brick_from_vine"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

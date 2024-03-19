@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:melon_slices"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

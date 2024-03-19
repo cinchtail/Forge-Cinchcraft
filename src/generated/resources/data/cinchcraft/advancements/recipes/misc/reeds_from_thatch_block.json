@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:reeds_from_thatch_block"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

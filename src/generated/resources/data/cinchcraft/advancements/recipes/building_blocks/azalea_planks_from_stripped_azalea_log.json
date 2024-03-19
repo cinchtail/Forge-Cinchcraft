@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:azalea_planks_from_stripped_azalea_log"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

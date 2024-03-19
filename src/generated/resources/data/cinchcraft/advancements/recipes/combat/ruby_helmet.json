@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:ruby_helmet"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

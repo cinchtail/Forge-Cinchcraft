@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:chainmail_chestplate_from_chainmail"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

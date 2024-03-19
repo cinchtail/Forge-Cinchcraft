@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:netherite_horse_armor_from_smithing"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

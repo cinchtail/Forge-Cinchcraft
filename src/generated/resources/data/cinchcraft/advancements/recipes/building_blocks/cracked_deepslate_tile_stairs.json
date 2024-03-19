@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:cracked_deepslate_tile_stairs"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

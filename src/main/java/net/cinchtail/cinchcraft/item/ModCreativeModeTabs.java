@@ -110,6 +110,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.QUARTZ_BRICK_STAIRS.get());
                         output.accept(ModBlocks.QUARTZ_BRICK_SLAB.get());
                         output.accept(ModBlocks.QUARTZ_BRICK_WALL.get());
+                        output.accept(ModBlocks.MOSSY_QUARTZ_BRICKS.get());
+                        output.accept(ModBlocks.MOSSY_QUARTZ_BRICK_STAIRS.get());
+                        output.accept(ModBlocks.MOSSY_QUARTZ_BRICK_SLAB.get());
+                        output.accept(ModBlocks.MOSSY_QUARTZ_BRICK_WALL.get());
                         output.accept(ModBlocks.CRACKED_PRISMARINE_BRICKS.get());
                         output.accept(ModBlocks.CRACKED_PRISMARINE_BRICK_STAIRS.get());
                         output.accept(ModBlocks.CRACKED_PRISMARINE_BRICK_SLAB.get());

@@ -1,4 +1,4 @@
-// 1.20.2	2023-10-07T12:38:51.1484199	Item Models: cinchcraft
+// 1.20.4	2024-03-18T23:02:46.62559	Item Models: cinchcraft
 774809724c0c051db5a823287ccfb162c5f16b47 assets/cinchcraft/models/item/ancient_slime_stew.json
 56f5e9dc708fc4c9cdf2ede2af80e98be3212353 assets/cinchcraft/models/item/azalea_boat.json
 f946135c414ac93b59835f78246ad3384293ff63 assets/cinchcraft/models/item/azalea_button.json
@@ -97,6 +97,9 @@ d5ca79e22103d0021578801c3d4ef36b3e0588d5 assets/cinchcraft/models/item/mossy_dee
 65a4bb3f90789c643d24a9cfb30341e18719411a assets/cinchcraft/models/item/mossy_nether_brick_slab.json
 2caa61e35e7829ec9698e9d4267536d518eb2ea6 assets/cinchcraft/models/item/mossy_nether_brick_stairs.json
 11c3b122f22bfcdacfcae2ea764d25d571ca4dcd assets/cinchcraft/models/item/mossy_nether_brick_wall.json
+f581ac0879978d6b6e25a74fe9c5b5a8d987140e assets/cinchcraft/models/item/mossy_quartz_brick_slab.json
+f419091182622112890e64716c2f93f55bd61a56 assets/cinchcraft/models/item/mossy_quartz_brick_stairs.json
+1900338ecd81080edb80800729eb8f91bea7252d assets/cinchcraft/models/item/mossy_quartz_brick_wall.json
 84fea0bbbaccac220bd591e8a276b217a8397420 assets/cinchcraft/models/item/netherite_horse_armor.json
 4f889d219574e0d6ff818d02aa5e0a20a9fca3c2 assets/cinchcraft/models/item/nether_stew.json
 3f6b83024137c455c59b715d98cd219ebad41396 assets/cinchcraft/models/item/pineapple.json

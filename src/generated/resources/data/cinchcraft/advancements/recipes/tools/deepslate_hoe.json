@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:deepslate_hoe"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

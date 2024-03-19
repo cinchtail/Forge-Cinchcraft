@@ -308,5 +308,9 @@
   "block.cinchcraft.mossy_bricks": "长满青苔的砖块",
   "block.cinchcraft.mossy_brick_wall": "长满青苔的砖墙",
   "block.cinchcraft.mossy_brick_slab": "长满青苔的砖台阶",
-  "block.cinchcraft.mossy_brick_stairs": "长满青苔的砖楼梯"
+  "block.cinchcraft.mossy_brick_stairs": "长满青苔的砖楼梯",
+  "block.cinchcraft.mossy_quartz_bricks": "苔藓石英砖",
+  "block.cinchcraft.mossy_quartz_brick_wall": "长满青苔的石英砖墙",
+  "block.cinchcraft.mossy_quartz_brick_slab": "苔藓石英砖板",
+  "block.cinchcraft.mossy_quartz_brick_stairs": "长满青苔的石英砖楼梯"
 }

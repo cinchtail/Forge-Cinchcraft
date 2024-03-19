@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:block_of_ruby"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

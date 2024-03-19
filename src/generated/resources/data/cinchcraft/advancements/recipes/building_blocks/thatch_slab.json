@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:thatch_slab"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

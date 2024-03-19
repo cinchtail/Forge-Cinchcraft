@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:calcite_slab"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

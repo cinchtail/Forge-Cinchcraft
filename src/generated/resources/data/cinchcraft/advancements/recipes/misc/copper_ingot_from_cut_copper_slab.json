@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:copper_ingot_from_cut_copper_slab"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

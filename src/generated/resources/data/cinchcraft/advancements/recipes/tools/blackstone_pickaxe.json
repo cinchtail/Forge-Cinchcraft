@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:blackstone_pickaxe"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

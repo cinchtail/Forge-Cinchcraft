@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:polished_deepslate_button"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

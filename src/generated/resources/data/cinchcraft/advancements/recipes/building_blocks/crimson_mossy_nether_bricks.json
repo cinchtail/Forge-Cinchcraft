@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:crimson_mossy_nether_bricks"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

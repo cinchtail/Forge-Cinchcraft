@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:packed_mud_from_reeds"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -2040,6 +2040,53 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Blocks.VINE)
                 .unlockedBy("has_vine", has(Items.VINE))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_brick_from_vine"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_QUARTZ_BRICK_STAIRS.get(),4)
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .define('A', ModBlocks.MOSSY_QUARTZ_BRICKS.get())
+                .unlockedBy("has_mossy_quartz_bricks", has(ModBlocks.MOSSY_QUARTZ_BRICKS.get()))
+                .save(consumer);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.MOSSY_QUARTZ_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_QUARTZ_BRICK_STAIRS.get())
+                .unlockedBy("has_mossy_quartz_bricks", has(ModBlocks.MOSSY_QUARTZ_BRICKS.get()))
+                .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_quartz_brick_stairs_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_QUARTZ_BRICK_SLAB.get(),6)
+                .pattern("AAA")
+                .define('A', ModBlocks.MOSSY_QUARTZ_BRICKS.get())
+                .unlockedBy("has_mossy_quartz_bricks", has(ModBlocks.MOSSY_QUARTZ_BRICKS.get()))
+                .save(consumer);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.MOSSY_QUARTZ_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_QUARTZ_BRICK_SLAB.get(),2)
+                .unlockedBy("has_mossy_quartz_bricks", has(ModBlocks.MOSSY_QUARTZ_BRICKS.get()))
+                .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_quartz_brick_slab_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_QUARTZ_BRICK_WALL.get(),6)
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModBlocks.MOSSY_QUARTZ_BRICKS.get())
+                .unlockedBy("has_mossy_quartz_bricks", has(ModBlocks.MOSSY_QUARTZ_BRICKS.get()))
+                .save(consumer);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.MOSSY_QUARTZ_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_QUARTZ_BRICK_WALL.get())
+                .unlockedBy("has_mossy_quartz_bricks", has(ModBlocks.MOSSY_QUARTZ_BRICKS.get()))
+                .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_quartz_brick_wall_from_stonecutting"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_QUARTZ_BRICKS.get())
+                .group("mossy_quartz_bricks")
+                .requires(Blocks.QUARTZ_BRICKS)
+                .requires(Blocks.MOSS_BLOCK)
+                .unlockedBy("has_moss_block", has(Blocks.MOSS_BLOCK))
+                .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_quartz_brick_from_moss_block"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_QUARTZ_BRICKS.get())
+                .group("mossy_quartz_bricks")
+                .requires(Blocks.QUARTZ_BRICKS)
+                .requires(Blocks.VINE)
+                .unlockedBy("has_vine", has(Items.VINE))
+                .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_quartz_brick_from_vine"));
     }
     protected static void ingot(RecipeOutput consumer, ItemLike ingot, ItemLike ore, ItemLike deepslateOre, ItemLike raw, int smeltingTime, float experience) {
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ore, deepslateOre, raw), RecipeCategory.MISC, ingot, experience,

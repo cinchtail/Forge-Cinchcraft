@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:cracked_red_nether_brick_slab_from_stonecutting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

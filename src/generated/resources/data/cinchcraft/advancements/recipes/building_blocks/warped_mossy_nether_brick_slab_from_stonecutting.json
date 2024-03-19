@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:warped_mossy_nether_brick_slab_from_stonecutting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

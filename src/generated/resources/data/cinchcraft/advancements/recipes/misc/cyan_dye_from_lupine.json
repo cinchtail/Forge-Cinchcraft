@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:cyan_dye_from_lupine"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

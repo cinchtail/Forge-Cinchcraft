@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:vegetable_stew_from_red_mushroom"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

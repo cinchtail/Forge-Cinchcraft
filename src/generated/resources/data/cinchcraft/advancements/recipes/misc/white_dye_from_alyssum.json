@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:white_dye_from_alyssum"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

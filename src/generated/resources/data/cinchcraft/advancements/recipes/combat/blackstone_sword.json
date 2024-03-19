@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:blackstone_sword"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

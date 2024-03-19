@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:warped_mossy_nether_bricks"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

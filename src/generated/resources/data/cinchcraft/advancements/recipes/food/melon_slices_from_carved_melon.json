@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:melon_slices_from_carved_melon"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

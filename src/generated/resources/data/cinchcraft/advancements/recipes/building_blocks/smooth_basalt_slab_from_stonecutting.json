@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:smooth_basalt_slab_from_stonecutting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

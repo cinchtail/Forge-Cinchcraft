@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:smooth_quartz_wall_from_stonecutting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

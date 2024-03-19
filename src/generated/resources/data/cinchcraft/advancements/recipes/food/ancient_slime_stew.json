@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:ancient_slime_stew"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

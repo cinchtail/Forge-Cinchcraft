@@ -30,6 +30,5 @@
     "recipes": [
       "cinchcraft:cracked_nether_brick_stairs_from_stonecutting"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }
