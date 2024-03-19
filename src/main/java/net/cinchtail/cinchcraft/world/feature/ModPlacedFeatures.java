@@ -16,9 +16,6 @@ import net.minecraft.world.level.levelgen.placement.*;
 import java.util.List;
 
 public class ModPlacedFeatures {
-
-    //public static final ResourceKey<PlacedFeature> APPLE_CHECKED_KEY = createKey("apple_tree_checked");
-    //public static final ResourceKey<PlacedFeature> APPLE_PLACED_KEY = createKey("apple_tree_placed");
     public static final ResourceKey<PlacedFeature> RUBY_PLACED_KEY = createKey("ruby_ore_placed");
     public static final ResourceKey<PlacedFeature> NETHER_RUBY_PLACED_KEY = createKey("nether_ruby_ore_placed");
     public static final ResourceKey<PlacedFeature> NETHER_COAL_PLACED_KEY = createKey("nether_coal_ore_placed");
@@ -43,11 +40,6 @@ public class ModPlacedFeatures {
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
-
-        /*register(context, APPLE_CHECKED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.APPLE_KEY),
-                List.of(PlacementUtils.filteredByBlockSurvival(ModBlocks.APPLE_SAPLING.get())));
-        register(context, APPLE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.APPLE_KEY),
-                VegetationPlacements.treePlacement(RarityFilter.onAverageOnceEvery(48), ModBlocks.APPLE_SAPLING.get()));*/
 
         register(context, RUBY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_RUBY_ORE_KEY),
                 commonOrePlacement(10, // VeinsPerChunk
@@ -103,16 +95,14 @@ public class ModPlacedFeatures {
                 List.of(RarityFilter.onAverageOnceEvery(42),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         register(context, LUPINE_LARGE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LUPINE_LARGE_KEY),
-                List.of(RarityFilter.onAverageOnceEvery(4),
+                List.of(RarityFilter.onAverageOnceEvery(2),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
-
         register(context, PINEAPPLE_PLANT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.PINEAPPLE_PLANT_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(20),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         register(context, STRAWBERRY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STRAWBERRY_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(70),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
-
         register(context, STAR_CACTUS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STAR_CACTUS_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(38),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));

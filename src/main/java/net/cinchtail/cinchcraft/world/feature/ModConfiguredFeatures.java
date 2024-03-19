@@ -24,8 +24,6 @@ import java.util.List;
 import java.util.function.Supplier;
 
 public class ModConfiguredFeatures {
-    //public static final ResourceKey<ConfiguredFeature<?, ?>> APPLE_KEY = registerKey("apple");
-    //public static final ResourceKey<ConfiguredFeature<?, ?>> APPLE_SPAWN_KEY = registerKey("apple_spawn");
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_RUBY_ORE_KEY = registerKey("overworld_ruby_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_RUBY_ORE_KEY = registerKey("nether_ruby_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_COAL_ORE_KEY = registerKey("nether_coal_ore");
@@ -73,19 +71,6 @@ public class ModConfiguredFeatures {
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         HolderGetter<PlacedFeature> placedFeatures = context.lookup(Registries.PLACED_FEATURE);
 
-        /*register(context, APPLE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(ModBlocks.APPLE_LOG.get()),
-                new StraightTrunkPlacer(2, 2, 3),
-                BlockStateProvider.simple(ModBlocks.APPLE_LEAVES.get()),
-                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
-                new TwoLayersFeatureSize(1, 0, 2))
-                .dirt(BlockStateProvider.simple(Blocks.DIRT)).build());
-
-        register(context, APPLE_SPAWN_KEY, Feature.RANDOM_SELECTOR,
-                new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(
-                        placedFeatures.getOrThrow(ModPlacedFeatures.APPLE_CHECKED_KEY),
-                        0.5F)), placedFeatures.getOrThrow(ModPlacedFeatures.APPLE_CHECKED_KEY)));*/
-
         register(context, OVERWORLD_RUBY_ORE_KEY, Feature.ORE, new OreConfiguration(OVERWORLD_RUBY_ORES.get(),8));
         register(context, NETHER_RUBY_ORE_KEY, Feature.ORE, new OreConfiguration(NETHER_RUBY_ORES.get(),3));
         register(context, NETHER_IRON_ORE_KEY, Feature.ORE, new OreConfiguration(NETHER_IRON_ORES.get(),5));
@@ -121,7 +106,7 @@ public class ModConfiguredFeatures {
                 new RandomPatchConfiguration(20, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.BUBBLE_FLOWER.get())))));
         register(context, LUPINE_LARGE_KEY, Feature.FLOWER,
-                new RandomPatchConfiguration(2800, 20, 5, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                new RandomPatchConfiguration(2800, 16, 5, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.LUPINE.get())))));
 
         register(context, PINEAPPLE_PLANT_KEY, Feature.FLOWER,
