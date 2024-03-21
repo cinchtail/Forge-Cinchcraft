@@ -74,7 +74,7 @@ public class ModPlacedFeatures {
                 List.of(RarityFilter.onAverageOnceEvery(5), InSquarePlacement.spread(),
                         PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()));
         register(context, CATTAILS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CATTAILS_KEY),
-                List.of(RarityFilter.onAverageOnceEvery(5), InSquarePlacement.spread(),
+                List.of(RarityFilter.onAverageOnceEvery(4), InSquarePlacement.spread(),
                         PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()));
         register(context, BLUEBERRIES_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLUEBERRIES_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(16),
