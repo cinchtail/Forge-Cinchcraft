@@ -3,23 +3,23 @@ package net.cinchtail.cinchcraft.datagen;
 import net.cinchtail.cinchcraft.Cinchcraft;
 import net.cinchtail.cinchcraft.block.ModBlocks;
 import net.cinchtail.cinchcraft.item.ModItems;
+import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.advancements.Criterion;
-import net.minecraft.advancements.critereon.InventoryChangeTrigger;
-import net.minecraft.advancements.critereon.ItemPredicate;
+import net.minecraft.advancements.critereon.EnterBlockTrigger;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
-import java.util.Arrays;
 import java.util.List;
-import java.util.function.Consumer;
+import java.util.Optional;
+
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
     private static final List<ItemLike> RUBY_SMELTABLES = List.of(ModBlocks.RUBY_ORE.get(), ModBlocks.DEEPSLATE_RUBY_ORE.get(), ModBlocks.NETHER_RUBY_ORE.get());
     private static final List<ItemLike> NETHER_COAL = List.of(ModBlocks.NETHER_COAL_ORE.get());
@@ -291,18 +291,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_azalea_planks", has(ModItems.AZALEA_PLANKS.get()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_BOAT.get())
-                .pattern("A A")
-                .pattern("AAA")
-                .define('A', ModItems.AZALEA_PLANKS.get())
-                .unlockedBy("has_azalea_planks", has(ModItems.AZALEA_PLANKS.get()))
-                .save(consumer);
+        woodenBoat(consumer, ModItems.AZALEA_BOAT.get(), ModBlocks.AZALEA_PLANKS.get());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_CHEST_BOAT.get())
-                .requires(ModItems.AZALEA_BOAT.get())
-                .requires(Items.CHEST)
-                .unlockedBy("has_azalea_boat", has(ModItems.AZALEA_BOAT.get()))
-                .save(consumer);
+        chestBoat(consumer, ModItems.AZALEA_CHEST_BOAT.get(), ModItems.AZALEA_BOAT.get());
 
         //Reeds Recipes
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.THATCH_BLOCK.get())

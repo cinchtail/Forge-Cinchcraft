@@ -1,12 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "building",
+  "category": "misc",
+  "group": "chest_boat",
   "ingredients": [
     {
-      "item": "cinchcraft:azalea_boat"
+      "item": "minecraft:chest"
     },
     {
-      "item": "minecraft:chest"
+      "item": "cinchcraft:azalea_boat"
     }
   ],
   "result": {

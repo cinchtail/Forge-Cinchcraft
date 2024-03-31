@@ -1,13 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_azalea_boat": {
+    "has_boat": {
       "conditions": {
         "items": [
           {
-            "items": [
-              "cinchcraft:azalea_boat"
-            ]
+            "tag": "minecraft:boats"
           }
         ]
       },
@@ -23,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_azalea_boat"
+      "has_boat"
     ]
   ],
   "rewards": {
