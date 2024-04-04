@@ -296,8 +296,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> SUNFLOWER_CROP = BLOCKS.register("sunflower_crop",
             () -> new ModSunflowerCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PITCHER_CROP)
                     .noOcclusion().sound(SoundType.GRASS)));
-    public static final RegistryObject<Block> REEDS = BLOCKS.register("reeds",
-            () -> new Reeds(BlockBehaviour.Properties.ofFullCopy(Blocks.ROSE_BUSH)
+    public static final RegistryObject<Block> REEDS_CROP_BLOCK = BLOCKS.register("reeds_crop_block",
+            () -> new ReedsCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PITCHER_CROP)
                     .sound(SoundType.SMALL_DRIPLEAF)));
 
 

@@ -183,7 +183,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.THATCH_BLOCK.get());
                         output.accept(ModItems.THATCH_STAIRS.get());
                         output.accept(ModItems.THATCH_SLAB.get());
-                        output.accept(ModItems.REEDS.get());
+                        output.accept(ModItems.REEDS_SEEDS.get());
                         output.accept(ModItems.CATTAILS.get());
                         output.accept(ModItems.FIRE_FERN.get());
                         output.accept(ModBlocks.BUBBLE_FLOWER.get());

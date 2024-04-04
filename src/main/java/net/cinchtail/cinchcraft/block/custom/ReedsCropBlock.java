@@ -1,7 +1,6 @@
 package net.cinchtail.cinchcraft.block.custom;
 
 import net.cinchtail.cinchcraft.block.ModBlocks;
-import net.cinchtail.cinchcraft.item.ModItems;
 import net.cinchtail.cinchcraft.util.ModBlockTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -17,26 +16,30 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.block.state.properties.*;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 import javax.annotation.Nullable;
 
-public class ModSunflowerCropBlock extends DoublePlantBlock implements BonemealableBlock {
+
+public class ReedsCropBlock extends DoublePlantBlock implements SimpleWaterloggedBlock, BonemealableBlock {
     public static final IntegerProperty AGE = BlockStateProperties.AGE_4;
     public static final int MAX_AGE = 4;
     private static final int DOUBLE_PLANT_AGE_INTERSECTION = 3;
     private static final int BONEMEAL_INCREASE = 1;
-
+    private static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     private static final VoxelShape FULL_UPPER_SHAPE = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 15.0D, 13.0D);
     private static final VoxelShape FULL_LOWER_SHAPE = Block.box(3.0D, -1.0D, 3.0D, 13.0D, 16.0D, 13.0D);
     private static final VoxelShape[] UPPER_SHAPE_BY_AGE = new VoxelShape[]{Block.box(5.0D, 0.0D, 5.0D, 11.0D, 10.0D, 11.0D), FULL_UPPER_SHAPE};
     private static final VoxelShape[] LOWER_SHAPE_BY_AGE = new VoxelShape[]{Block.box(5.0D, 0.0D, 5.0D, 11.0D, 10.0D, 11.0D), FULL_LOWER_SHAPE, FULL_LOWER_SHAPE, FULL_LOWER_SHAPE, FULL_LOWER_SHAPE};
-    public ModSunflowerCropBlock(Properties properties) {
+
+    public ReedsCropBlock(Properties properties) {
         super(properties);
+        this.registerDefaultState(this.stateDefinition.any().setValue(HALF, DoubleBlockHalf.LOWER).setValue(WATERLOGGED, Boolean.TRUE).setValue(FACING, Direction.NORTH));
     }
     private boolean isMaxAge(BlockState blockState) {
         return blockState.getValue(AGE) >= 4;
@@ -45,39 +48,61 @@ public class ModSunflowerCropBlock extends DoublePlantBlock implements Bonemeala
     public boolean isRandomlyTicking(BlockState blockState) {
         return blockState.getValue(HALF) == DoubleBlockHalf.LOWER && !this.isMaxAge(blockState);
     }
-    @Nullable
-    public BlockState getStateForPlacement(BlockPlaceContext placeContext) {
-        return this.defaultBlockState();
-    }
-    protected boolean mayPlaceOn(BlockState blockState, BlockGetter blockGetter, BlockPos pos) {
-        return blockState.is(ModBlockTags.SUNFLOWER_CROP_PLACEABLE);
-    }
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockBlockStateBuilder) {
-        blockBlockStateBuilder.add(AGE);
-        super.createBlockStateDefinition(blockBlockStateBuilder);
-    }
+
     public VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos pos, CollisionContext collisionContext) {
         return blockState.getValue(HALF) == DoubleBlockHalf.UPPER ? UPPER_SHAPE_BY_AGE[Math.min(Math.abs(4 - (blockState.getValue(AGE) + 1)), UPPER_SHAPE_BY_AGE.length - 1)] : LOWER_SHAPE_BY_AGE[blockState.getValue(AGE)];
     }
-    public BlockState updateShape(BlockState blockState, Direction direction, BlockState blockState1, LevelAccessor levelAccessor, BlockPos pos, BlockPos pos1) {
-        return !blockState.canSurvive(levelAccessor, pos) ? Blocks.AIR.defaultBlockState() : blockState;
+    @Nullable
+    public BlockState getStateForPlacement(BlockPlaceContext placeContext) {
+        BlockState blockstate = super.getStateForPlacement(placeContext);
+        return blockstate != null ? copyWaterloggedFrom(placeContext.getLevel(), placeContext.getClickedPos(), blockstate.setValue(FACING, placeContext.getHorizontalDirection().getOpposite())) : null;
     }
-    public boolean canSurvive(BlockState blockState, LevelReader levelReader, BlockPos pos) {
-        if (!isLower(blockState)) {
-            return super.canSurvive(blockState, levelReader, pos);
-        } else {
-            return this.mayPlaceOn(levelReader.getBlockState(pos.below()), levelReader, pos.below()) && sufficientLight(levelReader, pos) && (blockState.getValue(AGE) < 3 || isUpper(levelReader.getBlockState(pos.above())));
+    public void setPlacedBy(Level blockstate1, BlockPos pos, BlockState blockState, LivingEntity livingEntity, ItemStack itemStack) {
+        if (!blockstate1.isClientSide()) {
+            BlockPos blockpos = pos.above();
+            BlockState blockstate = DoublePlantBlock.copyWaterloggedFrom(blockstate1, blockpos, this.defaultBlockState().setValue(HALF, DoubleBlockHalf.UPPER).setValue(FACING, blockState.getValue(FACING)));
+            blockstate1.setBlock(blockpos, blockstate, 3);
         }
+
     }
     public boolean canBeReplaced(BlockState blockState, BlockPlaceContext placeContext) {
         return false;
     }
-
-    public void setPlacedBy(Level level, BlockPos pos, BlockState blockState, LivingEntity livingEntity, ItemStack itemStack) {
+    public FluidState getFluidState(BlockState blockState) {
+        return blockState.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(blockState);
     }
+    @Override
+    public boolean canSurvive(BlockState blockState, LevelReader levelReader, BlockPos pos)
+    {
+        if (blockState.getValue(HALF) == DoubleBlockHalf.UPPER)
+        {
+            BlockState blockstate = levelReader.getBlockState(pos.below());
+            return blockstate.is(this) && blockstate.getValue(HALF) == DoubleBlockHalf.LOWER && sufficientLight(levelReader, pos) && (blockState.getValue(AGE) < 3) || isUpper(levelReader.getBlockState(pos.above()));
+        }
 
+        else if(blockState.getValue(HALF) == DoubleBlockHalf.LOWER && blockState.getValue(WATERLOGGED))
+        {
+            return levelReader.getBlockState(pos.below()).is(ModBlockTags.REEDS_PLACEABLE)
+                    && levelReader.getFluidState(pos).is(Fluids.WATER)
+                    && levelReader.getFluidState(pos.above()).isEmpty();
+        }
+
+        else
+        {
+            return false;
+        }
+    }
+    public BlockState updateShape(BlockState blockState, Direction direction, BlockState blockState1, LevelAccessor levelAccessor, BlockPos pos, BlockPos pos1) {
+        if (blockState.getValue(WATERLOGGED)) {
+            levelAccessor.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(levelAccessor));
+        }
+        return super.updateShape(blockState, direction, blockState1, levelAccessor, pos, pos1);
+    }
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockBlockStateBuilder) {
+        blockBlockStateBuilder.add(HALF, WATERLOGGED, FACING);
+    }
     public void randomTick(BlockState blockState, ServerLevel serverLevel, BlockPos pos, RandomSource randomSource) {
-        float f = ModSunflowerCropBlock.modGetGrowthSpeed(this, serverLevel, pos);
+        float f = ReedsCropBlock.modGetGrowthSpeed(this, serverLevel, pos);
         boolean flag = randomSource.nextInt((int)(25.0F / f) + 1) == 0;
         if (flag) {
             this.grow(serverLevel, blockState, pos, 1);
@@ -134,36 +159,36 @@ public class ModSunflowerCropBlock extends DoublePlantBlock implements Bonemeala
     }
     private static boolean canGrowInto(LevelReader levelReader, BlockPos pos) {
         BlockState blockstate = levelReader.getBlockState(pos);
-        return blockstate.isAir() || blockstate.is(ModBlocks.SUNFLOWER_CROP.get());
+        return blockstate.isAir() || blockstate.is(ModBlocks.REEDS_CROP_BLOCK.get());
     }
     private static boolean sufficientLight(LevelReader levelReader, BlockPos pos) {
         return levelReader.getRawBrightness(pos, 0) >= 8 || levelReader.canSeeSky(pos);
     }
 
     private static boolean isLower(BlockState blockState) {
-        return blockState.is(ModBlocks.SUNFLOWER_CROP.get()) && blockState.getValue(HALF) == DoubleBlockHalf.LOWER;
+        return blockState.is(ModBlocks.REEDS_CROP_BLOCK.get()) && blockState.getValue(HALF) == DoubleBlockHalf.LOWER;
     }
 
     private static boolean isUpper(BlockState blockState) {
-        return blockState.is(ModBlocks.SUNFLOWER_CROP.get()) && blockState.getValue(HALF) == DoubleBlockHalf.UPPER;
+        return blockState.is(ModBlocks.REEDS_CROP_BLOCK.get()) && blockState.getValue(HALF) == DoubleBlockHalf.UPPER;
     }
 
     private boolean canGrow(LevelReader levelReader, BlockPos pos, BlockState blockState, int i) {
         return !this.isMaxAge(blockState) && sufficientLight(levelReader, pos) && (i < 3 || canGrowInto(levelReader, pos.above()));
     }
     @Nullable
-    private ModSunflowerCropBlock.PosAndState getLowerHalf(LevelReader levelReader, BlockPos pos, BlockState blockState) {
+    private ReedsCropBlock.PosAndState getLowerHalf(LevelReader levelReader, BlockPos pos, BlockState blockState) {
         if (isLower(blockState)) {
-            return new ModSunflowerCropBlock.PosAndState(pos, blockState);
+            return new ReedsCropBlock.PosAndState(pos, blockState);
         } else {
             BlockPos blockpos = pos.below();
             BlockState blockstate = levelReader.getBlockState(blockpos);
-            return isLower(blockstate) ? new ModSunflowerCropBlock.PosAndState(blockpos, blockstate) : null;
+            return isLower(blockstate) ? new ReedsCropBlock.PosAndState(blockpos, blockstate) : null;
         }
     }
     public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos pos, BlockState blockState) {
-        ModSunflowerCropBlock.PosAndState modsunflowercropblock$posandstate = this.getLowerHalf(levelReader, pos, blockState);
-        return modsunflowercropblock$posandstate != null && this.canGrow(levelReader, modsunflowercropblock$posandstate.pos, modsunflowercropblock$posandstate.state, modsunflowercropblock$posandstate.state.getValue(AGE) + 1);
+        ReedsCropBlock.PosAndState reedscropblock$posandstate = this.getLowerHalf(levelReader, pos, blockState);
+        return reedscropblock$posandstate != null && this.canGrow(levelReader, reedscropblock$posandstate.pos, reedscropblock$posandstate.state, reedscropblock$posandstate.state.getValue(AGE) + 1);
     }
 
     public boolean isBonemealSuccess(Level level, RandomSource randomSource, BlockPos pos, BlockState blockState) {
@@ -171,14 +196,15 @@ public class ModSunflowerCropBlock extends DoublePlantBlock implements Bonemeala
     }
 
     public void performBonemeal(ServerLevel serverLevel, RandomSource randomSource, BlockPos pos, BlockState blockState) {
-        ModSunflowerCropBlock.PosAndState modsunflowercropblock$posandstate = this.getLowerHalf(serverLevel, pos, blockState);
-        if (modsunflowercropblock$posandstate != null) {
-            this.grow(serverLevel, modsunflowercropblock$posandstate.state, modsunflowercropblock$posandstate.pos, 1);
+        ReedsCropBlock.PosAndState reedscropblock$posandstate = this.getLowerHalf(serverLevel, pos, blockState);
+        if (reedscropblock$posandstate != null) {
+            this.grow(serverLevel, reedscropblock$posandstate.state, reedscropblock$posandstate.pos, 1);
         }
     }
-    public ItemStack getCloneItemStack(BlockGetter blockGetter, BlockPos pos, BlockState blockState) {
-        return new ItemStack(ModItems.SUNFLOWER_SEEDS.get());
+    public float getMaxVerticalOffset() {
+        return 0.1F;
     }
     record PosAndState(BlockPos pos, BlockState state) {
     }
 }
+

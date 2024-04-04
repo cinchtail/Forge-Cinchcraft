@@ -83,7 +83,7 @@ public class ModConfiguredFeatures {
 
         register(context, REEDS_KEY, Feature.RANDOM_PATCH,
                 new RandomPatchConfiguration(50, 6, 2, PlacementUtils.inlinePlaced(Feature.SIMPLE_BLOCK,
-                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.REEDS.get().defaultBlockState())))));
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.REEDS_CROP_BLOCK.get().defaultBlockState())))));
         register(context, CATTAILS_KEY, Feature.RANDOM_PATCH,
                 new RandomPatchConfiguration(50, 6, 2, PlacementUtils.inlinePlaced(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.CATTAILS.get().defaultBlockState())))));

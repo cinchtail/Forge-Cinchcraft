@@ -65,7 +65,7 @@ public class WanderingTraderTrades {
                 , 9, 3));
         event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.SUNFLOWER_SEEDS.get(), 2)
                 , 7, 3));
-        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.REEDS.get(), 2)
+        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.REEDS_SEEDS.get(), 2)
                 , 9, 3));
         event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.CATTAILS.get(), 1)
                 , 5, 3));
