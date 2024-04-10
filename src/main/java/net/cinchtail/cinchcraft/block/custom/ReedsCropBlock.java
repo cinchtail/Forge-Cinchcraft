@@ -99,7 +99,7 @@ public class ReedsCropBlock extends DoublePlantBlock implements SimpleWaterlogge
         return super.updateShape(blockState, direction, blockState1, levelAccessor, pos, pos1);
     }
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockBlockStateBuilder) {
-        blockBlockStateBuilder.add(HALF, WATERLOGGED, FACING);
+        blockBlockStateBuilder.add(HALF, WATERLOGGED, FACING, AGE);
     }
     public void randomTick(BlockState blockState, ServerLevel serverLevel, BlockPos pos, RandomSource randomSource) {
         float f = ReedsCropBlock.modGetGrowthSpeed(this, serverLevel, pos);
@@ -107,7 +107,6 @@ public class ReedsCropBlock extends DoublePlantBlock implements SimpleWaterlogge
         if (flag) {
             this.grow(serverLevel, blockState, pos, 1);
         }
-
     }
     protected static float modGetGrowthSpeed(Block block, BlockGetter blockGetter, BlockPos pos) {
         float f = 1.0F;
