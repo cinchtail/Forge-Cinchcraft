@@ -186,7 +186,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.THATCH_BLOCK.get());
                         output.accept(ModItems.THATCH_STAIRS.get());
                         output.accept(ModItems.THATCH_SLAB.get());
-                        output.accept(ModItems.REEDS_SEEDS.get());
                         output.accept(ModItems.CATTAILS.get());
                         output.accept(ModItems.FIRE_FERN.get());
                         output.accept(ModBlocks.BUBBLE_FLOWER.get());
@@ -241,6 +240,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CHAINMAIL.get());
                         output.accept(ModItems.DOG_MUSIC_DISC.get());
                         output.accept(ModItems.KYOTO_MUSIC_DISC.get());
+                        output.accept(ModItems.REEDS_SEEDS.get());
                         output.accept(ModItems.CARROT_SEEDS.get());
                         output.accept(ModItems.SUNFLOWER_SEEDS.get());
                         output.accept(ModItems.SUNFLOWER_HEAD.get());
