@@ -72,14 +72,23 @@ public class ReedsCropBlock extends DoublePlantBlock implements SimpleWaterlogge
         return blockState.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(blockState);
     }
     @Override
-    public boolean canSurvive(BlockState blockState, LevelReader levelReader, BlockPos pos) {
-        if (blockState.getValue(HALF) == DoubleBlockHalf.UPPER) {
+    public boolean canSurvive(BlockState blockState, LevelReader levelReader, BlockPos pos)
+    {
+        if (blockState.getValue(HALF) == DoubleBlockHalf.UPPER)
+        {
             BlockState blockstate = levelReader.getBlockState(pos.below());
-            return blockstate.is(this) && blockstate.getValue(HALF) == DoubleBlockHalf.LOWER && sufficientLight(levelReader, pos) && (blockState.getValue(AGE) >= 3) || isUpper(levelReader.getBlockState(pos.above()));
-        } else if(blockState.getValue(HALF) == DoubleBlockHalf.LOWER && blockState.getValue(WATERLOGGED)) {
+            return blockstate.is(this) && blockstate.getValue(HALF) == DoubleBlockHalf.LOWER && sufficientLight(levelReader, pos) && (blockState.getValue(AGE) < 3) || isUpper(levelReader.getBlockState(pos.above()));
+        }
+
+        else if(blockState.getValue(HALF) == DoubleBlockHalf.LOWER && blockState.getValue(WATERLOGGED))
+        {
             return levelReader.getBlockState(pos.below()).is(ModBlockTags.REEDS_PLACEABLE)
-                    && ((levelReader.getBlockState(pos.above()).is(this) && levelReader.getBlockState(pos.above()).getValue(HALF) == DoubleBlockHalf.UPPER) || levelReader.isEmptyBlock(pos.above()));
-        } else {
+                    && levelReader.getFluidState(pos).is(Fluids.WATER)
+                    && levelReader.getFluidState(pos.above()).isEmpty();
+        }
+
+        else
+        {
             return false;
         }
     }
