@@ -174,6 +174,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         vanillaWallBlock(CRACKED_POLISHED_BLACKSTONE_BRICK_WALL, blockVanillaBlockLoc(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS));
         vanillaWallBlock(CRACKED_NETHER_BRICK_WALL, blockVanillaBlockLoc(Blocks.CRACKED_NETHER_BRICKS));
         vanillaWallBlock(SMOOTH_BASALT_WALL, blockVanillaBlockLoc(Blocks.SMOOTH_BASALT));
+        vanillaWallBlock(DEEPSLATE_WALL, blockVanillaBlockLoc(Blocks.DEEPSLATE));
         modWallBlock(MOSSY_MUD_BRICK_WALL, blockLoc(MOSSY_MUD_BRICKS));
         modWallBlock(POLISHED_TUFF_WALL, blockLoc(POLISHED_TUFF));
         modWallBlock(POLISHED_CALCITE_WALL, blockLoc(POLISHED_CALCITE));

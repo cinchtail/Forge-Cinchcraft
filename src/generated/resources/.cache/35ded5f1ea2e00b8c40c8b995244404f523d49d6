@@ -1,4 +1,4 @@
-// 1.20.4	2024-03-18T23:02:46.62559	Item Models: cinchcraft
+// 1.20.4	2024-04-25T18:19:01.8204847	Item Models: cinchcraft
 774809724c0c051db5a823287ccfb162c5f16b47 assets/cinchcraft/models/item/ancient_slime_stew.json
 56f5e9dc708fc4c9cdf2ede2af80e98be3212353 assets/cinchcraft/models/item/azalea_boat.json
 f946135c414ac93b59835f78246ad3384293ff63 assets/cinchcraft/models/item/azalea_button.json
@@ -67,7 +67,10 @@ b105ea96288dfa464c472f7361fae504ae173e71 assets/cinchcraft/models/item/deepslate
 1cba746679b1d35e7f0ab487105179ef655788ca assets/cinchcraft/models/item/deepslate_hoe.json
 de33ac31f12f41b997828b115d21ef6fe52c6589 assets/cinchcraft/models/item/deepslate_pickaxe.json
 d989c39acc3d48f8c836a7227f76d83607b43de6 assets/cinchcraft/models/item/deepslate_shovel.json
+2f84a62f418b14954629be3254063b2b74963bd6 assets/cinchcraft/models/item/deepslate_slab.json
+b7660a7ef7c6e939c9854449e9abafc378974f1e assets/cinchcraft/models/item/deepslate_stairs.json
 4daf6fee956534ffb1d582eef7c93cd09197c05c assets/cinchcraft/models/item/deepslate_sword.json
+ea96e7e25586de9a61bb9c593014708f9a37d7b7 assets/cinchcraft/models/item/deepslate_wall.json
 2b4f0cd527638cb97aad119db18c4dcd7cd9f597 assets/cinchcraft/models/item/dog_music_disc.json
 feac18884b1a446438f8aa2a2a15c8538e0e2a78 assets/cinchcraft/models/item/dripstone_slab.json
 81a709d698817453e9e501472745329159160d8c assets/cinchcraft/models/item/dripstone_stairs.json

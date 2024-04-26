@@ -2078,6 +2078,39 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Blocks.VINE)
                 .unlockedBy("has_vine", has(Items.VINE))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "mossy_quartz_brick_from_vine"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEEPSLATE_STAIRS.get(),4)
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .define('A', Blocks.DEEPSLATE)
+                .unlockedBy("has_deepslate", has(Blocks.DEEPSLATE))
+                .save(consumer);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.DEEPSLATE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEEPSLATE_STAIRS.get())
+                .unlockedBy("has_deepslate", has(Blocks.DEEPSLATE))
+                .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "deepslate_stairs_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEEPSLATE_SLAB.get(),6)
+                .pattern("AAA")
+                .define('A', Blocks.DEEPSLATE)
+                .unlockedBy("has_deepslate", has(Blocks.DEEPSLATE))
+                .save(consumer);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.DEEPSLATE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEEPSLATE_SLAB.get(),2)
+                .unlockedBy("has_deepslate", has(Blocks.DEEPSLATE))
+                .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "deepslate_slab_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEEPSLATE_WALL.get(),6)
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', Blocks.DEEPSLATE)
+                .unlockedBy("has_deepslate", has(Blocks.DEEPSLATE))
+                .save(consumer);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.DEEPSLATE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEEPSLATE_WALL.get())
+                .unlockedBy("has_deepslate", has(Blocks.DEEPSLATE))
+                .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "deepslate_wall_from_stonecutting"));
     }
     protected static void ingot(RecipeOutput consumer, ItemLike ingot, ItemLike ore, ItemLike deepslateOre, ItemLike raw, int smeltingTime, float experience) {
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ore, deepslateOre, raw), RecipeCategory.MISC, ingot, experience,

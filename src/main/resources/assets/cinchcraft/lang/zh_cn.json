@@ -312,5 +312,8 @@
   "block.cinchcraft.mossy_quartz_bricks": "苔藓石英砖",
   "block.cinchcraft.mossy_quartz_brick_wall": "长满青苔的石英砖墙",
   "block.cinchcraft.mossy_quartz_brick_slab": "苔藓石英砖板",
-  "block.cinchcraft.mossy_quartz_brick_stairs": "长满青苔的石英砖楼梯"
+  "block.cinchcraft.mossy_quartz_brick_stairs": "长满青苔的石英砖楼梯",
+  "block.cinchcraft.deepslate_wall": "深石板墙",
+  "block.cinchcraft.deepslate_slab": "深板岩板",
+  "block.cinchcraft.deepslate_stairs": "深石板楼梯"
 }

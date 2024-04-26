@@ -10,6 +10,7 @@
             "state": {
               "Name": "cinchcraft:reeds_crop_block",
               "Properties": {
+                "age": "0",
                 "facing": "north",
                 "half": "lower",
                 "waterlogged": "true"

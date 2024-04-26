@@ -129,6 +129,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SMOOTH_BASALT_STAIRS.get());
                         output.accept(ModBlocks.SMOOTH_BASALT_SLAB.get());
                         output.accept(ModBlocks.SMOOTH_BASALT_WALL.get());
+                        output.accept(ModBlocks.DEEPSLATE_STAIRS.get());
+                        output.accept(ModBlocks.DEEPSLATE_SLAB.get());
+                        output.accept(ModBlocks.DEEPSLATE_WALL.get());
                         output.accept(ModBlocks.MOSSY_COBBLED_DEEPSLATE.get());
                         output.accept(ModBlocks.MOSSY_COBBLED_DEEPSLATE_STAIRS.get());
                         output.accept(ModBlocks.MOSSY_COBBLED_DEEPSLATE_SLAB.get());
@@ -250,7 +253,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.NETHER_STEW.get());
                         output.accept(ModItems.ANCIENT_SLIME_STEW.get());
                     }).build());
-
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);

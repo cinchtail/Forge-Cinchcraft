@@ -1,4 +1,4 @@
-// 1.20.4	2024-03-18T22:44:52.4939723	Block States: cinchcraft
+// 1.20.4	2024-04-25T18:19:01.8244859	Block States: cinchcraft
 7901b6f250fe4c595ef99b172bda946030802c32 assets/cinchcraft/blockstates/azalea_button.json
 a53b5d1fe8c95ef966faf0b7e4ca6a5c4a943432 assets/cinchcraft/blockstates/azalea_door.json
 eb838eda8d050729f9a7bf558c65d74e041a114b assets/cinchcraft/blockstates/azalea_fence.json
@@ -67,6 +67,7 @@ bb2ce936e5ed5d25efbe6021f0936ba2f8ffe9b7 assets/cinchcraft/blockstates/crimson_m
 19ca2dcfec3a139d055738eaee46162cfff99523 assets/cinchcraft/blockstates/cut_sandstone_wall.json
 3786263870cf3fedd55c487cc4b42dd08a3af7a7 assets/cinchcraft/blockstates/dark_prismarine_wall.json
 5c3364f9cdf777d0d352bd819963161692d57334 assets/cinchcraft/blockstates/deepslate_ruby_ore.json
+234a8c5405d96b6389866ab01c1b91471d0919cb assets/cinchcraft/blockstates/deepslate_wall.json
 c309990a3e8739ef91164481309449b415a81bfc assets/cinchcraft/blockstates/dripstone_slab.json
 34d18601269168d1b9d9e0e8fb4d411a3466c95a assets/cinchcraft/blockstates/dripstone_stairs.json
 e726bac55639a6b4498e7321c68bdab81eb4e30b assets/cinchcraft/blockstates/dripstone_wall.json
@@ -327,6 +328,10 @@ c7085431c5dc150be1688d167d9011149622380c assets/cinchcraft/models/block/cut_sand
 558dd1cc92f8f5768f8cc1f74f002d9d0bc82038 assets/cinchcraft/models/block/dark_prismarine_wall_side.json
 e574401057b7068ceabd03f58356c520bfa5c291 assets/cinchcraft/models/block/dark_prismarine_wall_side_tall.json
 060d7a03b207e9a223275025471afe41e5fdd5d8 assets/cinchcraft/models/block/deepslate_ruby_ore.json
+c0f52c28f37af551d69d796a498aa48366ed9e30 assets/cinchcraft/models/block/deepslate_wall_inventory.json
+1f30baa0a62dc7a53e40797852db6eda819e7de4 assets/cinchcraft/models/block/deepslate_wall_post.json
+c057f336c3e2156000c60304dcd62a34542382f4 assets/cinchcraft/models/block/deepslate_wall_side.json
+6f6bf4737b75262d80326e867994a90c9cf5b603 assets/cinchcraft/models/block/deepslate_wall_side_tall.json
 8f5c6454c55453e93a1b9c631663bb70c926437a assets/cinchcraft/models/block/dripstone_slab.json
 67cdcd8bb68a5352f10df6152734b8a2f33df7e9 assets/cinchcraft/models/block/dripstone_slab_top.json
 6df0c5c81573eceb5d33876d67073e1839693262 assets/cinchcraft/models/block/dripstone_stairs.json

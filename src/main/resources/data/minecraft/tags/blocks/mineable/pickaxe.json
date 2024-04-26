@@ -144,6 +144,9 @@
     "cinchcraft:mossy_quartz_bricks",
     "cinchcraft:mossy_quartz_brick_wall",
     "cinchcraft:mossy_quartz_brick_slab",
-    "cinchcraft:mossy_quartz_brick_stairs"
+    "cinchcraft:mossy_quartz_brick_stairs",
+    "cinchcraft:deepslate_wall",
+    "cinchcraft:deepslate_slab",
+    "cinchcraft:deepslate_stairs"
   ]
 }

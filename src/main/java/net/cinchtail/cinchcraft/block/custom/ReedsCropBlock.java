@@ -72,23 +72,14 @@ public class ReedsCropBlock extends DoublePlantBlock implements SimpleWaterlogge
         return blockState.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(blockState);
     }
     @Override
-    public boolean canSurvive(BlockState blockState, LevelReader levelReader, BlockPos pos)
-    {
-        if (blockState.getValue(HALF) == DoubleBlockHalf.UPPER)
-        {
+    public boolean canSurvive(BlockState blockState, LevelReader levelReader, BlockPos pos) {
+        if (blockState.getValue(HALF) == DoubleBlockHalf.UPPER) {
             BlockState blockstate = levelReader.getBlockState(pos.below());
-            return blockstate.is(this) && blockstate.getValue(HALF) == DoubleBlockHalf.LOWER && sufficientLight(levelReader, pos) && (blockState.getValue(AGE) < 3) || isUpper(levelReader.getBlockState(pos.above()));
-        }
-
-        else if(blockState.getValue(HALF) == DoubleBlockHalf.LOWER && blockState.getValue(WATERLOGGED))
-        {
+            return blockstate.is(this) && blockstate.getValue(HALF) == DoubleBlockHalf.LOWER && sufficientLight(levelReader, pos) && (blockState.getValue(AGE) >= 3) || isUpper(levelReader.getBlockState(pos.above()));
+        } else if(blockState.getValue(HALF) == DoubleBlockHalf.LOWER && blockState.getValue(WATERLOGGED)) {
             return levelReader.getBlockState(pos.below()).is(ModBlockTags.REEDS_PLACEABLE)
-                    && levelReader.getFluidState(pos).is(Fluids.WATER)
-                    && levelReader.getFluidState(pos.above()).isEmpty();
-        }
-
-        else
-        {
+                    && ((levelReader.getBlockState(pos.above()).is(this) && levelReader.getBlockState(pos.above()).getValue(HALF) == DoubleBlockHalf.UPPER) || levelReader.isEmptyBlock(pos.above()));
+        } else {
             return false;
         }
     }
@@ -137,7 +128,8 @@ public class ReedsCropBlock extends DoublePlantBlock implements SimpleWaterlogge
         if (flag && flag1) {
             f /= 2.0F;
         } else {
-            boolean flag2 = blockGetter.getBlockState(blockpos3.north()).is(block) || blockGetter.getBlockState(blockpos4.north()).is(block) || blockGetter.getBlockState(blockpos4.south()).is(block) || blockGetter.getBlockState(blockpos3.south()).is(block);
+            boolean flag2 = blockGetter.getBlockState(blockpos3.north()).is(block) || blockGetter.getBlockState(blockpos4.north()).is(block)
+                    || blockGetter.getBlockState(blockpos4.south()).is(block) || blockGetter.getBlockState(blockpos3.south()).is(block);
             if (flag2) {
                 f /= 2.0F;
             }
@@ -151,7 +143,8 @@ public class ReedsCropBlock extends DoublePlantBlock implements SimpleWaterlogge
             serverLevel.setBlock(pos, blockState.setValue(AGE, i), 2);
             if (i >= 3) {
                 BlockPos blockpos = pos.above();
-                serverLevel.setBlock(blockpos, copyWaterloggedFrom(serverLevel, pos, this.defaultBlockState().setValue(AGE, i).setValue(HALF, DoubleBlockHalf.UPPER)), 3);
+                serverLevel.setBlock(blockpos, this.defaultBlockState().setValue(AGE, i)
+                        .setValue(HALF, DoubleBlockHalf.UPPER).setValue(WATERLOGGED, false), 3);
             }
 
         }

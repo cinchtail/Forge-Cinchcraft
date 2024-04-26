@@ -312,5 +312,8 @@
   "block.cinchcraft.mossy_quartz_bricks": "Mossy Quartz Bricks",
   "block.cinchcraft.mossy_quartz_brick_wall": "Mossy Quartz Brick Wall",
   "block.cinchcraft.mossy_quartz_brick_slab": "Mossy Quartz Brick Slab",
-  "block.cinchcraft.mossy_quartz_brick_stairs": "Mossy Quartz Brick Stairs"
+  "block.cinchcraft.mossy_quartz_brick_stairs": "Mossy Quartz Brick Stairs",
+  "block.cinchcraft.deepslate_wall": "Deepslate Wall",
+  "block.cinchcraft.deepslate_slab": "Deepslate Slab",
+  "block.cinchcraft.deepslate_stairs": "Deepslate Stairs"
 }
