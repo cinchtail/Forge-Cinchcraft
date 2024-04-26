@@ -57,13 +57,8 @@ public class ReedsCropBlock extends DoublePlantBlock implements SimpleWaterlogge
         BlockState blockstate = super.getStateForPlacement(placeContext);
         return blockstate != null ? copyWaterloggedFrom(placeContext.getLevel(), placeContext.getClickedPos(), blockstate.setValue(FACING, placeContext.getHorizontalDirection().getOpposite())) : null;
     }
+    @Override
     public void setPlacedBy(Level blockstate1, BlockPos pos, BlockState blockState, LivingEntity livingEntity, ItemStack itemStack) {
-        if (!blockstate1.isClientSide()) {
-            BlockPos blockpos = pos.above();
-            BlockState blockstate = DoublePlantBlock.copyWaterloggedFrom(blockstate1, blockpos, this.defaultBlockState().setValue(HALF, DoubleBlockHalf.UPPER).setValue(FACING, blockState.getValue(FACING)));
-            blockstate1.setBlock(blockpos, blockstate, 3);
-        }
-
     }
     public boolean canBeReplaced(BlockState blockState, BlockPlaceContext placeContext) {
         return false;
@@ -77,7 +72,7 @@ public class ReedsCropBlock extends DoublePlantBlock implements SimpleWaterlogge
         if (blockState.getValue(HALF) == DoubleBlockHalf.UPPER)
         {
             BlockState blockstate = levelReader.getBlockState(pos.below());
-            return blockstate.is(this) && blockstate.getValue(HALF) == DoubleBlockHalf.LOWER && sufficientLight(levelReader, pos) && (blockState.getValue(AGE) < 3) || isUpper(levelReader.getBlockState(pos.above()));
+            return blockstate.is(this) && blockstate.getValue(HALF) == DoubleBlockHalf.LOWER && sufficientLight(levelReader, pos) || isUpper(levelReader.getBlockState(pos.above()));
         }
 
         else if(blockState.getValue(HALF) == DoubleBlockHalf.LOWER && blockState.getValue(WATERLOGGED))

@@ -4,6 +4,7 @@ import com.google.common.base.Suppliers;
 import net.cinchtail.cinchcraft.Cinchcraft;
 import net.cinchtail.cinchcraft.block.ModBlocks;
 import net.cinchtail.cinchcraft.block.custom.BlueBerryBushBlock;
+import net.cinchtail.cinchcraft.block.custom.ReedsCropBlock;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -83,7 +84,7 @@ public class ModConfiguredFeatures {
 
         register(context, REEDS_KEY, Feature.RANDOM_PATCH,
                 new RandomPatchConfiguration(50, 6, 2, PlacementUtils.inlinePlaced(Feature.SIMPLE_BLOCK,
-                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.REEDS_CROP_BLOCK.get().defaultBlockState())))));
+                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.REEDS_CROP_BLOCK.get().defaultBlockState().setValue(ReedsCropBlock.AGE, 4))))));
         register(context, CATTAILS_KEY, Feature.RANDOM_PATCH,
                 new RandomPatchConfiguration(50, 6, 2, PlacementUtils.inlinePlaced(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.CATTAILS.get().defaultBlockState())))));
