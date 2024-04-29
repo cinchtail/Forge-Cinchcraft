@@ -43,6 +43,9 @@ public class ModItems {
             () -> new ModBoatItem(false, ModBoatEntity.Type.AZALEA, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> AZALEA_CHEST_BOAT = ITEMS.register("azalea_chest_boat",
             () -> new ModBoatItem(true, ModBoatEntity.Type.AZALEA, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> REEDS_SEEDS = ITEMS.register("reeds_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.REEDS_CROP_BLOCK.get(),
+                    new Item.Properties()));
 
     //Foods
     public static final RegistryObject<Item> VEGETABLE_STEW = ITEMS.register("vegetable_stew",
@@ -143,9 +146,6 @@ public class ModItems {
                     new Item.Properties()));
     public static final RegistryObject<Item> CARVED_MELON = ITEMS.register("carved_melon",
             () -> new ItemNameBlockItem(ModBlocks.CARVED_MELON.get(),
-                    new Item.Properties()));
-    public static final RegistryObject<Item> REEDS_SEEDS = ITEMS.register("reeds_seeds",
-            () -> new ItemNameBlockItem(ModBlocks.REEDS_CROP_BLOCK.get(),
                     new Item.Properties()));
     public static final RegistryObject<Item> CATTAILS = ITEMS.register("cattails",
             () -> new ItemNameBlockItem(ModBlocks.CATTAILS.get(),

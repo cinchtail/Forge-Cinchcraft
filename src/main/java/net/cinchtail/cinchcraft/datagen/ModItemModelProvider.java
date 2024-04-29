@@ -40,6 +40,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.ANCIENT_SLIME_STEW);
         simpleItem(ModItems.SUNFLOWER_SEEDS);
         simpleItem(ModItems.SUNFLOWER_HEAD);
+        simpleItem(ModItems.REEDS_SEEDS);
 
 
         simpleItem(ModItems.AZALEA_SIGN);
