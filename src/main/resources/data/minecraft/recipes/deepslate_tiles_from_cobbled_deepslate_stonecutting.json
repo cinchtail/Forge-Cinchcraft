@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "count": 1,
   "ingredient": {
-    "item": "minecraft:barrier"
+    "item": "minecraft:deepslate"
   },
-  "result": "minecraft:barrier"
+  "result": "minecraft:deepslate_tiles"
 }
