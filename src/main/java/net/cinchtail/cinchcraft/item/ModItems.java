@@ -46,6 +46,8 @@ public class ModItems {
     public static final RegistryObject<Item> REEDS_SEEDS = ITEMS.register("reeds_seeds",
             () -> new ItemNameBlockItem(ModBlocks.REEDS_CROP_BLOCK.get(),
                     new Item.Properties()));
+    public static final RegistryObject<Item> REEDS = ITEMS.register("reeds",
+            () -> new Item(new Item.Properties()));
 
     //Foods
     public static final RegistryObject<Item> VEGETABLE_STEW = ITEMS.register("vegetable_stew",

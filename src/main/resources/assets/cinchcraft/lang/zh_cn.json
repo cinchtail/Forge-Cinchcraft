@@ -75,7 +75,6 @@
   "item.cinchcraft.butter_cup": "毛茛",
   "item.cinchcraft.small_rose": "小玫瑰",
   "item.cinchcraft.crocus": "鸢尾",
-  "item.cinchcraft.reeds": "芦苇",
   "item.cinchcraft.cattails": "香蒲",
   "item.cinchcraft.star_cactus": "星仙人掌",
   "item.cinchcraft.alyssum": "香雪球",
@@ -101,6 +100,7 @@
   "item.cinchcraft.azalea_boat": "杜鹃木船",
   "item.cinchcraft.azalea_chest_boat": "杜鹃木运输船",
   "item.cinchcraft.reeds_seeds": "芦苇种子",
+  "item.cinchcraft.reeds": "芦苇",
 
   "itemGroup.cinchcraft_blocks": "Cinch的工艺：方块",
   "itemGroup.cinchcraft_items": "Cinch的工艺：物品",

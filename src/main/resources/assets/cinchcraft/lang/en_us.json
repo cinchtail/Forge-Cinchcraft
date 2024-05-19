@@ -75,7 +75,6 @@
   "item.cinchcraft.butter_cup": "Butter Cup",
   "item.cinchcraft.small_rose": "Small Rose",
   "item.cinchcraft.crocus": "Crocus",
-  "item.cinchcraft.reeds": "Reeds",
   "item.cinchcraft.cattails": "Cattails",
   "item.cinchcraft.star_cactus": "Star Cactus",
   "item.cinchcraft.alyssum": "Alyssum",
@@ -101,6 +100,7 @@
   "item.cinchcraft.azalea_boat": "Azalea Boat",
   "item.cinchcraft.azalea_chest_boat": "Azalea Chest Boat",
   "item.cinchcraft.reeds_seeds": "Reeds Seeds",
+  "item.cinchcraft.reeds": "Reeds",
 
   "itemGroup.cinchcraft_blocks": "Cinchcraft Blocks",
   "itemGroup.cinchcraft_items": "Cinchcraft Items",

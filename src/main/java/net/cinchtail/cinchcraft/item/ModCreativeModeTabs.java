@@ -240,6 +240,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CHAINMAIL.get());
                         output.accept(ModItems.DOG_MUSIC_DISC.get());
                         output.accept(ModItems.KYOTO_MUSIC_DISC.get());
+                        output.accept(ModItems.REEDS.get());
                         output.accept(ModItems.REEDS_SEEDS.get());
                         output.accept(ModItems.CARROT_SEEDS.get());
                         output.accept(ModItems.SUNFLOWER_SEEDS.get());
