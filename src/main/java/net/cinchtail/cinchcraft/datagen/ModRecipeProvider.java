@@ -300,8 +300,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .pattern("AAA")
                 .pattern("AAA")
-                .define('A', ModItems.REEDS_SEEDS.get())
-                .unlockedBy("has_reeds", has(ModItems.REEDS_SEEDS.get()))
+                .define('A', ModItems.REEDS.get())
+                .unlockedBy("has_reeds", has(ModItems.REEDS.get()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModItems.THATCH_STAIRS.get(),4)
@@ -318,19 +318,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_thatch_block", has(ModItems.THATCH_BLOCK.get()))
                 .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.REEDS_SEEDS.get(), 9)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.REEDS.get(), 9)
                 .requires(ModItems.THATCH_BLOCK.get())
                 .group("reeds")
                 .unlockedBy("has_thatch_block", has(ModItems.THATCH_BLOCK.get()))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "reeds_from_thatch_block"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.REEDS_SEEDS.get(), 6)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.REEDS.get(), 6)
                 .requires(ModItems.THATCH_STAIRS.get())
                 .group("reeds")
                 .unlockedBy("has_thatch_stairs", has(ModItems.THATCH_STAIRS.get()))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "reeds_from_thatch_stairs"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.REEDS_SEEDS.get(), 4)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.REEDS.get(), 4)
                 .requires(ModItems.THATCH_SLAB.get())
                 .group("reeds")
                 .unlockedBy("has_thatch_slab", has(ModItems.THATCH_SLAB.get()))
@@ -339,8 +339,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, Items.PACKED_MUD)
                 .pattern("AT")
                 .define('A', Items.MUD)
-                .define('T', ModItems.REEDS_SEEDS.get())
-                .unlockedBy("has_reeds", has(ModItems.REEDS_SEEDS.get()))
+                .define('T', ModItems.REEDS.get())
+                .unlockedBy("has_reeds", has(ModItems.REEDS.get()))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "packed_mud_from_reeds"));
 
         //Blackstone Tools
