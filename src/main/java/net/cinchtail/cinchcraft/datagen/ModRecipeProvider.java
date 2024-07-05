@@ -626,6 +626,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_white_wool", has(Items.WHITE_WOOL))
                 .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "string_from_wool"));
 
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.DEEPSLATE_BRICKS), RecipeCategory.BUILDING_BLOCKS, Blocks.CHISELED_DEEPSLATE)
+                .unlockedBy("has_deepslate_bricks", has(Blocks.DEEPSLATE_BRICKS))
+                .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "chiseled_deepslate_from_deepslate_bricks"));
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.POLISHED_DEEPSLATE), RecipeCategory.BUILDING_BLOCKS, Blocks.CHISELED_DEEPSLATE)
+                .unlockedBy("has_polished_deepslate", has(Blocks.POLISHED_DEEPSLATE))
+                .save(consumer, new ResourceLocation(Cinchcraft.MOD_ID, "chiseled_deepslate_from_polished_deepslate"));
+
 
         //Blocks
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_END_STONE_BRICKS.get())
