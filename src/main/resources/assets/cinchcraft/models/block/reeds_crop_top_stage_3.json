@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "cinchcraft:block/sunflower_crop_top_stage_3"
+    "cross": "cinchcraft:block/reeds_crop_top_stage_3"
   },
   "render_type": "cutout"
 }
