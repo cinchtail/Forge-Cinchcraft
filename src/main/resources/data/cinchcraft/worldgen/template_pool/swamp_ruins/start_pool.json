@@ -30,7 +30,7 @@
       }
     },
     {
-      "weight": 5,
+      "weight": 1,
       "element": {
         "location": "cinchcraft:swamp_ruins/swamp_ruin_4",
         "processors": "cinchcraft:make_mud_bricks_mossy_and_cracked",
