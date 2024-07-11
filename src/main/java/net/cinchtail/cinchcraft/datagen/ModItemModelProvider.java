@@ -70,12 +70,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.RUBY_HOE);
 
 
-        fenceItem(ModBlocks.MOSSY_NETHER_BRICK_FENCE, ModBlocks.MOSSY_NETHER_BRICKS);
-        fenceItem(ModBlocks.CRIMSON_MOSSY_NETHER_BRICK_FENCE, ModBlocks.CRIMSON_MOSSY_NETHER_BRICKS);
-        fenceItem(ModBlocks.WARPED_MOSSY_NETHER_BRICK_FENCE, ModBlocks.WARPED_MOSSY_NETHER_BRICKS);
-        fenceItem(ModBlocks.AZALEA_FENCE, ModBlocks.AZALEA_PLANKS);
-        fenceItem(ModBlocks.CRACKED_RED_NETHER_BRICK_FENCE, ModBlocks.CRACKED_RED_NETHER_BRICKS);
-        vanillaFenceItem(ModBlocks.CRACKED_NETHER_BRICK_FENCE, Blocks.CRACKED_NETHER_BRICKS);
+        fenceItem(ModBlocks.CRACKED_NETHER_BRICK_FENCE, Blocks.CRACKED_NETHER_BRICKS);
+        modFenceItem(ModBlocks.MOSSY_NETHER_BRICK_FENCE, ModBlocks.MOSSY_NETHER_BRICKS);
+        modFenceItem(ModBlocks.CRIMSON_MOSSY_NETHER_BRICK_FENCE, ModBlocks.CRIMSON_MOSSY_NETHER_BRICKS);
+        modFenceItem(ModBlocks.WARPED_MOSSY_NETHER_BRICK_FENCE, ModBlocks.WARPED_MOSSY_NETHER_BRICKS);
+        modFenceItem(ModBlocks.AZALEA_FENCE, ModBlocks.AZALEA_PLANKS);
+        modFenceItem(ModBlocks.CRACKED_RED_NETHER_BRICK_FENCE, ModBlocks.CRACKED_RED_NETHER_BRICKS);
 
 
         buttonItem(ModBlocks.POLISHED_DEEPSLATE_BUTTON, Blocks.POLISHED_DEEPSLATE);
@@ -218,11 +218,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         this.withExistingParent(Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block.get())).getPath(), mcLoc("block/button_inventory"))
                 .texture("texture",  new ResourceLocation(Cinchcraft.MOD_ID, "block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(baseBlock)).getPath()));
     }
-    public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+    public void modFenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block.get())).getPath(), mcLoc("block/fence_inventory"))
                 .texture("texture",  new ResourceLocation(Cinchcraft.MOD_ID, "block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(baseBlock.get())).getPath()));
     }
-    public void vanillaFenceItem(RegistryObject<Block> block, Block baseBlock) {
+    public void fenceItem(RegistryObject<Block> block, Block baseBlock) {
         this.withExistingParent(Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(block.get())).getPath(), mcLoc("block/fence_inventory"))
                 .texture("texture",  new ResourceLocation("minecraft", "block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(baseBlock)).getPath()));
     }
