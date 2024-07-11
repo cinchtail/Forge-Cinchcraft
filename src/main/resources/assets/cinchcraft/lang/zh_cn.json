@@ -170,8 +170,6 @@
   "block.cinchcraft.quartz_brick_wall": "石英砖墙",
   "block.cinchcraft.quartz_brick_slab": "石英砖台阶",
   "block.cinchcraft.quartz_brick_stairs": "石英砖楼梯",
-  "block.cinchcraft.nether_brick_furnace": "下界砖栅栏",
-  "block.cinchcraft.red_nether_brick_fence": "红色下界砖栅栏",
   "block.cinchcraft.mossy_nether_bricks": "生苔下界砖块",
   "block.cinchcraft.mossy_nether_brick_wall": "生苔下界砖墙",
   "block.cinchcraft.mossy_nether_brick_slab": "生苔下界砖台阶",
@@ -316,5 +314,7 @@
   "block.cinchcraft.mossy_quartz_brick_stairs": "长满青苔的石英砖楼梯",
   "block.cinchcraft.deepslate_wall": "深石板墙",
   "block.cinchcraft.deepslate_slab": "深板岩板",
-  "block.cinchcraft.deepslate_stairs": "深石板楼梯"
+  "block.cinchcraft.deepslate_stairs": "深石板楼梯",
+  "block.cinchcraft.cracked_nether_brick_fence": "破裂的下界砖栅栏",
+  "block.cinchcraft.cracked_red_nether_brick_fence": "破裂的红色下界砖栅栏"
 }

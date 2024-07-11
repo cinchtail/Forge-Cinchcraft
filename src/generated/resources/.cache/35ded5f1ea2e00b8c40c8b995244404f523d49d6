@@ -1,4 +1,4 @@
-// 1.20.4	2024-05-30T18:58:25.8494236	Item Models: cinchcraft
+// 1.20.4	2024-07-10T21:18:27.6319418	Item Models: cinchcraft
 774809724c0c051db5a823287ccfb162c5f16b47 assets/cinchcraft/models/item/ancient_slime_stew.json
 56f5e9dc708fc4c9cdf2ede2af80e98be3212353 assets/cinchcraft/models/item/azalea_boat.json
 f946135c414ac93b59835f78246ad3384293ff63 assets/cinchcraft/models/item/azalea_button.json
@@ -37,6 +37,7 @@ a35336b2ef2b14f9bebf579dc0c6b99494255c3f assets/cinchcraft/models/item/cracked_b
 9ff98cee6ae9a8e78d9a44c001ba498a31547d75 assets/cinchcraft/models/item/cracked_mud_brick_slab.json
 a5bd74bd3d28be1182f4463978671dcac98230ce assets/cinchcraft/models/item/cracked_mud_brick_stairs.json
 c6378d37d1c4216b40feb0174e882004b9ab5336 assets/cinchcraft/models/item/cracked_mud_brick_wall.json
+ddb5895f8ef21ced057e5868c0e3bf735ba483b8 assets/cinchcraft/models/item/cracked_nether_brick_fence.json
 37a7f2312c12dea79822e07f880a02a629a54d2e assets/cinchcraft/models/item/cracked_nether_brick_slab.json
 b9e61c102cc688eb0bc32a8d5f421787e7ec788f assets/cinchcraft/models/item/cracked_nether_brick_stairs.json
 7c5f15103af7a4d3ceab38b9ec63c14223d4b19a assets/cinchcraft/models/item/cracked_nether_brick_wall.json
@@ -50,6 +51,7 @@ bbfb32cb6a190841867a18cfd1f9ad78b2e292bc assets/cinchcraft/models/item/cracked_p
 5237c969a6f711e0474e092ee884b9aaeed5a220 assets/cinchcraft/models/item/cracked_quartz_brick_stairs.json
 6934d3471ab28efc49490d0fd29e17ea2fd57618 assets/cinchcraft/models/item/cracked_quartz_brick_wall.json
 3ecf8890df357cbea53d89de8bc4abf68e047e87 assets/cinchcraft/models/item/cracked_red_nether_bricks.json
+7a63f6373c24bf975048e043e677facddb727930 assets/cinchcraft/models/item/cracked_red_nether_brick_fence.json
 0e44578f2f1a9ea242fbfbeb434c33d67a9506fe assets/cinchcraft/models/item/cracked_red_nether_brick_slab.json
 da4b6036e554c9b57a2e79167f36a77c7d30311c assets/cinchcraft/models/item/cracked_red_nether_brick_stairs.json
 910b48f56dfd10fc993d39a2adf799ce7d0e1533 assets/cinchcraft/models/item/cracked_red_nether_brick_wall.json

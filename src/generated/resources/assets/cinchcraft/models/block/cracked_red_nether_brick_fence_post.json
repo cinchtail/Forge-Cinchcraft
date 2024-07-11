@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "cinchcraft:block/cracked_red_nether_bricks"
+  }
+}

@@ -196,10 +196,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 
         vanillaFenceBlock((FenceBlock) RED_NETHER_BRICK_FENCE.get(), blockVanillaBlockLoc(Blocks.RED_NETHER_BRICKS));
+        vanillaFenceBlock((FenceBlock) CRACKED_NETHER_BRICK_FENCE.get(), blockVanillaBlockLoc(Blocks.CRACKED_NETHER_BRICKS));
         fenceBlock((FenceBlock) MOSSY_NETHER_BRICK_FENCE.get(), blockLoc(MOSSY_NETHER_BRICKS));
         fenceBlock((FenceBlock) CRIMSON_MOSSY_NETHER_BRICK_FENCE.get(), blockLoc(CRIMSON_MOSSY_NETHER_BRICKS));
         fenceBlock((FenceBlock) WARPED_MOSSY_NETHER_BRICK_FENCE.get(), blockLoc(WARPED_MOSSY_NETHER_BRICKS));
         fenceBlock((FenceBlock) AZALEA_FENCE.get(), blockLoc(AZALEA_PLANKS));
+        fenceBlock((FenceBlock) CRACKED_RED_NETHER_BRICK_FENCE.get(), blockLoc(CRACKED_RED_NETHER_BRICKS));
 
         fenceGateBlock((FenceGateBlock) AZALEA_FENCE_GATE.get(), blockLoc(AZALEA_PLANKS));
 

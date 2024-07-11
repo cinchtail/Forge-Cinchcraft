@@ -65,6 +65,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CRACKED_NETHER_BRICK_STAIRS.get());
                         output.accept(ModBlocks.CRACKED_NETHER_BRICK_SLAB.get());
                         output.accept(ModBlocks.CRACKED_NETHER_BRICK_WALL.get());
+                        output.accept(ModBlocks.CRACKED_NETHER_BRICK_FENCE.get());
                         output.accept(ModBlocks.MOSSY_NETHER_BRICKS.get());
                         output.accept(ModBlocks.MOSSY_NETHER_BRICK_STAIRS.get());
                         output.accept(ModBlocks.MOSSY_NETHER_BRICK_SLAB.get());
@@ -86,6 +87,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CRACKED_RED_NETHER_BRICK_STAIRS.get());
                         output.accept(ModBlocks.CRACKED_RED_NETHER_BRICK_SLAB.get());
                         output.accept(ModBlocks.CRACKED_RED_NETHER_BRICK_WALL.get());
+                        output.accept(ModBlocks.CRACKED_RED_NETHER_BRICK_FENCE.get());
                         output.accept(ModBlocks.CRACKED_MUD_BRICKS.get());
                         output.accept(ModBlocks.CRACKED_MUD_BRICK_STAIRS.get());
                         output.accept(ModBlocks.CRACKED_MUD_BRICK_SLAB.get());

@@ -101,6 +101,7 @@ public class Cinchcraft
         ComposterBlock.COMPOSTABLES.put(ModItems.STAR_CACTUS.get(), 0.65f);
         ComposterBlock.COMPOSTABLES.put(ModItems.FIRE_FERN.get(), 0.65f);
         ComposterBlock.COMPOSTABLES.put(ModItems.REEDS_SEEDS.get(), 0.65f);
+        ComposterBlock.COMPOSTABLES.put(ModItems.REEDS.get(), 0.65f);
         ComposterBlock.COMPOSTABLES.put(ModItems.CATTAILS.get(), 0.65f);
         ComposterBlock.COMPOSTABLES.put(ModItems.STALK.get(), 0.65f);
 
