@@ -1,118 +1,143 @@
 {
+  "type": "minecraft:chest",
   "pools": [
     {
-      "bonus_rolls": 0.5,
+      "bonus_rolls": 0.0,
       "entries": [
         {
-          "type": "item",
-          "name": "minecraft:spider_eye",
-          "weight": 3,
+          "type": "minecraft:item",
           "functions": [
             {
-              "function": "minecraft:set_count",
-              "count": {
-                "max": 8,
-                "min": 5
-              }
+              "function": "minecraft:enchant_randomly"
             }
-          ]
-        },
-        {
-          "type": "item",
-          "name": "minecraft:string",
-          "weight": 5,
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "max": 15,
-                "min": 5
-              }
-            }
-          ]
-        },
-        {
-          "type": "alternatives",
-          "children": [
-            {
-              "type": "item",
-              "name": "minecraft:iron_ingot",
-              "weight": 1
-            },
-            {
-              "type": "item",
-              "name": "minecraft:bread",
-              "weight": 1
-            },
-            {
-              "type": "item",
-              "name": "minecraft:bucket",
-              "weight": 1
-            },
-            {
-              "type": "item",
-              "name": "cinchcraft:ruby",
-              "weight": 1
-            },
-            {
-              "type": "item",
-              "name": "minecraft:fermented_spider_eye",
-              "weight": 1
-            },
-            {
-              "type": "minecraft:item",
-              "functions": [
-                {
-                  "function": "minecraft:enchant_with_levels",
-                  "levels": 15.0,
-                  "treasure": true
-                }
-              ],
-              "name": "minecraft:book",
-              "weight": 1
-            },
-            {
-              "type": "minecraft:item",
-              "functions": [
-                {
-                  "enchantments": [
-                    "minecraft:bane_of_arthropods"
-                  ],
-                  "function": "minecraft:enchant_randomly"
-                }
-              ],
-              "name": "minecraft:book",
-              "weight": 3
-            }
-          ]
-        },
-        {
-          "type": "alternatives",
-          "children": [
-            {
-              "type": "item",
-              "name": "minecraft:iron_sword",
-              "weight": 1,
-              "functions": [
-                {
-                  "add": false,
-                  "damage": {
-                    "type": "minecraft:uniform",
-                    "max": 1.0,
-                    "min": 0.8
-                  },
-                  "function": "minecraft:set_damage"
-                }
-              ]
-            }
-          ]
+          ],
+          "name": "minecraft:book",
+          "weight": 2
         }
       ],
       "rolls": {
         "type": "minecraft:uniform",
-        "max": 20.0,
-        "min": 10.0
+        "max": 2.0,
+        "min": 0.0
       }
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 4.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:iron_ingot",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": 1.0,
+              "function": "minecraft:set_count"
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 1.0,
+                "min": 0.8
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
+          "name": "minecraft:iron_sword",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 2.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "cinchcraft:ruby",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:bucket",
+          "weight": 3
+        }
+      ],
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 3.0,
+        "min": 1.0
+      }
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 12.0,
+                "min": 6.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:spider_eye",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 14.0,
+                "min": 8.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:string",
+          "weight": 10
+        }
+      ],
+      "rolls": 20.0
     }
-  ]
+  ],
+  "random_sequence": "cinchcraft:chests/ruined_spider_mob_grinder"
 }

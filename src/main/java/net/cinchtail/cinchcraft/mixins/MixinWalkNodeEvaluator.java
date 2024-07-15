@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(value = WalkNodeEvaluator.class, priority = 1002)
 public class MixinWalkNodeEvaluator {
     @Inject(method = "checkNeighbourBlocks", at = @At("RETURN"), cancellable = true)
-    private static void checkNeighbourBlocks(BlockGetter p_77608_, BlockPos.MutableBlockPos p_77609_, BlockPathTypes p_77610_, CallbackInfoReturnable<BlockPathTypes> cir) {
+    private static void cinchcraft$checkNeighbourBlocks(BlockGetter p_77608_, BlockPos.MutableBlockPos p_77609_, BlockPathTypes p_77610_, CallbackInfoReturnable<BlockPathTypes> cir) {
         int i = p_77609_.getX();
         int j = p_77609_.getY();
         int k = p_77609_.getZ();
