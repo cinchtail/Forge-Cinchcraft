@@ -5,9 +5,9 @@
     },
     "title": "Ice Cold Blaze",
     "description": "Kill a blaze with a snowball!",
-    "frame": "challenge",
     "show_toast": true,
-    "announce_to_chat": true
+    "announce_to_chat": true,
+    "hidden": false
   },
   "parent": "minecraft:nether/find_fortress",
   "criteria": {

@@ -1,0 +1,22 @@
+{
+  "display": {
+    "icon": {
+      "item": "cinchcraft:bubble_flower"
+    },
+    "title": "Funky Flower",
+    "description": "Levitate Using a Bubble Flower!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "minecraft:end/enter_end_gateway",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:enter_block",
+      "conditions": {
+        "block": "cinchcraft:bubble_flower"
+      }
+    }
+  }
+}
