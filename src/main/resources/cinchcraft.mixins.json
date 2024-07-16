@@ -5,8 +5,7 @@
   "refmap": "cinchcraft.refmap.json",
   "mixins": [
     "MixinBeehivePoi",
-    "MixinWalkNodeEvaluator",
-    "MixinBushBlocks"
+    "MixinWalkNodeEvaluator"
   ],
   "client": [
   ],
