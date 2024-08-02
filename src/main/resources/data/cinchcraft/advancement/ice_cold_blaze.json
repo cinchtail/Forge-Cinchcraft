@@ -1,10 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:snowball"
+      "id": "minecraft:snowball"
     },
     "title": "Ice Cold Blaze",
-    "description": "Kill a blaze with a snowball!",
+    "description": "Kill a Blaze with a Snowball!",
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,

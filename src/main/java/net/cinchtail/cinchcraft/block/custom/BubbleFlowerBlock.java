@@ -1,6 +1,7 @@
 package net.cinchtail.cinchcraft.block.custom;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -13,13 +14,13 @@ import net.minecraft.world.level.block.FlowerBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.PlantType;
 
-import java.util.function.Supplier;
-
 public class BubbleFlowerBlock extends FlowerBlock {
 
-    public BubbleFlowerBlock(MobEffect pSuspiciousStewEffect, int pEffectDuration, Properties pProperties) {
-        super(pSuspiciousStewEffect, pEffectDuration, pProperties);
+
+    public BubbleFlowerBlock(Holder<MobEffect> mobEffectHolder, float v, Properties properties) {
+        super(mobEffectHolder, v, properties);
     }
+
     @Override
     public PlantType getPlantType(BlockGetter level, BlockPos pos) {
         return null;

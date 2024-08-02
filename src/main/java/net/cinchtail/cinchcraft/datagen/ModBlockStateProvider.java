@@ -218,10 +218,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         logBlock(((RotatedPillarBlock) AZALEA_LOG.get()));
         axisBlock(((RotatedPillarBlock) AZALEA_WOOD.get()), blockTexture(AZALEA_LOG.get()), blockTexture(AZALEA_LOG.get()));
-        axisBlock((RotatedPillarBlock) STRIPPED_AZALEA_LOG.get(), new ResourceLocation(Cinchcraft.MOD_ID, "block/stripped_azalea_log"),
-                new ResourceLocation(Cinchcraft.MOD_ID, "block/stripped_azalea_log_top"));
-        axisBlock((RotatedPillarBlock) STRIPPED_AZALEA_WOOD.get(), new ResourceLocation(Cinchcraft.MOD_ID, "block/stripped_azalea_log"),
-                new ResourceLocation(Cinchcraft.MOD_ID, "block/stripped_azalea_log"));
+        axisBlock((RotatedPillarBlock) STRIPPED_AZALEA_LOG.get(), ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "block/stripped_azalea_log"),
+                ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "block/stripped_azalea_log_top"));
+        axisBlock((RotatedPillarBlock) STRIPPED_AZALEA_WOOD.get(), ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "block/stripped_azalea_log"),
+                ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "block/stripped_azalea_log"));
 
 
         signBlock(((StandingSignBlock) AZALEA_SIGN.get()), ((WallSignBlock) ModBlocks.AZALEA_WALL_SIGN.get()),
@@ -273,10 +273,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         return ForgeRegistries.BLOCKS.getKey(block);
     }
     public ResourceLocation blockVanillaBlockLoc(Block block) {
-        return new ResourceLocation("block/" + block.asItem());
+        return ResourceLocation.parse("block/" + block.asItem());
     }
     public ResourceLocation blockLoc(Supplier<? extends Block> block) {
-        return new ResourceLocation(Cinchcraft.MOD_ID, "block/" + getName(block));
+        return ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "block/" + getName(block));
     }
     private void blockItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("cinchcraft:block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get())).getPath()));

@@ -7,6 +7,7 @@ import net.cinchtail.cinchcraft.loot.CommonAddItemToSuspiciouseBlockModifier;
 import net.cinchtail.cinchcraft.loot.RareAddItemToSuspiciousBlockModifier;
 import net.cinchtail.cinchcraft.loot.RemoveItemModifier;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
@@ -27,7 +28,7 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
     }
 
     @Override
-    protected void start() {
+    protected void start(HolderLookup.Provider provider) {
         add("pitcher_plant_root_from_pitcher_crop", new AddItemModifier(new LootItemCondition[] {
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.PITCHER_CROP)
                         .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(PitcherCropBlock.AGE, 4)
@@ -45,41 +46,40 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
         }, ModItems.STALK.get()));
 
         add("ruby_horse_armor_from_jungle_temple", new AddItemModifier(new LootItemCondition[] {
-                new LootTableIdCondition.Builder(new ResourceLocation("chests/jungle_temple")).build(),
+                new LootTableIdCondition.Builder(ResourceLocation.parse("chests/jungle_temple")).build(),
                 LootItemRandomChanceCondition.randomChance(0.4f).build() }, ModItems.RUBY_HORSE_ARMOR.get()));
 
         add("ruby_horse_armor_from_village_armorer", new AddItemModifier(new LootItemCondition[] {
-                new LootTableIdCondition.Builder(new ResourceLocation("chests/village/village_weaponsmith")).build(),
+                new LootTableIdCondition.Builder(ResourceLocation.parse("chests/village/village_weaponsmith")).build(),
                 LootItemRandomChanceCondition.randomChance(0.35f).build() }, ModItems.RUBY_HORSE_ARMOR.get()));
 
         add("ruby_horse_armor_from_dungeon", new AddItemModifier(new LootItemCondition[] {
-                new LootTableIdCondition.Builder(new ResourceLocation("chests/simple_dungeon")).build(),
+                new LootTableIdCondition.Builder(ResourceLocation.parse("chests/simple_dungeon")).build(),
                 LootItemRandomChanceCondition.randomChance(0.35f).build() }, ModItems.RUBY_HORSE_ARMOR.get()));
 
         add("ruby_horse_armor_from_desert_pyramid", new AddItemModifier(new LootItemCondition[] {
-                new LootTableIdCondition.Builder(new ResourceLocation("chests/desert_pyramid")).build(),
+                new LootTableIdCondition.Builder(ResourceLocation.parse("chests/desert_pyramid")).build(),
                 LootItemRandomChanceCondition.randomChance(0.35f).build() }, ModItems.RUBY_HORSE_ARMOR.get()));
 
         add("spyglass_from_shipwreck", new AddItemModifier(new LootItemCondition[] {
-                new LootTableIdCondition.Builder(new ResourceLocation("chests/shipwreck_map")).build(),
+                new LootTableIdCondition.Builder(ResourceLocation.parse("chests/shipwreck_map")).build(),
                 LootItemRandomChanceCondition.randomChance(0.25f).build() }, Items.SPYGLASS));
 
         add("carrot_seeds_from_shipwreck", new AddItemModifier(new LootItemCondition[] {
-                new LootTableIdCondition.Builder(new ResourceLocation("chests/shipwreck_supply")).build(),
+                new LootTableIdCondition.Builder(ResourceLocation.parse("chests/shipwreck_supply")).build(),
                 LootItemRandomChanceCondition.randomChance(0.75f).build() }, ModItems.CARROT_SEEDS.get()));
 
         add("nautilus_shell_from_cold_ocean_ruin", new RareAddItemToSuspiciousBlockModifier(new LootItemCondition[] {
-                new LootTableIdCondition.Builder(new ResourceLocation("archaeology/ocean_ruin_cold")).build() },
+                new LootTableIdCondition.Builder(ResourceLocation.parse("archaeology/ocean_ruin_cold")).build() },
                 Items.NAUTILUS_SHELL));
 
         add("nautilus_shell_from_cold_ocean_ruin", new RareAddItemToSuspiciousBlockModifier(new LootItemCondition[] {
-                new LootTableIdCondition.Builder(new ResourceLocation("archaeology/ocean_ruin_warm")).build() },
+                new LootTableIdCondition.Builder(ResourceLocation.parse("archaeology/ocean_ruin_warm")).build() },
                 Items.NAUTILUS_SHELL));
 
         add("book_from_trail_ruin_common", new CommonAddItemToSuspiciouseBlockModifier(new LootItemCondition[] {
-                new LootTableIdCondition.Builder(new ResourceLocation("archaeology/trail_ruins_common")).build() },
+                new LootTableIdCondition.Builder(ResourceLocation.parse("archaeology/trail_ruins_common")).build() },
                 Items.BOOK));
     }
-
 }
 ///give Dev minecraft:chest{BlockEntityTag:{LootTable:"minecraft:chests/shipwreck_map"}}

@@ -1,6 +1,5 @@
 package net.cinchtail.cinchcraft.datagen;
 
-import net.cinchtail.cinchcraft.Cinchcraft;
 import net.cinchtail.cinchcraft.world.feature.ModConfiguredFeatures;
 import net.cinchtail.cinchcraft.world.feature.ModPlacedFeatures;
 import net.minecraft.core.Cloner;

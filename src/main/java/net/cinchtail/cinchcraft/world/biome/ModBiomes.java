@@ -12,6 +12,6 @@ public class ModBiomes
 
     private static ResourceKey<Biome> register(String name)
     {
-        return ResourceKey.create(Registries.BIOME, new ResourceLocation(Cinchcraft.MOD_ID, name));
+        return ResourceKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, name));
     }
 }

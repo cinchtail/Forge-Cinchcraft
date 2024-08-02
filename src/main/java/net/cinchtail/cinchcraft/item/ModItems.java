@@ -30,11 +30,11 @@ public class ModItems {
     public static final RegistryObject<Item> SUNFLOWER_HEAD = ITEMS.register("sunflower_head",
             () -> new Item(new Item.Properties().craftRemainder(Items.YELLOW_DYE)));
     public static final RegistryObject<Item> NETHERITE_HORSE_ARMOR = ITEMS.register("netherite_horse_armor",
-            () -> new HorseArmorItem(14, "netherite",
-                    new Item.Properties().fireResistant().stacksTo(1)));
+            () -> new AnimalArmorItem(ModArmorMaterials.RUBY, AnimalArmorItem.BodyType.EQUESTRIAN,
+                    false, (new Item.Properties()).stacksTo(1)));
     public static final RegistryObject<Item> RUBY_HORSE_ARMOR = ITEMS.register("ruby_horse_armor",
-            () -> new HorseArmorItem(8, "ruby",
-                    new Item.Properties().stacksTo(1)));
+            () -> new AnimalArmorItem(ModArmorMaterials.RUBY, AnimalArmorItem.BodyType.EQUESTRIAN,
+                    false, (new Item.Properties()).stacksTo(1)));
     public static final RegistryObject<Item> DOG_MUSIC_DISC = ITEMS.register("dog_music_disc",
             () -> new RecordItem(8, ModSounds.DOG_MUSIC_DISC, new Item.Properties().rarity(Rarity.RARE).stacksTo(1), 2900));
     public static final RegistryObject<Item> KYOTO_MUSIC_DISC = ITEMS.register("kyoto_music_disc",
@@ -51,11 +51,11 @@ public class ModItems {
 
     //Foods
     public static final RegistryObject<Item> VEGETABLE_STEW = ITEMS.register("vegetable_stew",
-            () -> new BowlFoodItem(new Item.Properties().stacksTo(1).food(ModFoods.VEGETABLE_STEW)));
+            () -> new Item(new Item.Properties().stacksTo(1).food(ModFoods.VEGETABLE_STEW)));
     public static final RegistryObject<Item> NETHER_STEW = ITEMS.register("nether_stew",
-            () -> new BowlFoodItem(new Item.Properties().stacksTo(1).food(ModFoods.NETHER_STEW)));
+            () -> new Item(new Item.Properties().stacksTo(1).food(ModFoods.NETHER_STEW)));
     public static final RegistryObject<Item> ANCIENT_SLIME_STEW = ITEMS.register("ancient_slime_stew",
-            () -> new BowlFoodItem(new Item.Properties().stacksTo(1).food(ModFoods.ANCIENT_SLIME_STEW)));
+            () -> new Item(new Item.Properties().stacksTo(1).food(ModFoods.ANCIENT_SLIME_STEW)));
     public static final RegistryObject<Item> BLUEBERRIES = ITEMS.register("blueberries",
             () -> new ItemNameBlockItem(ModBlocks.BLUEBERRY_BUSH.get(),
                     new Item.Properties().food(ModFoods.BLUEBERRIES)));
@@ -76,50 +76,50 @@ public class ModItems {
 
     //Tools and Weapons
     public static final RegistryObject<Item> BLACKSTONE_SWORD = ITEMS.register("blackstone_sword",
-            () -> new SwordItem(ModTiers.BLACKSTONE,3, -2.4f,
-                    new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.BLACKSTONE,
+                    new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.BLACKSTONE,3, -2.4F))));
     public static final RegistryObject<Item> BLACKSTONE_PICKAXE = ITEMS.register("blackstone_pickaxe",
-            () -> new PickaxeItem(ModTiers.BLACKSTONE,1, -2.8f,
-                    new Item.Properties()));
+            () -> new PickaxeItem(ModToolTiers.BLACKSTONE,
+                    new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolTiers.BLACKSTONE,1F, -2.8F))));
     public static final RegistryObject<Item> BLACKSTONE_AXE = ITEMS.register("blackstone_axe",
-            () -> new AxeItem(ModTiers.BLACKSTONE,7, -3.2f,
-                    new Item.Properties()));
+            () -> new AxeItem(ModToolTiers.BLACKSTONE,
+                    new Item.Properties().attributes(AxeItem.createAttributes(ModToolTiers.BLACKSTONE,7F, -3.2F))));
     public static final RegistryObject<Item> BLACKSTONE_SHOVEL = ITEMS.register("blackstone_shovel",
-            () -> new ShovelItem(ModTiers.BLACKSTONE,1, -3f,
-                    new Item.Properties()));
+            () -> new ShovelItem(ModToolTiers.BLACKSTONE,
+                    new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.BLACKSTONE,1.5F, -3F))));
     public static final RegistryObject<Item> BLACKSTONE_HOE = ITEMS.register("blackstone_hoe",
-            () -> new HoeItem(ModTiers.BLACKSTONE,-1, -2f,
-                    new Item.Properties()));
+            () -> new HoeItem(ModToolTiers.BLACKSTONE,
+                    new Item.Properties().attributes(HoeItem.createAttributes(ModToolTiers.BLACKSTONE,-1F, -2F))));
     public static final RegistryObject<Item> DEEPSLATE_SWORD = ITEMS.register("deepslate_sword",
-            () -> new SwordItem(ModTiers.DEEPSLATE,3, -2.4f,
-                    new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.DEEPSLATE,
+                    new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.DEEPSLATE,3, -2.4F))));
     public static final RegistryObject<Item> DEEPSLATE_PICKAXE = ITEMS.register("deepslate_pickaxe",
-            () -> new PickaxeItem(ModTiers.DEEPSLATE,1, -2.8f,
-                    new Item.Properties()));
+            () -> new PickaxeItem(ModToolTiers.DEEPSLATE,
+                    new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolTiers.DEEPSLATE,1F, -2.8F))));
     public static final RegistryObject<Item> DEEPSLATE_AXE = ITEMS.register("deepslate_axe",
-            () -> new AxeItem(ModTiers.DEEPSLATE,7, -3.2f,
-                    new Item.Properties()));
+            () -> new AxeItem(ModToolTiers.DEEPSLATE,
+                    new Item.Properties().attributes(AxeItem.createAttributes(ModToolTiers.DEEPSLATE,7F, -3.2F))));
     public static final RegistryObject<Item> DEEPSLATE_SHOVEL = ITEMS.register("deepslate_shovel",
-            () -> new ShovelItem(ModTiers.DEEPSLATE,1, -3f,
-                    new Item.Properties()));
+            () -> new ShovelItem(ModToolTiers.DEEPSLATE,
+                    new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.DEEPSLATE,1.5F, -3F))));
     public static final RegistryObject<Item> DEEPSLATE_HOE = ITEMS.register("deepslate_hoe",
-            () -> new HoeItem(ModTiers.DEEPSLATE,-1, -2f,
-                    new Item.Properties()));
+            () -> new HoeItem(ModToolTiers.DEEPSLATE,
+                    new Item.Properties().attributes(HoeItem.createAttributes(ModToolTiers.DEEPSLATE,-1F, -2F))));
     public static final RegistryObject<Item> RUBY_SWORD = ITEMS.register("ruby_sword",
-            () -> new SwordItem(ModTiers.RUBY,4, -2.4f,
-                    new Item.Properties()));
+            () -> new SwordItem(ModToolTiers.RUBY,
+                    new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.RUBY,4, -2.4F))));
     public static final RegistryObject<Item> RUBY_PICKAXE = ITEMS.register("ruby_pickaxe",
-            () -> new PickaxeItem(ModTiers.RUBY,2, -2.8f,
-                    new Item.Properties()));
+            () -> new PickaxeItem(ModToolTiers.RUBY,
+                    new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolTiers.RUBY,2F, -2.8F))));
     public static final RegistryObject<Item> RUBY_AXE = ITEMS.register("ruby_axe",
-            () -> new AxeItem(ModTiers.RUBY,6, -3f,
-                    new Item.Properties()));
+            () -> new AxeItem(ModToolTiers.RUBY,
+                    new Item.Properties().attributes(AxeItem.createAttributes(ModToolTiers.RUBY,6F, -3F))));
     public static final RegistryObject<Item> RUBY_SHOVEL = ITEMS.register("ruby_shovel",
-            () -> new ShovelItem(ModTiers.RUBY,2, -3f,
-                    new Item.Properties()));
+            () -> new ShovelItem(ModToolTiers.RUBY,
+                    new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.RUBY,1.5F, -3F))));
     public static final RegistryObject<Item> RUBY_HOE = ITEMS.register("ruby_hoe",
-            () -> new HoeItem(ModTiers.RUBY,-2, -.5f,
-                    new Item.Properties()));
+            () -> new HoeItem(ModToolTiers.RUBY,
+                    new Item.Properties().attributes(HoeItem.createAttributes(ModToolTiers.RUBY,-2F, -.5F))));
     public static final RegistryObject<Item> RUBY_HELMET = ITEMS.register("ruby_helmet",
             () -> new ArmorItem(ModArmorMaterials.RUBY, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> RUBY_CHESTPLATE = ITEMS.register("ruby_chestplate",

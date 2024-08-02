@@ -3,9 +3,9 @@ package net.cinchtail.cinchcraft.event;
 import net.cinchtail.cinchcraft.Cinchcraft;
 import net.cinchtail.cinchcraft.block.ModBlocks;
 import net.cinchtail.cinchcraft.item.ModItems;
+import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraftforge.common.BasicItemListing;
 import net.minecraftforge.event.village.WandererTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -15,65 +15,35 @@ public class WanderingTraderTrades {
     @SubscribeEvent
     public void ModWanderingTraderTrades(WandererTradesEvent event)
     {
-        event.getGenericTrades().add(new BasicItemListing(5, new ItemStack(Items.TADPOLE_BUCKET, 1)
-                , 5, 5));
-        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.CROCUS.get(), 1)
-                , 7, 4));
-        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.BUTTER_CUP.get(), 1)
-                , 7, 4));
-        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.SMALL_ROSE.get(), 1)
-                , 7, 4));
-        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.STAR_CACTUS.get(), 1)
-                , 7, 4));
-        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.ALYSSUM.get(), 1)
-                , 7, 4));
-        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.LUPINE.get(), 1)
-                , 7, 4));
-        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(Items.PINK_PETALS, 1)
-                , 7, 4));
-        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(Items.SWEET_BERRIES, 3)
-                , 7, 3));
-        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(Items.GLOW_BERRIES, 3)
-                , 7, 3));
-        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.BLUEBERRIES.get(), 3)
-                , 7, 3));
-        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.STRAWBERRIES.get(), 3)
-                , 7, 3));
-        event.getRareTrades().add(new BasicItemListing(6, new ItemStack(Items.SPYGLASS, 1)
-                , 1, 10));
-        event.getRareTrades().add(new BasicItemListing(9, new ItemStack(Items.SADDLE, 1)
-                , 1, 10));
-        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(Items.GLOW_LICHEN, 2)
-                , 5, 5));
-        event.getRareTrades().add(new BasicItemListing(30, new ItemStack(Items.WITHER_ROSE, 1)
-                , 1, 12));
-        event.getGenericTrades().add(new BasicItemListing(2, new ItemStack(Items.POWDER_SNOW_BUCKET, 1)
-                , 5, 10));
-        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(Items.PAINTING, 1)
-                , 5, 10));
-        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(Items.CANDLE, 3)
-                , 5, 10));
-        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(Items.SCAFFOLDING, 8)
-                , 4, 10));
-        event.getRareTrades().add(new BasicItemListing(2, new ItemStack(ModItems.PINEAPPLE.get(), 1)
-                , 5, 3));
-        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(Items.HONEYCOMB, 1)
-                , 6, 3));
-        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(Items.INK_SAC, 1)
-                , 5, 3));
-        event.getGenericTrades().add(new BasicItemListing(2, new ItemStack(Items.GLOW_INK_SAC, 1)
-                , 5, 3));
-        event.getRareTrades().add(new BasicItemListing(1, new ItemStack(ModItems.RUBY.get(), 1)
-                , 9, 3));
-        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.SUNFLOWER_SEEDS.get(), 2)
-                , 7, 3));
-        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.REEDS_SEEDS.get(), 2)
-                , 9, 3));
-        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModItems.CATTAILS.get(), 1)
-                , 5, 3));
-        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(Items.SNOWBALL, 4)
-                , 4, 3));
-        event.getGenericTrades().add(new BasicItemListing(1, new ItemStack(ModBlocks.ICICLE.get(), 1)
-                , 8, 3));
+        new VillagerTrades.ItemsForEmeralds(Items.TADPOLE_BUCKET, 5, 1, 4, 1),
+                new VillagerTrades.ItemsForEmeralds(Items.POWDER_SNOW_BUCKET, 2, 1, 5, 10),
+                new VillagerTrades.ItemsForEmeralds(ModItems.CROCUS.get(), 1, 1, 12, 1),
+                new VillagerTrades.ItemsForEmeralds(ModItems.BUTTER_CUP.get(), 1, 1, 12, 1),
+                new VillagerTrades.ItemsForEmeralds(ModItems.SMALL_ROSE.get(), 1, 1, 12, 1),
+                new VillagerTrades.ItemsForEmeralds(ModItems.STAR_CACTUS.get(), 1, 1, 12, 1),
+                new VillagerTrades.ItemsForEmeralds(ModItems.ALYSSUM.get(), 1, 1, 12, 1),
+                new VillagerTrades.ItemsForEmeralds(ModItems.LUPINE.get(), 1, 1, 12, 1),
+                new VillagerTrades.ItemsForEmeralds(Items.PINK_PETALS, 1, 1, 12, 1),
+                new VillagerTrades.ItemsForEmeralds(ModItems.CATTAILS.get(), 1, 1, 5, 3),
+                new VillagerTrades.ItemsForEmeralds(Items.WITHER_ROSE, 30, 1, 1, 12),
+                new VillagerTrades.ItemsForEmeralds(Items.SWEET_BERRIES, 1, 3, 7, 3),
+                new VillagerTrades.ItemsForEmeralds(Items.GLOW_BERRIES, 1, 3, 7, 3),
+                new VillagerTrades.ItemsForEmeralds(ModItems.BLUEBERRIES.get(), 1, 3, 7, 3),
+                new VillagerTrades.ItemsForEmeralds(ModItems.STRAWBERRIES.get(), 1, 3, 7, 3),
+                new VillagerTrades.ItemsForEmeralds(ModItems.PINEAPPLE.get(), 2, 1, 5, 3),
+                new VillagerTrades.ItemsForEmeralds(ModItems.SUNFLOWER_SEEDS.get(), 1, 1, 12, 1),
+                new VillagerTrades.ItemsForEmeralds(ModItems.REEDS_SEEDS.get(), 1, 1, 12, 1),
+                new VillagerTrades.ItemsForEmeralds(Items.SPYGLASS, 6, 1, 1, 10),
+                new VillagerTrades.ItemsForEmeralds(Items.SADDLE, 9, 1, 1, 10),
+                new VillagerTrades.ItemsForEmeralds(Items.PAINTING, 1, 1, 5, 10),
+                new VillagerTrades.ItemsForEmeralds(Items.CANDLE, 1, 4, 5, 10),
+                new VillagerTrades.ItemsForEmeralds(Items.SCAFFOLDING, 1, 8, 4, 10),
+                new VillagerTrades.ItemsForEmeralds(Items.HONEYCOMB, 1, 1, 6, 3),
+                new VillagerTrades.ItemsForEmeralds(Items.INK_SAC, 1, 1, 5, 3),
+                new VillagerTrades.ItemsForEmeralds(Items.GLOW_INK_SAC, 1, 1, 5, 3),
+                new VillagerTrades.ItemsForEmeralds(Items.GLOW_LICHEN, 1, 2, 5, 5),
+                new VillagerTrades.ItemsForEmeralds(ModBlocks.ICICLE.get(), 1, 2, 5, 1),
+                new VillagerTrades.ItemsForEmeralds(Items.SNOWBALL, 1, 4, 4, 3),
+                new VillagerTrades.ItemsForEmeralds(ModItems.RUBY.get(), 1, 1, 9, 3)
     }
 }

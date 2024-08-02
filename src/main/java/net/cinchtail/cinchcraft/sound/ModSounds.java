@@ -16,7 +16,7 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> KYOTO_MUSIC_DISC = registerSoundEvent("kyoto_music_disc");
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
-        ResourceLocation id = new ResourceLocation(Cinchcraft.MOD_ID, name);
+        ResourceLocation id = ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, name);
         return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(id));
     }
     public static void register(IEventBus eventBus) {

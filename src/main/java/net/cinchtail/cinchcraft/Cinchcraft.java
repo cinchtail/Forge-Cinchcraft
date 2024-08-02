@@ -119,7 +119,7 @@ public class Cinchcraft
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             event.enqueueWork(() -> {
-                Regions.register(new ModOverworldRegion(new ResourceLocation(Cinchcraft.MOD_ID, "overworld"), 3));
+                Regions.register(new ModOverworldRegion(ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "overworld"), 3));
 
                 Sheets.addWoodType(ModWoodTypes.AZALEA);
 
@@ -129,11 +129,6 @@ public class Cinchcraft
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.ALYSSUM.getId(), ModBlocks.POTTED_ALYSSUM);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.LUPINE.getId(), ModBlocks.POTTED_LUPINE);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.STAR_CACTUS.getId(), ModBlocks.POTTED_STAR_CACTUS);
-
-                PotionBrewing.addMix(Potions.AWKWARD, Items.GLOW_BERRIES, ModPotions.GLOWING_POTION.get());
-                PotionBrewing.addMix(Potions.AWKWARD, Items.INK_SAC, ModPotions.BLINDNESS_POTION.get());
-                PotionBrewing.addMix(ModPotions.GLOWING_POTION.get(), Items.REDSTONE, ModPotions.LONG_GLOWING_POTION.get());
-                PotionBrewing.addMix(ModPotions.BLINDNESS_POTION.get(), Items.REDSTONE, ModPotions.LONG_BLINDNESS_POTION.get());
 
                 EntityRenderers.register(ModEntities.MOD_BOAT.get(), pContext -> new ModBoatRenderer(pContext, false));
                 EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.get(), pContext -> new ModBoatRenderer(pContext, true));

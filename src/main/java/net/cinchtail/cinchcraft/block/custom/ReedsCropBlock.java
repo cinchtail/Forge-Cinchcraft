@@ -1,6 +1,7 @@
 package net.cinchtail.cinchcraft.block.custom;
 
 import net.cinchtail.cinchcraft.block.ModBlocks;
+import net.cinchtail.cinchcraft.item.ModItems;
 import net.cinchtail.cinchcraft.util.ModBlockTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -47,6 +48,9 @@ public class ReedsCropBlock extends DoublePlantBlock implements SimpleWaterlogge
 
     public boolean isRandomlyTicking(BlockState blockState) {
         return blockState.getValue(HALF) == DoubleBlockHalf.LOWER && !this.isMaxAge(blockState);
+    }
+    public ItemStack getCloneItemStack(LevelReader levelReader, BlockPos blockPos, BlockState blockState) {
+        return new ItemStack(ModItems.REEDS_SEEDS.get());
     }
 
     public VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos pos, CollisionContext collisionContext) {

@@ -12,6 +12,6 @@ public class ModBlockTags {
     public static final TagKey<Block> CATTAILS_PLACEABLE = create("cattails_placeable");
 
     private static TagKey<Block> create(String s) {
-        return TagKey.create(Registries.BLOCK, new ResourceLocation(s));
+        return TagKey.create(Registries.BLOCK, ResourceLocation.withDefaultNamespace(s));
     }
 }

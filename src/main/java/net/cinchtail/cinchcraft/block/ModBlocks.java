@@ -269,13 +269,13 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> POTTED_SMALL_ROSE = BLOCKS.register("potted_small_rose",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ModBlocks.SMALL_ROSE, BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_DANDELION)));
     public static final RegistryObject<Block> CROCUS = BLOCKS.register("crocus",
-            () -> new CrocusFlowerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DANDELION).noOcclusion()));
+            () -> new CrocusFlowerBlock(MobEffects.INVISIBILITY, 5.0F, BlockBehaviour.Properties.ofFullCopy(Blocks.DANDELION).noOcclusion()));
     public static final RegistryObject<FlowerPotBlock> POTTED_CROCUS = BLOCKS.register("potted_crocus",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ModBlocks.CROCUS, BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_DANDELION)));
     public static final RegistryObject<Block> BUBBLE_FLOWER = registerBlock("bubble_flower",
             () -> new BubbleFlowerBlock(MobEffects.LEVITATION, 4, BlockBehaviour.Properties.ofFullCopy(Blocks.DANDELION).noOcclusion()));
     public static final RegistryObject<Block> ALYSSUM = BLOCKS.register("alyssum",
-            () -> new AlyssumFlowerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DANDELION).noOcclusion()));
+            () -> new AlyssumFlowerBlock(MobEffects.CONFUSION, 12.0F, BlockBehaviour.Properties.ofFullCopy(Blocks.DANDELION).noOcclusion()));
     public static final RegistryObject<FlowerPotBlock> POTTED_ALYSSUM = BLOCKS.register("potted_alyssum",
             () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ModBlocks.ALYSSUM, BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_DANDELION)));
     public static final RegistryObject<Block> LUPINE = BLOCKS.register("lupine",
@@ -581,8 +581,7 @@ public class ModBlocks {
             () -> new ModFlammableFenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB).sound(SoundType.WOOD).strength(1.5f),
                     true, 20, 5));
     public static final RegistryObject<Block> AZALEA_FENCE_GATE = BLOCKS.register("azalea_fence_gate",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.ofFullCopy(OAK_FENCE_GATE),
-                    SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE, ModWoodTypes.AZALEA));
+            () -> new ModFlammableFenceGateBlock(ModWoodTypes.AZALEA, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> AZALEA_DOOR = BLOCKS.register("azalea_door",
             () -> new DoorBlock(ModBlockSetType.AZALEA, BlockBehaviour.Properties.ofFullCopy(OAK_DOOR)));
     public static final RegistryObject<Block> AZALEA_TRAPDOOR = BLOCKS.register("azalea_trapdoor",
