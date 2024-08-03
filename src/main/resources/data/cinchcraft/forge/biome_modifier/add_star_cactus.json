@@ -1,5 +1,6 @@
 {
-  "type": "cinchcraft:vegetal",
+  "type": "forge:add_features",
   "biomes": "#minecraft:is_star_cactus_biomes",
-  "feature": "cinchcraft:star_cactus_placed"
+  "features": "cinchcraft:star_cactus_placed",
+  "step": "vegetal_decoration"
 }

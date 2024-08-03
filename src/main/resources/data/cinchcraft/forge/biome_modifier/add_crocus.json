@@ -1,5 +1,6 @@
 {
-  "type": "cinchcraft:vegetal",
+  "type": "forge:add_features",
   "biomes": "#minecraft:is_crocus_biomes",
-  "feature": "cinchcraft:crocus_placed"
+  "features": "cinchcraft:crocus_placed",
+  "step": "vegetal_decoration"
 }

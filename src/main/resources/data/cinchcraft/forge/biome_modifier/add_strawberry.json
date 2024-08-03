@@ -1,5 +1,6 @@
 {
-  "type": "cinchcraft:vegetal",
+  "type": "forge:add_features",
   "biomes": "#minecraft:is_strawberry_biomes",
-  "feature": "cinchcraft:strawberry_placed"
+  "features": "cinchcraft:strawberry_placed",
+  "step": "vegetal_decoration"
 }

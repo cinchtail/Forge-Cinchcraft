@@ -1,3 +1,6 @@
 {
-  "parent": "cinchcraft:block/cracked_red_nether_brick_fence"
+  "parent": "minecraft:block/fence_inventory",
+  "textures": {
+    "texture": "cinchcraft:block/cracked_red_nether_bricks"
+  }
 }

@@ -1,5 +1,6 @@
 {
-  "type": "cinchcraft:vegetal",
+  "type": "forge:add_features",
   "biomes": "#minecraft:is_cattails_biomes",
-  "feature": "cinchcraft:cattails_placed"
+  "features": "cinchcraft:cattails_placed",
+  "step": "vegetal_decoration"
 }

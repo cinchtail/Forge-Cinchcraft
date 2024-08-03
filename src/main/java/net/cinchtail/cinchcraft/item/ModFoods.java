@@ -3,6 +3,7 @@ package net.cinchtail.cinchcraft.item;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.Items;
 
 public class ModFoods {
     static final FoodProperties VEGETABLE_STEW = modStew(6).build();
@@ -16,6 +17,6 @@ public class ModFoods {
     static final FoodProperties PITCHER_PLANT_ROOT = (new FoodProperties.Builder()).nutrition(1).saturationModifier(0.1F).build();
 
     private static FoodProperties.Builder modStew(int i) {
-        return (new FoodProperties.Builder()).nutrition(i).saturationModifier(0.6F);
+        return (new FoodProperties.Builder()).nutrition(i).saturationModifier(0.6F).usingConvertsTo(Items.BOWL);
     }
 }

@@ -1,5 +1,6 @@
 {
-  "type": "cinchcraft:vegetal",
+  "type": "forge:add_features",
   "biomes": "#minecraft:is_bubble_flower_biomes",
-  "feature": "cinchcraft:bubble_flower_placed"
+  "features": "cinchcraft:bubble_flower_placed",
+  "step": "vegetal_decoration"
 }

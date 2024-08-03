@@ -1,5 +1,6 @@
 {
-  "type": "cinchcraft:vegetal",
+  "type": "forge:add_features",
   "biomes": "#minecraft:is_reeds_biomes",
-  "feature": "cinchcraft:reeds_placed"
+  "features": "cinchcraft:reeds_placed",
+  "step": "vegetal_decoration"
 }
