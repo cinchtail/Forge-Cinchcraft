@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "cinchcraft:cracked_prismarine_bricks"
+  },
+  "result": {
+    "count": 1,
+    "id": "cinchcraft:cracked_prismarine_brick_wall"
+  }
+}

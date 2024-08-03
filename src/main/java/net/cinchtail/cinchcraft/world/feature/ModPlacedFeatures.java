@@ -5,6 +5,7 @@ import net.cinchtail.cinchcraft.Cinchcraft;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -15,15 +16,15 @@ import net.minecraft.world.level.levelgen.placement.*;
 import java.util.List;
 
 public class ModPlacedFeatures {
-    public static final ResourceKey<PlacedFeature> RUBY_PLACED_KEY = createKey("ruby_ore_placed");
-    public static final ResourceKey<PlacedFeature> NETHER_RUBY_PLACED_KEY = createKey("nether_ruby_ore_placed");
-    public static final ResourceKey<PlacedFeature> NETHER_COAL_PLACED_KEY = createKey("nether_coal_ore_placed");
-    public static final ResourceKey<PlacedFeature> NETHER_IRON_PLACED_KEY = createKey("nether_iron_ore_placed");
-    public static final ResourceKey<PlacedFeature> NETHER_COPPER_PLACED_KEY = createKey("nether_copper_ore_placed");
+    public static final ResourceKey<PlacedFeature> RUBY_ORE_PLACED_KEY = createKey("ruby_ore_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_RUBY_ORE_PLACED_KEY = createKey("nether_ruby_ore_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_COAL_ORE_PLACED_KEY = createKey("nether_coal_ore_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_IRON_ORE_PLACED_KEY = createKey("nether_iron_ore_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_COPPER_ORE_PLACED_KEY = createKey("nether_copper_ore_placed");
     public static final ResourceKey<PlacedFeature> NETHER_LAPIS_LAZULI_ORE_PLACED_KEY = createKey("nether_lapis_lazuli_ore_placed");
-    public static final ResourceKey<PlacedFeature> NETHER_REDSTONE_PLACED_PLACED_KEY = createKey("nether_redstone_ore_placed");
-    public static final ResourceKey<PlacedFeature> NETHER_EMERALD_PLACED_KEY = createKey("nether_emerald_ore_placed");
-    public static final ResourceKey<PlacedFeature> NETHER_DIAMOND_ORE_PLACED_PLACED_KEY = createKey("nether_diamond_ore_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_REDSTONE_ORE_PLACED_KEY = createKey("nether_redstone_ore_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_EMERALD_ORE_PLACED_KEY = createKey("nether_emerald_ore_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_DIAMOND_ORE_PLACED_KEY = createKey("nether_diamond_ore_placed");
     public static final ResourceKey<PlacedFeature> BUTTER_CUP_PLACED_KEY = createKey("butter_cup_placed");
     public static final ResourceKey<PlacedFeature> CROCUS_PLACED_KEY = createKey("crocus_placed");
     public static final ResourceKey<PlacedFeature> ALYSSUM_PLACED_KEY = createKey("alyssum_placed");
@@ -37,35 +38,35 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> CATTAILS_PLACED_KEY = createKey("cattails_placed");
     public static final ResourceKey<PlacedFeature> LUPINE_LARGE_PLACED_KEY = createKey("lupine_large_placed");
 
-    public static void bootstrap(BootstapContext<PlacedFeature> context) {
+    public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
-        register(context, RUBY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_RUBY_ORE_KEY),
+        register(context, RUBY_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_RUBY_ORE_KEY),
                 commonOrePlacement(6, // VeinsPerChunk
                         HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(100))));
 
-        register(context, NETHER_RUBY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_RUBY_ORE_KEY),
+        register(context, NETHER_RUBY_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_RUBY_ORE_KEY),
                 commonOrePlacement(3, // VeinsPerChunk
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
-        register(context, NETHER_IRON_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_IRON_ORE_KEY),
+        register(context, NETHER_IRON_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_IRON_ORE_KEY),
                 commonOrePlacement(6, // VeinsPerChunk
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
-        register(context, NETHER_COPPER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_COPPER_ORE_KEY),
+        register(context, NETHER_COPPER_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_COPPER_ORE_KEY),
                 commonOrePlacement(6, // VeinsPerChunk
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
-        register(context, NETHER_COAL_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_COAL_ORE_KEY),
+        register(context, NETHER_COAL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_COAL_ORE_KEY),
                 commonOrePlacement(4, // VeinsPerChunk
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
         register(context, NETHER_LAPIS_LAZULI_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_LAPIS_LAZULI_ORE_KEY),
                 commonOrePlacement(3, // VeinsPerChunk
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
-        register(context, NETHER_REDSTONE_PLACED_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_REDSTONE_KEY),
+        register(context, NETHER_REDSTONE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_REDSTONE_ORE_KEY),
                 commonOrePlacement(3, // VeinsPerChunk
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
-        register(context, NETHER_DIAMOND_ORE_PLACED_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_DIAMOND_ORE_KEY),
+        register(context, NETHER_DIAMOND_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_DIAMOND_ORE_KEY),
                 commonOrePlacement(2, // VeinsPerChunk
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
-        register(context, NETHER_EMERALD_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_EMERALD_KEY),
+        register(context, NETHER_EMERALD_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_EMERALD_ORE_KEY),
                 commonOrePlacement(2, // VeinsPerChunk
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
 
@@ -108,21 +109,21 @@ public class ModPlacedFeatures {
 
     }
 
-    public static List<PlacementModifier> orePlacement(PlacementModifier placementModifier, PlacementModifier placementModifier1) {
-        return List.of(placementModifier, InSquarePlacement.spread(), placementModifier1, BiomeFilter.biome());
+    public static List<PlacementModifier> orePlacement(PlacementModifier pCountPlacement, PlacementModifier pHeightRange) {
+        return List.of(pCountPlacement, InSquarePlacement.spread(), pHeightRange, BiomeFilter.biome());
     }
-    public static List<PlacementModifier> commonOrePlacement(int i, PlacementModifier placementModifier) {
-        return orePlacement(CountPlacement.of(i), placementModifier);
+    public static List<PlacementModifier> commonOrePlacement(int pCount, PlacementModifier pHeightRange) {
+        return orePlacement(CountPlacement.of(pCount), pHeightRange);
     }
-    public static List<PlacementModifier> rareOrePlacement(int i, PlacementModifier placementModifier) {
-        return orePlacement(RarityFilter.onAverageOnceEvery(i), placementModifier);
+    public static List<PlacementModifier> rareOrePlacement(int pChance, PlacementModifier pHeightRange) {
+        return orePlacement(RarityFilter.onAverageOnceEvery(pChance), pHeightRange);
     }
 
     private static ResourceKey<PlacedFeature> createKey(String name) {
         return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, name));
     }
 
-    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration,
+    private static void register(BootstrapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration,
                                  List<PlacementModifier> modifiers) {
         context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
     }

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_block_of_ruby": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cinchcraft:block_of_ruby"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cinchcraft:ruby"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_block_of_ruby"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cinchcraft:ruby"
+    ]
+  }
+}

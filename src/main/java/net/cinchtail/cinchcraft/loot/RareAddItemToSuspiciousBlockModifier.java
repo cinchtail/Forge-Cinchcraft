@@ -2,6 +2,7 @@ package net.cinchtail.cinchcraft.loot;
 
 import com.google.common.base.Suppliers;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.world.item.Item;
@@ -16,8 +17,8 @@ import org.jetbrains.annotations.NotNull;
 import java.util.function.Supplier;
 
 public class RareAddItemToSuspiciousBlockModifier extends LootModifier {
-    public static final Supplier<Codec<RareAddItemToSuspiciousBlockModifier>> CODEC = Suppliers.memoize(()
-            -> RecordCodecBuilder.create(inst -> codecStart(inst).and(ForgeRegistries.ITEMS.getCodec()
+    public static final Supplier<MapCodec<RareAddItemToSuspiciousBlockModifier>> CODEC = Suppliers.memoize(()
+            -> RecordCodecBuilder.mapCodec(inst -> codecStart(inst).and(ForgeRegistries.ITEMS.getCodec()
             .fieldOf("item").forGetter(m -> m.item)).apply(inst, RareAddItemToSuspiciousBlockModifier::new)));
     private final Item item;
 
@@ -41,7 +42,7 @@ public class RareAddItemToSuspiciousBlockModifier extends LootModifier {
         return generatedLoot;
     }
     @Override
-    public Codec<? extends IGlobalLootModifier> codec() {
+    public MapCodec<? extends IGlobalLootModifier> codec() {
         return CODEC.get();
     }
 }

@@ -4,7 +4,7 @@
       "model": "cinchcraft:block/dripstone_slab"
     },
     "type=double": {
-      "model": "minecraft:block/dripstone_block"
+      "model": "cinchcraft:block/dripstone_slab"
     },
     "type=top": {
       "model": "cinchcraft:block/dripstone_slab_top"

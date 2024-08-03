@@ -21,10 +21,12 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCon
 import net.minecraftforge.common.data.GlobalLootModifierProvider;
 import net.minecraftforge.common.loot.LootTableIdCondition;
 
+import java.util.concurrent.CompletableFuture;
+
 
 public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
-    public ModGlobalLootModifierProvider(PackOutput output) {
-        super(output, Cinchcraft.MOD_ID);
+    public ModGlobalLootModifierProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+        super(output, Cinchcraft.MOD_ID, registries);
     }
 
     @Override
@@ -82,4 +84,4 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
                 Items.BOOK));
     }
 }
-///give Dev minecraft:chest{BlockEntityTag:{LootTable:"minecraft:chests/shipwreck_map"}}
+//give Dev minecraft:chest{BlockEntityTag:{LootTable:"minecraft:chests/shipwreck_map"}}

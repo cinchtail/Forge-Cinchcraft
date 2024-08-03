@@ -4,7 +4,7 @@
       "model": "cinchcraft:block/tuff_slab"
     },
     "type=double": {
-      "model": "minecraft:block/tuff"
+      "model": "cinchcraft:block/tuff_slab"
     },
     "type=top": {
       "model": "cinchcraft:block/tuff_slab_top"

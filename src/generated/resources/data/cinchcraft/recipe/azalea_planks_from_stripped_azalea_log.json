@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "azalea_planks",
+  "ingredients": [
+    {
+      "item": "cinchcraft:stripped_azalea_log"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "cinchcraft:azalea_planks"
+  }
+}

@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:block/fence_inventory",
-  "textures": {
-    "texture": "cinchcraft:block/azalea_planks"
-  }
+  "parent": "cinchcraft:block/azalea_fence"
 }

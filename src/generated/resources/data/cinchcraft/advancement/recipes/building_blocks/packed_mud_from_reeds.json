@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_reeds": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cinchcraft:reeds"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cinchcraft:packed_mud_from_reeds"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_reeds"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cinchcraft:packed_mud_from_reeds"
+    ]
+  }
+}

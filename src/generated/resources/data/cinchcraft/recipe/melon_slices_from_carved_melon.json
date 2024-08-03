@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "melon_slices",
+  "ingredients": [
+    {
+      "item": "cinchcraft:carved_melon"
+    }
+  ],
+  "result": {
+    "count": 6,
+    "id": "minecraft:melon_slice"
+  }
+}

@@ -8,7 +8,6 @@ import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockModelBuilder;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.client.model.generators.MultiPartBlockStateBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -59,149 +58,119 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(MOSSY_BRICKS);
         blockWithItem(MOSSY_QUARTZ_BRICKS);
 
-        slabBlock((SlabBlock) TUFF_SLAB.get(), blockTexture(Blocks.TUFF),
-                blockTexture(Blocks.TUFF));
-        slabBlock((SlabBlock) CALCITE_SLAB.get(), blockTexture(Blocks.CALCITE),
-                blockTexture(Blocks.CALCITE));
-        slabBlock((SlabBlock) DRIPSTONE_SLAB.get(), blockTexture(Blocks.DRIPSTONE_BLOCK),
-                blockTexture(Blocks.DRIPSTONE_BLOCK));
-        slabBlock((SlabBlock) QUARTZ_BRICK_SLAB.get(), blockTexture(Blocks.QUARTZ_BRICKS),
-                blockTexture(Blocks.QUARTZ_BRICKS));
-        slabBlock((SlabBlock) END_STONE_SLAB.get(), blockTexture(Blocks.END_STONE),
-                blockTexture(Blocks.END_STONE));
-        slabBlock((SlabBlock) MOSSY_MUD_BRICK_SLAB.get(), blockLoc(MOSSY_MUD_BRICKS),
-                blockLoc(MOSSY_MUD_BRICKS));
-        slabBlock((SlabBlock) POLISHED_TUFF_SLAB.get(), blockLoc(POLISHED_TUFF),
-                blockLoc(POLISHED_TUFF));
-        slabBlock((SlabBlock) POLISHED_CALCITE_SLAB.get(), blockLoc(POLISHED_CALCITE),
-                blockLoc(POLISHED_CALCITE));
-        slabBlock((SlabBlock) POLISHED_DRIPSTONE_SLAB.get(), blockLoc(POLISHED_DRIPSTONE_BLOCK),
-                blockLoc(POLISHED_DRIPSTONE_BLOCK));
-        slabBlock((SlabBlock) MOSSY_COBBLED_DEEPSLATE_SLAB.get(), blockLoc(MOSSY_COBBLED_DEEPSLATE),
-                blockLoc(MOSSY_COBBLED_DEEPSLATE));
-        slabBlock((SlabBlock) MOSSY_DEEPSLATE_BRICK_SLAB.get(), blockLoc(MOSSY_DEEPSLATE_BRICKS),
-                blockLoc(MOSSY_DEEPSLATE_BRICKS));
-        slabBlock((SlabBlock) MOSSY_DEEPSLATE_TILE_SLAB.get(), blockLoc(MOSSY_DEEPSLATE_TILES),
-                blockLoc(MOSSY_DEEPSLATE_TILES));
-        slabBlock((SlabBlock) CRACKED_STONE_BRICK_SLAB.get(), blockTexture(Blocks.CRACKED_STONE_BRICKS),
-                blockTexture(Blocks.CRACKED_STONE_BRICKS));
-        slabBlock((SlabBlock) CRACKED_DEEPSLATE_BRICK_SLAB.get(), blockTexture(Blocks.CRACKED_DEEPSLATE_BRICKS),
-                blockTexture(Blocks.CRACKED_DEEPSLATE_BRICKS));
-        slabBlock((SlabBlock) CRACKED_DEEPSLATE_TILE_SLAB.get(), blockTexture(Blocks.CRACKED_DEEPSLATE_TILES),
-                blockTexture(Blocks.CRACKED_DEEPSLATE_TILES));
-        slabBlock((SlabBlock) CRACKED_POLISHED_BLACKSTONE_BRICK_SLAB.get(), blockTexture(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS),
-                blockTexture(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS));
-        slabBlock((SlabBlock) CRACKED_NETHER_BRICK_SLAB.get(), blockTexture(Blocks.CRACKED_NETHER_BRICKS),
-                blockTexture(Blocks.CRACKED_NETHER_BRICKS));
-        slabBlock((SlabBlock) CRACKED_RED_NETHER_BRICK_SLAB.get(), blockLoc(CRACKED_RED_NETHER_BRICKS),
-                blockLoc(CRACKED_RED_NETHER_BRICKS));
-        slabBlock((SlabBlock) CRACKED_MUD_BRICK_SLAB.get(), blockLoc(CRACKED_MUD_BRICKS),
-                blockLoc(CRACKED_MUD_BRICKS));
-        slabBlock((SlabBlock) CRACKED_QUARTZ_BRICK_SLAB.get(), blockLoc(CRACKED_QUARTZ_BRICKS),
-                blockLoc(CRACKED_QUARTZ_BRICKS));
-        slabBlock((SlabBlock) SMOOTH_BASALT_SLAB.get(), blockTexture(Blocks.SMOOTH_BASALT),
-                blockTexture(Blocks.SMOOTH_BASALT));
-        slabBlock((SlabBlock) MOSSY_NETHER_BRICK_SLAB.get(), blockLoc(MOSSY_NETHER_BRICKS),
-                blockLoc(MOSSY_NETHER_BRICKS));
-        slabBlock((SlabBlock) CRIMSON_MOSSY_NETHER_BRICK_SLAB.get(), blockLoc(CRIMSON_MOSSY_NETHER_BRICKS),
-                blockLoc(CRIMSON_MOSSY_NETHER_BRICKS));
-        slabBlock((SlabBlock) WARPED_MOSSY_NETHER_BRICK_SLAB.get(), blockLoc(WARPED_MOSSY_NETHER_BRICKS),
-                blockLoc(WARPED_MOSSY_NETHER_BRICKS));
-        slabBlock((SlabBlock) CRACKED_BRICK_SLAB.get(), blockLoc(CRACKED_BRICKS),
-                blockLoc(CRACKED_BRICKS));
-        slabBlock((SlabBlock) CRACKED_PRISMARINE_BRICK_SLAB.get(), blockLoc(CRACKED_PRISMARINE_BRICKS),
-                blockLoc(CRACKED_PRISMARINE_BRICKS));
-        slabBlock((SlabBlock) CRACKED_END_STONE_BRICK_SLAB.get(), blockLoc(CRACKED_END_STONE_BRICKS),
-                blockLoc(CRACKED_END_STONE_BRICKS));
-        slabBlock((SlabBlock) AZALEA_SLAB.get(), blockLoc(AZALEA_PLANKS),
-                blockLoc(AZALEA_PLANKS));
-        slabBlock((SlabBlock) MOSSY_BRICK_SLAB.get(), blockLoc(MOSSY_BRICKS),
-                blockLoc(MOSSY_BRICKS));
-        slabBlock((SlabBlock) MOSSY_QUARTZ_BRICK_SLAB.get(), blockLoc(MOSSY_QUARTZ_BRICKS),
-                blockLoc(MOSSY_QUARTZ_BRICKS));
+        vanillaSlabBlock(TUFF_SLAB, Blocks.TUFF);
+        vanillaSlabBlock(CALCITE_SLAB, Blocks.CALCITE);
+        vanillaSlabBlock(DRIPSTONE_SLAB, Blocks.DRIPSTONE_BLOCK);
+        vanillaSlabBlock(QUARTZ_BRICK_SLAB, Blocks.QUARTZ_BRICKS);
+        vanillaSlabBlock(END_STONE_SLAB, Blocks.END_STONE);
+        modSlabBlock(MOSSY_MUD_BRICK_SLAB, MOSSY_MUD_BRICKS);
+        modSlabBlock(POLISHED_TUFF_SLAB, POLISHED_TUFF);
+        modSlabBlock(POLISHED_CALCITE_SLAB, POLISHED_CALCITE);
+        modSlabBlock(POLISHED_DRIPSTONE_SLAB, POLISHED_DRIPSTONE_BLOCK);
+        modSlabBlock(MOSSY_COBBLED_DEEPSLATE_SLAB, MOSSY_COBBLED_DEEPSLATE);
+        modSlabBlock(MOSSY_DEEPSLATE_BRICK_SLAB, MOSSY_DEEPSLATE_BRICKS);
+        modSlabBlock(MOSSY_DEEPSLATE_TILE_SLAB, MOSSY_DEEPSLATE_TILES);
+        vanillaSlabBlock(CRACKED_STONE_BRICK_SLAB, Blocks.CRACKED_STONE_BRICKS);
+        vanillaSlabBlock(CRACKED_DEEPSLATE_BRICK_SLAB, Blocks.CRACKED_DEEPSLATE_BRICKS);
+        vanillaSlabBlock(CRACKED_DEEPSLATE_TILE_SLAB, Blocks.CRACKED_DEEPSLATE_TILES);
+        vanillaSlabBlock(CRACKED_POLISHED_BLACKSTONE_BRICK_SLAB, Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS);
+        vanillaSlabBlock(CRACKED_NETHER_BRICK_SLAB, Blocks.CRACKED_NETHER_BRICKS);
+        modSlabBlock(CRACKED_RED_NETHER_BRICK_SLAB, CRACKED_RED_NETHER_BRICKS);
+        modSlabBlock(CRACKED_MUD_BRICK_SLAB, CRACKED_MUD_BRICKS);
+        modSlabBlock(CRACKED_QUARTZ_BRICK_SLAB, CRACKED_QUARTZ_BRICKS);
+        vanillaSlabBlock(SMOOTH_BASALT_SLAB, Blocks.SMOOTH_BASALT);
+        modSlabBlock(MOSSY_NETHER_BRICK_SLAB, MOSSY_NETHER_BRICKS);
+        modSlabBlock(CRIMSON_MOSSY_NETHER_BRICK_SLAB, CRIMSON_MOSSY_NETHER_BRICKS);
+        modSlabBlock(WARPED_MOSSY_NETHER_BRICK_SLAB, WARPED_MOSSY_NETHER_BRICKS);
+        modSlabBlock(CRACKED_BRICK_SLAB, CRACKED_BRICKS);
+        modSlabBlock(CRACKED_PRISMARINE_BRICK_SLAB, CRACKED_PRISMARINE_BRICKS);
+        modSlabBlock(CRACKED_END_STONE_BRICK_SLAB, CRACKED_END_STONE_BRICKS);
+        modSlabBlock(AZALEA_SLAB, AZALEA_PLANKS);
+        modSlabBlock(MOSSY_BRICK_SLAB, MOSSY_BRICKS);
+        modSlabBlock(MOSSY_QUARTZ_BRICK_SLAB, MOSSY_QUARTZ_BRICKS);
 
-        stairsBlock((StairBlock) SMOOTH_STONE_STAIRS.get(), blockTexture(Blocks.SMOOTH_STONE));
-        stairsBlock((StairBlock) TUFF_STAIRS.get(), blockTexture(Blocks.TUFF));
-        stairsBlock((StairBlock) CALCITE_STAIRS.get(), blockTexture(Blocks.CALCITE));
-        stairsBlock((StairBlock) DRIPSTONE_STAIRS.get(), blockTexture(Blocks.DRIPSTONE_BLOCK));
-        stairsBlock((StairBlock) QUARTZ_BRICK_STAIRS.get(), blockTexture(Blocks.QUARTZ_BRICKS));
-        stairsBlock((StairBlock) END_STONE_STAIRS.get(), blockTexture(Blocks.END_STONE));
-        stairsBlock((StairBlock) MOSSY_MUD_BRICK_STAIRS.get(), blockLoc(MOSSY_MUD_BRICKS));
-        stairsBlock((StairBlock) POLISHED_TUFF_STAIRS.get(), blockLoc(POLISHED_TUFF));
-        stairsBlock((StairBlock) POLISHED_CALCITE_STAIRS.get(), blockLoc(POLISHED_CALCITE));
-        stairsBlock((StairBlock) POLISHED_DRIPSTONE_STAIRS.get(), blockLoc(POLISHED_DRIPSTONE_BLOCK));
-        stairsBlock((StairBlock) MOSSY_COBBLED_DEEPSLATE_STAIRS.get(), blockLoc(MOSSY_COBBLED_DEEPSLATE));
-        stairsBlock((StairBlock) MOSSY_DEEPSLATE_BRICK_STAIRS.get(), blockLoc(MOSSY_DEEPSLATE_BRICKS));
-        stairsBlock((StairBlock) MOSSY_DEEPSLATE_TILE_STAIRS.get(), blockLoc(MOSSY_DEEPSLATE_TILES));
-        stairsBlock((StairBlock) CRACKED_STONE_BRICK_STAIRS.get(), blockTexture(Blocks.CRACKED_STONE_BRICKS));
-        stairsBlock((StairBlock) CRACKED_DEEPSLATE_BRICK_STAIRS.get(), blockTexture(Blocks.CRACKED_DEEPSLATE_BRICKS));
-        stairsBlock((StairBlock) CRACKED_DEEPSLATE_TILE_STAIRS.get(), blockTexture(Blocks.CRACKED_DEEPSLATE_TILES));
-        stairsBlock((StairBlock) CRACKED_POLISHED_BLACKSTONE_BRICK_STAIRS.get(), blockTexture(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS));
-        stairsBlock((StairBlock) CRACKED_NETHER_BRICK_STAIRS.get(), blockTexture(Blocks.CRACKED_NETHER_BRICKS));
-        stairsBlock((StairBlock) CRACKED_RED_NETHER_BRICK_STAIRS.get(), blockLoc(CRACKED_RED_NETHER_BRICKS));
-        stairsBlock((StairBlock) CRACKED_MUD_BRICK_STAIRS.get(), blockLoc(CRACKED_MUD_BRICKS));
-        stairsBlock((StairBlock) CRACKED_QUARTZ_BRICK_STAIRS.get(), blockLoc(CRACKED_QUARTZ_BRICKS));
-        stairsBlock((StairBlock) SMOOTH_BASALT_STAIRS.get(), blockTexture(Blocks.SMOOTH_BASALT));
-        stairsBlock((StairBlock) MOSSY_NETHER_BRICK_STAIRS.get(), blockLoc(MOSSY_NETHER_BRICKS));
-        stairsBlock((StairBlock) CRIMSON_MOSSY_NETHER_BRICK_STAIRS.get(), blockLoc(CRIMSON_MOSSY_NETHER_BRICKS));
-        stairsBlock((StairBlock) WARPED_MOSSY_NETHER_BRICK_STAIRS.get(), blockLoc(WARPED_MOSSY_NETHER_BRICKS));
-        stairsBlock((StairBlock) CRACKED_BRICK_STAIRS.get(), blockLoc(CRACKED_BRICKS));
-        stairsBlock((StairBlock) CRACKED_PRISMARINE_BRICK_STAIRS.get(), blockLoc(CRACKED_PRISMARINE_BRICKS));
-        stairsBlock((StairBlock) CRACKED_END_STONE_BRICK_STAIRS.get(), blockLoc(CRACKED_END_STONE_BRICKS));
-        stairsBlock((StairBlock) AZALEA_STAIRS.get(), blockLoc(AZALEA_PLANKS));
-        stairsBlock((StairBlock) MOSSY_BRICK_STAIRS.get(), blockLoc(MOSSY_BRICKS));
-        stairsBlock((StairBlock) MOSSY_QUARTZ_BRICK_STAIRS.get(), blockLoc(MOSSY_QUARTZ_BRICKS));
+        vanillaStairsBlock(SMOOTH_STONE_STAIRS, Blocks.SMOOTH_STONE);
+        vanillaStairsBlock(TUFF_STAIRS, Blocks.TUFF);
+        vanillaStairsBlock(CALCITE_STAIRS, Blocks.CALCITE);
+        vanillaStairsBlock(DRIPSTONE_STAIRS, Blocks.DRIPSTONE_BLOCK);
+        vanillaStairsBlock(QUARTZ_BRICK_STAIRS, Blocks.QUARTZ_BRICKS);
+        vanillaStairsBlock(END_STONE_STAIRS, Blocks.END_STONE);
+        modStairsBlock(MOSSY_MUD_BRICK_STAIRS, MOSSY_MUD_BRICKS);
+        modStairsBlock(POLISHED_TUFF_STAIRS, POLISHED_TUFF);
+        modStairsBlock(POLISHED_CALCITE_STAIRS, POLISHED_CALCITE);
+        modStairsBlock(POLISHED_DRIPSTONE_STAIRS, POLISHED_DRIPSTONE_BLOCK);
+        modStairsBlock(MOSSY_COBBLED_DEEPSLATE_STAIRS, MOSSY_COBBLED_DEEPSLATE);
+        modStairsBlock(MOSSY_DEEPSLATE_BRICK_STAIRS, MOSSY_DEEPSLATE_BRICKS);
+        modStairsBlock(MOSSY_DEEPSLATE_TILE_STAIRS, MOSSY_DEEPSLATE_TILES);
+        vanillaStairsBlock(CRACKED_STONE_BRICK_STAIRS, Blocks.CRACKED_STONE_BRICKS);
+        vanillaStairsBlock(CRACKED_DEEPSLATE_BRICK_STAIRS, Blocks.CRACKED_DEEPSLATE_BRICKS);
+        vanillaStairsBlock( CRACKED_DEEPSLATE_TILE_STAIRS, Blocks.CRACKED_DEEPSLATE_TILES);
+        vanillaStairsBlock(CRACKED_POLISHED_BLACKSTONE_BRICK_STAIRS, Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS);
+        vanillaStairsBlock(CRACKED_NETHER_BRICK_STAIRS, Blocks.CRACKED_NETHER_BRICKS);
+        modStairsBlock(CRACKED_RED_NETHER_BRICK_STAIRS, CRACKED_RED_NETHER_BRICKS);
+        modStairsBlock(CRACKED_MUD_BRICK_STAIRS, CRACKED_MUD_BRICKS);
+        modStairsBlock(CRACKED_QUARTZ_BRICK_STAIRS, CRACKED_QUARTZ_BRICKS);
+        vanillaStairsBlock(SMOOTH_BASALT_STAIRS, Blocks.SMOOTH_BASALT);
+        modStairsBlock(MOSSY_NETHER_BRICK_STAIRS, MOSSY_NETHER_BRICKS);
+        modStairsBlock(CRIMSON_MOSSY_NETHER_BRICK_STAIRS, CRIMSON_MOSSY_NETHER_BRICKS);
+        modStairsBlock(WARPED_MOSSY_NETHER_BRICK_STAIRS, WARPED_MOSSY_NETHER_BRICKS);
+        modStairsBlock(CRACKED_BRICK_STAIRS, CRACKED_BRICKS);
+        modStairsBlock(CRACKED_PRISMARINE_BRICK_STAIRS, CRACKED_PRISMARINE_BRICKS);
+        modStairsBlock(CRACKED_END_STONE_BRICK_STAIRS, CRACKED_END_STONE_BRICKS);
+        modStairsBlock(AZALEA_STAIRS, AZALEA_PLANKS);
+        modStairsBlock(MOSSY_BRICK_STAIRS, MOSSY_BRICKS);
+        modStairsBlock(MOSSY_QUARTZ_BRICK_STAIRS, MOSSY_QUARTZ_BRICKS);
 
 
-        vanillaWallBlock(SMOOTH_STONE_WALL, blockVanillaBlockLoc(Blocks.SMOOTH_STONE));
-        vanillaWallBlock(STONE_WALL, blockVanillaBlockLoc(Blocks.STONE));
-        vanillaWallBlock(POLISHED_ANDESITE_WALL, blockVanillaBlockLoc(Blocks.POLISHED_ANDESITE));
-        vanillaWallBlock(POLISHED_DIORITE_WALL, blockVanillaBlockLoc(Blocks.POLISHED_DIORITE));
-        vanillaWallBlock(POLISHED_GRANITE_WALL, blockVanillaBlockLoc(Blocks.POLISHED_GRANITE));
-        vanillaWallBlock(PRISMARINE_BRICK_WALL, blockVanillaBlockLoc(Blocks.PRISMARINE_BRICKS));
-        vanillaWallBlock(DARK_PRISMARINE_WALL, blockVanillaBlockLoc(Blocks.DARK_PRISMARINE));
-        vanillaWallBlock(PURPUR_WALL, blockVanillaBlockLoc(Blocks.PURPUR_BLOCK));
-        vanillaWallBlock(TUFF_WALL, blockVanillaBlockLoc(Blocks.TUFF));
-        vanillaWallBlock(CALCITE_WALL, blockVanillaBlockLoc(Blocks.CALCITE));
-        vanillaWallBlock(DRIPSTONE_WALL, blockVanillaBlockLoc(Blocks.DRIPSTONE_BLOCK));
-        vanillaWallBlock(QUARTZ_BRICK_WALL, blockVanillaBlockLoc(Blocks.QUARTZ_BRICKS));
-        vanillaWallBlock(CUT_SANDSTONE_WALL, blockVanillaBlockLoc(Blocks.CUT_SANDSTONE));
-        vanillaWallBlock(CUT_RED_SANDSTONE_WALL, blockVanillaBlockLoc(Blocks.CUT_RED_SANDSTONE));
-        vanillaWallBlock(END_STONE_WALL, blockVanillaBlockLoc(Blocks.END_STONE));
-        vanillaWallBlock(CRACKED_STONE_BRICK_WALL, blockVanillaBlockLoc(Blocks.CRACKED_STONE_BRICKS));
-        vanillaWallBlock(CRACKED_DEEPSLATE_BRICK_WALL, blockVanillaBlockLoc(Blocks.CRACKED_DEEPSLATE_BRICKS));
-        vanillaWallBlock(CRACKED_DEEPSLATE_TILE_WALL, blockVanillaBlockLoc(Blocks.CRACKED_DEEPSLATE_TILES));
-        vanillaWallBlock(CRACKED_POLISHED_BLACKSTONE_BRICK_WALL, blockVanillaBlockLoc(Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS));
-        vanillaWallBlock(CRACKED_NETHER_BRICK_WALL, blockVanillaBlockLoc(Blocks.CRACKED_NETHER_BRICKS));
-        vanillaWallBlock(SMOOTH_BASALT_WALL, blockVanillaBlockLoc(Blocks.SMOOTH_BASALT));
-        vanillaWallBlock(DEEPSLATE_WALL, blockVanillaBlockLoc(Blocks.DEEPSLATE));
-        modWallBlock(MOSSY_MUD_BRICK_WALL, blockLoc(MOSSY_MUD_BRICKS));
-        modWallBlock(POLISHED_TUFF_WALL, blockLoc(POLISHED_TUFF));
-        modWallBlock(POLISHED_CALCITE_WALL, blockLoc(POLISHED_CALCITE));
-        modWallBlock(POLISHED_DRIPSTONE_WALL, blockLoc(POLISHED_DRIPSTONE_BLOCK));
-        modWallBlock(MOSSY_COBBLED_DEEPSLATE_WALL, blockLoc(MOSSY_COBBLED_DEEPSLATE));
-        modWallBlock(MOSSY_DEEPSLATE_BRICK_WALL, blockLoc(MOSSY_DEEPSLATE_BRICKS));
-        modWallBlock(MOSSY_DEEPSLATE_TILE_WALL, blockLoc(MOSSY_DEEPSLATE_TILES));
-        modWallBlock(CRACKED_RED_NETHER_BRICK_WALL, blockLoc(CRACKED_RED_NETHER_BRICKS));
-        modWallBlock(CRACKED_MUD_BRICK_WALL, blockLoc(CRACKED_MUD_BRICKS));
-        modWallBlock(CRACKED_QUARTZ_BRICK_WALL, blockLoc(CRACKED_QUARTZ_BRICKS));
-        modWallBlock(MOSSY_NETHER_BRICK_WALL, blockLoc(MOSSY_NETHER_BRICKS));
-        modWallBlock(CRIMSON_MOSSY_NETHER_BRICK_WALL, blockLoc(CRIMSON_MOSSY_NETHER_BRICKS));
-        modWallBlock(WARPED_MOSSY_NETHER_BRICK_WALL, blockLoc(WARPED_MOSSY_NETHER_BRICKS));
-        modWallBlock(CRACKED_BRICK_WALL, blockLoc(CRACKED_BRICKS));
-        modWallBlock(CRACKED_PRISMARINE_BRICK_WALL, blockLoc(CRACKED_PRISMARINE_BRICKS));
-        modWallBlock(CRACKED_END_STONE_BRICK_WALL, blockLoc(CRACKED_END_STONE_BRICKS));
-        modWallBlock(MOSSY_BRICK_WALL, blockLoc(MOSSY_BRICKS));
-        modWallBlock(MOSSY_QUARTZ_BRICK_WALL, blockLoc(MOSSY_QUARTZ_BRICKS));
+        vanillaWallBlock(SMOOTH_STONE_WALL, Blocks.SMOOTH_STONE);
+        vanillaWallBlock(STONE_WALL, Blocks.STONE);
+        vanillaWallBlock(POLISHED_ANDESITE_WALL, Blocks.POLISHED_ANDESITE);
+        vanillaWallBlock(POLISHED_DIORITE_WALL, Blocks.POLISHED_DIORITE);
+        vanillaWallBlock(POLISHED_GRANITE_WALL, Blocks.POLISHED_GRANITE);
+        vanillaWallBlock(PRISMARINE_BRICK_WALL, Blocks.PRISMARINE_BRICKS);
+        vanillaWallBlock(DARK_PRISMARINE_WALL, Blocks.DARK_PRISMARINE);
+        vanillaWallBlock(PURPUR_WALL, Blocks.PURPUR_BLOCK);
+        vanillaWallBlock(TUFF_WALL, Blocks.TUFF);
+        vanillaWallBlock(CALCITE_WALL, Blocks.CALCITE);
+        vanillaWallBlock(DRIPSTONE_WALL, Blocks.DRIPSTONE_BLOCK);
+        vanillaWallBlock(QUARTZ_BRICK_WALL, Blocks.QUARTZ_BRICKS);
+        vanillaWallBlock(CUT_SANDSTONE_WALL, Blocks.CUT_SANDSTONE);
+        vanillaWallBlock(CUT_RED_SANDSTONE_WALL, Blocks.CUT_RED_SANDSTONE);
+        vanillaWallBlock(END_STONE_WALL, Blocks.END_STONE);
+        vanillaWallBlock(CRACKED_STONE_BRICK_WALL, Blocks.CRACKED_STONE_BRICKS);
+        vanillaWallBlock(CRACKED_DEEPSLATE_BRICK_WALL, Blocks.CRACKED_DEEPSLATE_BRICKS);
+        vanillaWallBlock(CRACKED_DEEPSLATE_TILE_WALL, Blocks.CRACKED_DEEPSLATE_TILES);
+        vanillaWallBlock(CRACKED_POLISHED_BLACKSTONE_BRICK_WALL, Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS);
+        vanillaWallBlock(CRACKED_NETHER_BRICK_WALL, Blocks.CRACKED_NETHER_BRICKS);
+        vanillaWallBlock(SMOOTH_BASALT_WALL, Blocks.SMOOTH_BASALT);
+        vanillaWallBlock(DEEPSLATE_WALL, Blocks.DEEPSLATE);
+        modWallBlock(MOSSY_MUD_BRICK_WALL, MOSSY_MUD_BRICKS);
+        modWallBlock(POLISHED_TUFF_WALL, POLISHED_TUFF);
+        modWallBlock(POLISHED_CALCITE_WALL, POLISHED_CALCITE);
+        modWallBlock(POLISHED_DRIPSTONE_WALL, POLISHED_DRIPSTONE_BLOCK);
+        modWallBlock(MOSSY_COBBLED_DEEPSLATE_WALL, MOSSY_COBBLED_DEEPSLATE);
+        modWallBlock(MOSSY_DEEPSLATE_BRICK_WALL, MOSSY_DEEPSLATE_BRICKS);
+        modWallBlock(MOSSY_DEEPSLATE_TILE_WALL, MOSSY_DEEPSLATE_TILES);
+        modWallBlock(CRACKED_RED_NETHER_BRICK_WALL, CRACKED_RED_NETHER_BRICKS);
+        modWallBlock(CRACKED_MUD_BRICK_WALL, CRACKED_MUD_BRICKS);
+        modWallBlock(CRACKED_QUARTZ_BRICK_WALL, CRACKED_QUARTZ_BRICKS);
+        modWallBlock(MOSSY_NETHER_BRICK_WALL, MOSSY_NETHER_BRICKS);
+        modWallBlock(CRIMSON_MOSSY_NETHER_BRICK_WALL, CRIMSON_MOSSY_NETHER_BRICKS);
+        modWallBlock(WARPED_MOSSY_NETHER_BRICK_WALL, WARPED_MOSSY_NETHER_BRICKS);
+        modWallBlock(CRACKED_BRICK_WALL, CRACKED_BRICKS);
+        modWallBlock(CRACKED_PRISMARINE_BRICK_WALL, CRACKED_PRISMARINE_BRICKS);
+        modWallBlock(CRACKED_END_STONE_BRICK_WALL, CRACKED_END_STONE_BRICKS);
+        modWallBlock(MOSSY_BRICK_WALL, MOSSY_BRICKS);
+        modWallBlock(MOSSY_QUARTZ_BRICK_WALL, MOSSY_QUARTZ_BRICKS);
 
 
-        vanillaFenceBlock((FenceBlock) RED_NETHER_BRICK_FENCE.get(), blockVanillaBlockLoc(Blocks.RED_NETHER_BRICKS));
-        vanillaFenceBlock((FenceBlock) CRACKED_NETHER_BRICK_FENCE.get(), blockVanillaBlockLoc(Blocks.CRACKED_NETHER_BRICKS));
-        fenceBlock((FenceBlock) MOSSY_NETHER_BRICK_FENCE.get(), blockLoc(MOSSY_NETHER_BRICKS));
-        fenceBlock((FenceBlock) CRIMSON_MOSSY_NETHER_BRICK_FENCE.get(), blockLoc(CRIMSON_MOSSY_NETHER_BRICKS));
-        fenceBlock((FenceBlock) WARPED_MOSSY_NETHER_BRICK_FENCE.get(), blockLoc(WARPED_MOSSY_NETHER_BRICKS));
-        fenceBlock((FenceBlock) AZALEA_FENCE.get(), blockLoc(AZALEA_PLANKS));
-        fenceBlock((FenceBlock) CRACKED_RED_NETHER_BRICK_FENCE.get(), blockLoc(CRACKED_RED_NETHER_BRICKS));
+        vanillaFenceBlock(RED_NETHER_BRICK_FENCE, Blocks.RED_NETHER_BRICKS);
+        vanillaFenceBlock(CRACKED_NETHER_BRICK_FENCE, Blocks.CRACKED_NETHER_BRICKS);
+        modFenceBlock(MOSSY_NETHER_BRICK_FENCE, MOSSY_NETHER_BRICKS);
+        modFenceBlock(CRIMSON_MOSSY_NETHER_BRICK_FENCE, CRIMSON_MOSSY_NETHER_BRICKS);
+        modFenceBlock(WARPED_MOSSY_NETHER_BRICK_FENCE, WARPED_MOSSY_NETHER_BRICKS);
+        modFenceBlock(AZALEA_FENCE, AZALEA_PLANKS);
+        modFenceBlock(CRACKED_RED_NETHER_BRICK_FENCE, CRACKED_RED_NETHER_BRICKS);
 
         fenceGateBlock((FenceGateBlock) AZALEA_FENCE_GATE.get(), blockLoc(AZALEA_PLANKS));
 
@@ -242,43 +211,61 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 
     }
+    private void blockItem(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("cinchcraft:block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get())).getPath()));
+    }
+    public void blockWithItem(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    }
+    public void vanillaStairsBlock(RegistryObject<Block> block, Block texture) {
+        simpleBlockItem(block.get(), models().withExistingParent((block.get()).asItem().toString(), blockTexture(block)));
+        stairsBlock((StairBlock) block.get(), blockTexture(texture));
+    }
+    public void modStairsBlock(RegistryObject<Block> block, RegistryObject<Block> texture) {
+        simpleBlockItem(block.get(), models().withExistingParent((block.get()).asItem().toString(), blockTexture(block)));
+        stairsBlock((StairBlock) block.get(), blockTexture(texture));
+    }
+    public void vanillaSlabBlock(RegistryObject<Block> block, Block texture) {
+        simpleBlockItem(block.get(), models().withExistingParent((block.get()).asItem().toString(), blockTexture(block)));
+        slabBlock((SlabBlock)block.get(), block.getId(), blockTexture(texture));
+    }
+    public void modSlabBlock(RegistryObject<Block> block, RegistryObject<Block> texture) {
+        simpleBlockItem(block.get(), models().withExistingParent((block.get()).asItem().toString(), blockTexture(block)));
+        slabBlock((SlabBlock)block.get(), texture.getId(), blockTexture(texture));
+    }
+    public void vanillaFenceBlock(RegistryObject<Block> block, Block texture) {
+        simpleBlockItem(block.get(), models().fenceInventory(key(block).toString(), blockTexture(texture)));
+        fenceBlock((FenceBlock) block.get(), blockTexture(texture));
+    }
+    public void modFenceBlock(RegistryObject<Block> block, RegistryObject<Block> texture) {
+        simpleBlockItem(block.get(), models().fenceInventory(key(block).toString(), blockTexture(texture)));
+        fenceBlock((FenceBlock) block.get(), blockTexture(texture));
+    }
     private void trapDoorBlockItem(RegistryObject<Block> blockRegistryObject, String appendix) {
         simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("cinchcraft:block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get())).getPath() + appendix));
     }
-    private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
-        simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    public void vanillaWallBlock(RegistryObject<Block> block, Block texture) {
+        simpleBlockItem(block.get(), models().wallInventory(key(block).toString(), blockTexture(texture)));
+        wallBlock((WallBlock) block.get(), blockTexture(texture));
     }
-    public void vanillaWallBlock(RegistryObject<Block> block, ResourceLocation texture) {
-        super.wallBlock((WallBlock) block.get(), texture);
-        models().wallInventory(getName(block) + "_inventory", texture);
-    }
-    public void modWallBlock(RegistryObject<Block> block, ResourceLocation texture) {
-        super.wallBlock((WallBlock) block.get(), texture);
-        models().wallInventory(getName(block) + "_inventory", texture);
-    }
-    public void vanillaFenceBlock(FenceBlock block, ResourceLocation texture) {
-        super.fenceBlock( block, texture);
-        String baseName = key(block).toString();
-        fourWayBlock(block,
-                models().fencePost(baseName + "_post", texture),
-                models().fenceSide(baseName + "_side", texture),
-                models().fenceInventory(baseName + "_inventory", texture));
-    }
-    private void fourWayBlock(FenceBlock block, BlockModelBuilder fencePost, BlockModelBuilder fenceSide, BlockModelBuilder fenceInventory) {
+    public void modWallBlock(RegistryObject<Block> block, RegistryObject<Block> texture) {
+        simpleBlockItem(block.get(), models().wallInventory(key(block).toString(), blockTexture(texture)));
+        wallBlock((WallBlock) block.get(), blockTexture(texture));
     }
     public String getName(Supplier<? extends Block> block) {
         return block.get().builtInRegistryHolder().key().location().getPath();
     }
-    private ResourceLocation key(Block block) {
-        return ForgeRegistries.BLOCKS.getKey(block);
-    }
-    public ResourceLocation blockVanillaBlockLoc(Block block) {
-        return ResourceLocation.parse("block/" + block.asItem());
-    }
     public ResourceLocation blockLoc(Supplier<? extends Block> block) {
         return ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "block/" + getName(block));
     }
-    private void blockItem(RegistryObject<Block> blockRegistryObject) {
-        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("cinchcraft:block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get())).getPath()));
+    public ResourceLocation blockTexture(RegistryObject<Block> block) {
+        ResourceLocation name = key(block);
+        return ResourceLocation.fromNamespaceAndPath(name.getNamespace(), ModItemModelProvider.BLOCK_FOLDER + "/" + name.getPath());
+    }
+    private ResourceLocation key(RegistryObject<Block> block) {
+        return ForgeRegistries.BLOCKS.getKey(block.get());
+    }
+    private ResourceLocation key(Block block) {
+        return ForgeRegistries.BLOCKS.getKey(block);
     }
 }

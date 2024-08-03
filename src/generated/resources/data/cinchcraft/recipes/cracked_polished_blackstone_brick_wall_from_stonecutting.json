@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "minecraft:cracked_polished_blackstone_bricks"
-  },
-  "result": "cinchcraft:cracked_polished_blackstone_brick_wall"
-}

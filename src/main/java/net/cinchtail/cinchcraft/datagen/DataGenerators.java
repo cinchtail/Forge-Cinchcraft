@@ -24,7 +24,7 @@ public class DataGenerators {
         generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput, lookupProvider));
         generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
-        generator.addProvider(event.includeServer(), ModWorldGenProvider.RegistriesDatapackGenerator(event, packOutput));
-        generator.addProvider(event.includeClient(), new ModGlobalLootModifierProvider(packOutput));
+        generator.addProvider(event.includeServer(), new ModWorldGenProvider(packOutput, lookupProvider));
+        generator.addProvider(event.includeClient(), new ModGlobalLootModifierProvider(packOutput, lookupProvider));
     }
 }

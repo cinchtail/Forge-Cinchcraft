@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cinchcraft:block_of_ruby"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "cinchcraft:ruby"
+  }
+}

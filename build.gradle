@@ -118,11 +118,10 @@ minecraft {
         }
 
         data {
-            // example of overriding the workingDirectory set in configureEach above
-            workingDirectory project.file('run-data')
-
-            // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            args '--mod', 'cinchcraft', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            workingDirectory project.file('run')
+            ideaModule "${rootProject.name}.${project.name}.main"
+            args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/generated/resources/'), '--existing', file('src/main/resources/'), '--existing-mod', 'cinchcraft'
+            taskName 'runData'
         }
     }
 }
@@ -174,6 +173,8 @@ dependencies {
     runtimeOnly("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
 
     implementation 'com.github.glitchfiend:TerraBlender-forge:' + minecraft_version + '-' + terrablender_version
+
+    implementation('net.sf.jopt-simple:jopt-simple:5.0.4') { version { strictly '5.0.4' } }
 
     // Example mod dependency using a mod jar from ./libs with a flat dir repository
     // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar

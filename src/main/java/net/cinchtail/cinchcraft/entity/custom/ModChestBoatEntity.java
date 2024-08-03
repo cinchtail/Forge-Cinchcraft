@@ -13,7 +13,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 
 public class ModChestBoatEntity extends ChestBoat {
-    private static final EntityDataAccessor<Integer> DATA_ID_TYPE = SynchedEntityData.defineId(Boat.class, EntityDataSerializers.INT);
+    private static final EntityDataAccessor<Integer> DATA_ID_TYPE = SynchedEntityData.defineId(ModChestBoatEntity.class, EntityDataSerializers.INT);
 
     public ModChestBoatEntity(EntityType<? extends ChestBoat> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
@@ -29,34 +29,31 @@ public class ModChestBoatEntity extends ChestBoat {
 
     @Override
     public Item getDropItem() {
-        switch (getModVariant()) {
-            case AZALEA -> {
-                return ModItems.AZALEA_CHEST_BOAT.get();
-            }
-        }
-        return super.getDropItem();
+        return switch (getModVariant()) {
+            case AZALEA -> ModItems.AZALEA_CHEST_BOAT.get();
+        };
     }
 
     public void setVariant(ModBoatEntity.Type pVariant) {
         this.entityData.set(DATA_ID_TYPE, pVariant.ordinal());
     }
 
-    protected void defineSynchedData() {
-        super.defineSynchedData();
-        this.entityData.define(DATA_ID_TYPE, ModBoatEntity.Type.AZALEA.ordinal());
-    }
-
-    protected void addAdditionalSaveData(CompoundTag pCompound) {
-        pCompound.putString("Type", this.getModVariant().getSerializedName());
-    }
-
-    protected void readAdditionalSaveData(CompoundTag pCompound) {
-        if (pCompound.contains("Type", 8)) {
-            this.setVariant(ModBoatEntity.Type.byName(pCompound.getString("Type")));
-        }
-    }
-
     public ModBoatEntity.Type getModVariant() {
         return ModBoatEntity.Type.byId(this.entityData.get(DATA_ID_TYPE));
+    }
+
+    protected void defineSynchedData(SynchedEntityData.Builder builder) {
+        super.defineSynchedData(builder);
+        builder.define(DATA_ID_TYPE, ModBoatEntity.Type.AZALEA.ordinal());
+    }
+
+    protected void addAdditionalSaveData(CompoundTag compoundTag) {
+        super.addAdditionalSaveData(compoundTag);
+        this.addChestVehicleSaveData(compoundTag, this.registryAccess());
+    }
+
+    protected void readAdditionalSaveData(CompoundTag compoundTag) {
+        super.readAdditionalSaveData(compoundTag);
+        this.readChestVehicleSaveData(compoundTag, this.registryAccess());
     }
 }

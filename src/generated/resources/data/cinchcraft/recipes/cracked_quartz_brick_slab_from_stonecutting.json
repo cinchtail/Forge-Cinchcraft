@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "item": "cinchcraft:cracked_quartz_bricks"
-  },
-  "result": "cinchcraft:cracked_quartz_brick_slab"
-}

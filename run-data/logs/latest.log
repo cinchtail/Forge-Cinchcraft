@@ -1,35 +1,26 @@
-[16Jul2024 19:25:21.824] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 12, --assetsDir, C:\Users\Joshua Davies\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, cinchcraft, --all, --output, C:\Users\Joshua Davies\Desktop\Forge-Cinchcraft\src\generated\resources, --existing, C:\Users\Joshua Davies\Desktop\Forge-Cinchcraft\src\main\resources, --mixin.config, cinchcraft.mixins.json]
-[16Jul2024 19:25:21.830] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 17.0.3+7
-[16Jul2024 19:25:21.831] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.1.2 starting: java version 17.0.3 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
-[16Jul2024 19:25:21.909] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
-[16Jul2024 19:25:21.996] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=jar:file:///C:/Users/Joshua%20Davies/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar!/ Service=ModLauncher Env=UNKNOWN
-[16Jul2024 19:25:23.183] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[16Jul2024 19:25:23.956] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[16Jul2024 19:25:23.956] [main/ERROR] [mixin/]: Mixin config cinchcraft.mixins.json does not specify "minVersion" property
-[16Jul2024 19:25:23.967] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\Joshua Davies\.gradle\caches\forge_gradle\assets, --assetIndex, 12, --mod, cinchcraft, --all, --output, C:\Users\Joshua Davies\Desktop\Forge-Cinchcraft\src\generated\resources, --existing, C:\Users\Joshua Davies\Desktop\Forge-Cinchcraft\src\main\resources]
-[16Jul2024 19:25:23.995] [main/WARN] [mixin/]: Reference map 'cinchcraft.refmap.json' for cinchcraft.mixins.json could not be read. If this is a development environment you can ignore this message
-[16Jul2024 19:25:24.269] [main/INFO] [mixin/]: Remapping refMap terrablender.refmap.json using C:\Users\Joshua Davies\Desktop\Forge-Cinchcraft\build\createSrgToMcp\output.srg
-[16Jul2024 19:25:24.270] [main/INFO] [mixin/]: Remapping refMap terrablender.refmap.json using C:\Users\Joshua Davies\Desktop\Forge-Cinchcraft\build\createSrgToMcp\output.srg
-[16Jul2024 19:25:24.298] [main/WARN] [mixin/]: Mixin environment was unable to detect the current side, sided mixins will not be applied
-[16Jul2024 19:25:24.329] [main/WARN] [mixin/]: Mixin environment was unable to detect the current side, sided mixins will not be applied
-[16Jul2024 19:25:24.329] [main/WARN] [mixin/]: Mixin environment was unable to detect the current side, sided mixins will not be applied
-[16Jul2024 19:25:28.447] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 49.1.0, for MC 1.20.4 with MCP 20231207.112700
-[16Jul2024 19:25:28.447] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v49.1.0 Initialized
-[16Jul2024 19:25:28.495] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
-[16Jul2024 19:25:28.760] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
-[16Jul2024 19:25:28.768] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 5.384 ms
-[16Jul2024 19:25:29.365] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [cinchcraft]
-[16Jul2024 19:25:29.412] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Joshua%20Davies/Desktop/Forge-Cinchcraft/build/fg_cache/net/minecraftforge/forge/1.20.4-49.1.0_mapped_official_1.20.4/forge-1.20.4-49.1.0_mapped_official_1.20.4.jar%230!/assets/.mcassetsroot' uses unexpected schema
-[16Jul2024 19:25:29.413] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Joshua%20Davies/Desktop/Forge-Cinchcraft/build/fg_cache/net/minecraftforge/forge/1.20.4-49.1.0_mapped_official_1.20.4/forge-1.20.4-49.1.0_mapped_official_1.20.4.jar%230!/data/.mcassetsroot' uses unexpected schema
-[16Jul2024 19:25:29.617] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[16Jul2024 19:25:29.844] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 226 ms
-[16Jul2024 19:25:29.845] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: cinchcraft
-[16Jul2024 19:25:30.302] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: cinchcraft finished after 456 ms
-[16Jul2024 19:25:30.302] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: cinchcraft
-[16Jul2024 19:25:30.329] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: cinchcraft finished after 26 ms
-[16Jul2024 19:25:30.329] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
-[16Jul2024 19:25:30.357] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 27 ms
-[16Jul2024 19:25:30.357] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Global Loot Modifiers : cinchcraft
-[16Jul2024 19:25:30.369] [main/INFO] [net.minecraft.data.DataGenerator/]: Global Loot Modifiers : cinchcraft finished after 10 ms
-[16Jul2024 19:25:30.369] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 754 ms
-[16Jul2024 19:25:30.461] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 1547, old count: 1549, new count: 1548, removed stale: 0, written: 0
+[03Aug2024 15:37:38.282] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 17, --assetsDir, C:\Users\Joshua Davies\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, cinchcraft, --all, --output, C:\Users\Joshua Davies\Desktop\Forge-Cinchcraft\src\generated\resources, --existing, C:\Users\Joshua Davies\Desktop\Forge-Cinchcraft\src\main\resources, --mixin.config, cinchcraft.mixins.json]
+[03Aug2024 15:37:38.284] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 21.0.3+9-LTS
+[03Aug2024 15:37:38.286] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.1 starting: java version 21.0.3 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
+[03Aug2024 15:37:38.364] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
+[03Aug2024 15:37:38.441] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=jar:file:///C:/Users/Joshua%20Davies/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar!/ Service=ModLauncher Env=UNKNOWN
+[03Aug2024 15:37:39.437] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[03Aug2024 15:37:39.981] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[03Aug2024 15:37:39.981] [main/ERROR] [mixin/]: Mixin config cinchcraft.mixins.json does not specify "minVersion" property
+[03Aug2024 15:37:39.989] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\Joshua Davies\.gradle\caches\forge_gradle\assets, --assetIndex, 17, --mod, cinchcraft, --all, --output, C:\Users\Joshua Davies\Desktop\Forge-Cinchcraft\src\generated\resources, --existing, C:\Users\Joshua Davies\Desktop\Forge-Cinchcraft\src\main\resources]
+[03Aug2024 15:37:40.011] [main/WARN] [mixin/]: Reference map 'cinchcraft.refmap.json' for cinchcraft.mixins.json could not be read. If this is a development environment you can ignore this message
+[03Aug2024 15:37:40.013] [main/WARN] [mixin/]: Reference map 'terrablender.refmap.json' for terrablender.mixins.json could not be read. If this is a development environment you can ignore this message
+[03Aug2024 15:37:40.014] [main/WARN] [mixin/]: Reference map 'terrablender.refmap.json' for terrablender_forge.mixins.json could not be read. If this is a development environment you can ignore this message
+[03Aug2024 15:37:40.041] [main/WARN] [mixin/]: Mixin environment was unable to detect the current side, sided mixins will not be applied
+[03Aug2024 15:37:40.066] [main/WARN] [mixin/]: Mixin environment was unable to detect the current side, sided mixins will not be applied
+[03Aug2024 15:37:40.066] [main/WARN] [mixin/]: Mixin environment was unable to detect the current side, sided mixins will not be applied
+[03Aug2024 15:37:44.110] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 51.0.13, for MC 1.21 with MCP 20240613.102039
+[03Aug2024 15:37:44.110] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v51.0.13 Initialized
+[03Aug2024 15:37:44.127] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
+[03Aug2024 15:37:44.262] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
+[03Aug2024 15:37:44.267] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 3.306 ms
+[03Aug2024 15:37:45.107] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [cinchcraft]
+[03Aug2024 15:37:45.156] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Joshua%20Davies/Desktop/Forge-Cinchcraft/build/fg_cache/net/minecraftforge/forge/1.21-51.0.13_mapped_official_1.21/forge-1.21-51.0.13_mapped_official_1.21.jar%230!/assets/.mcassetsroot' uses unexpected schema
+[03Aug2024 15:37:45.157] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Joshua%20Davies/Desktop/Forge-Cinchcraft/build/fg_cache/net/minecraftforge/forge/1.21-51.0.13_mapped_official_1.21/forge-1.21-51.0.13_mapped_official_1.21.jar%230!/data/.mcassetsroot' uses unexpected schema
+[03Aug2024 15:37:45.283] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[03Aug2024 15:37:45.626] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 342 ms
+[03Aug2024 15:37:45.626] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: cinchcraft

@@ -4,7 +4,7 @@
       "model": "cinchcraft:block/quartz_brick_slab"
     },
     "type=double": {
-      "model": "minecraft:block/quartz_bricks"
+      "model": "cinchcraft:block/quartz_brick_slab"
     },
     "type=top": {
       "model": "cinchcraft:block/quartz_brick_slab_top"
