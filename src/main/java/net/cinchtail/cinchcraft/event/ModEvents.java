@@ -44,7 +44,6 @@ public class ModEvents {
     @Mod.EventBusSubscriber(modid = Cinchcraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
     public static class ForgeEvents {
 
-        //TODO might be broken
         @SubscribeEvent
         public static InteractionResult ShearMelonBlock(PlayerInteractEvent.RightClickBlock event) {
             Level level = event.getLevel();
@@ -218,8 +217,8 @@ public class ModEvents {
                 new ItemStack(Items.SNOWBALL, 4), 4, 3, 0.02f
         ));
         rareTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
-                new ItemStack(ModItems.RUBY.get(), 1), 9, 3, 0.02f
+                new ItemCost(ModItems.RUBY.get(), 1),
+                new ItemStack(Items.EMERALD, 1), 9, 3, 0.02f
         ));
     }
 }
