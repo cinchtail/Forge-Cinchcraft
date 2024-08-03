@@ -11,6 +11,8 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -39,9 +41,10 @@ import java.util.List;
 
 
 public class ModEvents {
-    @Mod.EventBusSubscriber(modid = Cinchcraft.MOD_ID)
+    @Mod.EventBusSubscriber(modid = Cinchcraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
     public static class ForgeEvents {
 
+        //TODO might be broken
         @SubscribeEvent
         public static InteractionResult ShearMelonBlock(PlayerInteractEvent.RightClickBlock event) {
             Level level = event.getLevel();
@@ -61,9 +64,7 @@ public class ModEvents {
                         ItemEntity itementity = new ItemEntity(level, (double) pos.getX() + 0.5D + (double) direction1.getStepX() * 0.65D, (double) pos.getY() + 0.1D, (double) pos.getZ() + 0.5D + (double) direction1.getStepZ() * 0.65D, new ItemStack(Items.MELON_SEEDS, 4));
                         itementity.setDeltaMovement(0.05D * (double) direction1.getStepX() + level.random.nextDouble() * 0.02D, 0.05D, 0.05D * (double) direction1.getStepZ() + level.random.nextDouble() * 0.02D);
                         level.addFreshEntity(itementity);
-                        stack.hurtAndBreak(1, player, (p_55287_) -> {
-                            p_55287_.broadcastBreakEvent(hand);
-                        });
+                        stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(hand));
                         level.gameEvent(player, GameEvent.SHEAR, pos);
                         player.awardStat(Stats.ITEM_USED.get(Items.SHEARS));
                     }

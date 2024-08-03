@@ -7,7 +7,6 @@ import net.cinchtail.cinchcraft.block.entity.ModBlockEntities;
 import net.cinchtail.cinchcraft.entity.ModEntities;
 import net.cinchtail.cinchcraft.entity.client.ModBoatRenderer;
 import net.cinchtail.cinchcraft.event.ModEvents;
-import net.cinchtail.cinchcraft.event.WanderingTraderTrades;
 import net.cinchtail.cinchcraft.item.ModCreativeModeTabs;
 import net.cinchtail.cinchcraft.item.ModItems;
 import net.cinchtail.cinchcraft.loot.ModLootModifiers;
@@ -23,8 +22,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.alchemy.PotionBrewing;
-import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -59,7 +56,6 @@ public class Cinchcraft
         ModBlocks.register(modEventBus);
 
         ModPotions.register(modEventBus);
-        //ModEffects.register(modEventBus);
 
         ModBlockEntities.register(modEventBus);
 
@@ -74,9 +70,7 @@ public class Cinchcraft
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::clientSetup);
 
-        MinecraftForge.EVENT_BUS.register(new WanderingTraderTrades());
         MinecraftForge.EVENT_BUS.register(new ModEvents());
-
         MinecraftForge.EVENT_BUS.register(this);
     }
 

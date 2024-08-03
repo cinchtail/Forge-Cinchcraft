@@ -1,0 +1,8 @@
+{
+  "comparator_output": 14,
+  "description": {
+    "translate": "item.cinchcraft.kyoto_music_disc.desc"
+  },
+  "length_in_seconds": 249.0,
+  "sound_event": "cinchcraft:kyoto_music_disc"
+}

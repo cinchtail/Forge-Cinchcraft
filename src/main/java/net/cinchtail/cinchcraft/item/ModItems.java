@@ -36,9 +36,9 @@ public class ModItems {
             () -> new AnimalArmorItem(ModArmorMaterials.RUBY, AnimalArmorItem.BodyType.EQUESTRIAN,
                     false, (new Item.Properties()).stacksTo(1)));
     public static final RegistryObject<Item> DOG_MUSIC_DISC = ITEMS.register("dog_music_disc",
-            () -> new RecordItem(8, ModSounds.DOG_MUSIC_DISC, new Item.Properties().rarity(Rarity.RARE).stacksTo(1), 2900));
+            () -> new Item(new Item.Properties().stacksTo(1).jukeboxPlayable(ModSounds.DOG_MUSIC_DISC_KEY).rarity(Rarity.RARE)));
     public static final RegistryObject<Item> KYOTO_MUSIC_DISC = ITEMS.register("kyoto_music_disc",
-            () -> new RecordItem(6, ModSounds.KYOTO_MUSIC_DISC, new Item.Properties().rarity(Rarity.RARE).stacksTo(1), 4980));
+            () -> new Item(new Item.Properties().stacksTo(1).jukeboxPlayable(ModSounds.KYOTO_MUSIC_DISC_KEY).rarity(Rarity.RARE)));
     public static final RegistryObject<Item> AZALEA_BOAT = ITEMS.register("azalea_boat",
             () -> new ModBoatItem(false, ModBoatEntity.Type.AZALEA, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> AZALEA_CHEST_BOAT = ITEMS.register("azalea_chest_boat",
