@@ -9,6 +9,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -77,16 +78,24 @@ public class BlueBerryBushBlock extends BushBlock implements BonemealableBlock {
 
         }
     }
-    public InteractionResult useWithoutItem(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
+    @Override
+    protected ItemInteractionResult useItemOn(
+            ItemStack itemStack, BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
         int i = blockState.getValue(AGE);
         boolean flag = i == 3;
-        if (!flag && player.getItemInHand(interactionHand).is(Items.BONE_MEAL)) {
-            return InteractionResult.PASS;
-        } else if (i > 1) {
+        return !flag && itemStack.is(Items.BONE_MEAL)
+                ? ItemInteractionResult.SKIP_DEFAULT_BLOCK_INTERACTION
+                : super.useItemOn(itemStack, blockState, level, blockPos, player, interactionHand, blockHitResult);
+    }
+    @Override
+    protected InteractionResult useWithoutItem(BlockState blockState, Level level, BlockPos blockPos, Player player, BlockHitResult blockHitResult) {
+        int i = blockState.getValue(AGE);
+        boolean flag = i == 3;
+        if (i > 1) {
             int j = 1 + level.random.nextInt(2);
             popResource(level, blockPos, new ItemStack(ModItems.BLUEBERRIES.get(), j + (flag ? 1 : 0)));
-            level.playSound(null, blockPos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
-            BlockState blockstate = blockState.setValue(AGE, 1);
+            level.playSound(null, blockPos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + player.getRandom().nextFloat() * 0.4F);
+            BlockState blockstate = blockState.setValue(AGE, Integer.valueOf(1));
             level.setBlock(blockPos, blockstate, 2);
             level.gameEvent(GameEvent.BLOCK_CHANGE, blockPos, GameEvent.Context.of(player, blockstate));
             return InteractionResult.sidedSuccess(level.isClientSide);

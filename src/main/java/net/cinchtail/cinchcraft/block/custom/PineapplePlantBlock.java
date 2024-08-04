@@ -9,6 +9,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -68,12 +69,20 @@ public class PineapplePlantBlock extends BushBlock implements BonemealableBlock 
             net.minecraftforge.common.ForgeHooks.onCropsGrowPost(serverLevel, pos, blockState);
         }
     }
-    protected InteractionResult useWithoutItem(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
+    @Override
+    protected ItemInteractionResult useItemOn(
+            ItemStack itemStack, BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
         int i = blockState.getValue(AGE);
         boolean flag = i == 3;
-        if (!flag && player.getItemInHand(interactionHand).is(Items.BONE_MEAL)) {
-            return InteractionResult.PASS;
-        } else if (i > 2) {
+        return !flag && itemStack.is(Items.BONE_MEAL)
+                ? ItemInteractionResult.SKIP_DEFAULT_BLOCK_INTERACTION
+                : super.useItemOn(itemStack, blockState, level, blockPos, player, interactionHand, blockHitResult);
+    }
+    @Override
+    protected InteractionResult useWithoutItem(BlockState blockState, Level level, BlockPos blockPos, Player player, BlockHitResult blockHitResult) {
+        int i = blockState.getValue(AGE);
+        boolean flag = i == 3;
+        if (i > 2) {
             int j = 2 + level.random.nextInt(2);
             popResource(level, blockPos, new ItemStack(ModItems.PINEAPPLE.get()));
             level.playSound(null, blockPos, SoundEvents.CROP_PLANTED, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
@@ -85,7 +94,6 @@ public class PineapplePlantBlock extends BushBlock implements BonemealableBlock 
             return super.useWithoutItem(blockState, level, blockPos, player, blockHitResult);
         }
     }
-
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockBlockStateBuilder) {
         blockBlockStateBuilder.add(AGE);
     }
