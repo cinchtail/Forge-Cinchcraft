@@ -5,7 +5,7 @@
       "rules": [
         {
           "input_predicate": {
-            "block": "minecraft:stone_bricks",
+            "block": "minecraft:smooth_sandstone",
             "probability": 0.3,
             "predicate_type": "minecraft:random_block_match"
           },
@@ -13,12 +13,12 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "minecraft:mossy_stone_bricks"
+            "Name": "minecraft:sandstone"
           }
         },
         {
           "input_predicate": {
-            "block": "minecraft:stone_brick_slab",
+            "block": "minecraft:smooth_sandstone",
             "probability": 0.3,
             "predicate_type": "minecraft:random_block_match"
           },
@@ -26,20 +26,33 @@
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "minecraft:mossy_stone_brick_slab"
+            "Name": "minecraft:cut_sandstone"
           }
         },
         {
           "input_predicate": {
-            "block": "minecraft:stone_bricks",
-            "probability": 0.3,
+            "block": "minecraft:smooth_sandstone_slab",
+            "probability": 0.1,
             "predicate_type": "minecraft:random_block_match"
           },
           "location_predicate": {
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "minecraft:cracked_stone_bricks"
+            "Name": "minecraft:cut_sandstone_slab"
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "minecraft:smooth_sandstone_slab",
+            "probability": 0.1,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "minecraft:cut_sandstone_slab"
           }
         }
       ]

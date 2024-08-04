@@ -5,28 +5,28 @@
       "rules": [
         {
           "input_predicate": {
-            "block": "minecraft:cobblestone",
-            "probability": 0.5,
+            "block": "minecraft:polished_andesite",
+            "probability": 0.3,
             "predicate_type": "minecraft:random_block_match"
           },
           "location_predicate": {
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "minecraft:mossy_cobblestone"
+            "Name": "minecraft:stone_bricks"
           }
         },
         {
           "input_predicate": {
-            "block": "minecraft:cobblestone_slab",
-            "probability": 0.5,
+            "block": "minecraft:polished_andesite_slab",
+            "probability": 0.1,
             "predicate_type": "minecraft:random_block_match"
           },
           "location_predicate": {
             "predicate_type": "minecraft:always_true"
           },
           "output_state": {
-            "Name": "minecraft:mossy_cobblestone_slab"
+            "Name": "minecraft:stone_brick_slab"
           }
         }
       ]

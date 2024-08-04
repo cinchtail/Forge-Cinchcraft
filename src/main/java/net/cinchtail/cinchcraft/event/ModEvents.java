@@ -143,6 +143,10 @@ public class ModEvents {
                     new ItemCost(Items.EMERALD, 30),
                     new ItemStack(Items.WITHER_ROSE, 1), 1, 12, 0.02f
             ));
+            rareTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 4),
+                    new ItemStack(Items.SPORE_BLOSSOM, 1), 3, 10, 0.02f
+            ));
             genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(Items.EMERALD, 1),
                     new ItemStack(Items.SWEET_BERRIES, 3), 7, 3, 0.02f
@@ -171,6 +175,10 @@ public class ModEvents {
                     new ItemCost(Items.EMERALD, 1),
                     new ItemStack(ModItems.REEDS_SEEDS.get(), 1), 12, 1, 0.02f
             ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 1),
+                    new ItemStack(Items.COCOA_BEANS, 1), 12, 1, 0.02f
+            ));
             rareTrades.add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(Items.EMERALD, 6),
                     new ItemStack(Items.SPYGLASS, 1), 1, 10, 0.02f
@@ -185,15 +193,15 @@ public class ModEvents {
             ));
             genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(Items.EMERALD, 1),
-                    new ItemStack(Items.PAINTING, 4), 5, 10, 0.02f
-            ));
-            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                    new ItemCost(Items.EMERALD, 1),
                     new ItemStack(Items.SCAFFOLDING, 8), 4, 10, 0.02f
             ));
             genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(Items.EMERALD, 1),
-                    new ItemStack(Items.SCAFFOLDING, 1), 6, 3, 0.02f
+                    new ItemStack(Items.CANDLE, 4), 5, 10, 0.02f
+            ));
+            rareTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 12),
+                    new ItemStack(Items.TURTLE_EGG, 1), 2, 10, 0.02f
             ));
             genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(Items.EMERALD, 1),

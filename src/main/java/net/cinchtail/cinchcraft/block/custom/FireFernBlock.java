@@ -30,7 +30,7 @@ public class FireFernBlock extends DoublePlantBlock {
 
     public void entityInside(BlockState state, Level level, BlockPos pos, Entity entity) {
         if (!entity.isSteppingCarefully() && entity instanceof LivingEntity) {
-            entity.hurt(level.damageSources().inFire(),4.0F);
+            entity.hurt(level.damageSources().onFire(), 4.0F);
         }
         super.stepOn(level, pos, state, entity);
     }
