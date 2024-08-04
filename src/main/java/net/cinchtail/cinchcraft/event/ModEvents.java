@@ -85,140 +85,140 @@ public class ModEvents {
                 event.setCanceled(true);
             }
         }
-    }
-    @SubscribeEvent
-    public static void onBrewingRecipeRegister(BrewingRecipeRegisterEvent event) {
-        PotionBrewing.Builder builder = event.getBuilder();
+        @SubscribeEvent
+        public static void onBrewingRecipeRegister(BrewingRecipeRegisterEvent event) {
+            PotionBrewing.Builder builder = event.getBuilder();
 
-        builder.addMix(Potions.AWKWARD, Items.GLOW_BERRIES, ModPotions.GLOWING_POTION.getHolder().get());
-        builder.addMix(Potions.AWKWARD, Items.INK_SAC, ModPotions.BLINDNESS_POTION.getHolder().get());
-        builder.addMix(ModPotions.GLOWING_POTION.getHolder().get(), Items.REDSTONE, ModPotions.LONG_GLOWING_POTION.getHolder().get());
-        builder.addMix(ModPotions.BLINDNESS_POTION.getHolder().get(), Items.REDSTONE, ModPotions.LONG_BLINDNESS_POTION.getHolder().get());
-    }
-    @SubscribeEvent
-    public static void addWanderingTrades(WandererTradesEvent event) {
-        List<VillagerTrades.ItemListing> genericTrades = event.getGenericTrades();
-        List<VillagerTrades.ItemListing> rareTrades = event.getRareTrades();
+            builder.addMix(Potions.AWKWARD, Items.GLOW_BERRIES, ModPotions.GLOWING_POTION.getHolder().get());
+            builder.addMix(Potions.AWKWARD, Items.INK_SAC, ModPotions.BLINDNESS_POTION.getHolder().get());
+            builder.addMix(ModPotions.GLOWING_POTION.getHolder().get(), Items.REDSTONE, ModPotions.LONG_GLOWING_POTION.getHolder().get());
+            builder.addMix(ModPotions.BLINDNESS_POTION.getHolder().get(), Items.REDSTONE, ModPotions.LONG_BLINDNESS_POTION.getHolder().get());
+        }
+        @SubscribeEvent
+        public static void addWanderingTrades(WandererTradesEvent event) {
+            List<VillagerTrades.ItemListing> genericTrades = event.getGenericTrades();
+            List<VillagerTrades.ItemListing> rareTrades = event.getRareTrades();
 
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 5),
-                new ItemStack(Items.TADPOLE_BUCKET, 1), 4, 1, 0.02f
-        ));
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 2),
-                new ItemStack(Items.POWDER_SNOW_BUCKET, 1), 5, 10, 0.02f
-        ));
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
-                new ItemStack(ModItems.CROCUS.get(), 1), 12, 1, 0.02f
-        ));
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
-                new ItemStack(ModItems.BUTTER_CUP.get(), 1), 12, 1, 0.02f
-        ));
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
-                new ItemStack(ModItems.SMALL_ROSE.get(), 1), 12, 1, 0.02f
-        ));
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
-                new ItemStack(ModItems.STAR_CACTUS.get(), 1), 12, 1, 0.02f
-        ));
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
-                new ItemStack(ModItems.ALYSSUM.get(), 1), 12, 1, 0.02f
-        ));
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
-                new ItemStack(ModItems.LUPINE.get(), 1), 12, 1, 0.02f
-        ));
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
-                new ItemStack(Items.PINK_PETALS, 1), 12, 1, 0.02f
-        ));
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
-                new ItemStack(ModItems.CATTAILS.get(), 1), 5, 3, 0.02f
-        ));
-        rareTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 30),
-                new ItemStack(Items.WITHER_ROSE, 1), 1, 12, 0.02f
-        ));
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
-                new ItemStack(Items.SWEET_BERRIES, 3), 7, 3, 0.02f
-        ));
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
-                new ItemStack(Items.GLOW_BERRIES, 3), 7, 3, 0.02f
-        ));
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
-                new ItemStack(ModItems.BLUEBERRIES.get(), 3), 7, 3, 0.02f
-        ));
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
-                new ItemStack(ModItems.STRAWBERRIES.get(), 3), 7, 3, 0.02f
-        ));
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
-                new ItemStack(ModItems.PINEAPPLE.get(), 1), 5, 3, 0.02f
-        ));
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
-                new ItemStack(ModItems.SUNFLOWER_SEEDS.get(), 1), 12, 1, 0.02f
-        ));
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
-                new ItemStack(ModItems.REEDS_SEEDS.get(), 1), 12, 1, 0.02f
-        ));
-        rareTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 6),
-                new ItemStack(Items.SPYGLASS, 1), 1, 10, 0.02f
-        ));
-        rareTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 9),
-                new ItemStack(Items.SADDLE, 1), 1, 10, 0.02f
-        ));
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
-                new ItemStack(Items.PAINTING, 1), 5, 10, 0.02f
-        ));
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
-                new ItemStack(Items.PAINTING, 4), 5, 10, 0.02f
-        ));
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
-                new ItemStack(Items.SCAFFOLDING, 8), 4, 10, 0.02f
-        ));
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
-                new ItemStack(Items.SCAFFOLDING, 1), 6, 3, 0.02f
-        ));
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
-                new ItemStack(Items.INK_SAC, 1), 5, 3, 0.02f
-        ));
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
-                new ItemStack(Items.GLOW_INK_SAC, 1), 5, 3, 0.02f
-        ));
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
-                new ItemStack(Items.GLOW_LICHEN, 2), 5, 5, 0.02f
-        ));
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
-                new ItemStack(ModBlocks.ICICLE.get(), 2), 5, 3, 0.02f
-        ));
-        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(Items.EMERALD, 1),
-                new ItemStack(Items.SNOWBALL, 4), 4, 3, 0.02f
-        ));
-        rareTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                new ItemCost(ModItems.RUBY.get(), 1),
-                new ItemStack(Items.EMERALD, 1), 9, 3, 0.02f
-        ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 5),
+                    new ItemStack(Items.TADPOLE_BUCKET, 1), 4, 1, 0.02f
+            ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 2),
+                    new ItemStack(Items.POWDER_SNOW_BUCKET, 1), 5, 10, 0.02f
+            ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 1),
+                    new ItemStack(ModItems.CROCUS.get(), 1), 12, 1, 0.02f
+            ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 1),
+                    new ItemStack(ModItems.BUTTER_CUP.get(), 1), 12, 1, 0.02f
+            ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 1),
+                    new ItemStack(ModItems.SMALL_ROSE.get(), 1), 12, 1, 0.02f
+            ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 1),
+                    new ItemStack(ModItems.STAR_CACTUS.get(), 1), 12, 1, 0.02f
+            ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 1),
+                    new ItemStack(ModItems.ALYSSUM.get(), 1), 12, 1, 0.02f
+            ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 1),
+                    new ItemStack(ModItems.LUPINE.get(), 1), 12, 1, 0.02f
+            ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 1),
+                    new ItemStack(Items.PINK_PETALS, 1), 12, 1, 0.02f
+            ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 1),
+                    new ItemStack(ModItems.CATTAILS.get(), 1), 5, 3, 0.02f
+            ));
+            rareTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 30),
+                    new ItemStack(Items.WITHER_ROSE, 1), 1, 12, 0.02f
+            ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 1),
+                    new ItemStack(Items.SWEET_BERRIES, 3), 7, 3, 0.02f
+            ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 1),
+                    new ItemStack(Items.GLOW_BERRIES, 3), 7, 3, 0.02f
+            ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 1),
+                    new ItemStack(ModItems.BLUEBERRIES.get(), 3), 7, 3, 0.02f
+            ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 1),
+                    new ItemStack(ModItems.STRAWBERRIES.get(), 3), 7, 3, 0.02f
+            ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 1),
+                    new ItemStack(ModItems.PINEAPPLE.get(), 1), 5, 3, 0.02f
+            ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 1),
+                    new ItemStack(ModItems.SUNFLOWER_SEEDS.get(), 1), 12, 1, 0.02f
+            ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 1),
+                    new ItemStack(ModItems.REEDS_SEEDS.get(), 1), 12, 1, 0.02f
+            ));
+            rareTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 6),
+                    new ItemStack(Items.SPYGLASS, 1), 1, 10, 0.02f
+            ));
+            rareTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 9),
+                    new ItemStack(Items.SADDLE, 1), 1, 10, 0.02f
+            ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 1),
+                    new ItemStack(Items.PAINTING, 1), 5, 10, 0.02f
+            ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 1),
+                    new ItemStack(Items.PAINTING, 4), 5, 10, 0.02f
+            ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 1),
+                    new ItemStack(Items.SCAFFOLDING, 8), 4, 10, 0.02f
+            ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 1),
+                    new ItemStack(Items.SCAFFOLDING, 1), 6, 3, 0.02f
+            ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 1),
+                    new ItemStack(Items.INK_SAC, 1), 5, 3, 0.02f
+            ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 1),
+                    new ItemStack(Items.GLOW_INK_SAC, 1), 5, 3, 0.02f
+            ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 1),
+                    new ItemStack(Items.GLOW_LICHEN, 2), 5, 5, 0.02f
+            ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 1),
+                    new ItemStack(ModBlocks.ICICLE.get(), 2), 5, 3, 0.02f
+            ));
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 1),
+                    new ItemStack(Items.SNOWBALL, 4), 4, 3, 0.02f
+            ));
+            rareTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(ModItems.RUBY.get(), 1),
+                    new ItemStack(Items.EMERALD, 1), 9, 3, 0.02f
+            ));
+        }
     }
 }
