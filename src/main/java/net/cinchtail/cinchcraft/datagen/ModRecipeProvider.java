@@ -1480,65 +1480,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_granite", has(Blocks.GRANITE))
                 .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "polished_granite_wall_from_stonecutting_from_granite"));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF.get(),4)
-                .pattern("AA")
-                .pattern("AA")
-                .define('A', Blocks.TUFF)
-                .unlockedBy("has_tuff", has(Blocks.TUFF))
-                .save(consumer);
-
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.TUFF), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF.get())
-                .unlockedBy("has_tuff", has(Blocks.TUFF))
-                .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "polished_tuff_from_stonecutting"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF_STAIRS.get(),4)
-                .pattern("A  ")
-                .pattern("AA ")
-                .pattern("AAA")
-                .define('A', ModBlocks.POLISHED_TUFF.get())
-                .unlockedBy("has_polished_tuff", has(ModBlocks.POLISHED_TUFF.get()))
-                .save(consumer);
-
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.POLISHED_TUFF.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF_STAIRS.get())
-                .unlockedBy("has_polished_tuff", has(ModBlocks.POLISHED_TUFF.get()))
-                .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "polished_tuff_stairs_from_stonecutting"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF_SLAB.get(),6)
-                .pattern("AAA")
-                .define('A', ModBlocks.POLISHED_TUFF.get())
-                .unlockedBy("has_polished_tuff", has(ModBlocks.POLISHED_TUFF.get()))
-                .save(consumer);
-
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.POLISHED_TUFF.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF_SLAB.get(),2)
-                .unlockedBy("has_polished_tuff", has(ModBlocks.POLISHED_TUFF.get()))
-                .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "polished_tuff_slab_from_stonecutting"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF_WALL.get(),6)
-                .pattern("AAA")
-                .pattern("AAA")
-                .define('A', ModBlocks.POLISHED_TUFF.get())
-                .unlockedBy("has_polished_tuff", has(ModBlocks.POLISHED_TUFF.get()))
-                .save(consumer);
-
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.POLISHED_TUFF.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF_WALL.get())
-                .unlockedBy("has_polished_tuff", has(ModBlocks.POLISHED_TUFF.get()))
-                .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "polished_tuff_wall_from_stonecutting"));
-
-
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.TUFF), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF_STAIRS.get())
-                .unlockedBy("has_tuff", has(Blocks.TUFF))
-                .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "polished_tuff_stairs_from_stonecutting_from_tuff"));
-
-
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.TUFF), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF_SLAB.get(),2)
-                .unlockedBy("has_tuff", has(Blocks.TUFF))
-                .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "polished_tuff_slab_from_stonecutting_from_tuff"));
-
-
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.TUFF), RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_TUFF_WALL.get())
-                .unlockedBy("has_tuff", has(Blocks.TUFF))
-                .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "polished_tuff_wall_from_stonecutting_from_tuff"));
-
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PRISMARINE_BRICK_WALL.get(),6)
                 .pattern("AAA")
                 .pattern("AAA")
@@ -1727,39 +1668,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.STONE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.STONE_WALL.get())
                 .unlockedBy("has_stone", has(Blocks.STONE))
                 .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "stone_wall_from_stonecutting"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TUFF_STAIRS.get(),4)
-                .pattern("A  ")
-                .pattern("AA ")
-                .pattern("AAA")
-                .define('A', Items.TUFF)
-                .unlockedBy("has_tuff", has(Items.TUFF))
-                .save(consumer);
-
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.TUFF), RecipeCategory.BUILDING_BLOCKS, ModBlocks.TUFF_STAIRS.get())
-                .unlockedBy("has_tuff", has(Blocks.TUFF))
-                .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "tuff_stairs_from_stonecutting"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TUFF_SLAB.get(),6)
-                .pattern("AAA")
-                .define('A', Items.TUFF)
-                .unlockedBy("has_tuff", has(Items.TUFF))
-                .save(consumer);
-
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.TUFF), RecipeCategory.BUILDING_BLOCKS, ModBlocks.TUFF_SLAB.get(),2)
-                .unlockedBy("has_tuff", has(Blocks.TUFF))
-                .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "tuff_slab_from_stonecutting"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TUFF_WALL.get(),6)
-                .pattern("AAA")
-                .pattern("AAA")
-                .define('A', Items.TUFF)
-                .unlockedBy("has_tuff", has(Items.TUFF))
-                .save(consumer);
-
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.TUFF), RecipeCategory.BUILDING_BLOCKS, ModBlocks.TUFF_WALL.get())
-                .unlockedBy("has_tuff", has(Blocks.TUFF))
-                .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "tuff_wall_from_stonecutting"));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_NETHER_BRICKS.get())
                 .group("mossy_nether_bricks")

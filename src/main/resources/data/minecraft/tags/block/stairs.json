@@ -1,13 +1,11 @@
 {
   "replace": false,
   "values": [
-    "cinchcraft:tuff_stairs",
     "cinchcraft:calcite_stairs",
     "cinchcraft:dripstone_stairs",
     "cinchcraft:quartz_brick_stairs",
     "cinchcraft:end_stone_stairs",
     "cinchcraft:mossy_mud_brick_stairs",
-    "cinchcraft:polished_tuff_stairs",
     "cinchcraft:polished_calcite_stairs",
     "cinchcraft:polished_dripstone_stairs",
     "cinchcraft:mossy_cobbled_deepslate_stairs",

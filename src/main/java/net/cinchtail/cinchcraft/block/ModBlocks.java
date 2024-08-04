@@ -113,15 +113,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> PURPUR_WALL = registerBlock("purpur_wall",
             () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(PURPUR_BLOCK)
                     .strength(2f).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> TUFF_STAIRS = registerBlock("tuff_stairs",
-            () -> new StairBlock(STONE_STAIRS.defaultBlockState(),
-                    BlockBehaviour.Properties.ofFullCopy(TUFF).strength(2f).requiresCorrectToolForDrops().sound(SoundType.TUFF)));
-    public static final RegistryObject<Block> TUFF_SLAB = registerBlock("tuff_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(TUFF)
-                    .strength(2f).requiresCorrectToolForDrops().sound(SoundType.TUFF)));
-    public static final RegistryObject<Block> TUFF_WALL = registerBlock("tuff_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(TUFF)
-                    .strength(2f).requiresCorrectToolForDrops().sound(SoundType.TUFF)));
     public static final RegistryObject<Block> CALCITE_STAIRS = registerBlock("calcite_stairs",
             () -> new StairBlock(STONE_STAIRS.defaultBlockState(),
                     BlockBehaviour.Properties.ofFullCopy(CALCITE).strength(1f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
@@ -335,19 +326,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> MOSSY_MUD_BRICK_WALL = registerBlock("mossy_mud_brick_wall",
             () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
                     .strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.MUD_BRICKS)));
-    public static final RegistryObject<Block> POLISHED_TUFF = registerBlock("polished_tuff",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(2f)
-                    .sound(SoundType.TUFF).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> POLISHED_TUFF_STAIRS = registerBlock("polished_tuff_stairs",
-            () -> new StairBlock(ModBlocks.POLISHED_TUFF.get().defaultBlockState(),
-                    BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(2f)
-                            .requiresCorrectToolForDrops().sound(SoundType.TUFF)));
-    public static final RegistryObject<Block> POLISHED_TUFF_SLAB = registerBlock("polished_tuff_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
-                    .strength(2f).requiresCorrectToolForDrops().sound(SoundType.TUFF)));
-    public static final RegistryObject<Block> POLISHED_TUFF_WALL = registerBlock("polished_tuff_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
-                    .strength(2f).requiresCorrectToolForDrops().sound(SoundType.TUFF)));
     public static final RegistryObject<Block> POLISHED_CALCITE = registerBlock("polished_calcite",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(1f)
                     .sound(SoundType.CALCITE).requiresCorrectToolForDrops()));

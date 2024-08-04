@@ -1,13 +1,11 @@
 {
   "replace": false,
   "values": [
-    "cinchcraft:tuff_slab",
     "cinchcraft:calcite_slab",
     "cinchcraft:dripstone_slab",
     "cinchcraft:quartz_brick_slab",
     "cinchcraft:end_stone_slab",
     "cinchcraft:mossy_mud_brick_slab",
-    "cinchcraft:polished_tuff_slab",
     "cinchcraft:polished_calcite_slab",
     "cinchcraft:polished_dripstone_slab",
     "cinchcraft:mossy_cobbled_deepslate_slab",

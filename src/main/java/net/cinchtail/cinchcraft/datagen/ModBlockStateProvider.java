@@ -41,7 +41,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(MOSSY_MUD_BRICKS);
         blockWithItem(CHISELED_MUD_BRICKS);
         blockWithItem(CRACKED_MUD_BRICKS);
-        blockWithItem(POLISHED_TUFF);
         blockWithItem(POLISHED_CALCITE);
         blockWithItem(POLISHED_DRIPSTONE_BLOCK);
         blockWithItem(MOSSY_COBBLED_DEEPSLATE);
@@ -58,13 +57,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(MOSSY_BRICKS);
         blockWithItem(MOSSY_QUARTZ_BRICKS);
 
-        vanillaSlabBlock(TUFF_SLAB, Blocks.TUFF);
         vanillaSlabBlock(CALCITE_SLAB, Blocks.CALCITE);
         vanillaSlabBlock(DRIPSTONE_SLAB, Blocks.DRIPSTONE_BLOCK);
         vanillaSlabBlock(QUARTZ_BRICK_SLAB, Blocks.QUARTZ_BRICKS);
         vanillaSlabBlock(END_STONE_SLAB, Blocks.END_STONE);
         modSlabBlock(MOSSY_MUD_BRICK_SLAB, MOSSY_MUD_BRICKS);
-        modSlabBlock(POLISHED_TUFF_SLAB, POLISHED_TUFF);
         modSlabBlock(POLISHED_CALCITE_SLAB, POLISHED_CALCITE);
         modSlabBlock(POLISHED_DRIPSTONE_SLAB, POLISHED_DRIPSTONE_BLOCK);
         modSlabBlock(MOSSY_COBBLED_DEEPSLATE_SLAB, MOSSY_COBBLED_DEEPSLATE);
@@ -90,13 +87,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         modSlabBlock(MOSSY_QUARTZ_BRICK_SLAB, MOSSY_QUARTZ_BRICKS);
 
         vanillaStairsBlock(SMOOTH_STONE_STAIRS, Blocks.SMOOTH_STONE);
-        vanillaStairsBlock(TUFF_STAIRS, Blocks.TUFF);
         vanillaStairsBlock(CALCITE_STAIRS, Blocks.CALCITE);
         vanillaStairsBlock(DRIPSTONE_STAIRS, Blocks.DRIPSTONE_BLOCK);
         vanillaStairsBlock(QUARTZ_BRICK_STAIRS, Blocks.QUARTZ_BRICKS);
         vanillaStairsBlock(END_STONE_STAIRS, Blocks.END_STONE);
         modStairsBlock(MOSSY_MUD_BRICK_STAIRS, MOSSY_MUD_BRICKS);
-        modStairsBlock(POLISHED_TUFF_STAIRS, POLISHED_TUFF);
         modStairsBlock(POLISHED_CALCITE_STAIRS, POLISHED_CALCITE);
         modStairsBlock(POLISHED_DRIPSTONE_STAIRS, POLISHED_DRIPSTONE_BLOCK);
         modStairsBlock(MOSSY_COBBLED_DEEPSLATE_STAIRS, MOSSY_COBBLED_DEEPSLATE);
@@ -130,7 +125,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         vanillaWallBlock(PRISMARINE_BRICK_WALL, Blocks.PRISMARINE_BRICKS);
         vanillaWallBlock(DARK_PRISMARINE_WALL, Blocks.DARK_PRISMARINE);
         vanillaWallBlock(PURPUR_WALL, Blocks.PURPUR_BLOCK);
-        vanillaWallBlock(TUFF_WALL, Blocks.TUFF);
         vanillaWallBlock(CALCITE_WALL, Blocks.CALCITE);
         vanillaWallBlock(DRIPSTONE_WALL, Blocks.DRIPSTONE_BLOCK);
         vanillaWallBlock(QUARTZ_BRICK_WALL, Blocks.QUARTZ_BRICKS);
@@ -145,7 +139,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         vanillaWallBlock(SMOOTH_BASALT_WALL, Blocks.SMOOTH_BASALT);
         vanillaWallBlock(DEEPSLATE_WALL, Blocks.DEEPSLATE);
         modWallBlock(MOSSY_MUD_BRICK_WALL, MOSSY_MUD_BRICKS);
-        modWallBlock(POLISHED_TUFF_WALL, POLISHED_TUFF);
         modWallBlock(POLISHED_CALCITE_WALL, POLISHED_CALCITE);
         modWallBlock(POLISHED_DRIPSTONE_WALL, POLISHED_DRIPSTONE_BLOCK);
         modWallBlock(MOSSY_COBBLED_DEEPSLATE_WALL, MOSSY_COBBLED_DEEPSLATE);
