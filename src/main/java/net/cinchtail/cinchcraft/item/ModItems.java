@@ -30,8 +30,8 @@ public class ModItems {
     public static final RegistryObject<Item> SUNFLOWER_HEAD = ITEMS.register("sunflower_head",
             () -> new Item(new Item.Properties().craftRemainder(Items.YELLOW_DYE)));
     public static final RegistryObject<Item> NETHERITE_HORSE_ARMOR = ITEMS.register("netherite_horse_armor",
-            () -> new AnimalArmorItem(ModArmorMaterials.RUBY, AnimalArmorItem.BodyType.EQUESTRIAN,
-                    false, (new Item.Properties()).stacksTo(1)));
+            () -> new AnimalArmorItem(ArmorMaterials.NETHERITE, AnimalArmorItem.BodyType.EQUESTRIAN,
+                    false, (new Item.Properties()).fireResistant().stacksTo(1)));
     public static final RegistryObject<Item> RUBY_HORSE_ARMOR = ITEMS.register("ruby_horse_armor",
             () -> new AnimalArmorItem(ModArmorMaterials.RUBY, AnimalArmorItem.BodyType.EQUESTRIAN,
                     false, (new Item.Properties()).stacksTo(1)));
