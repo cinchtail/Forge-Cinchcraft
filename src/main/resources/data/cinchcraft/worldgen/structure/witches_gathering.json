@@ -6,6 +6,7 @@
   "biomes": "#cinchcraft:has_structure/witches_gathering",
   "step": "surface_structures",
   "terrain_adaptation": "beard_thin",
+  "liquid_settings": "ignore_waterlogging",
   "start_height": {
     "absolute": 0
   },
