@@ -10,6 +10,15 @@
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:villager_ruins/villager_ruin_3_treasure",
+        "processors": "cinchcraft:polished_andesite_to_stone_bricks",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
     }
   ]
 }

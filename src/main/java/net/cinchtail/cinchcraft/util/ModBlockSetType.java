@@ -19,6 +19,12 @@ public record ModBlockSetType(String name, boolean canOpenByHand, boolean canOpe
             BlockSetType.PressurePlateSensitivity.EVERYTHING, SoundType.WOOD, SoundEvents.WOODEN_DOOR_CLOSE, SoundEvents.WOODEN_DOOR_OPEN, SoundEvents.WOODEN_TRAPDOOR_CLOSE,
             SoundEvents.WOODEN_TRAPDOOR_OPEN, SoundEvents.WOODEN_PRESSURE_PLATE_CLICK_OFF, SoundEvents.WOODEN_PRESSURE_PLATE_CLICK_ON, SoundEvents.WOODEN_BUTTON_CLICK_OFF,
             SoundEvents.WOODEN_BUTTON_CLICK_ON));
+
+    public static final BlockSetType POLISHED_DEEPSLATE = register(new BlockSetType("polished_deepslate", true, true, false,
+            BlockSetType.PressurePlateSensitivity.MOBS, SoundType.POLISHED_DEEPSLATE, SoundEvents.IRON_DOOR_CLOSE, SoundEvents.IRON_DOOR_OPEN, SoundEvents.IRON_TRAPDOOR_CLOSE,
+            SoundEvents.IRON_TRAPDOOR_OPEN, SoundEvents.STONE_PRESSURE_PLATE_CLICK_OFF, SoundEvents.STONE_PRESSURE_PLATE_CLICK_ON, SoundEvents.STONE_BUTTON_CLICK_OFF,
+            SoundEvents.STONE_BUTTON_CLICK_ON));
+
     public static BlockSetType register(BlockSetType blockSetType) {
         VALUES.add(blockSetType);
         return blockSetType;

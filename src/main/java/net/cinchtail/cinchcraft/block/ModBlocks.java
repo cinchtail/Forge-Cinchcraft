@@ -242,8 +242,8 @@ public class ModBlocks {
             () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(DEEPSLATE)
                     .strength(3.0F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
     public static final RegistryObject<Block> POLISHED_DEEPSLATE_PRESSURE_PLATE = registerBlock("polished_deepslate_pressure_plate",
-            () -> new PressurePlateBlock(BlockSetType.STONE, BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_BLACKSTONE_PRESSURE_PLATE).sound(SoundType.POLISHED_DEEPSLATE)));
-    public static final RegistryObject<Block> POLISHED_DEEPSLATE_BUTTON = registerBlock("polished_deepslate_button", ModBlocks::modStoneButton);
+            () -> new PressurePlateBlock(ModBlockSetType.POLISHED_DEEPSLATE, BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_BLACKSTONE_PRESSURE_PLATE).sound(SoundType.POLISHED_DEEPSLATE)));
+    public static final RegistryObject<Block> POLISHED_DEEPSLATE_BUTTON = registerBlock("polished_deepslate_button", ModBlocks::modPolishedDeepslateButton);
     public static final RegistryObject<Block> IRON_BUTTON = registerBlock("iron_button", ModBlocks::modIronButton);
     public static final RegistryObject<Block> GOLD_BUTTON = registerBlock("gold_button", ModBlocks::modGoldButton);
     public static final RegistryObject<Block> ICICLE = registerBlock("icicle",
@@ -559,7 +559,7 @@ public class ModBlocks {
             () -> new ModFlammableFenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB).sound(SoundType.WOOD).strength(1.5f),
                     true, 20, 5));
     public static final RegistryObject<Block> AZALEA_FENCE_GATE = BLOCKS.register("azalea_fence_gate",
-            () -> new ModFlammableFenceGateBlock(ModWoodTypes.AZALEA, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+            () -> new ModFlammableFenceGateBlock(ModWoodTypes.AZALEA, BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.WOOD)));
     public static final RegistryObject<Block> AZALEA_DOOR = BLOCKS.register("azalea_door",
             () -> new DoorBlock(ModBlockSetType.AZALEA, BlockBehaviour.Properties.ofFullCopy(OAK_DOOR)));
     public static final RegistryObject<Block> AZALEA_TRAPDOOR = BLOCKS.register("azalea_trapdoor",
@@ -599,8 +599,8 @@ public class ModBlocks {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
-    private static Block modStoneButton() {
-        return new ButtonBlock(BlockSetType.STONE, 20, BlockBehaviour.Properties.of().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY));
+    private static Block modPolishedDeepslateButton() {
+        return new ButtonBlock(ModBlockSetType.POLISHED_DEEPSLATE, 20, BlockBehaviour.Properties.of().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY));
     }
     private static Block modIronButton() {
         return new ButtonBlock(BlockSetType.IRON, 10, BlockBehaviour.Properties.of().noCollission().strength(0.8F).pushReaction(PushReaction.DESTROY));
