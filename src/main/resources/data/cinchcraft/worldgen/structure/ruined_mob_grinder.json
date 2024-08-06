@@ -5,11 +5,10 @@
   "max_distance_from_center": 80,
   "biomes": "#cinchcraft:has_structure/ruined_mob_grinder_normal",
   "step": "underground_structures",
-  "terrain_adaptation": "encapsulate",
+  "terrainAdjustment": "rigid",
   "start_height": {
     "absolute": 15
   },
   "use_expansion_hack": false,
   "spawn_overrides": {}
 }
-

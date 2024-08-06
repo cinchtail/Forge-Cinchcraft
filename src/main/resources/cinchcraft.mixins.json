@@ -1,14 +1,15 @@
 {
   "required": true,
   "package": "net.cinchtail.cinchcraft.mixins",
-  "compatibilityLevel": "JAVA_17",
-  "refmap": "cinchcraft.refmap.json",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "${mod_id}.refmap.json",
   "mixins": [
     "MixinBeehivePoi",
     "MixinWalkNodeEvaluator"
   ],
   "client": [
   ],
+  "server": [],
   "minVersion": "0.8",
   "injectors": {
     "defaultRequire": 1
