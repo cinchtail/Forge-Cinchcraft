@@ -463,6 +463,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_cut_copper_slab", has(Items.CUT_COPPER_SLAB))
                 .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "copper_ingot_from_cut_copper_slab"));
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.COPPER_INGOT, 2)
+                .requires(Items.CHISELED_COPPER)
+                .group("copper_ingot")
+                .unlockedBy("has_chiseled_copper", has(Items.CHISELED_COPPER))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "copper_ingot_from_chiseled_copper"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.COPPER_INGOT, 2)
+                .requires(Items.COPPER_GRATE)
+                .group("copper_ingot")
+                .unlockedBy("has_copper_grate", has(Items.COPPER_GRATE))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "copper_ingot_from_copper_grate"));
+
         //Chainmail recipes
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CHAINMAIL.get(), 4)
                 .pattern("AA")
