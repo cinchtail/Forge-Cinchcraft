@@ -46,6 +46,15 @@
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "cinchcraft:ruined_tower/base_floors/ruined_tower_base_4",
+        "processors": "cinchcraft:make_stone_bricks_cracked",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
     }
   ]
 }
