@@ -3,18 +3,45 @@
   "fallback": "minecraft:empty",
   "elements": [
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
-        "location": "cinchcraft:ruined_tower/ruined_tower_1",
+        "location": "cinchcraft:ruined_tower/ruined_bases/ruined_tower_1",
         "processors": "cinchcraft:make_stone_bricks_cracked",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
     },
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
-        "location": "cinchcraft:ruined_tower/ruined_tower_2",
+        "location": "cinchcraft:ruined_tower/ruined_bases/ruined_tower_2",
+        "processors": "cinchcraft:make_stone_bricks_cracked",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "cinchcraft:ruined_tower/base_floors/ruined_tower_base_1",
+        "processors": "cinchcraft:make_stone_bricks_cracked",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "cinchcraft:ruined_tower/base_floors/ruined_tower_base_2",
+        "processors": "cinchcraft:make_stone_bricks_cracked",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "cinchcraft:ruined_tower/base_floors/ruined_tower_base_3",
         "processors": "cinchcraft:make_stone_bricks_cracked",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"

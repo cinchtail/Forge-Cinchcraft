@@ -84,4 +84,4 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
                 Items.BOOK));
     }
 }
-//give Dev minecraft:chest{BlockEntityTag:{LootTable:"minecraft:chests/shipwreck_map"}}
+//give Dev chest[container_loot={loot_table:"cinchcraft:chests/ruined_tower_creeper_room"}]
