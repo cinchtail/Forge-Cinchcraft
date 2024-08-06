@@ -1,0 +1,15 @@
+{
+  "name": "cinchcraft:ruined_tower_connect_5/side_pool_5",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:ruined_tower/connectors/ruined_tower_connection_point_3",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

@@ -2065,4 +2065,3 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 has(raw)).save(consumer, ResourceLocation.fromNamespaceAndPath("cinchcraft", ingot.asItem().toString()+"_from_blasting"));
     }
 }
-

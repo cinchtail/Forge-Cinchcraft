@@ -1,0 +1,15 @@
+{
+  "name": "cinchcraft:ruined_tower_connect_8/side_pool_8",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:ruined_tower/fifth_floors/ruined_tower_fifth_floor_1",
+        "processors": "cinchcraft:make_stone_bricks_cracked",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
