@@ -28,6 +28,15 @@
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:ruined_tower/second_floors/ruined_tower_second_floor_4",
+        "processors": "cinchcraft:make_stone_bricks_cracked",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
     }
   ]
 }

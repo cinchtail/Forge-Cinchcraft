@@ -38,5 +38,3 @@
   ],
   "random_sequence": "minecraft:pots/archaeology/abandoned_archaeology_site"
 }
-///give Dev minecraft:decorated_pot{BlockEntityTag:{LootTable:"cinchcraft:pots/archaeology/abandoned_archaeology_site_basic",sherds:["minecraft:howl_pottery_sherd","minecraft:brick","minecraft:brick","minecraft:brick"]}}
-

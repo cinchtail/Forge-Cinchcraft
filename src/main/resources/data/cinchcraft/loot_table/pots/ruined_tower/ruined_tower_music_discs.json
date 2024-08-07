@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:pots",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "cinchcraft:dog_music_disc"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "cinchcraft:kyoto_music_disc"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:music_disc_13"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:music_disc_cat"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:music_disc_otherside"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "minecraft:pots/ruined_tower/ruined_tower_music_discs"
+}
