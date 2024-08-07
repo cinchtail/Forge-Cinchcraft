@@ -5,7 +5,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "cinchcraft:abandoned_houses/abandoned_houses/abandoned_house_extensions/abandoned_wheat_farm",
+        "location": "cinchcraft:abandoned_houses/normal_abandoned_houses/abandoned_house_extensions/abandoned_wheat_farm",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -14,7 +14,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "cinchcraft:abandoned_houses/abandoned_houses/abandoned_house_extensions/abandoned_potato_farm",
+        "location": "cinchcraft:abandoned_houses/normal_abandoned_houses/abandoned_house_extensions/abandoned_potato_farm",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
