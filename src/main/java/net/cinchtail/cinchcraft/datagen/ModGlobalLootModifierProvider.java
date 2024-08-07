@@ -85,4 +85,5 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
     }
 }
 //give Dev chest[container_loot={loot_table:"cinchcraft:chests/ruined_tower_creeper_room"}]
-//give Dev minecraft:decorated_pot{BlockEntityTag:{LootTable:"cinchcraft:pots/archaeology/abandoned_archaeology_site_basic",sherds:["minecraft:howl_pottery_sherd","minecraft:brick","minecraft:brick","minecraft:brick"]}}
+//give @s decorated_pot[block_entity_data={id:"minecraft:decorated_pot",LootTable:"cinchcraft:pots/ruined_tower/ruined_tower_library"}]
+//give @s decorated_pot[block_entity_data={id:"minecraft:decorated_pot",LootTable:"cinchcraft:pots/ruined_tower/ruined_tower_library"},pot_decorations=["minecraft:howl_pottery_sherd","minecraft:brick","minecraft:brick","minecraft:brick"]]
