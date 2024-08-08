@@ -23,9 +23,9 @@ public class ModArmorMaterials {
                 attribute.put(ArmorItem.Type.BOOTS, 2);
                 attribute.put(ArmorItem.Type.LEGGINGS, 5);
                 attribute.put(ArmorItem.Type.CHESTPLATE, 7);
-                attribute.put(ArmorItem.Type.HELMET, 3);
-                attribute.put(ArmorItem.Type.BODY, 9);
-            }), 12, 0.0F, 0.0F, ModItems.RUBY::get);
+                attribute.put(ArmorItem.Type.HELMET, 2);
+                attribute.put(ArmorItem.Type.BODY, 8);
+            }), 12, 1.0F, 0.0F, ModItems.RUBY::get);
 
     private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> typeProtection,
                                                   int enchantability, float toughness, float knockbackResistance,
