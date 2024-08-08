@@ -27,7 +27,7 @@ public class CarvedMelonBlock extends HorizontalDirectionalBlock {
         return this.defaultBlockState().setValue(FACING, p_51377_.getHorizontalDirection().getOpposite());
     }
 
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> p_51385_) {
-        p_51385_.add(FACING);
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockBlockStateBuilder) {
+        blockBlockStateBuilder.add(FACING);
     }
 }
