@@ -6,7 +6,7 @@
       "weight": 1,
       "element": {
         "location": "cinchcraft:witches_gathering/witches_gathering_bottom",
-        "processors": "minecraft:empty",
+        "processors": "cinchcraft:witches_gathering_processor",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
