@@ -475,6 +475,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_copper_grate", has(Items.COPPER_GRATE))
                 .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "copper_ingot_from_copper_grate"));
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.COPPER_INGOT, 2)
+                .requires(Items.COPPER_DOOR)
+                .group("copper_ingot")
+                .unlockedBy("has_copper_door", has(Items.COPPER_DOOR))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "copper_ingot_from_copper_door"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.COPPER_INGOT, 2)
+                .requires(Items.COPPER_TRAPDOOR)
+                .group("copper_ingot")
+                .unlockedBy("has_copper_trapdoor", has(Items.COPPER_TRAPDOOR))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "copper_ingot_from_copper_trapdoor"));
+
         //Chainmail recipes
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CHAINMAIL.get(), 4)
                 .pattern("AA")
@@ -646,6 +658,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_polished_blackstone_bricks", has(Blocks.POLISHED_BLACKSTONE_BRICKS))
                 .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "chiseled_deepslate_from_polished_blackstone_bricks"));
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.IRON_INGOT, 2)
+                .requires(Items.IRON_DOOR)
+                .group("iron_ingot")
+                .unlockedBy("has_iron_door", has(Items.IRON_DOOR))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "iron_ingot_from_iron_door"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.IRON_INGOT, 2)
+                .requires(Items.IRON_TRAPDOOR)
+                .group("iron_ingot")
+                .unlockedBy("has_iron_trapdoor", has(Items.IRON_TRAPDOOR))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "iron_ingot_from_iron_trapdoor"));
 
         //Blocks
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_END_STONE_BRICKS.get())
