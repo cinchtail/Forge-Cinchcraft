@@ -1121,13 +1121,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_end_stone", has(Blocks.END_STONE))
                 .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "end_stone_wall_from_stonecutting"));
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Items.IRON_INGOT), RecipeCategory.BUILDING_BLOCKS, ModBlocks.IRON_BUTTON.get())
-                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
-                .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "iron_button_wall_from_stonecutting"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.IRON_BUTTON.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', Items.IRON_NUGGET)
+                .unlockedBy("has_iron_nugget", has(Items.IRON_NUGGET))
+                .save(consumer);
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Items.GOLD_INGOT), RecipeCategory.BUILDING_BLOCKS, ModBlocks.GOLD_BUTTON.get())
-                .unlockedBy("has_gold_ingot", has(Items.GOLD_INGOT))
-                .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "gold_button_wall_from_stonecutting"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GOLD_BUTTON.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', Items.GOLD_NUGGET)
+                .unlockedBy("has_gold_nugget", has(Items.GOLD_NUGGET))
+                .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MOSSY_COBBLED_DEEPSLATE.get())
                 .group("mossy_cobbled_bricks")

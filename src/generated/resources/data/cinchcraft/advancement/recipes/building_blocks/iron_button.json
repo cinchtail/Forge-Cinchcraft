@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_iron_ingot": {
+    "has_iron_nugget": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:iron_ingot"
+            "items": "minecraft:iron_nugget"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "cinchcraft:iron_button_wall_from_stonecutting"
+        "recipe": "cinchcraft:iron_button"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_iron_ingot"
+      "has_iron_nugget"
     ]
   ],
   "rewards": {
     "recipes": [
-      "cinchcraft:iron_button_wall_from_stonecutting"
+      "cinchcraft:iron_button"
     ]
   }
 }
