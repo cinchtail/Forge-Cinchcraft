@@ -128,11 +128,11 @@ public class ModVillagerTrades {
                     new ItemStack(Items.EMERALD, 1), 6, 4, 0.02f
             ));
         //Level 5 Trades
-            trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
+            trades.get(5).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(Items.EMERALD, 2),
                     new ItemStack(Items.HONEYCOMB_BLOCK, 1), 4, 4, 0.02f
             ));
-            trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
+            trades.get(5).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(Items.EMERALD, 2),
                     new ItemStack(Items.HONEY_BLOCK, 1), 4, 4, 0.02f
             ));
