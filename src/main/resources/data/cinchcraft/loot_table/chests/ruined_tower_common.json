@@ -127,5 +127,6 @@
         "min": 3.0
       }
     }
-  ]
+  ],
+  "random_sequence": "cinchcraft:chests/ruined_tower_common"
 }

@@ -124,5 +124,6 @@
         "min": 3.0
       }
     }
-  ]
+  ],
+  "random_sequence": "cinchcraft:chests/bee_keeper_house"
 }

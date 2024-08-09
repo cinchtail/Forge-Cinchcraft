@@ -153,5 +153,6 @@
         "min": 8.0
       }
     }
-  ]
+  ],
+  "random_sequence": "cinchcraft:chests/witches_gathering"
 }

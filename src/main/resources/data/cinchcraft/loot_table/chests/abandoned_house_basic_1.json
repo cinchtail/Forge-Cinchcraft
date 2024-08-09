@@ -122,9 +122,10 @@
       ],
       "rolls": {
         "type": "minecraft:uniform",
-        "max": 3.0,
-        "min": 2.0
+        "max": 8.0,
+        "min": 5.0
       }
     }
-  ]
+  ],
+  "random_sequence": "cinchcraft:chests/abandoned_house_basic_1"
 }

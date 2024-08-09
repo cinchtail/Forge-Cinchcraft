@@ -103,5 +103,6 @@
         "min": 3.0
       }
     }
-  ]
+  ],
+  "random_sequence": "cinchcraft:chests/archaeology_site_barrel"
 }

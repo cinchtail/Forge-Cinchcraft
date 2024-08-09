@@ -41,6 +41,38 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
+                "max": 4.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "cinchcraft:alyssum",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 4.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "cinchcraft:lupine",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
                 "max": 5.0,
                 "min": 2.0
               },
@@ -201,5 +233,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "minecraft:chests/pillager_outpost"
+  "random_sequence": "cinchcraft:chests/pillager_camp"
 }

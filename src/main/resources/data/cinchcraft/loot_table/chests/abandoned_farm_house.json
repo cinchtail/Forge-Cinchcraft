@@ -123,5 +123,6 @@
         "min": 3.0
       }
     }
-  ]
+  ],
+  "random_sequence": "cinchcraft:chests/abandoned_farm_house"
 }
