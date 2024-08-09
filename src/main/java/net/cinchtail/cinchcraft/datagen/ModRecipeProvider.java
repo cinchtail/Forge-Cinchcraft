@@ -172,6 +172,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_end_stone_bricks", has(Blocks.END_STONE_BRICKS))
                 .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "cracked_end_stone_bricks"));
 
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(Blocks.TUFF_BRICKS), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_TUFF_BRICKS.get(), 0.1F, 200)
+                .unlockedBy("has_tuff_bricks", has(Blocks.TUFF_BRICKS))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "cracked_tuff_bricks"));
+
         //Azalea Wood Recipes
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModItems.AZALEA_PLANKS.get(), 4)
                 .group("azalea_planks")
@@ -2084,6 +2088,40 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.DEEPSLATE), RecipeCategory.BUILDING_BLOCKS, ModBlocks.DEEPSLATE_WALL.get())
                 .unlockedBy("has_deepslate", has(Blocks.DEEPSLATE))
                 .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "deepslate_wall_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_TUFF_BRICK_STAIRS.get(),4)
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .define('A', ModBlocks.CRACKED_TUFF_BRICKS.get())
+                .unlockedBy("has_cracked_tuff_bricks", has(ModBlocks.CRACKED_TUFF_BRICKS.get()))
+                .save(consumer);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_TUFF_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_TUFF_BRICK_STAIRS.get())
+                .unlockedBy("has_cracked_tuff_bricks", has(ModBlocks.CRACKED_TUFF_BRICKS.get()))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "cracked_tuff_brick_stairs_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_TUFF_BRICK_SLAB.get(),6)
+                .pattern("AAA")
+                .define('A', ModBlocks.CRACKED_TUFF_BRICKS.get())
+                .unlockedBy("has_cracked_tuff_bricks", has(ModBlocks.CRACKED_TUFF_BRICKS.get()))
+                .save(consumer);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_TUFF_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_TUFF_BRICK_SLAB.get(),2)
+                .unlockedBy("has_cracked_tuff_bricks", has(ModBlocks.CRACKED_TUFF_BRICKS.get()))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "cracked_tuff_brick_slab_from_stonecutting"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_TUFF_BRICK_WALL.get(),6)
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModBlocks.CRACKED_TUFF_BRICKS.get())
+                .unlockedBy("has_cracked_tuff_bricks", has(ModBlocks.CRACKED_TUFF_BRICKS.get()))
+                .save(consumer);
+
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.CRACKED_TUFF_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_TUFF_BRICK_WALL.get())
+                .unlockedBy("has_cracked_tuff_bricks", has(ModBlocks.CRACKED_TUFF_BRICKS.get()))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "cracked_tuff_brick_wall_from_stonecutting"));
+
     }
     protected static void ingot(RecipeOutput consumer, ItemLike ingot, ItemLike ore, ItemLike deepslateOre, ItemLike raw, int smeltingTime, float experience) {
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ore, deepslateOre, raw), RecipeCategory.MISC, ingot, experience,

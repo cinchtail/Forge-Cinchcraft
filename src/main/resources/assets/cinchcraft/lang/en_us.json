@@ -317,5 +317,9 @@
   "block.cinchcraft.mossy_quartz_brick_stairs": "Mossy Quartz Brick Stairs",
   "block.cinchcraft.deepslate_wall": "Deepslate Wall",
   "block.cinchcraft.deepslate_slab": "Deepslate Slab",
-  "block.cinchcraft.deepslate_stairs": "Deepslate Stairs"
+  "block.cinchcraft.deepslate_stairs": "Deepslate Stairs",
+  "block.cinchcraft.cracked_tuff_bricks": "Cracked Tuff Bricks",
+  "block.cinchcraft.cracked_tuff_brick_wall": "Cracked Tuff Brick Wall",
+  "block.cinchcraft.cracked_tuff_brick_slab": "Cracked Tuff Brick Slab",
+  "block.cinchcraft.cracked_tuff_brick_stairs": "Cracked Tuff Brick Stairs"
 }
