@@ -88,6 +88,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         modSlabBlock(MOSSY_QUARTZ_BRICK_SLAB, MOSSY_QUARTZ_BRICKS);
         modSlabBlock(CRACKED_TUFF_BRICK_SLAB, CRACKED_TUFF_BRICKS);
 
+
         vanillaStairsBlock(SMOOTH_STONE_STAIRS, Blocks.SMOOTH_STONE);
         vanillaStairsBlock(CALCITE_STAIRS, Blocks.CALCITE);
         vanillaStairsBlock(DRIPSTONE_STAIRS, Blocks.DRIPSTONE_BLOCK);
@@ -169,6 +170,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         modFenceBlock(AZALEA_FENCE, AZALEA_PLANKS);
         modFenceBlock(CRACKED_RED_NETHER_BRICK_FENCE, CRACKED_RED_NETHER_BRICKS);
 
+
         fenceGateBlock((FenceGateBlock) AZALEA_FENCE_GATE.get(), blockLoc(AZALEA_PLANKS));
 
 
@@ -208,7 +210,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     }
     private void blockItem(RegistryObject<Block> blockRegistryObject) {
-        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("cinchcraft:block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get())).getPath()));
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("cinchcraft:block/"
+                + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get())).getPath()));
     }
     public void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
@@ -250,7 +253,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get())).getPath() + appendix));
     }
     public void doorBlock(RegistryObject<Block> block, boolean cutout) {
-        simpleBlockItem(block.get(), models().singleTexture((block.get()).asItem().toString(), ResourceLocation.withDefaultNamespace("item/generated"), "layer0",
+        simpleBlockItem(block.get(), models().singleTexture((block.get()).asItem().toString(),
+                ResourceLocation.withDefaultNamespace("item/generated"), "layer0",
                 ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "item/" + block.getId().getPath())));
         if (cutout) {
             doorBlockWithRenderType((DoorBlock) block.get(), blockTexture(block, "_bottom"), blockTexture(block, "_top"), "cutout");
