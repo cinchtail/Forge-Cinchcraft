@@ -1,0 +1,34 @@
+{
+
+  "name": "cinchcraft:badlands_killing_chamber_connect/badlands_spider_killing_chamber_connect",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:ruined_mob_grinders/badlands/killing_chambers/sections/ruined_mob_grinder_badlands_spider_killing_chamber_section_1",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:ruined_mob_grinders/badlands/killing_chambers/sections/ruined_mob_grinder_badlands_spider_killing_chamber_section_2",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:ruined_mob_grinders/badlands/killing_chambers/sections/ruined_mob_grinder_badlands_spider_killing_chamber_section_3",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

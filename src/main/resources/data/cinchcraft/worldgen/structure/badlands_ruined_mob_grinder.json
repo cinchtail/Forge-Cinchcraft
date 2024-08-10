@@ -1,14 +1,14 @@
 {
   "type": "minecraft:jigsaw",
-  "start_pool": "cinchcraft:ruined_mob_grinder/bases",
+  "start_pool": "cinchcraft:badlands_ruined_mob_grinder/bases",
   "size": 7,
   "max_distance_from_center": 80,
-  "biomes": "#cinchcraft:has_structure/ruined_mob_grinder_normal",
+  "biomes": "#cinchcraft:has_structure/ruined_mob_grinder_badlands",
   "step": "underground_structures",
   "liquid_settings": "ignore_waterlogging",
   "terrainAdjustment": "rigid",
   "start_height": {
-    "absolute": 15
+    "absolute": 25
   },
   "use_expansion_hack": false,
   "spawn_overrides": {}

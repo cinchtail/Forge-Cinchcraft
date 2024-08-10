@@ -6,7 +6,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "cinchcraft:ruined_mob_grinders/killing_chambers/sections/ruined_mob_grinder_spider_killing_chamber_section_1",
+        "location": "cinchcraft:ruined_mob_grinders/normal/killing_chambers/sections/ruined_mob_grinder_spider_killing_chamber_section_1",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -15,7 +15,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "cinchcraft:ruined_mob_grinders/killing_chambers/sections/ruined_mob_grinder_spider_killing_chamber_section_2",
+        "location": "cinchcraft:ruined_mob_grinders/normal/killing_chambers/sections/ruined_mob_grinder_spider_killing_chamber_section_2",
         "processors": "cinchcraft:make_stone_bricks_cracked",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -24,7 +24,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "cinchcraft:ruined_mob_grinders/killing_chambers/sections/ruined_mob_grinder_spider_killing_chamber_section_3",
+        "location": "cinchcraft:ruined_mob_grinders/normal/killing_chambers/sections/ruined_mob_grinder_spider_killing_chamber_section_3",
         "processors": "cinchcraft:make_stone_bricks_cracked",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"

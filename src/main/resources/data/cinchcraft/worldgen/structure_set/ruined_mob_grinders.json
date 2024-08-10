@@ -3,6 +3,10 @@
     {
       "structure": "cinchcraft:ruined_mob_grinder",
       "weight": 1
+    },
+    {
+      "structure": "cinchcraft:badlands_ruined_mob_grinder",
+      "weight": 1
     }
   ],
   "placement": {

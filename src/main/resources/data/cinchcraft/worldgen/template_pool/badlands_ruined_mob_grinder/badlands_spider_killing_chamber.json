@@ -1,5 +1,5 @@
 {
-  "name": "cinchcraft:killing_chamber/spider_killing_chamber",
+  "name": "cinchcraft:badlands_killing_chamber/badlands_spider_killing_chamber",
   "fallback": "minecraft:empty",
   "elements": [
     {
@@ -14,7 +14,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "cinchcraft:ruined_mob_grinders/normal/killing_chambers/sections/ruined_mob_grinder_spider_killing_chamber_section_base",
+        "location": "cinchcraft:ruined_mob_grinders/normal/killing_chambers/sections/ruined_mob_grinder_badlands_spider_killing_chamber_section_base",
         "processors": "minecraft:empty",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"

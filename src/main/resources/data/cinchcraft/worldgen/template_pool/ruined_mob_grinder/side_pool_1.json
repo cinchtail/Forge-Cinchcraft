@@ -4,55 +4,55 @@
   "fallback": "minecraft:empty",
   "elements": [
     {
-      "weight": 1,
+      "weight": 3,
       "element": {
-        "location": "cinchcraft:ruined_mob_grinders/killing_chambers/ruined_mob_grinder_killing_chamber_1",
+        "location": "cinchcraft:ruined_mob_grinders/normal/killing_chambers/ruined_mob_grinder_killing_chamber_1",
         "processors": "cinchcraft:make_stone_bricks_cracked",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
     },
     {
-      "weight": 1,
+      "weight": 3,
       "element": {
-        "location": "cinchcraft:ruined_mob_grinders/killing_chambers/ruined_mob_grinder_killing_chamber_2",
+        "location": "cinchcraft:ruined_mob_grinders/normal/killing_chambers/ruined_mob_grinder_killing_chamber_2",
         "processors": "cinchcraft:make_stone_bricks_cracked",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
     },
     {
-      "weight": 1,
+      "weight": 3,
       "element": {
-        "location": "cinchcraft:ruined_mob_grinders/killing_chambers/ruined_mob_grinder_killing_chamber_3",
+        "location": "cinchcraft:ruined_mob_grinders/normal/killing_chambers/ruined_mob_grinder_killing_chamber_3",
         "processors": "cinchcraft:make_stone_bricks_cracked",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
     },
     {
-      "weight": 1,
+      "weight": 5,
       "element": {
-        "location": "cinchcraft:ruined_mob_grinders/killing_chambers/ruined_mob_grinder_killing_chamber_4",
+        "location": "cinchcraft:ruined_mob_grinders/normal/killing_chambers/ruined_mob_grinder_killing_chamber_4",
         "processors": "cinchcraft:make_stone_bricks_cracked",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
     },
     {
-      "weight": 1,
+      "weight": 3,
       "element": {
-        "location": "cinchcraft:ruined_mob_grinders/killing_chambers/ruined_mob_grinder_killing_chamber_5",
+        "location": "cinchcraft:ruined_mob_grinders/normal/killing_chambers/ruined_mob_grinder_killing_chamber_5",
         "processors": "cinchcraft:make_stone_bricks_cracked",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
     },
     {
-      "weight": 1,
+      "weight": 3,
       "element": {
-        "location": "cinchcraft:ruined_mob_grinders/killing_chambers/ruined_mob_grinder_killing_chamber_6",
-        "processors": "cinchcraft:make_cobblestone_mossy_and_stone_bricks_cracked",
+        "location": "cinchcraft:ruined_mob_grinders/normal/killing_chambers/ruined_mob_grinder_killing_chamber_6",
+        "processors": "cinchcraft:make_stone_bricks_cracked",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
