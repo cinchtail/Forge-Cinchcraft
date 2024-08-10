@@ -5,9 +5,9 @@ import net.cinchtail.cinchcraft.block.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
-import net.minecraftforge.client.model.generators.BlockModelBuilder;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
+import net.minecraftforge.client.model.generators.ModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -172,10 +172,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fenceGateBlock((FenceGateBlock) AZALEA_FENCE_GATE.get(), blockLoc(AZALEA_PLANKS));
 
 
-        buttonBlock((ButtonBlock) POLISHED_DEEPSLATE_BUTTON.get(), blockTexture(Blocks.POLISHED_DEEPSLATE));
-        buttonBlock((ButtonBlock) IRON_BUTTON.get(), blockTexture(Blocks.IRON_BLOCK));
-        buttonBlock((ButtonBlock) GOLD_BUTTON.get(), blockTexture(Blocks.GOLD_BLOCK));
-        buttonBlock((ButtonBlock) AZALEA_BUTTON.get(), blockLoc(AZALEA_PLANKS));
+        vanillaButtonBlock(POLISHED_DEEPSLATE_BUTTON, Blocks.POLISHED_DEEPSLATE);
+        vanillaButtonBlock(IRON_BUTTON, Blocks.IRON_BLOCK);
+        vanillaButtonBlock(GOLD_BUTTON, Blocks.GOLD_BLOCK);
+        modButtonBlock(AZALEA_BUTTON, AZALEA_PLANKS);
 
 
         pressurePlateBlock((PressurePlateBlock) POLISHED_DEEPSLATE_PRESSURE_PLATE.get(), blockTexture(Blocks.POLISHED_DEEPSLATE));
@@ -193,9 +193,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         signBlock(((StandingSignBlock) AZALEA_SIGN.get()), ((WallSignBlock) ModBlocks.AZALEA_WALL_SIGN.get()),
                 blockTexture(ModBlocks.AZALEA_PLANKS.get()));
 
-        doorBlockWithRenderType((DoorBlock) AZALEA_DOOR.get(), modLoc("block/azalea_door_bottom"), modLoc("block/azalea_door_top"), "cutout");
-        trapdoorBlockWithRenderType((TrapDoorBlock) AZALEA_TRAPDOOR.get(), modLoc("block/azalea_trapdoor"), true, "cutout");
-
 
         blockItem(AZALEA_PRESSURE_PLATE);
         blockItem(POLISHED_DEEPSLATE_PRESSURE_PLATE);
@@ -205,6 +202,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(STRIPPED_AZALEA_WOOD);
         blockItem(AZALEA_FENCE_GATE);
         trapDoorBlockItem(AZALEA_TRAPDOOR, "_bottom");
+        doorBlock(AZALEA_DOOR, true);
+        trapdoorBlock(AZALEA_TRAPDOOR, true);
 
 
     }
@@ -230,6 +229,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(block.get(), models().withExistingParent((block.get()).asItem().toString(), blockTexture(block)));
         slabBlock((SlabBlock)block.get(), texture.getId(), blockTexture(texture));
     }
+    public void vanillaWallBlock(RegistryObject<Block> block, Block texture) {
+        simpleBlockItem(block.get(), models().wallInventory(key(block).toString(), blockTexture(texture)));
+        wallBlock((WallBlock) block.get(), blockTexture(texture));
+    }
+    public void modWallBlock(RegistryObject<Block> block, RegistryObject<Block> texture) {
+        simpleBlockItem(block.get(), models().wallInventory(key(block).toString(), blockTexture(texture)));
+        wallBlock((WallBlock) block.get(), blockTexture(texture));
+    }
     public void vanillaFenceBlock(RegistryObject<Block> block, Block texture) {
         simpleBlockItem(block.get(), models().fenceInventory(key(block).toString(), blockTexture(texture)));
         fenceBlock((FenceBlock) block.get(), blockTexture(texture));
@@ -239,15 +246,33 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fenceBlock((FenceBlock) block.get(), blockTexture(texture));
     }
     private void trapDoorBlockItem(RegistryObject<Block> blockRegistryObject, String appendix) {
-        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("cinchcraft:block/" + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get())).getPath() + appendix));
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("cinchcraft:block/"
+                + Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get())).getPath() + appendix));
     }
-    public void vanillaWallBlock(RegistryObject<Block> block, Block texture) {
-        simpleBlockItem(block.get(), models().wallInventory(key(block).toString(), blockTexture(texture)));
-        wallBlock((WallBlock) block.get(), blockTexture(texture));
+    public void doorBlock(RegistryObject<Block> block, boolean cutout) {
+        simpleBlockItem(block.get(), models().singleTexture((block.get()).asItem().toString(), ResourceLocation.withDefaultNamespace("item/generated"), "layer0",
+                ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "item/" + block.getId().getPath())));
+        if (cutout) {
+            doorBlockWithRenderType((DoorBlock) block.get(), blockTexture(block, "_bottom"), blockTexture(block, "_top"), "cutout");
+        } else {
+            doorBlock((DoorBlock) block.get(), blockTexture(block, "_bottom"), blockTexture(block, "_top"));
+        }
     }
-    public void modWallBlock(RegistryObject<Block> block, RegistryObject<Block> texture) {
-        simpleBlockItem(block.get(), models().wallInventory(key(block).toString(), blockTexture(texture)));
-        wallBlock((WallBlock) block.get(), blockTexture(texture));
+    public void trapdoorBlock(RegistryObject<Block> block, boolean cutout) {
+        if (cutout) {
+            trapdoorBlockWithRenderType((TrapDoorBlock) block.get(), blockTexture(block), true, "cutout");
+        } else {
+            trapdoorBlock((TrapDoorBlock) block.get(), blockTexture(block), true);
+        }
+        simpleBlockItem(block.get(), models().withExistingParent((block.get()).asItem().toString(), blockTexture(block, "_bottom")));
+    }
+    public void modButtonBlock(RegistryObject<Block> block, RegistryObject<Block> texture) {
+        simpleBlockItem(block.get(), models().buttonInventory((block.getId().getPath()+"_inventory"), blockTexture(texture)));
+        buttonBlock((ButtonBlock) block.get(), blockTexture(texture));
+    }
+    public void vanillaButtonBlock(RegistryObject<Block> block, Block texture) {
+        simpleBlockItem(block.get(), models().buttonInventory((block.getId().getPath()+"_inventory"), blockTexture(texture)));
+        buttonBlock((ButtonBlock) block.get(), blockTexture(texture));
     }
     public String getName(Supplier<? extends Block> block) {
         return block.get().builtInRegistryHolder().key().location().getPath();
@@ -259,10 +284,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         ResourceLocation name = key(block);
         return ResourceLocation.fromNamespaceAndPath(name.getNamespace(), ModItemModelProvider.BLOCK_FOLDER + "/" + name.getPath());
     }
+    public ResourceLocation blockTexture(RegistryObject<Block> block, String string) {
+        ResourceLocation name = key(block);
+        return ResourceLocation.fromNamespaceAndPath(name.getNamespace(), ModelProvider.BLOCK_FOLDER + "/" + name.getPath() + string);
+    }
     private ResourceLocation key(RegistryObject<Block> block) {
         return ForgeRegistries.BLOCKS.getKey(block.get());
-    }
-    private ResourceLocation key(Block block) {
-        return ForgeRegistries.BLOCKS.getKey(block);
     }
 }

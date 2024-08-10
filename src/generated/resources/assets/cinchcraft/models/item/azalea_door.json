@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "cinchcraft:item/azalea_door"
-  }
+  "parent": "cinchcraft:block/azalea_door"
 }
