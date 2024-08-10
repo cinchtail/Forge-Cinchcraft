@@ -192,8 +192,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 ResourceLocation.fromNamespaceAndPath(Cinchcraft.MOD_ID, "block/stripped_azalea_log"));
 
 
-        signBlock(((StandingSignBlock) AZALEA_SIGN.get()), ((WallSignBlock) ModBlocks.AZALEA_WALL_SIGN.get()),
-                blockTexture(ModBlocks.AZALEA_PLANKS.get()));
+        signBlock(AZALEA_SIGN, AZALEA_WALL_SIGN, AZALEA_PLANKS);
+        hangingSignBlock(AZALEA_HANGING_SIGN, AZALEA_WALL_HANGING_SIGN, AZALEA_PLANKS);
 
 
         blockItem(AZALEA_PRESSURE_PLATE);
@@ -278,6 +278,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(block.get(), models().buttonInventory((block.getId().getPath()+"_inventory"), blockTexture(texture)));
         buttonBlock((ButtonBlock) block.get(), blockTexture(texture));
     }
+    public void signBlock(RegistryObject<Block> standing, RegistryObject<Block> wall, RegistryObject<Block> texture) {
+        signBlock((StandingSignBlock) standing.get(), (WallSignBlock) wall.get(), blockTexture(texture));
+    }
+    public void hangingSignBlock(RegistryObject<Block> hangingSignBlock, RegistryObject<Block> wallHangingSignBlock, RegistryObject<Block> texture) {
+        ModelFile sign = models().sign(name(hangingSignBlock), blockTexture(texture));
+        simpleBlock(hangingSignBlock.get(), sign);
+        simpleBlock(wallHangingSignBlock.get(), sign);
+    }
     public String getName(Supplier<? extends Block> block) {
         return block.get().builtInRegistryHolder().key().location().getPath();
     }
@@ -294,5 +302,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
     private ResourceLocation key(RegistryObject<Block> block) {
         return ForgeRegistries.BLOCKS.getKey(block.get());
+    }
+    private String name(RegistryObject<Block> block) {
+        return key(block).getPath();
     }
 }
