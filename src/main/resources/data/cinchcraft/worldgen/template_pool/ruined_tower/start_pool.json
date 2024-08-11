@@ -3,7 +3,7 @@
   "fallback": "minecraft:empty",
   "elements": [
     {
-      "weight": 2,
+      "weight": 20,
       "element": {
         "location": "cinchcraft:ruined_tower/ruined_bases/ruined_tower_1",
         "processors": "cinchcraft:make_stone_bricks_cracked",
@@ -12,7 +12,7 @@
       }
     },
     {
-      "weight": 2,
+      "weight": 20,
       "element": {
         "location": "cinchcraft:ruined_tower/ruined_bases/ruined_tower_2",
         "processors": "cinchcraft:make_stone_bricks_cracked",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "weight": 2,
+      "weight": 20,
       "element": {
         "location": "cinchcraft:ruined_tower/ruined_bases/ruined_tower_3",
         "processors": "cinchcraft:make_stone_bricks_cracked",

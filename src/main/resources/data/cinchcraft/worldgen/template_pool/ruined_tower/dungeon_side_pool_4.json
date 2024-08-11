@@ -1,0 +1,15 @@
+{
+  "name": "cinchcraft:ruined_tower_dungeon_connect_4/dungeon_side_pool_4",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:ruined_tower/dungeon/rooms/dungeon_room_1",
+        "processors": "cinchcraft:make_cobblestone_and_stone_bricks_mossy_and_cracked",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

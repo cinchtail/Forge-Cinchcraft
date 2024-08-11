@@ -1,0 +1,15 @@
+{
+  "name": "cinchcraft:ruined_tower_dungeon_connect_2/dungeon_side_pool_2",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:ruined_tower/dungeon/entrances/dungeon_entrance_1",
+        "processors": "cinchcraft:make_stone_bricks_cracked",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
