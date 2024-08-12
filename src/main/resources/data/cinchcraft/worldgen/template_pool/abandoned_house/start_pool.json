@@ -6,7 +6,7 @@
       "weight": 3,
       "element": {
         "location": "cinchcraft:abandoned_houses/normal_abandoned_houses/abandoned_brick_house",
-        "processors": "minecraft:empty",
+        "processors": "cinchcraft:make_cobblestone_mossy",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }

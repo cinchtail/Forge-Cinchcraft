@@ -60,7 +60,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "minecraft:archaeology/abandoned_archaeology_site"
+  "random_sequence": "cinchcraft:archaeology/abandoned_archeology_site"
 }
-
-///give Dev minecraft:suspicious_gravel{BlockEntityTag:{LootTable:"cinchcraft:archaeology/abandoned_archeology_site"}}
