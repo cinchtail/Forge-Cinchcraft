@@ -1,12 +1,21 @@
 {
-  "name": "cinchcraft:abandoned_birch_forest_house_1/side_pool_1",
+  "name": "cinchcraft:abandoned_birch_forest_house_1_connect_1/side_pool_1",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
-        "location": "cinchcraft:abandoned_houses/abandoned_birch_forest_houses/connectors/abandoned_birch_forest_house_1_connection_point",
-        "processors": "minecraft:empty",
+        "location": "cinchcraft:abandoned_houses/abandoned_birch_forest_houses/basements/abandoned_birch_forest_house_1_basement_1",
+        "processors": "cinchcraft:make_cobblestone_mossy",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:abandoned_houses/abandoned_birch_forest_houses/basements/abandoned_birch_forest_house_1_basement_2",
+        "processors": "cinchcraft:make_cobblestone_mossy",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }

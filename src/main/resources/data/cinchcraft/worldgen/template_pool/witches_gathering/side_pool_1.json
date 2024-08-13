@@ -1,12 +1,12 @@
 {
-  "name": "cinchcraft:witches_gathering_connect_1/side_pool_1",
+  "name": "cinchcraft:witches_gathering_connect/side_pool_1",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
-        "location": "cinchcraft:witches_gathering/witches_gathering_connection_point",
-        "processors": "minecraft:empty",
+        "location": "cinchcraft:witches_gathering/witches_gathering_bottom",
+        "processors": "cinchcraft:witches_gathering_processor",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
