@@ -5,7 +5,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "cinchcraft:ruined_tower/dungeon/corridors/dungeon_corridor_1",
+        "location": "cinchcraft:ruined_tower/dungeon/corridors/dungeon_entrance_corridor_1",
         "processors": "cinchcraft:ruined_tower_dungeon_processor",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -14,7 +14,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "cinchcraft:ruined_tower/dungeon/corridors/dungeon_corridor_2",
+        "location": "cinchcraft:ruined_tower/dungeon/corridors/dungeon_entrance_corridor_2",
         "processors": "cinchcraft:ruined_tower_dungeon_processor",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
