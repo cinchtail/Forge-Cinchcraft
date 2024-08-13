@@ -28,15 +28,6 @@
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "location": "cinchcraft:ruined_tower/dungeon/corridors/dungeon_corridor_9",
-        "processors": "cinchcraft:ruined_tower_dungeon_processor",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
-      }
     }
   ]
 }
