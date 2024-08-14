@@ -1,0 +1,15 @@
+{
+  "name": "cinchcraft:ruined_tower_dungeon_connect_8/dungeon_side_pool_8",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:ruined_tower/dungeon/corridors/dungeon_corridor_8",
+        "processors": "cinchcraft:ruined_tower_dungeon_processor",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
