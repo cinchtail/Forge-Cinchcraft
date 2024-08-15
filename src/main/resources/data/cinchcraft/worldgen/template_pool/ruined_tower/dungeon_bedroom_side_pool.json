@@ -1,0 +1,78 @@
+{
+  "name": "cinchcraft:ruined_tower_dungeon_bedroom/dungeon_bedroom_side_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:ruined_tower/dungeon/bedrooms/dungeon_bedroom_1",
+        "processors": "cinchcraft:ruined_tower_dungeon_processor",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:ruined_tower/dungeon/bedrooms/dungeon_bedroom_2",
+        "processors": "cinchcraft:ruined_tower_dungeon_processor",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:ruined_tower/dungeon/bedrooms/dungeon_bedroom_3",
+        "processors": "cinchcraft:ruined_tower_dungeon_processor",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:ruined_tower/dungeon/bedrooms/dungeon_bedroom_4",
+        "processors": "cinchcraft:ruined_tower_dungeon_processor",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:ruined_tower/dungeon/bedrooms/dungeon_bedroom_5",
+        "processors": "cinchcraft:ruined_tower_dungeon_processor",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:ruined_tower/dungeon/bedrooms/dungeon_bedroom_6",
+        "processors": "cinchcraft:ruined_tower_dungeon_processor",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:ruined_tower/dungeon/bedrooms/dungeon_bedroom_7",
+        "processors": "cinchcraft:ruined_tower_dungeon_processor",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:ruined_tower/dungeon/bedrooms/dungeon_bedroom_8",
+        "processors": "cinchcraft:ruined_tower_dungeon_processor",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
