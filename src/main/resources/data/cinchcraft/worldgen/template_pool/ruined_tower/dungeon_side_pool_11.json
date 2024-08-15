@@ -1,11 +1,11 @@
 {
-  "name": "cinchcraft:ruined_tower_dungeon_connect_9/dungeon_side_pool_9",
+  "name": "cinchcraft:ruined_tower_dungeon_connect_11/dungeon_side_pool_11",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
-        "location": "cinchcraft:ruined_tower/dungeon/rooms/dungeon_pit_room",
+        "location": "cinchcraft:ruined_tower/dungeon/rooms/dungeon_living_quarters",
         "processors": "cinchcraft:ruined_tower_dungeon_processor",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
