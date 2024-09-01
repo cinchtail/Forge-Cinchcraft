@@ -130,8 +130,32 @@
       ]
     },
     {
-      "processor_type": "minecraft:protected_blocks",
-      "value": "#minecraft:features_cannot_replace"
+      "delegate": {
+        "processor_type": "minecraft:rule",
+        "rules": [
+          {
+            "block_entity_modifier": {
+              "type": "minecraft:append_loot",
+              "loot_table": "cinchcraft:archaeology/ruined_tower_dungeon"
+            },
+            "input_predicate": {
+              "predicate_type": "minecraft:tag_match",
+              "tag": "cinchcraft:ruined_tower_dungeon_archeology_replaceable"
+            },
+            "location_predicate": {
+              "predicate_type": "minecraft:always_true"
+            },
+            "output_state": {
+              "Name": "minecraft:suspicious_gravel",
+              "Properties": {
+                "dusted": "0"
+              }
+            }
+          }
+        ]
+      },
+      "limit": 10,
+      "processor_type": "minecraft:capped"
     }
   ]
 }
