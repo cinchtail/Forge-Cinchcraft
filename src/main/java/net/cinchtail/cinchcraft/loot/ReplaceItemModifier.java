@@ -15,13 +15,13 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Supplier;
 
-public class CommonAddItemToSuspiciouseBlockModifier extends LootModifier {
-    public static final Supplier<MapCodec<CommonAddItemToSuspiciouseBlockModifier>> CODEC = Suppliers.memoize(()
+public class ReplaceItemModifier extends LootModifier {
+    public static final Supplier<MapCodec<ReplaceItemModifier>> CODEC = Suppliers.memoize(()
             -> RecordCodecBuilder.mapCodec(inst -> codecStart(inst).and(ForgeRegistries.ITEMS.getCodec()
-            .fieldOf("item").forGetter(m -> m.item)).apply(inst, CommonAddItemToSuspiciouseBlockModifier::new)));
+            .fieldOf("item").forGetter(m -> m.item)).apply(inst, ReplaceItemModifier::new)));
     private final Item item;
 
-    public CommonAddItemToSuspiciouseBlockModifier(LootItemCondition[] conditionsIn, Item item) {
+    public ReplaceItemModifier(LootItemCondition[] conditionsIn, Item item) {
         super(conditionsIn);
         this.item = item;
     }
@@ -29,15 +29,13 @@ public class CommonAddItemToSuspiciouseBlockModifier extends LootModifier {
     @Override
     protected @NotNull ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
         for (LootItemCondition condition : this.conditions) {
-            if (!condition.test(context)) {
+            if(!condition.test(context)) {
                 return generatedLoot;
             }
         }
+        generatedLoot.clear();
+        generatedLoot.add(new ItemStack(this.item));
 
-        if (context.getRandom().nextFloat() < 0.17f) {
-            generatedLoot.clear();
-            generatedLoot.add(new ItemStack(this.item));
-        }
         return generatedLoot;
     }
 

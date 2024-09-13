@@ -1,5 +1,5 @@
 {
-  "type": "cinchcraft:remove_item",
+  "type": "cinchcraft:replace_item",
   "conditions": [
     {
       "block": "minecraft:sunflower",

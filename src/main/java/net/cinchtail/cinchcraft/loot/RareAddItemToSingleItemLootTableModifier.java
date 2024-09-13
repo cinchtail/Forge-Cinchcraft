@@ -15,13 +15,13 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Supplier;
 
-public class RareAddItemToSuspiciousBlockModifier extends LootModifier {
-    public static final Supplier<MapCodec<RareAddItemToSuspiciousBlockModifier>> CODEC = Suppliers.memoize(()
+public class RareAddItemToSingleItemLootTableModifier extends LootModifier {
+    public static final Supplier<MapCodec<RareAddItemToSingleItemLootTableModifier>> CODEC = Suppliers.memoize(()
             -> RecordCodecBuilder.mapCodec(inst -> codecStart(inst).and(ForgeRegistries.ITEMS.getCodec()
-            .fieldOf("item").forGetter(m -> m.item)).apply(inst, RareAddItemToSuspiciousBlockModifier::new)));
+            .fieldOf("item").forGetter(m -> m.item)).apply(inst, RareAddItemToSingleItemLootTableModifier::new)));
     private final Item item;
 
-    public RareAddItemToSuspiciousBlockModifier(LootItemCondition[] conditionsIn, Item item) {
+    public RareAddItemToSingleItemLootTableModifier(LootItemCondition[] conditionsIn, Item item) {
         super(conditionsIn);
         this.item = item;
     }

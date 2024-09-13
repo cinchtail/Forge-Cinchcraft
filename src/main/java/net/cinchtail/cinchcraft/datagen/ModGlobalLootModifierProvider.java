@@ -2,10 +2,7 @@ package net.cinchtail.cinchcraft.datagen;
 
 import net.cinchtail.cinchcraft.Cinchcraft;
 import net.cinchtail.cinchcraft.item.ModItems;
-import net.cinchtail.cinchcraft.loot.AddItemModifier;
-import net.cinchtail.cinchcraft.loot.CommonAddItemToSuspiciouseBlockModifier;
-import net.cinchtail.cinchcraft.loot.RareAddItemToSuspiciousBlockModifier;
-import net.cinchtail.cinchcraft.loot.RemoveItemModifier;
+import net.cinchtail.cinchcraft.loot.*;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -34,18 +31,18 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
         add("pitcher_plant_root_from_pitcher_crop", new AddItemModifier(new LootItemCondition[] {
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.PITCHER_CROP)
                         .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(PitcherCropBlock.AGE, 4)
-                                .hasProperty(PitcherCropBlock.HALF, DoubleBlockHalf.UPPER)).build(),
-                }, ModItems.PITCHER_PLANT_ROOT.get()));
+                                .hasProperty(PitcherCropBlock.HALF, DoubleBlockHalf.UPPER)).build(), },
+                ModItems.PITCHER_PLANT_ROOT.get()));
 
-        add("stalk_from_sunflower", new RemoveItemModifier(new LootItemCondition[] {
+        add("stalk_from_sunflower", new ReplaceItemModifier(new LootItemCondition[] {
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.SUNFLOWER)
-                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoublePlantBlock.HALF, DoubleBlockHalf.LOWER)).build(),
-        }, ModItems.SUNFLOWER_HEAD.get()));
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoublePlantBlock.HALF, DoubleBlockHalf.LOWER)).build(),},
+                ModItems.SUNFLOWER_HEAD.get()));
 
         add("sunflower_head_from_sunflower", new AddItemModifier(new LootItemCondition[] {
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.SUNFLOWER)
-                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoublePlantBlock.HALF, DoubleBlockHalf.LOWER)).build(),
-        }, ModItems.STALK.get()));
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoublePlantBlock.HALF, DoubleBlockHalf.LOWER)).build(),},
+                ModItems.STALK.get()));
 
         add("ruby_horse_armor_from_jungle_temple", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(ResourceLocation.parse("chests/jungle_temple")).build(),
@@ -67,19 +64,19 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
                 new LootTableIdCondition.Builder(ResourceLocation.parse("chests/shipwreck_map")).build(),
                 LootItemRandomChanceCondition.randomChance(0.25f).build() }, Items.SPYGLASS));
 
-        add("carrot_seeds_from_shipwreck", new AddItemModifier(new LootItemCondition[] {
+        add("carrot_seeds_from_shipwreck", new AddMultipleItemsModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(ResourceLocation.parse("chests/shipwreck_supply")).build(),
-                LootItemRandomChanceCondition.randomChance(0.75f).build() }, ModItems.CARROT_SEEDS.get()));
+                LootItemRandomChanceCondition.randomChance(0.75f).build() }, ModItems.CARROT_SEEDS.get(),6));
 
-        add("nautilus_shell_from_cold_ocean_ruin", new RareAddItemToSuspiciousBlockModifier(new LootItemCondition[] {
+        add("nautilus_shell_from_cold_ocean_ruin", new RareAddItemToSingleItemLootTableModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(ResourceLocation.parse("archaeology/ocean_ruin_cold")).build() },
                 Items.NAUTILUS_SHELL));
 
-        add("nautilus_shell_from_cold_ocean_ruin", new RareAddItemToSuspiciousBlockModifier(new LootItemCondition[] {
+        add("nautilus_shell_from_cold_ocean_ruin", new RareAddItemToSingleItemLootTableModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(ResourceLocation.parse("archaeology/ocean_ruin_warm")).build() },
                 Items.NAUTILUS_SHELL));
 
-        add("book_from_trail_ruin_common", new CommonAddItemToSuspiciouseBlockModifier(new LootItemCondition[] {
+        add("book_from_trail_ruin_common", new CommonAddItemToSingleItemLootTableModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(ResourceLocation.parse("archaeology/trail_ruins_common")).build() },
                 Items.BOOK));
     }
