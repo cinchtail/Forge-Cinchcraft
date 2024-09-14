@@ -46,23 +46,23 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
 
         add("ruby_horse_armor_from_jungle_temple", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(ResourceLocation.parse("chests/jungle_temple")).build(),
-                LootItemRandomChanceCondition.randomChance(0.4f).build() }, ModItems.RUBY_HORSE_ARMOR.get()));
+                LootItemRandomChanceCondition.randomChance(0.45f).build() }, ModItems.RUBY_HORSE_ARMOR.get()));
 
         add("ruby_horse_armor_from_village_armorer", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(ResourceLocation.parse("chests/village/village_weaponsmith")).build(),
-                LootItemRandomChanceCondition.randomChance(0.35f).build() }, ModItems.RUBY_HORSE_ARMOR.get()));
+                LootItemRandomChanceCondition.randomChance(0.45f).build() }, ModItems.RUBY_HORSE_ARMOR.get()));
 
         add("ruby_horse_armor_from_dungeon", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(ResourceLocation.parse("chests/simple_dungeon")).build(),
-                LootItemRandomChanceCondition.randomChance(0.35f).build() }, ModItems.RUBY_HORSE_ARMOR.get()));
+                LootItemRandomChanceCondition.randomChance(0.45f).build() }, ModItems.RUBY_HORSE_ARMOR.get()));
 
         add("ruby_horse_armor_from_desert_pyramid", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(ResourceLocation.parse("chests/desert_pyramid")).build(),
-                LootItemRandomChanceCondition.randomChance(0.35f).build() }, ModItems.RUBY_HORSE_ARMOR.get()));
+                LootItemRandomChanceCondition.randomChance(0.45f).build() }, ModItems.RUBY_HORSE_ARMOR.get()));
 
         add("spyglass_from_shipwreck", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(ResourceLocation.parse("chests/shipwreck_map")).build(),
-                LootItemRandomChanceCondition.randomChance(0.25f).build() }, Items.SPYGLASS));
+                LootItemRandomChanceCondition.randomChance(0.35f).build() }, Items.SPYGLASS));
 
         add("carrot_seeds_from_shipwreck", new AddMultipleItemsModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(ResourceLocation.parse("chests/shipwreck_supply")).build(),
