@@ -10,6 +10,15 @@
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:ruined_tower/dungeon/entrances/dungeon_entrance_2",
+        "processors": "cinchcraft:make_stone_bricks_cracked",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
     }
   ]
 }
