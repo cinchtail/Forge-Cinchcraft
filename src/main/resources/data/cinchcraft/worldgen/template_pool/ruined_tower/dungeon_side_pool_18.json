@@ -1,11 +1,11 @@
 {
-  "name": "cinchcraft:ruined_tower_dungeon_connect_15/dungeon_side_pool_15",
+  "name": "cinchcraft:ruined_tower_dungeon_connect_18/dungeon_side_pool_18",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
-        "location": "cinchcraft:ruined_tower/dungeon/corridors/dungeon_staircase_3",
+        "location": "cinchcraft:ruined_tower/dungeon/corridors/dungeon_staircase_4",
         "processors": "cinchcraft:ruined_tower_dungeon_processor",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
