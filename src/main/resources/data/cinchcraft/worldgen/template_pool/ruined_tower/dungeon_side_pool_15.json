@@ -5,7 +5,16 @@
     {
       "weight": 1,
       "element": {
-        "location": "cinchcraft:ruined_tower/dungeon/corridors/dungeon_staircase_3",
+        "location": "cinchcraft:ruined_tower/dungeon/rooms/dungeon_archeology_room",
+        "processors": "cinchcraft:ruined_tower_dungeon_processor",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:ruined_tower/dungeon/rooms/dungeon_lush_cave_room",
         "processors": "cinchcraft:ruined_tower_dungeon_processor",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"

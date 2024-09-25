@@ -5,25 +5,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "cinchcraft:ruined_tower/dungeon/rooms/dungeon_farm_room_1",
-        "processors": "cinchcraft:ruined_tower_dungeon_processor",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "location": "cinchcraft:ruined_tower/dungeon/rooms/dungeon_farm_room_2",
-        "processors": "cinchcraft:ruined_tower_dungeon_processor",
-        "projection": "rigid",
-        "element_type": "minecraft:single_pool_element"
-      }
-    },
-    {
-      "weight": 1,
-      "element": {
-        "location": "cinchcraft:ruined_tower/dungeon/rooms/dungeon_farm_room_3",
+        "location": "cinchcraft:ruined_tower/dungeon/corridors/dungeon_staircase_4",
         "processors": "cinchcraft:ruined_tower_dungeon_processor",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
