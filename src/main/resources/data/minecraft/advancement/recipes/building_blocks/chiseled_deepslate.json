@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "minecraft:has_deepslate_brick_slab"
+            "items": "minecraft:deepslate_brick_slab"
           }
         ]
       },

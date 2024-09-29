@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "cinchcraft:bubble_flower"
+      "id": "cinchcraft:bubble_flower"
     },
     "title": "Funky Flower",
     "description": "Levitate Using a Bubble Flower!",
