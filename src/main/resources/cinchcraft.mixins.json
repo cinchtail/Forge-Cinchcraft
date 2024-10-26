@@ -2,7 +2,7 @@
   "required": true,
   "package": "net.cinchtail.cinchcraft.mixins",
   "compatibilityLevel": "JAVA_21",
-  "refmap": "${mod_id}.refmap.json",
+  "refmap": "cinchcraft.refmap.json",
   "mixins": [
     "MixinBeehivePoi",
     "MixinWalkNodeEvaluator"
