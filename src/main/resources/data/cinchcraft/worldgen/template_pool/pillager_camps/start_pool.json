@@ -1,0 +1,24 @@
+{
+  "name": "cinchcraft:pillager_camps/start_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:pillager_camps/pillager_camp_1",
+        "processors": "cinchcraft:make_cobblestone_mossy",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "cinchcraft:pillager_camps/pillager_camp_2",
+        "processors": "cinchcraft:make_cobblestone_mossy",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "type": "minecraft:jigsaw",
-  "start_pool": "cinchcraft:pillager_camp/start_pool",
+  "start_pool": "cinchcraft:pillager_camps/start_pool",
   "size": 2,
   "max_distance_from_center": 80,
   "biomes": "#cinchcraft:has_structure/pillager_camp",
