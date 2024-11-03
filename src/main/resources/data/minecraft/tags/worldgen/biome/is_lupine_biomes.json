@@ -1,6 +1,8 @@
 {
   "values": [
     "minecraft:birch_forest",
-    "minecraft:old_growth_spruce_taiga"
+    "minecraft:old_growth_spruce_taiga",
+    "cinchcraft:birch_grove",
+    "cinchcraft:rocky_meadow"
   ]
 }

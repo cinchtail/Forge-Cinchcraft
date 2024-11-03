@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_rocky_meadow_trees_biomes",
+  "features": "cinchcraft:rocky_meadow_trees_placed",
+  "step": "local_modifications"
+}

@@ -9,6 +9,8 @@
     "minecraft:old_growth_spruce_taiga",
     "minecraft:flower_forest",
     "minecraft:lush_caves",
-    "minecraft:dripstone_caves"
+    "minecraft:dripstone_caves",
+    "cinchcraft:birch_grove",
+    "cinchcraft:rocky_meadow"
   ]
 }
