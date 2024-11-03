@@ -3,9 +3,18 @@
   "fallback": "minecraft:empty",
   "elements": [
     {
-      "weight": 1,
+      "weight": 4,
       "element": {
-        "location": "cinchcraft:pillager_camps/pillager_camp_extension",
+        "location": "cinchcraft:pillager_camps/pillager_camp_extension_1",
+        "processors": "cinchcraft:make_cobblestone_mossy",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "cinchcraft:pillager_camps/pillager_camp_extension_2",
         "processors": "cinchcraft:make_cobblestone_mossy",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
