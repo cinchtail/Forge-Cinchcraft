@@ -42,7 +42,6 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> STRAWBERRY_KEY = registerKey("strawberry");
     public static final ResourceKey<ConfiguredFeature<?, ?>> REEDS_KEY = registerKey("reeds");
     public static final ResourceKey<ConfiguredFeature<?, ?>> CATTAILS_KEY = registerKey("cattails");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> LUPINE_LARGE_KEY = registerKey("lupine_large");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
 
@@ -91,9 +90,6 @@ public class ModConfiguredFeatures {
         register(context, BUBBLE_FLOWER_KEY, Feature.FLOWER,
                 new RandomPatchConfiguration(20, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.BUBBLE_FLOWER.get())))));
-        register(context, LUPINE_LARGE_KEY, Feature.FLOWER,
-                new RandomPatchConfiguration(4000, 10, 5, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
-                        new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.LUPINE.get())))));
         register(context, STAR_CACTUS_KEY, Feature.FLOWER,
                 new RandomPatchConfiguration(10, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                         new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.STAR_CACTUS.get())))));

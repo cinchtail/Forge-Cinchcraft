@@ -36,7 +36,6 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> STRAWBERRY_PLACED_KEY = createKey("strawberry_placed");
     public static final ResourceKey<PlacedFeature> REEDS_PLACED_KEY = createKey("reeds_placed");
     public static final ResourceKey<PlacedFeature> CATTAILS_PLACED_KEY = createKey("cattails_placed");
-    public static final ResourceKey<PlacedFeature> LUPINE_LARGE_PLACED_KEY = createKey("lupine_large_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -93,9 +92,6 @@ public class ModPlacedFeatures {
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         register(context, BUBBLE_FLOWER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BUBBLE_FLOWER_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(42),
-                        InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
-        register(context, LUPINE_LARGE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LUPINE_LARGE_KEY),
-                List.of(RarityFilter.onAverageOnceEvery(2),
                         InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         register(context, PINEAPPLE_PLANT_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.PINEAPPLE_PLANT_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(20),

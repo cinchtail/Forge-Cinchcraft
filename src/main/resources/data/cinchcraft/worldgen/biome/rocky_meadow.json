@@ -84,7 +84,8 @@
       "minecraft:glow_lichen",
       "minecraft:patch_grass_taiga",
       "minecraft:flower_meadow",
-      "minecraft:trees_meadow"
+      "minecraft:trees_meadow",
+      "cinchcraft:rocky_meadow_trees_placed"
     ],
     [
       "minecraft:freeze_top_layer"

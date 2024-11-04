@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#minecraft:is_birch_grove_trees_biomes",
-  "features": "cinchcraft:birch_grove_trees_placed",
-  "step": "local_modifications"
-}

@@ -4,7 +4,7 @@
     "default": "minecraft:spruce_checked",
     "features": [
       {
-        "chance": 0.3,
+        "chance": 0.1,
         "feature": "minecraft:pine_checked"
       }
     ]
