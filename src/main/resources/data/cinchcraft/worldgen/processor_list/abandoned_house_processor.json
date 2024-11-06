@@ -1,0 +1,87 @@
+{
+  "processors": [
+    {
+      "processor_type": "minecraft:rule",
+      "rules": [
+        {
+          "input_predicate": {
+            "block": "minecraft:cobblestone",
+            "probability": 0.3,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "minecraft:mossy_cobblestone"
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "minecraft:white_stained_glass_pane",
+            "probability": 0.3,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "minecraft:air"
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "minecraft:stone_bricks",
+            "probability": 0.2,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "minecraft:mossy_stone_bricks"
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "minecraft:stone_bricks",
+            "probability": 0.2,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "minecraft:cracked_stone_bricks"
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "minecraft:bricks",
+            "probability": 0.3,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "cinchcraft:mossy_bricks"
+          }
+        },
+        {
+          "input_predicate": {
+            "block": "minecraft:bricks",
+            "probability": 0.3,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "output_state": {
+            "Name": "cinchcraft:cracked_bricks"
+          }
+        }
+      ]
+    }
+  ]
+}
