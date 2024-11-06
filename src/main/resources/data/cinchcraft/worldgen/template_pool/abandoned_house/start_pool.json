@@ -32,6 +32,15 @@
     {
       "weight": 7,
       "element": {
+        "location": "cinchcraft:abandoned_houses/normal_abandoned_houses/abandoned_house_basic_2",
+        "processors": "cinchcraft:make_cobblestone_mossy",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 7,
+      "element": {
         "location": "cinchcraft:abandoned_houses/normal_abandoned_houses/abandoned_house_small_ruined",
         "processors": "cinchcraft:make_cobblestone_mossy",
         "projection": "rigid",
