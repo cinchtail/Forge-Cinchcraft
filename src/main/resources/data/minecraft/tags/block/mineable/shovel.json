@@ -2,5 +2,7 @@
 {
   "replace": false,
   "values": [
+    "cinchcraft:permafrost",
+    "cinchcraft:suspicious_permafrost"
   ]
 }
