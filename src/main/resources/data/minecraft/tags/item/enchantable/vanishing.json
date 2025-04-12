@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:saddle",
+    "minecraft:leather_horse_armor",
+    "minecraft:iron_horse_armor",
+    "cinchcraft:ruby_horse_armor",
+    "minecraft:golden_horse_armor",
+    "minecraft:diamond_horse_armor",
+    "cinchcraft:netherite_horse_armor",
+    "minecraft:recovery_compass",
+    "minecraft:wolf_armor",
+    "minecraft:clock",
+    "minecraft:spyglass",
+    "minecraft:bucket",
+    "minecraft:water_bucket",
+    "minecraft:lava_bucket",
+    "minecraft:milk_bucket",
+    "minecraft:powder_snow_bucket",
+    "minecraft:cod_bucket",
+    "minecraft:salmon_bucket",
+    "minecraft:tropical_fish_bucket",
+    "minecraft:pufferfish_bucket",
+    "minecraft:tadpole_bucket",
+    "minecraft:goat_horn"
+  ]
+}

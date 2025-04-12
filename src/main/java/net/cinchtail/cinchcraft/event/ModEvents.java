@@ -6,6 +6,8 @@ import net.cinchtail.cinchcraft.item.ModItems;
 import net.cinchtail.cinchcraft.potion.ModPotions;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -14,10 +16,14 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionBrewing;
 import net.minecraft.world.item.alchemy.Potions;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.ItemEnchantments;
 import net.minecraft.world.item.trading.ItemCost;
 import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.entity.npc.VillagerTrades;
@@ -28,7 +34,9 @@ import net.minecraft.world.level.block.CarvedPumpkinBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.ToolActions;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.brewing.BrewingRecipeRegisterEvent;
 import net.minecraftforge.event.entity.player.BonemealEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
@@ -37,6 +45,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 import java.util.List;
+import java.util.Map;
 
 
 public class ModEvents {
@@ -44,7 +53,7 @@ public class ModEvents {
     public static class ForgeEvents {
 
         @SubscribeEvent
-        public static InteractionResult ShearMelonBlock(PlayerInteractEvent.RightClickBlock event) {
+        public static InteractionResult shearMelonBlock(PlayerInteractEvent.RightClickBlock event) {
             Level level = event.getLevel();
             Player player = event.getEntity();
             BlockPos pos = event.getPos();
@@ -71,17 +80,45 @@ public class ModEvents {
             return InteractionResult.sidedSuccess(level.isClientSide);
         }
         @SubscribeEvent
-        public static void CancelCarrotPlanting(PlayerInteractEvent.RightClickBlock event) {
+        public static void cancelCarrotPlanting(PlayerInteractEvent.RightClickBlock event) {
             ItemStack stack = event.getItemStack();
             if (stack.is(Items.CARROT)) {
                 event.setCanceled(true);
             }
         }
         @SubscribeEvent
-        public static void CancelSunflowerBoneMealing(BonemealEvent event) {
+        public static void cancelSunflowerBoneMealing(BonemealEvent event) {
             Block targetBlock = event.getLevel().getBlockState(event.getPos()).getBlock();
             if (targetBlock == Blocks.SUNFLOWER) {
                 event.setCanceled(true);
+            }
+        }
+        @SubscribeEvent
+        public static void onBucketUse(PlayerInteractEvent.RightClickItem event) {
+            Player player = event.getEntity();
+            ItemStack heldItem = event.getItemStack();
+
+            if (!(heldItem.getItem() instanceof BucketItem)) return;
+
+            if (!heldItem.isEmpty() && heldItem.isEnchanted()) {
+                ItemEnchantments enchantments = heldItem.getEnchantments();
+
+                MinecraftForge.EVENT_BUS.register(new Object() {
+                    @SubscribeEvent
+                    public void onTick(TickEvent.PlayerTickEvent tickEvent) {
+                        if (tickEvent.player == player && tickEvent.phase == TickEvent.Phase.END) {
+                            ItemStack newItem = player.getMainHandItem();
+
+                            if (!ItemStack.isSameItemSameComponents(heldItem, newItem) &&
+                                    newItem.getItem() instanceof BucketItem) {
+
+                                EnchantmentHelper.setEnchantments(newItem, enchantments);
+                            }
+
+                            MinecraftForge.EVENT_BUS.unregister(this);
+                        }
+                    }
+                });
             }
         }
         @SubscribeEvent
