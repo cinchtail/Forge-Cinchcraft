@@ -34,6 +34,12 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
                                 .hasProperty(PitcherCropBlock.HALF, DoubleBlockHalf.UPPER)).build(), },
                 ModItems.PITCHER_PLANT_ROOT.get()));
 
+        add("pitcher_pod_from_pitcher_crop", new AddItemModifier(new LootItemCondition[] {
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.PITCHER_CROP)
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(PitcherCropBlock.AGE, 4)
+                                .hasProperty(PitcherCropBlock.HALF, DoubleBlockHalf.UPPER)).build(),
+                LootItemRandomChanceCondition.randomChance(0.05f).build() }, Items.PITCHER_POD));
+
         add("stalk_from_sunflower", new ReplaceItemModifier(new LootItemCondition[] {
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.SUNFLOWER)
                         .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoublePlantBlock.HALF, DoubleBlockHalf.LOWER)).build(),},
@@ -79,8 +85,39 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
         add("book_from_trail_ruin_common", new CommonAddItemToSingleItemLootTableModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(ResourceLocation.parse("archaeology/trail_ruins_common")).build() },
                 Items.BOOK));
+
+        add("iron_ingot_from_trail_ruin_common", new CommonAddItemToSingleItemLootTableModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.parse("archaeology/trail_ruins_common")).build() },
+                Items.IRON_INGOT));
+
+        add("copper_ingot_from_trail_ruin_common", new CommonAddItemToSingleItemLootTableModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.parse("archaeology/trail_ruins_common")).build() },
+                Items.COPPER_INGOT));
+
+        add("diamond_from_trail_ruin_rare", new RareAddItemToSingleItemLootTableModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.parse("archaeology/trail_ruins_rare")).build() },
+                Items.DIAMOND));
+
+        add("gold_ingot_from_trail_ruin_rare", new CommonAddItemToSingleItemLootTableModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.parse("archaeology/trail_ruins_rare")).build() },
+                Items.GOLD_INGOT));
+
+        add("gold_ingot_from_desert_well", new CommonAddItemToSingleItemLootTableModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.parse("archaeology/desert_well")).build() },
+                Items.GOLD_NUGGET));
+
+        add("diamond_from_desert_well", new CommonAddItemToSingleItemLootTableModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.parse("archaeology/desert_well")).build() },
+                Items.DIAMOND));
+
+        add("book_from_desert_well", new CommonAddItemToSingleItemLootTableModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.parse("archaeology/desert_well")).build() },
+                Items.BOOK));
     }
 }
+
+
+
 //give Dev chest[container_loot={loot_table:"cinchcraft:chests/ruined_tower_tier_1_loot"}]
 //give @s minecraft:suspicious_gravel[block_entity_data={id:"minecraft:suspicious_sand",LootTable:"cinchcraft:archaeology/abandoned_archeology_site"}]
 //give @s decorated_pot[block_entity_data={id:"minecraft:decorated_pot",LootTable:"cinchcraft:pots/ruined_tower/ruined_tower_library"}]

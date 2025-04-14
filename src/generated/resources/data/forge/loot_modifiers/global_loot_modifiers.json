@@ -2,15 +2,23 @@
   "entries": [
     "cinchcraft:spyglass_from_shipwreck",
     "cinchcraft:book_from_trail_ruin_common",
+    "cinchcraft:diamond_from_desert_well",
+    "cinchcraft:pitcher_pod_from_pitcher_crop",
+    "cinchcraft:ruby_horse_armor_from_village_armorer",
+    "cinchcraft:carrot_seeds_from_shipwreck",
+    "cinchcraft:sunflower_head_from_sunflower",
+    "cinchcraft:gold_ingot_from_trail_ruin_rare",
+    "cinchcraft:gold_ingot_from_desert_well",
+    "cinchcraft:diamond_from_trail_ruin_rare",
     "cinchcraft:pitcher_plant_root_from_pitcher_crop",
     "cinchcraft:stalk_from_sunflower",
     "cinchcraft:ruby_horse_armor_from_desert_pyramid",
+    "cinchcraft:iron_ingot_from_trail_ruin_common",
+    "cinchcraft:book_from_desert_well",
     "cinchcraft:ruby_horse_armor_from_jungle_temple",
-    "cinchcraft:ruby_horse_armor_from_village_armorer",
-    "cinchcraft:carrot_seeds_from_shipwreck",
     "cinchcraft:nautilus_shell_from_cold_ocean_ruin",
     "cinchcraft:ruby_horse_armor_from_dungeon",
-    "cinchcraft:sunflower_head_from_sunflower"
+    "cinchcraft:copper_ingot_from_trail_ruin_common"
   ],
   "replace": false
 }

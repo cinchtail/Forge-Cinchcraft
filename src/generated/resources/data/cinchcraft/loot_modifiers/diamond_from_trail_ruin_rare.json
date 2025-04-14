@@ -1,0 +1,10 @@
+{
+  "type": "cinchcraft:rare_add_item_to_single_item_loot_table",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:archaeology/trail_ruins_rare"
+    }
+  ],
+  "item": "minecraft:diamond"
+}

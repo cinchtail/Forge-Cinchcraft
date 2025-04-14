@@ -6,8 +6,6 @@ import net.cinchtail.cinchcraft.item.ModItems;
 import net.cinchtail.cinchcraft.potion.ModPotions;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.ListTag;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -21,7 +19,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionBrewing;
 import net.minecraft.world.item.alchemy.Potions;
-import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.ItemEnchantments;
 import net.minecraft.world.item.trading.ItemCost;
@@ -45,7 +42,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 import java.util.List;
-import java.util.Map;
 
 
 public class ModEvents {
@@ -94,7 +90,7 @@ public class ModEvents {
             }
         }
         @SubscribeEvent
-        public static void onBucketUse(PlayerInteractEvent.RightClickItem event) {
+        public static void bucketKeepsEnchantmentOnUse(PlayerInteractEvent.RightClickItem event) {
             Player player = event.getEntity();
             ItemStack heldItem = event.getItemStack();
 
@@ -131,7 +127,7 @@ public class ModEvents {
             builder.addMix(ModPotions.BLINDNESS_POTION.getHolder().get(), Items.REDSTONE, ModPotions.LONG_BLINDNESS_POTION.getHolder().get());
         }
         @SubscribeEvent
-        public static void addWanderingTrades(WandererTradesEvent event) {
+        public static void addWanderingTraderTrades(WandererTradesEvent event) {
             List<VillagerTrades.ItemListing> genericTrades = event.getGenericTrades();
             List<VillagerTrades.ItemListing> rareTrades = event.getRareTrades();
 

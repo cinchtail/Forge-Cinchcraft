@@ -1,0 +1,18 @@
+{
+  "type": "cinchcraft:add_item",
+  "conditions": [
+    {
+      "block": "minecraft:pitcher_crop",
+      "condition": "minecraft:block_state_property",
+      "properties": {
+        "age": "4",
+        "half": "upper"
+      }
+    },
+    {
+      "chance": 0.05,
+      "condition": "minecraft:random_chance"
+    }
+  ],
+  "item": "minecraft:pitcher_pod"
+}
