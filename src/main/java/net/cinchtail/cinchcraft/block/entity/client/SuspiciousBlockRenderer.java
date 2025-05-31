@@ -17,7 +17,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
-public class SuspiciousBlockRenderer implements BlockEntityRenderer<SuspiciousBlockEntity> {
+public class SuspiciousBlockRenderer { /*implements BlockEntityRenderer<SuspiciousBlockEntity> {
     private final ItemRenderer itemRenderer;
 
     public SuspiciousBlockRenderer(BlockEntityRendererProvider.Context context) {
@@ -62,5 +62,5 @@ public class SuspiciousBlockRenderer implements BlockEntityRenderer<SuspiciousBl
         }
 
         return $$2;
-    }
+    }*/
 }

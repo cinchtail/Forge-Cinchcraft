@@ -23,10 +23,10 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(ModHangingSignBlockEntity::new,
                             ModBlocks.AZALEA_HANGING_SIGN.get(), ModBlocks.AZALEA_WALL_HANGING_SIGN.get()).build(null));
 
-    public static final RegistryObject<BlockEntityType<SuspiciousBlockEntity>> SUSPICIOUSBLOCK =
+    /*public static final RegistryObject<BlockEntityType<SuspiciousBlockEntity>> SUSPICIOUSBLOCK =
             BLOCK_ENTITIES.register("suspicious_block",() ->
                     BlockEntityType.Builder.of(SuspiciousBlockEntity::new,
-                        ModBlocks.SUSPICIOUS_PERMAFROST.get()).build(null));
+                        ModBlocks.SUSPICIOUS_PERMAFROST.get()).build(null));*/
 
 
     public static void register(IEventBus eventBus) {

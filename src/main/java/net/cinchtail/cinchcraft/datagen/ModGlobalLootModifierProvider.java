@@ -94,13 +94,13 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
                 new LootTableIdCondition.Builder(ResourceLocation.parse("archaeology/trail_ruins_common")).build() },
                 Items.COPPER_INGOT));
 
+        add("gold_ingot_from_trail_ruin_common", new CommonAddItemToSingleItemLootTableModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ResourceLocation.parse("archaeology/trail_ruins_common")).build() },
+                Items.GOLD_INGOT));
+
         add("diamond_from_trail_ruin_rare", new RareAddItemToSingleItemLootTableModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(ResourceLocation.parse("archaeology/trail_ruins_rare")).build() },
                 Items.DIAMOND));
-
-        add("gold_ingot_from_trail_ruin_rare", new CommonAddItemToSingleItemLootTableModifier(new LootItemCondition[] {
-                new LootTableIdCondition.Builder(ResourceLocation.parse("archaeology/trail_ruins_rare")).build() },
-                Items.GOLD_INGOT));
 
         add("gold_ingot_from_desert_well", new CommonAddItemToSingleItemLootTableModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(ResourceLocation.parse("archaeology/desert_well")).build() },

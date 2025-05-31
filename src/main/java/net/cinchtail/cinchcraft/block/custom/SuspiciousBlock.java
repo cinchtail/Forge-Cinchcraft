@@ -26,7 +26,7 @@ import net.minecraft.world.phys.Vec3;
 
 import javax.annotation.Nullable;
 
-public class SuspiciousBlock extends BaseEntityBlock implements Fallable {
+public class SuspiciousBlock { /* extends BaseEntityBlock implements Fallable {
     public static final MapCodec<BrushableBlock> CODEC = RecordCodecBuilder.mapCodec((brushableBlockInstance) -> brushableBlockInstance.group(BuiltInRegistries.BLOCK.byNameCodec().fieldOf("turns_into").forGetter(BrushableBlock::getTurnsInto),
             BuiltInRegistries.SOUND_EVENT.byNameCodec().fieldOf("brush_sound").forGetter(BrushableBlock::getBrushSound),
             BuiltInRegistries.SOUND_EVENT.byNameCodec().fieldOf("brush_comleted_sound").forGetter(BrushableBlock::getBrushCompletedSound),
@@ -117,5 +117,5 @@ public class SuspiciousBlock extends BaseEntityBlock implements Fallable {
 
     static {
         DUSTED = BlockStateProperties.DUSTED;
-    }
+    }*/
 }

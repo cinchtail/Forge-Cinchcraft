@@ -249,11 +249,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> ICICLE = registerBlock("icicle",
             () -> new IcicleBlock(BlockBehaviour.Properties.of().mapColor(MapColor.ICE).noOcclusion()
                     .sound(SoundType.GLASS).randomTicks().instabreak().dynamicShape().offsetType(BlockBehaviour.OffsetType.XZ)));
-    public static final RegistryObject<Block> PERMAFROST = registerBlock("permafrost",
+    /*public static final RegistryObject<Block> PERMAFROST = registerBlock("permafrost",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(DIRT).sound(SoundType.GRAVEL)));
     public static final RegistryObject<Block> SUSPICIOUS_PERMAFROST = registerBlock("suspicious_permafrost",
             () -> new SuspiciousBlock(ModBlocks.PERMAFROST.get(), SoundEvents.BRUSH_GRAVEL, SoundEvents.BRUSH_GRAVEL_COMPLETED, BlockBehaviour.Properties.of().mapColor(MapColor.ICE)
-                    .strength(0.25F).sound(SoundType.SUSPICIOUS_GRAVEL).pushReaction(PushReaction.DESTROY)));
+                    .strength(0.25F).sound(SoundType.SUSPICIOUS_GRAVEL).pushReaction(PushReaction.DESTROY)));*/
 
     //Plants
     public static final RegistryObject<Block> BUTTER_CUP = BLOCKS.register("butter_cup",

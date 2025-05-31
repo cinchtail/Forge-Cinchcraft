@@ -6,8 +6,7 @@ import net.minecraft.world.level.block.entity.BrushableBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 
-public class SuspiciousBlockEntity extends BrushableBlockEntity
-{
+public class SuspiciousBlockEntity { /*extends BrushableBlockEntity {
     public SuspiciousBlockEntity(BlockPos pos, BlockState state)
     {
         super(pos, state);
@@ -23,5 +22,5 @@ public class SuspiciousBlockEntity extends BrushableBlockEntity
     public @NotNull BlockEntityType<?> getType()
     {
         return ModBlockEntities.SUSPICIOUSBLOCK.get();
-    }
+    }*/
 }
