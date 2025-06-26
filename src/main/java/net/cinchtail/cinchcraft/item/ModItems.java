@@ -48,6 +48,8 @@ public class ModItems {
                     new Item.Properties()));
     public static final RegistryObject<Item> REEDS = ITEMS.register("reeds",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COMPOST = ITEMS.register("compost",
+            () -> new CompostItem(new Item.Properties()));
 
     //Foods
     public static final RegistryObject<Item> VEGETABLE_STEW = ITEMS.register("vegetable_stew",

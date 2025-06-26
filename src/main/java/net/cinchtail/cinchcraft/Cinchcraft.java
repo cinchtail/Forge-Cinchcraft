@@ -44,25 +44,21 @@ public class Cinchcraft
     public static final String MOD_ID = "cinchcraft";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public Cinchcraft() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        modEventBus.addListener(this::commonSetup);
-
-        ModCreativeModeTabs.register(modEventBus);
+    public Cinchcraft(FMLJavaModLoadingContext context) {
+        IEventBus modEventBus = context.getModEventBus();
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
-        ModPotions.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
 
         ModBlockEntities.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         ModSounds.register(modEventBus);
         ModVillagers.register(modEventBus);
-
+        ModPotions.register(modEventBus);
         ModLootModifiers.register(modEventBus);
-
-        ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::clientSetup);

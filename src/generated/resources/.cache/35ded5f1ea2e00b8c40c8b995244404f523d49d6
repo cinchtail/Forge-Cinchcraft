@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-14T15:43:24.8414756	Item Models: cinchcraft
+// 1.21.1	2025-06-25T23:09:47.8750454	Item Models: cinchcraft
 774809724c0c051db5a823287ccfb162c5f16b47 assets/cinchcraft/models/item/ancient_slime_stew.json
 56f5e9dc708fc4c9cdf2ede2af80e98be3212353 assets/cinchcraft/models/item/azalea_boat.json
 9bfad9602418520a8379834e5421cccd397d23e1 assets/cinchcraft/models/item/azalea_chest_boat.json
@@ -12,6 +12,7 @@ c4e0813bbff9221790d53c7968580579b0dbd043 assets/cinchcraft/models/item/blackston
 0ffb9bb4d74e996f3f2852558bfea38e3e6ee1cd assets/cinchcraft/models/item/blueberries.json
 e941badd8b38d36f5ff4727cfde9afd97f785e69 assets/cinchcraft/models/item/blueberry_pie.json
 59a03ac82bee2a421b032bae05b3834d92e0fd63 assets/cinchcraft/models/item/carrot_seeds.json
+822c123587545ac118725044f5af42940dd94c54 assets/cinchcraft/models/item/compost.json
 d8a52c63d48d99d8d379d54f5888156c8b60cc28 assets/cinchcraft/models/item/copper_nugget.json
 b105ea96288dfa464c472f7361fae504ae173e71 assets/cinchcraft/models/item/deepslate_axe.json
 1cba746679b1d35e7f0ab487105179ef655788ca assets/cinchcraft/models/item/deepslate_hoe.json

@@ -6,6 +6,8 @@ import net.cinchtail.cinchcraft.item.ModItems;
 import net.cinchtail.cinchcraft.potion.ModPotions;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerChunkCache;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -28,7 +30,12 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CarvedPumpkinBlock;
+import net.minecraft.world.level.block.ComposterBlock;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.chunk.ChunkAccess;
+import net.minecraft.world.level.chunk.LevelChunk;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.common.MinecraftForge;
@@ -37,6 +44,7 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.brewing.BrewingRecipeRegisterEvent;
 import net.minecraftforge.event.entity.player.BonemealEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.event.village.WandererTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -78,7 +86,11 @@ public class ModEvents {
         @SubscribeEvent
         public static void cancelCarrotPlanting(PlayerInteractEvent.RightClickBlock event) {
             ItemStack stack = event.getItemStack();
-            if (stack.is(Items.CARROT)) {
+            BlockPos pos = event.getPos();
+            Level world = event.getLevel();
+
+            BlockState clickedBlock = world.getBlockState(pos);
+            if (stack.is(Items.CARROT) && clickedBlock.is(Blocks.FARMLAND)) {
                 event.setCanceled(true);
             }
         }
@@ -115,6 +127,18 @@ public class ModEvents {
                         }
                     }
                 });
+            }
+        }
+        @SubscribeEvent
+        public static void compostFromComposter(PlayerInteractEvent.RightClickBlock event) {
+            Level level = event.getLevel();
+            BlockPos pos = event.getPos();
+            BlockState state = level.getBlockState(pos);
+
+            if (!level.isClientSide && state.getBlock() == Blocks.COMPOSTER && state.getValue(ComposterBlock.LEVEL) == 8) {
+                event.setCanceled(true);
+                level.setBlock(pos, state.setValue(ComposterBlock.LEVEL, 0), 3);
+                Block.popResource(level, pos.above(), new ItemStack(ModItems.COMPOST.get()));
             }
         }
         @SubscribeEvent
