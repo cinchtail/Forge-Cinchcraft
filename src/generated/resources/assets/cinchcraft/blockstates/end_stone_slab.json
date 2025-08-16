@@ -4,7 +4,7 @@
       "model": "cinchcraft:block/end_stone_slab"
     },
     "type=double": {
-      "model": "cinchcraft:block/end_stone_slab"
+      "model": "minecraft:block/end_stone"
     },
     "type=top": {
       "model": "cinchcraft:block/end_stone_slab_top"

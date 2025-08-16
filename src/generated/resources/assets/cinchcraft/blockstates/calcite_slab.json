@@ -4,7 +4,7 @@
       "model": "cinchcraft:block/calcite_slab"
     },
     "type=double": {
-      "model": "cinchcraft:block/calcite_slab"
+      "model": "minecraft:block/calcite"
     },
     "type=top": {
       "model": "cinchcraft:block/calcite_slab_top"

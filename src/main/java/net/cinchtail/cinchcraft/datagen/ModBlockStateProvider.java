@@ -226,8 +226,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock((StairBlock) block.get(), blockTexture(texture));
     }
     public void vanillaSlabBlock(RegistryObject<Block> block, Block texture) {
-        simpleBlockItem(block.get(), models().withExistingParent((block.get()).asItem().toString(), blockTexture(block)));
-        slabBlock((SlabBlock)block.get(), block.getId(), blockTexture(texture));
+        simpleBlockItem(block.get(), models().withExistingParent(block.get().asItem().toString(), blockTexture(block)));
+        slabBlock((SlabBlock) block.get(), ForgeRegistries.BLOCKS.getKey(texture), blockTexture(texture));
     }
     public void modSlabBlock(RegistryObject<Block> block, RegistryObject<Block> texture) {
         simpleBlockItem(block.get(), models().withExistingParent((block.get()).asItem().toString(), blockTexture(block)));
