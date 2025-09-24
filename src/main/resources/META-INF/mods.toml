@@ -62,7 +62,7 @@ A Vanilla+ Mod with all the features I think should be in the game.
     mandatory=true
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
     versionRange="${minecraft_version_range}"
-    ordering="AFTER"
+    ordering="NONE"
     side="BOTH"
 [[dependencies.cinchcraft]]
     modId="terrablender"
